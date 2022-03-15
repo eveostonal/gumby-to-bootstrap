@@ -1,0 +1,118 @@
+// ----------------------------------------------------- PANEL 5 - HP Game Search
+
+.hp_gamesearch {
+  background: $IGTOrange;
+  padding: 30px 20px 40px 20px;
+  
+  @include respond(all-phones) {
+    padding: 30px 10px 40px 10px;
+  }
+  
+  h2 {
+    color: $white;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  
+  .six {
+    width: 45% !important;
+    
+    input {
+      border: none;
+      padding: 0 15px;
+      line-height: 40px;
+      height: 40px;
+      font-size: 14px;
+      font-family: 'Lato';
+      width: 100%;
+      margin: 0;
+      color: $IGTLightGreyMedDark;
+      -webkit-appearance: none;
+      border-radius: 0;
+      
+      &:focus {
+        outline: none !important;
+        box-shadow: none;
+      }
+      
+      &:placeholder { color: $IGTLightGreyMedDark; }
+    }
+    
+      
+    @include respond(all-phones) {
+      width: 100% !important;
+    }
+  }
+  
+  .four {
+    margin: 0 !important;
+    width: 30% !important;
+
+    @include respond(all-phones) {
+      width: 100% !important;
+    }
+    
+    .hp_picker {
+      position: relative;
+      
+      select {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        font-family: 'Lato';
+        padding: 0 15px;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        width: 100%;
+        background: #f1f1f1;
+        color: $IGTLightGreyMedDark;
+        cursor: pointer;
+        
+        &:focus {
+          outline: none !important;
+          box-shadow: none;
+        }
+      }
+      
+		  &:after {
+				position: absolute;
+				top: 46%;
+				right: 7px;
+				z-index: 0;
+				margin-top: -12px;
+				width: 16px;
+				color: $IGTLightGreyMedDark;
+				content: "\f0d7";
+				font-family: "FontAwesome";
+			}
+    }
+  }
+  
+  .two {
+    margin: 0 !important;
+    width: 25% !important;
+
+    @include respond(all-phones) {
+      width: 100% !important;
+    }
+    
+    input {
+      height: 40px;
+      line-height: 40px;
+      width: 100% !important;
+      display: block;
+      -webkit-appearance: none;
+      border-radius: 0;
+      
+      &:focus {
+        outline: none !important;
+        box-shadow: none;
+      }
+    }
+  }
+}

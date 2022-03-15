@@ -1,0 +1,229 @@
+.clearfix:before, .clearfix:after { display: table; content: ""; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+// ---------
+
+hr, br {
+	display: none;
+}
+
+.last {
+	padding: 10px !important;
+}
+
+.add_10 {
+	// padding: 0 0 0 10px !important;
+}
+
+.text_center {
+	text-align: center !important;
+}
+
+.cellValue,
+.table_data_grid_ai,
+.replacement_programs_cell_data,
+.program_cell_data,
+.par_paytable_cell > a {
+	font-weight: normal !important;
+}
+
+// ---------  Table % Widths
+
+.per_05 {
+	width: 5%;
+}
+
+.per_10 {
+	width: 10%;
+}
+
+.per_15 {
+	width: 15%;
+}
+
+.per_20 {
+	width: 20%;
+}
+
+.per_25 {
+	width: 25%;
+}
+
+.per_30 {
+	width: 30%;
+}
+
+.per_35 {
+	width: 35%;
+}
+
+.per_40 {
+	width: 40%;
+}
+
+.per_45 {
+	width: 45%;
+}
+
+.per_50 {
+	width: 50%;
+}
+
+.per_55 {
+	width: 55%;
+}
+
+.per_60 {
+	width: 60%;
+}
+
+.per_65 {
+	width: 65%;
+}
+
+.per_70 {
+	width: 70%;
+}
+
+.per_75 {
+	width: 75%;
+}
+
+.per_80 {
+	width: 80%;
+}
+
+.per_85 {
+	width: 85%;
+}
+
+.per_90 {
+	width: 90%;
+}
+
+.per_95 {
+	width: 95%;
+}
+
+.per_100 {
+	width: 100%;
+}
+
+.table_width_1 {
+	width: 100%;
+}
+
+// ---
+
+.pad_10 {
+	padding: 10px;
+}
+
+
+// ---- Paddings per each Block
+
+.program_show,
+.par_replacement_program,
+.par_sheet_package,
+.par_paytables,
+.signature_codes,
+.par_theme_none,
+.related_game_themes,
+.associatedInstallProgram,
+.paytables_show,
+.par_sheet_package_container,
+.par_details_sheet_with_path,
+.pay_table_Values,
+.tooManyResults,
+.jurisdiction_wrapper,
+.jur_wrapper,
+.selectWrapper {
+	display: block;
+	margin: 0 0 30px 0 !important;
+}
+
+// ---- Cell Borders
+
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5 {
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+.cell-1 {
+ border-top: 1px solid #ddd !important;
+}
+
+.cell-border-t {
+ border-top: 1px solid #ddd !important;
+}
+
+.cell-border-l {
+ border-left: 1px solid #ddd !important;
+}
+
+.cell-border-b {
+ border-bottom: 1px solid #ddd !important;
+}
+
+.cell-border-0 {
+ border-bottom: none !important;
+}
+
+// -----
+
+
+// ---
+
+.ui-dialog-content > input,
+.ui-dialog-content > div > input {
+  position: inherit;
+  display: block;
+  padding-left: 5px;
+  width: auto;
+  height: auto;
+  color: inherit;
+  line-height: normal;
+}
+
+table {
+  border: 1px solid #ddd;
+}
+
+table table { 
+  border-width: 0px;
+}
+
+//.table_data_grid td,
+.ContentTD {
+	margin: 0;
+	padding: 0;
+	//border-bottom: none;
+}
+
+
+.table_data_grid {
+  tr:last-child {
+    td { border-bottom: none !important; }
+  }
+}
+
+.border_top_none { border-top: none !important; }
+.border_right_none { border-right: none !important; }
+.border_bottom_none { border-bottom: none !important; }
+.border_left_none { border-left: none !important; }
+
+// -----
+
+
+.jur_modal, .programSearchModal {
+  margin: 0;
+  display: none;
+}
+
+.view_left {
+  margin: 0 0 0 5px;
+}

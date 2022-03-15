@@ -1,0 +1,88 @@
+// ---- Over Writting http://gtech.com/spielo/gaming-customer-login
+
+
+html > body {
+ background-color: $white !important;
+ padding-top: 0 !important;
+}
+
+.banner {
+	min-height: 10px !important;
+}
+
+html > body > main > .container > .intro-block > .tab-content  {
+ display: block !important;
+ //border: 1px solid #eaeaea;
+}
+
+// H1
+
+.container .content.middle > h1 {
+	margin: 10px !important;
+}
+
+// Hiding items
+
+html > body.node-type-customer-login > main > .container .content.middle > h1 {
+ display: none;
+}
+
+//#block-system-main,
+.view-spielo-games-markets .view-filters,
+.view-spielo-games-markets .view-header,
+.node-type-spielo-game .text-wrap,
+.related-links-block,
+.admin-tabs,
+#toolbar,
+.views-field-field-main-image,
+#quicktabs-container-game_quick_facts_documents .view-game-quick-facts .views-field,
+.view-spielo-games-markets .item-list .pager,
+.opener-tabs .blue-bar-image-region {
+	//display: none;
+}
+
+.yellow,
+.intro-text .field-name-field-main-image,
+.page-node-50 .content .field-name-body {
+	display: block;
+}
+
+.field-type-image img,
+#toolbar,
+.admin-tabs,
+.views-field-field-main-image > .field-content > a > [typeof="foaf:Image"] {
+	display: none;
+}
+
+.field-content a > img  {
+	//display: none;
+}
+
+.views-field-field-spielogame-logo > .field-content > a > [typeof="foaf:Image"] {
+	display: block;
+}
+
+.item-list .pager {
+	display: block;
+}
+
+.views-field-field-cabinet,
+.field-item.even,
+.featured-region-second,
+#block-views-gallery-slideshow-block,
+.related-links-block {
+	display: none !important;
+}
+
+.view-spielo-games-markets .items_per_page {
+    margin: -44px 0 0 !important;
+}
+
+.intro-text {
+	padding-bottom: 0 !important;
+}
+
+#quicktabs-games_operator_markets {
+	height: 2100px;
+	width: 775px;
+}

@@ -1,0 +1,66 @@
+﻿body {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: none;
+  margin: 0;
+  padding: 0;
+  color: $white;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  margin: 0 0 10px 5px;
+  padding: 0;
+}
+
+
+.table-data-grid {
+  margin: 0 0 10px 0;
+  padding: 0;
+  width: 100%;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.ccbnTblTxtBold,
+.ccbnBgTxt {
+  font-size: 12px !important;
+}
+
+.table-data-grid a {
+  color: #0038a8;
+  font-size: 12px;
+}
+
+.table-data-grid tr.ccbnBgTblTtl {
+  border-bottom: 1px solid #abb9d6;
+  background: #ebf0fa;
+  padding: 5px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-data-grid tr.ccbnBgTblEven td,
+.table-data-grid tr.ccbnBgTblOdd td {
+  border-bottom: 1px solid #e2e2e2;
+  background: #fff;
+  padding: 5px;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: top;
+}
+
+.table-data-grid tr.ccbnBgTblEven td tr td,
+.table-data-grid tr.ccbnBgTblOdd td tr td {
+  border: none;
+  padding: 0;
+}

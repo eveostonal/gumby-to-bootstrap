@@ -1,0 +1,2089 @@
+// --------------------------------------------- Header Slideshows - ALL
+
+//---- Slide Data-Sources to hook into
+
+$header_btn_width: 50%; // was 302px
+
+// --------------------------------------------- Header Slideshow
+[data-target="slideshow-header"] {
+  height: $height-500;
+  overflow: hidden;
+
+  @include respond(all-phones) {
+    height: 285px;
+    margin-bottom: 30px;
+  }
+
+  .cycle-slideshow {
+    display: block;
+    height: inherit;
+
+    .cycle-slide {
+      padding: 0;
+      max-width: 100%;
+      width: 100%;
+      height: inherit;
+    }
+
+    .slide {
+      height: inherit;
+    	background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+    }
+
+    .center {
+      padding: 0;
+
+      @include respond(all-phones) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+
+    .addthis_igt {
+      padding: 10px 0 0;
+      margin: 0 auto;
+      width: 118px;
+      height: auto;
+      min-height: 17px;
+      line-height: 14px;
+
+      @include respond(portrait-tablets) {
+        margin: 0;
+      }
+
+      @include respond(tablets) {
+        margin: 0;
+      }
+
+      @include respond(desktop) {
+        margin: 0;
+      }
+
+      @include respond(large-screens) {
+        margin: 0;
+      }
+    }
+
+    //---- VIDEO
+    [data-source="video"] {
+     display: block;
+     //padding-top: 100px;
+
+      @include respond(all-phones) {
+        padding: 0 20px;
+        padding-top: 0;
+      }
+
+      .four {
+        width: 31.41026%;
+        padding-top: 100px;
+
+        @include respond(all-phones) {
+          padding-top: 80px;
+        }
+
+        @include respond(portrait-tablets) {
+          margin-left: 8.57372%;
+          width: 41.41026%;
+        }
+
+        @include respond(tablets) {
+          margin-left: 8.57372%;
+          width: 31.41026%;
+        }
+      }
+
+      .six {
+        margin-left: 2.88462%;
+        width: 48.55769%;
+        padding-top: 100px;
+
+        @include respond(portrait-tablets) {
+          margin-left: 2.88462%;
+          width: 38.55769%;
+        }
+
+        @include respond(tablets) {
+          margin-left: 2.88462%;
+          width: 48.55769%;
+        }
+
+        @include respond(all-phones) {
+          display: none;
+          visibility: hidden;
+        }
+      }
+
+      h2 {
+        padding-top: 0;
+        color: $white;
+        text-align: left;
+        font-size: 30px;
+        line-height: 36px;
+
+        @include respond(all-phones) {
+          position: relative;
+          display: block;
+          padding: 0 0 20px 0;
+          width: auto;
+          text-align: center;
+          font-size: 24px;
+        }
+
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 22px;
+
+        @include respond(all-phones) {
+          display: none;
+        }
+      }
+
+      .fluid-width-video-wrapper {
+        @include respond(all-phones) {
+         display: block;
+         // was display -> none
+        }
+      }
+    }
+
+    //---- TEXT
+    [data-source="text"] {
+      padding-top: 155px;
+
+      @include respond(all-phones) {
+        //padding-top: 100px;
+        padding-top: 40px;
+      }
+
+      @include respond(portrait-tablets) {
+        padding-top: 115px;
+      }
+
+      .widget {
+        text-align: center;
+
+        @include respond(all-phones) {
+          padding: 0 30px;
+        }
+
+        @include respond(portrait-tablets) {
+          margin-left: 4.28686%;
+          width: 91.42628%;
+        }
+
+        @include respond(tablets) {
+          margin-left: 4.28686%;
+          width: 91.42628%;
+        }
+      }
+
+      h2 {
+        padding-top: 0;
+        color: $white;
+        text-align: center;
+        font-size: 50px;
+        line-height: 56px;
+        padding-bottom: 30px;
+
+        @include respond(all-phones) {
+          padding: 0 0 20px 0;
+          width: auto;
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+
+      p {
+      	font-size: 16px;
+      	line-height: 22px;
+      	color: $white;
+      	text-align: center;
+
+        //@include respond(all-phones) {
+        //  display: none;
+        //}
+      }
+
+      .btn {
+        width: auto;
+        min-width: initial;
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
+        display: inline-block;
+        padding: 0 30px;
+        margin: 0 auto;
+
+        //@include respond(all-phones) {
+        //  display: none;
+        //}
+
+        @include respond(portrait-tablets) {
+	        //width: 50%;
+	      }
+
+	      @include respond(tablets) {
+	        //width: 40%;
+	      }
+      }
+    }
+
+    //---- IMAGE
+    [data-source="image"] {
+      //padding-top: 100px;
+      display: block;
+
+      @include respond(all-phones) {
+        padding: 0 20px;
+        padding-top: 0;
+      }
+
+      .four {
+        width: 31.41026%;
+        padding-top: 100px;
+        z-index: 50;
+
+        @include respond(all-phones) {
+          padding-top: 5px; //was 20px (SP)
+          text-align: center;
+        }
+
+        @include respond(portrait-tablets) {
+          margin-left: 8.57372%;
+          width: 41.41026%;
+        }
+
+        @include respond(tablets) {
+          margin-left: 8.57372%;
+          width: 31.41026%;
+        }
+      }
+
+      .six {
+        //margin-left: 2.88462%;
+        //width: 48.55769%;
+        //max-height: auto;
+        //padding-top: 100px;
+        //overflow: visible;
+        //position: relative;
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        z-index: 25;
+
+        @include respond(portrait-tablets) {
+          //margin-left: 2.88462%;
+          //width: 38.55769%;
+        }
+
+        @include respond(tablets) {
+          //margin-left: 2.88462%;
+          //width: 48.55769%;
+        }
+      }
+
+      h2 {
+        padding-top: 0;
+        color: $white;
+        text-align: left;
+        font-size: 30px;
+        line-height: 36px;
+
+        @include respond(all-phones) {
+          position: relative;
+          display: block;
+          //padding: 40px 0 15px 0;
+          padding: 20px 0 10px 0;
+          width: auto;
+          text-align: center;
+          font-size: 28px;
+        }
+      }
+      
+      .legal_line {
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 22px;
+
+        //@include respond(all-phones) {
+        //  display: none;
+        //}
+      }
+
+      img {
+        //width: 100%;
+        //height: auto;
+        //padding-top: 20px;
+        //max-height: 260px;
+
+        //@include respond(all-phones) {
+        //margin: 0 0 0 5%;
+        //width: 90%;
+        //display: none;
+        //}
+
+        //House of Cards
+        position: absolute;
+        bottom: -500px;
+        right: 100px;
+        height: inherit !important;
+        //max-width: inherit !important;
+        max-width: 450px;
+
+        @include respond(all-phones) {
+          display: none;
+        }
+
+        @include respond(portrait-tablets) {
+	        //right: -120px;
+	        right: 15px; //see all w/ padding
+	      }
+
+	      @include respond(tablets) {
+	        right: 100px;
+	      }
+	      
+	      //@media (max-width: 670px) { display: none; }
+
+      }
+
+      .btn {
+        width: auto;
+        min-width: initial;
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
+        display: inline-block;
+        padding: 0 30px;
+        margin: 0;
+
+        //@include respond(all-phones) {
+        //  display: none;
+        //}
+      }
+
+      .text_link {
+        color: $IGTBlue;
+
+        a {
+          color: $IGTBlue;
+          font-size: 16px;
+          @extend %wrap_text;
+        }
+
+        a:hover {
+          color: $body-link-hover-color;
+        }
+
+        .fa-angle-right {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+
+    .btn {
+      @include respond(all-phones) {
+        display: block;
+        margin: 0 auto;
+        width: 265px;
+      }
+    }
+
+    div.non_mobile_img {
+      @extend %ie_8_imageScale;
+      display: block;
+      padding-top: 0;
+      width: 100%;
+      height: inherit;
+      // extend has to be on the bottom
+      @extend %ie_8_imageScale_fix;
+
+    }
+  } // --- cycle-slideshow end
+
+  //Controls the Nav for the Enhanced Headers
+  .slideshow_nav {
+    display: block;
+    padding: 0;
+    bottom: 55%;
+
+    @include respond(all-phones) {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .slide_pagination_01,
+    .slide_pagination_02,
+    .slide_pagination_03,
+    .slide_pagination_04,
+    .slide_pagination_05,
+    .slide_pagination_06,
+    .slide_pagination_07 {
+      display: block !important;
+      text-align: center !important;
+      position: absolute;
+      bottom: -210px;
+      width: 100%;
+      z-index: 140;
+
+      @include respond(all-phones) {
+        bottom: -82px;
+        top: auto;
+      }
+
+      li {
+        a {
+          font-size: 16px;
+          color: $white;
+          text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+          &:hover { color: $IGTYellow; }
+        }
+
+        &.cycle-pager-active a {
+          //color: $IGTBackgroundGrey !important;
+        }
+
+        &.cycle-pager-active a > i.fa:before {
+          //color: $IGTBackgroundGrey !important;
+        }
+      }
+    }
+
+    .nav_left {
+      display: block;
+
+      a {
+        color: $white !important;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+        &:hover { color: rgba(255, 255, 255, 0.65) !important; }
+      }
+
+      @include respond(portrait-tablets) {
+        left: 20px;
+      }
+
+      @include respond(tablets) {
+        left: 20px;
+      }
+    }
+
+    .nav_right {
+      display: block;
+
+      a {
+        color: $white !important;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+        &:hover { color: rgba(255, 255, 255, 0.65) !important; }
+      }
+
+      @include respond(portrait-tablets) {
+        right: 20px;
+      }
+
+      @include respond(tablets) {
+        right: 20px;
+      }
+    }
+  }
+}
+
+
+// --------------------------------------------- Static Header
+[data-target="static-header"] {
+  @extend %static_header_default;
+
+  @include respond(all-phones) {
+    height: 200px;
+  }
+
+  //---- TEXT
+  [data-source="text"] {
+    @extend %static_header_text;
+    padding-top: 0;
+
+    .widget {
+      text-align: left;
+      padding-top: 50px;
+
+      @include respond(all-phones) {
+        padding: 30px 30px 0;
+      }
+
+      @include respond(portrait-tablets) {
+        margin-left: 4.28686%;
+        width: 91.42628%;
+      }
+
+      @include respond(tablets) {
+        margin-left: 4.28686%;
+        width: 91.42628%;
+      }
+    }
+
+    .align-left {
+      text-align: left;
+      margin-left: 8.57372%;
+      position: relative;
+      z-index: 10;
+      padding-top: 30px;
+
+      @include respond(all-phones) {
+        margin-left: 0;
+        padding-top: 30px;
+      }
+
+      h2, p {
+        text-align: left;
+      }
+
+      p {
+        color: $white;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+
+      .btn {
+        margin: 0;
+      }
+    }
+
+    h2 {
+      @extend %static_header_h2;
+      font-size: 52px;
+
+      @include respond(all-phones) {
+        padding: 5px 0 20px 0;
+        width: auto;
+        font-size: 32px;
+      }
+
+      @include respond(portrait-tablets) {
+        font-size: 48px;
+      }
+
+      @include respond(tablets) {
+        font-size: 48px;
+      }
+    }
+
+    p {
+      @extend %static_header_p;
+      color: $white;
+      text-align: center;
+      padding: 0;
+      margin: 0 0 20px 0;
+
+      //@include respond(all-phones) {
+      //  display: none;
+      //}
+    }
+
+    .btn {
+      @extend %static_header_btn;
+
+      @include respond(all-phones) {
+        width: 265px;
+      }
+    }
+  }
+
+  .non_mobile_img {
+    position: absolute;
+    @extend %ie_8_imageScale;
+    display: block;
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+  }
+
+  //---- IMAGE
+  [data-source="image"] {
+    display: block;
+    padding-top: 100px;
+    height: inherit;
+    width: inherit;
+
+    @include respond(all-phones) {
+      padding: 0 20px;
+      padding-top: 0;
+    }
+
+    .four {
+      width: 31.41026%;
+      padding-top: 100px;
+
+      @include respond(portrait-tablets) {
+        margin-left: 8.57372%;
+        width: 41.41026%;
+      }
+
+      @include respond(tablets) {
+        margin-left: 8.57372%;
+        width: 31.41026%;
+      }
+    }
+
+    .six {
+      margin-left: 2.88462%;
+      width: 48.55769%;
+      //padding-top: 100px;
+
+      @include respond(portrait-tablets) {
+        margin-left: 2.88462%;
+        width: 38.55769%;
+      }
+
+      @include respond(tablets) {
+        margin-left: 2.88462%;
+        width: 48.55769%;
+      }
+    }
+
+    h2 {
+      padding-top: 0;
+      color: $white;
+      text-align: left;
+      font-size: 32px;
+      //font-weight: 700;
+
+      @include respond(all-phones) {
+        position: relative;
+        display: block;
+        padding: 40px 0 10px 0;
+        width: auto;
+        text-align: center;
+        font-size: 32px;
+      }
+    }
+
+    p {
+      @include respond(all-phones) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+      padding-top: 20px;
+
+      @include respond(all-phones) {
+        //margin: 0 0 0 5%;
+        //width: 90%;
+        display: none;
+      }
+    }
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+      width: 302px;
+
+     @include respond(all-phones) {
+        width: 265px;
+        display: none;
+      }
+    }
+
+    .text_link {
+      color: $IGTBlue;
+
+      a {
+        color: $IGTBlue;
+        font-size: 16px;
+        @extend %wrap_text;
+      }
+
+      a:hover {
+        color: $body-link-hover-color;
+      }
+
+      .fa-angle-right {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+}
+
+
+// --------------------------------------------- Related Slideshow
+[data-target="slideshow-related"] {
+  position: relative;
+  padding: 0 20px 40px 20px;
+  width: 100%;
+
+  h4 {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  .cycle-slideshow {
+    margin: 0;
+    width: 91.42628% !important;
+
+    @include respond(all-phones) {
+      width: 100% !important;
+    }
+
+    @include respond(portrait-tablets) {
+      width: 87.23568% !important;
+      margin-left: 6.28686% !important;
+    }
+
+    .cycle-carousel-wrap {
+      margin: auto;
+      width: 100%;
+      height: inherit;
+
+      .slide_item {
+        display: block;
+
+        .fa-external-link,
+        .fa-angle-right {
+          margin: 0 4px 0 0;
+        }
+
+        .fa-external-link {
+          font-size: 12px;
+        }
+
+        .fa-angle-right {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .slideshow_nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: table;
+    overflow: auto;
+    margin: auto;
+    padding: 0;
+    max-width: 1040px;
+
+    @include respond(all-phones) {
+      position: relative;
+      margin: 20px 0 0 0;
+      height: 48px;
+      overflow: hidden;
+    }
+
+    .nav_left,
+    .nav_right {
+      @include respond(all-phones) {
+        margin: 14px 0 0;
+      }
+    }
+  }
+}
+
+
+// --------------------------------------------- Video/Image Slideshow
+[data-target="video-slideshow"] {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: table;
+  padding: 40px 0 40px 0;
+  //HIDE VIDEO, not used on microsite (SP).
+  display: none;
+  visibility: hidden;
+
+  h4 {
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+
+  .columns {
+    float: none;
+  }
+
+  [data-row="utility"] {
+    display: inline-block;
+    padding: 10px 0 20px 0;
+    height: 65px;
+
+    @include respond(all-phones) {
+      height: 125px;
+    }
+
+    .section_title {
+      float: left;
+      margin-left: 10px;
+
+      @include respond(all-phones) {
+       margin-left: 0;
+
+      h4 {
+         display: block;
+         margin: 0 0 5px 0;
+         padding: 0;
+       }
+      }
+
+      @include respond(portrait-tablets) {
+        margin-left: 23px;
+      }
+
+      @include respond(tablets) {
+        margin-left: 10px;
+      }
+    }
+
+    .section_select {
+      float: right;
+      margin-right: 10px;
+      width: 218px;
+
+      @include respond(all-phones) {
+       float: left;
+       margin-right: 0;
+       width: 218px;
+
+        select {
+          width: 215px;
+        }
+      }
+
+      @include respond(portrait-tablets) {
+        margin-right: 15px;
+        width: 218px;
+
+        select {
+          width: 215px;
+        }
+      }
+
+      @include respond(tablets) {
+        margin-right: 0;
+        width: 218px;
+      }
+    }
+  }
+
+  [data-target="slideshow-related"] {
+    padding: 0;
+    height: 198px;
+  }
+
+  .cycle-slideshow {
+    margin: 0;
+    width: 91.42628% !important;
+  }
+
+  .slideshow_nav {
+    //position: absolute;
+    //bottom: 25%;
+    //display: table;
+    max-width: 1080px;
+    //top: 40px;
+
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: table;
+    overflow: auto;
+    margin: auto;
+    //max-width: 1040px;
+
+    @include respond(all-phones) {
+      position: relative;
+      top: 0;
+      margin: 0;
+    }
+
+    .nav_left,
+    .nav_right {
+      @include respond(all-phones) {
+        margin: 0;
+      }
+    }
+  }
+
+  .centered,
+  .component,
+  #cycle-1 {
+    //height: auto !important;
+  }
+
+    // Bottom Carousel adj
+  #cycle-2 {
+    margin-top: 0 !important;
+    height: 197px !important;
+    width: 91.42628% !important;
+
+    @include respond(all-phones) {
+      height: 128px !important;
+      width: 100% !important;
+      margin: 0 0 10px 0;
+    }
+
+    @include respond(portrait-tablets) {
+      width: 87.23568% !important;
+      margin-left: 6.28686%;
+    }
+
+    .cycle-carousel-wrap {
+      margin: auto;
+      width: 100%;
+      height: auto;
+
+      .cycle-slide {
+        @include respond(all-phones) {
+          overflow: visible;
+          height: auto;
+        }
+      }
+
+      .slide_item {
+        display: block;
+
+        .fa-external-link,
+        .fa-angle-right {
+          margin: 0 4px 0 0;
+        }
+
+        .fa-external-link {
+          font-size: 12px;
+        }
+
+        .fa-angle-right {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  #cycle-1 {
+    width: 100% !important;
+
+    @include respond(all-phones) {
+      max-height: 203px !important;
+    }
+
+    .cycle-slide {
+      //min-width: 560px;
+      width: 100%;
+
+      a {
+        display: block;
+
+        img {
+          min-width: 100%;
+        }
+      }
+
+      @include respond(all-phones) {
+        min-width: 100%;
+      }
+
+      @include respond(portrait-tablets) {
+        min-width: 100%;
+      }
+
+      .addthis_igt {
+        float: right;
+        width: 114px;
+        height: auto;
+        display: block;
+      }
+
+      .options {
+        width: 100%;
+        height: 60px;
+
+        @include respond(all-phones) {
+          height: 60px;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-size: 14px;
+          width: 78%;
+          height: auto;
+          display: block;
+
+          @include respond(all-phones) {
+            font-size: 12px;
+          }
+        }
+
+        .item_title {
+          color: #336699;
+          text-rendering: optimizeLegibility;
+          padding-top: 0.273em;
+          line-height: 1.15538em;
+          padding-bottom: 0;
+          font-size: 18px;
+
+          @include respond(all-phones) {
+            font-size: 16px;
+          }
+        }
+
+        .align-right {
+          float: right;
+          width: 114px;
+          height: auto;
+          display: block;
+
+          @include respond(all-phones) {
+            float: right;
+            width: 114px;
+
+            .addthis_toolbox {
+              float: right;
+            }
+          }
+
+          @include respond(portrait-tablets) {
+            float: right;
+          }
+
+          @include respond(tablets) {
+            float: right;
+          }
+        }
+      }
+    }
+
+    .cycle-slide > img {
+      width: 600px;
+    }
+  }
+
+  #cycle-2 .cycle-slide-active > img {
+    opacity: .5;
+  }
+}
+
+
+// --------------------------------------------- Related & Video - OPTIONS
+[data-source="related-img-lg"] {
+  width: 220px;
+  padding-top: 0;
+  @extend %three_up_carousel;
+  vertical-align: top;
+  //margin: 0 20px 0 0;
+
+  @include respond(all-phones) {
+    width: 100% !important;
+    margin: 0 20px 0 0;
+  }
+
+  @include respond(tablets) {
+    //margin: 0 40px 0 40px;
+    margin: 0 5% 0 5%;
+  }
+
+  img {
+    width: 220px;
+    height: 130px;
+    display: block;
+    //cursor: pointer;
+    @extend %image_bottom_margin;
+
+    @include respond(all-phones) {
+      width: 220px;
+      height: 130px;
+      margin: 0 auto;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  p {
+  	@extend %p_tag_item_defaults;
+
+    @include respond(all-phones) {
+      margin-right: 0;
+      font-size: 14px;
+      padding: 10px 20px 0 20px;
+      text-align: center;
+    }
+  }
+
+  a {
+    display: block;
+    @extend %text_link_a;
+
+    .text_link {
+      @extend %text_link;
+      @extend %wrap_text;
+      color: $IGTMediumBlue;
+      //merger only Kill this class
+      //display: none;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
+
+      > p {
+				white-space: pre-wrap;
+				white-space: -moz-pre-wrap;
+				white-space: -pre-wrap;
+				white-space: -o-pre-wrap;
+				word-wrap: break-word;
+				color: $IGTMediumBlue;
+				display: inline;
+				line-height: 14px;
+				margin: 0 0 30px 0;
+
+		  	@extend %text_link;
+		  	font-family: $font-family !important;
+		  	font-size: 14px !important;
+
+		    @include respond(all-phones) {
+		      text-align: center;
+		    }
+		  }
+    }
+
+    &:hover {
+      @extend %text_link_hover;
+
+      .text_link {
+        @extend %text_link_hover;
+
+        @include respond(all-phones) {
+          text-align: center;
+        }
+
+        > p {
+					white-space: pre-wrap;
+					white-space: -moz-pre-wrap;
+					white-space: -pre-wrap;
+					white-space: -o-pre-wrap;
+					word-wrap: break-word;
+					display: inline;
+					line-height: 14px;
+					margin: 0 0 30px 0;
+
+			  	@extend %text_link_hover;
+			  	font-family: $font-family !important;
+			  	font-size: 14px !important;
+
+			    @include respond(all-phones) {
+			      text-align: center;
+			    }
+			  }
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+    width: 302px;
+
+    @include respond(all-phones) {
+      //width: 265px;
+      display: none;
+    }
+  }
+}
+
+[data-source="related-img-icon"] {
+  width: 220px !important;
+  height: auto;
+  margin: 0 10px 0 10px;
+  vertical-align: top;
+
+  @include respond(all-phones) {
+    width: 100% !important;
+  }
+
+  @include respond(portrait-tablets) {
+    width: 195px !important;
+  }
+
+  @include respond(tablets) {
+    margin: 0 40px 0 40px;
+  }
+
+  a {
+    display: block;
+    @extend %text_link_a;
+
+    .text_link {
+      @extend %text_link;
+      @extend %wrap_text;
+      color: $IGTMediumBlue;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
+
+      > p {
+				white-space: pre-wrap;
+				white-space: -moz-pre-wrap;
+				white-space: -pre-wrap;
+				white-space: -o-pre-wrap;
+				word-wrap: break-word;
+				color: $IGTMediumBlue;
+				display: inline;
+				line-height: 14px;
+				margin: 0 0 30px 0;
+
+		  	@extend %text_link;
+		  	font-family: $font-family !important;
+		  	font-size: 14px !important;
+
+		    @include respond(all-phones) {
+		      text-align: center;
+		    }
+		  }
+    }
+
+    &:hover {
+      @extend %text_link_hover;
+
+      .text_link {
+        @extend %text_link_hover;
+
+        @include respond(all-phones) {
+          text-align: center;
+        }
+
+        > p {
+					white-space: pre-wrap;
+					white-space: -moz-pre-wrap;
+					white-space: -pre-wrap;
+					white-space: -o-pre-wrap;
+					word-wrap: break-word;
+					display: inline;
+					line-height: 14px;
+					margin: 0 0 30px 0;
+
+			  	@extend %text_link_hover;
+			  	font-family: $font-family !important;
+			  	font-size: 14px !important;
+
+			    @include respond(all-phones) {
+			      text-align: center;
+			    }
+			  }
+      }
+    }
+  }
+
+  img {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+
+  p {
+    @extend %p_tag_item_defaults;
+    text-align: center;
+
+    @include respond(all-phones) {
+      margin-right: 0;
+      font-size: 14px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .text_link {
+    @extend %text_link;
+    text-align: center;
+
+    a {
+      @extend %text_link_a;
+      @extend %wrap_text;
+
+      &:hover {
+        @extend %text_link_hover;
+      }
+    }
+  }
+}
+
+[data-source="related-img-background"] {
+  width: 220px;
+  padding-top: 0;
+  @extend %three_up_carousel;
+  height: $related-img-background-defaults;
+
+  @include respond(all-phones) {
+    // width: 220px !important;
+    width: 100% !important;
+    margin: 0 20px 0 0;
+  }
+
+  @include respond(portrait-tablets) {
+
+  }
+
+  @include respond(tablets) {
+    //margin: 0 50px 0 50px;
+    margin: 0 5% 0 5%;
+  }
+
+  a {
+    display: block;
+    @extend %text_link_a;
+    cursor: pointer;
+
+    .text_link {
+      @extend %text_link;
+      @extend %wrap_text;
+      color: $IGTMediumBlue;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
+
+      > p {
+				white-space: pre-wrap;
+				white-space: -moz-pre-wrap;
+				white-space: -pre-wrap;
+				white-space: -o-pre-wrap;
+				word-wrap: break-word;
+				color: $IGTMediumBlue;
+				display: inline;
+				line-height: 14px;
+				margin: 0 0 30px 0;
+
+		  	@extend %text_link;
+		  	font-family: $font-family !important;
+		  	font-size: 14px !important;
+
+		    @include respond(all-phones) {
+		      text-align: center;
+		    }
+		  }
+    }
+
+    &:hover {
+      @extend %text_link_hover;
+
+      .text_link {
+        @extend %text_link_hover;
+
+        @include respond(all-phones) {
+          text-align: center;
+        }
+
+        > p {
+					white-space: pre-wrap;
+					white-space: -moz-pre-wrap;
+					white-space: -pre-wrap;
+					white-space: -o-pre-wrap;
+					word-wrap: break-word;
+					display: inline;
+					line-height: 14px;
+					margin: 0 0 30px 0;
+
+			  	@extend %text_link_hover;
+			  	font-family: $font-family !important;
+			  	font-size: 14px !important;
+
+			    @include respond(all-phones) {
+			      text-align: center;
+			    }
+			  }
+      }
+    }
+  }
+
+  .slide_item_container {
+    position: relative;
+    width: 220px;
+    height: $related-img-background-defaults;
+    display: block;
+    top: 0;
+
+    @include respond(all-phones) {
+      height: $related-img-background-defaults;
+      margin: 0 auto;
+    }
+  }
+
+  .non_mobile_img {
+    position: absolute;
+    @extend %ie_8_imageScale;
+    display: block;
+    padding-top: 0;
+    width: 100%;
+    height: 130px;
+    top: 0;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+  }
+
+  p {
+    @extend %p_tag_item_defaults;
+    position: relative;
+    z-index: 50;
+    top: 77px;
+    color: $white;
+    padding-left: 10px;
+    height: 24px;
+
+    // --- Uncomment these when you need more contrast ... behind the P Tags
+
+    // background: rgb(18, 108, 171);
+    // background: rgba(18, 108, 171, 0.3);
+
+    @include respond(all-phones) {
+      font-size: 14px;
+    }
+  }
+
+  .text_link {
+    @extend %text_link;
+    position: relative;
+    z-index: 50;
+    top: 77px;
+    //color: $white;
+    padding-left: 10px;
+    height: 18px;
+    //background: rgb(255, 255, 255);
+    //background: rgba(255, 255, 255, 0.5);
+
+    a {
+      @extend %text_link_a;
+      color: $white;
+    }
+
+    a:hover {
+      @extend %text_link_hover;
+    }
+  }
+}
+
+
+// ----- related-video -- Widths
+$related-video-desktop: 170px;
+$related-video-phone: 120px;
+$related-video-tablet-portrait: 142px;
+$related-video-tablet-landscape: 158px;
+
+// ----- related-video -- Heights
+$related-video-desktop-h: 96px;
+$related-video-phone-h: 77px;
+$related-video-tablet-portrait-h: 84px;
+$related-video-tablet-landscape-h: 99px;
+
+[data-source="related-video"] {
+  width: $related-video-desktop;
+  height: auto;
+  @extend %five_up_carousel;
+  vertical-align: top;
+
+  @include respond(all-phones) {
+    position: relative;
+    width: 48% !important;
+    height: auto !important;
+    margin: 0 14.25px 0 0;
+  }
+
+  @include respond(portrait-tablets) {
+    width: $related-video-tablet-portrait;
+    //height: $related-video-tablet-portrait-h;
+    height: auto;
+  }
+
+  @include respond(tablets) {
+    width: $related-video-tablet-landscape;
+    height: auto;
+  }
+
+  img {
+    @extend %image_bottom_margin;
+    width: $related-video-desktop;
+    height: $related-video-desktop-h;
+    display: block;
+    cursor: pointer;
+
+    @include respond(all-phones) {
+      width: $related-video-phone;
+      height: $related-video-phone-h;
+      margin: 0 auto;
+      padding: 0 0 10px 0;
+    }
+
+    @include respond(portrait-tablets) {
+      width: $related-video-tablet-portrait;
+      height: $related-video-tablet-portrait-h;
+    }
+
+    @include respond(tablets) {
+      width: $related-video-tablet-landscape;
+      height: $related-video-tablet-landscape-h;
+      margin: 0 auto;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  p, .text_link {
+    text-align: left;
+
+    @include respond(all-phones) {
+      text-align: center;
+    }
+  }
+
+  p {
+    @extend %p_tag_item_defaults;
+    line-height: 18px;
+    margin-right: 20px;
+
+    @include respond(all-phones) {
+      margin-right: 0;
+      font-size: 14px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .text_link {
+    //line-height: 24px;
+    //margin-right: 20px;
+
+    @include respond(all-phones) {
+     //margin-right: 0;
+    }
+  }
+
+  .text_link {
+    @extend %text_link;
+    line-height: 14px;
+		margin-top: 5px;
+		margin-right: 20px;
+		// Merger only
+		display: none;
+
+
+    .fa {
+	    color: $IGTBlue;
+    }
+
+    a {
+      @extend %text_link_a;
+      @extend %wrap_text;
+
+      &:hover {
+        @extend %text_link_hover;
+      }
+    }
+
+    @include respond(all-phones) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// --------------------------------------------- Fact Boxes - OPTIONS
+
+// ----- Fact Box -- Margins
+$fact-box-margin-desktop: 0 5% 0 5%;
+$fact-box-margin-tablet-portrait: 0 1% 0 1%;
+$fact-box-margin-tablet-landscape: 0 5% 0 5%;
+$fact-box-margin-phone: 77px;
+
+
+// --------------------------------------------- Fact Boxes Slideshow
+[data-target="slideshow-related-fact"] {
+  position: relative;
+  padding: 0 20px 40px 20px;
+  width: 100%;
+
+  h4 {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+
+  .cycle-slideshow {
+    margin: 0;
+    //margin-left: 0 !important;
+    width: 91.42628% !important;
+
+
+    @include respond(all-phones) {
+      width: 100% !important;
+    }
+
+    @include respond(portrait-tablets) {
+      //width: 87.23568% !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+
+    .cycle-carousel-wrap {
+      margin: auto;
+      width: 100%;
+      height: auto;
+
+      .slide_item {
+        display: block;
+
+        .fa-external-link,
+        .fa-angle-right {
+          margin: 0 4px 0 0;
+        }
+
+        .fa-external-link {
+          font-size: 12px;
+        }
+
+        .fa-angle-right {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .slideshow_nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: table;
+    overflow: auto;
+    margin: auto;
+    padding: 0;
+    max-width: 1040px;
+
+    @include respond(all-phones) {
+      position: relative;
+      margin: 20px 0 0 0;
+      height: 48px;
+      overflow: hidden;
+    }
+
+    .nav_left,
+    .nav_right {
+      @include respond(all-phones) {
+        margin: 14px 0 0;
+      }
+    }
+  }
+}
+
+[data-source="fact-img-icon"] {
+  width: 220px;
+  margin: $fact-box-margin-desktop;
+  vertical-align: top;
+  height: auto;
+
+  @include respond(all-phones) {
+    width: 100%;
+    margin: auto;
+  }
+
+  @include respond(portrait-tablets) {
+    width: 31.99987%;
+    //height: 130px;
+    height: auto;
+    margin: 0 5px 0 5px;
+    //width: 195px !important;
+    //margin: $fact-box-margin-tablet-portrait;
+  }
+
+  @include respond(tablets) {
+    margin: $fact-box-margin-tablet-landscape;
+  }
+
+  a {
+    display: block;
+    @extend %text_link_a;
+    height: auto;
+
+    .text_link {
+      @extend %text_link;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      @extend %text_link_hover;
+
+      .text_link {
+        @extend %text_link_hover;
+
+        @include respond(all-phones) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    //cursor: pointer;
+  }
+
+  .item_title {
+    @extend %p_tag_item_defaults;
+    color: $body-font-color;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    font-size: 20px;
+    position: static;
+    line-height: normal;
+
+    @include respond(all-phones) {
+      font-size: 20px;
+    }
+  }
+
+  .item_sub_copy {
+    @extend %p_tag_item_defaults;
+    color: $body-font-color;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    position: static;
+    line-height: normal;
+    //font-weight: 700;
+
+    @include respond(all-phones) {
+      font-size: 14px;
+    }
+
+    @include respond(portrait-tablets) {
+      font-size: 13px;
+    }
+  }
+}
+
+[data-source="fact-img-background"] {
+  @extend %three_up_carousel;
+  padding-top: 0;
+  width: 220px;
+  height: 130px;
+
+  @include respond(all-phones) {
+    width: 100% !important;
+    margin: auto;
+  }
+
+  @include respond(portrait-tablets) {
+    width: 31.99987%;
+    height: 130px;
+    margin: 0 10px 0 0;
+  }
+
+  @include respond(tablets) {
+    margin: $fact-box-margin-tablet-landscape;
+  }
+
+  a {
+    display: block;
+    width: 220px;
+    height: 130px;
+
+    @include respond(all-phones) {
+      margin: auto;
+    }
+
+    @include respond(portrait-tablets) {
+      width: 100%;
+      height: 130px;
+      margin: 0 auto;
+      min-width: 160px;
+      max-width: 220px;
+    }
+  }
+
+  .slide_item_container {
+    position: relative;
+    top: 0;
+    display: block;
+    width: 220px;
+    height: 130px;
+
+    @include respond(all-phones) {
+      //margin: auto;
+      width: 220px;
+      height: 130px;
+    }
+
+    @include respond(portrait-tablets) {
+      width: 100%;
+      height: 130px;
+    }
+
+    @include respond(tablets) {
+      //margin: $fact-box-margin-tablet-landscape;
+    }
+  }
+
+  .non_mobile_img {
+    @extend %ie_8_imageScale;
+    position: absolute;
+    top: 0;
+    display: block;
+    padding-top: 0;
+    width: 100%;
+    height: 130px;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+
+    @include respond(portrait-tablets) {
+      //width: 195px;
+      height: 130px;
+    }
+
+  }
+
+  .item_title {
+    @extend %p_tag_item_defaults;
+    position: relative;
+    top: 34px;
+    z-index: 50;
+    padding: 0 10px 0 10px;
+    //height: 24px;
+    color: $white;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+
+    @include respond(all-phones) {
+      font-size: 20px;
+    }
+  }
+
+  .item_sub_copy {
+    @extend %p_tag_item_defaults;
+    position: relative;
+    top: 28px;
+    z-index: 50;
+    padding: 0 10px 0 10px;
+    color: $white;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+
+    @include respond(all-phones) {
+      font-size: 14px;
+    }
+
+    @include respond(portrait-tablets) {
+      font-size: 13px;
+    }
+  }
+}
+
+.fact-img-icon-pagination > li,
+.fact-img-background-pagination > li {
+  display: inline-block !important;
+}
+
+
+// --------------------------------------------- Fine Tuning --- TEXT and Video Panels
+[data-source="text"] {
+  padding-top: 155px;
+
+  @include respond(portrait-tablets) {
+    padding-top: 90px;
+  }
+
+  h2 {
+    padding-top: 0;
+    color: $white;
+    text-align: center;
+    font-size: 60px;
+    //font-weight: 700;
+
+    @include respond(portrait-tablets) {
+      padding-bottom: 10px;
+    }
+  }
+
+  p {
+  	font-size: 24px;
+  	line-height: 28px;
+
+    @include respond(all-phones) {
+      margin: 0;
+      padding: 10px 20px 20px 20px;
+      color: $IGTBlue;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+    width: 302px;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+}
+
+[data-source="video"],
+[data-source="image"] {
+  padding-top: 90px;
+
+  @include respond(portrait-tablets) {
+    padding-top: 110px;
+  }
+
+  h2 {
+    padding-top: 0;
+    color: $white;
+    font-size: 30px;
+    line-height: 36px;
+
+    @include respond(all-phones) {
+      position: absolute;
+      padding: 50px 20px 0 30px;
+      width: 310px;
+      font-size: 36px;
+    }
+  }
+
+   p {
+  	color: $white;
+  	font-size: 16px;
+  	line-height: 22px;
+
+    @include respond(all-phones) {
+      margin: 0;
+      padding: 10px 20px 20px 20px;
+      color: $IGTBlue;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .btn {
+    width: auto;
+    min-width: initial;
+    height: 38px;
+    line-height: 38px;
+    font-size: 18px;
+    display: inline-block;
+    padding: 0 30px;
+    margin: 0;
+  }
+}
+
+
+// --------------------------------------------- Panel Heights / Widths
+.row_full {
+  width: 100%;
+}
+
+.v-500 {
+  // this class will have to toggle dynamically from the CMS
+  height: $height-500;
+
+  @include respond(all-phones) {
+    height: 285px !important;
+    // was height: 356px !important;
+  }
+}
+
+// D3 Header
+.v-300 {
+  // this class will have to toggle dynamically from the CMS
+  height: 300px;
+	
+	[data-source="text"] {
+		padding-top: 50px !important;
+	}
+
+  @include respond(all-phones) {
+    height: 250px !important;
+  }
+}
+
+// kinda of a temp hack for the D3 only  
+.header-carousel.v-300 {
+	margin: 0;
+	
+	.slideshow_nav .slide_pagination_01 {
+		bottom: -100px;
+	}
+	
+	[data-source="text"] {
+		padding-top: 50px !important;
+	}
+}
+
+.v-235 {
+  // this class will have to toggle dynamically from the CMS
+  height: 235px;
+}
+
+
+// --------------------------------------------- Games landing customisation (SP)
+[data-target="slideshow-header"] .cycle-slideshow [data-source="image"] {
+  #HeaderCarousel1_lvHeaderCarousel_divSetAlignment_0,
+  #HeaderCarousel1_lvHeaderCarousel_divSetAlignment_1,
+  #HeaderCarousel1_lvHeaderCarousel_divSetAlignment_2 {
+    //h2, p { color: $body-font-color !important; } // When you want body color text (SP)
+    h2, p { color: $white !important; }             // When you want white text (SP)
+  }
+}
+//
+// Apply a background overlay in mobile view to any banner (SP)
+//@include respond(all-phones) {
+  //#HeaderCarousel1_lvHeaderCarousel_divSetDataSource_2 { background: rgba(0, 0, 0, .5); }
+//}
+//
+// Apply a background overlay in tablet view to any banner (SP)
+//@include respond(portrait-tablets) {
+  //#HeaderCarousel1_lvHeaderCarousel_divSetDataSource_2,
+  //#HeaderCarousel1_lvHeaderCarousel_divSetDataSource_1 { background: rgba(0, 0, 0, .5); }
+//}

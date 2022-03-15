@@ -1,0 +1,214 @@
+// ------------ Custom Hero Banner Work for Gemini
+#{$slide_2} {
+  .header_title_h1 {
+    font-size: 60px;
+    line-height: 60px;
+
+    span {
+      display: block;
+      clear: both;
+    }
+  }
+
+  p { width: 340px; }
+
+   //Button
+  .btn {
+    background-color: $IGTDarkOrange;
+
+    a { color: $white; }
+  }
+}
+
+#{$slide_2_mobile} {
+  @include respond(all-phones) {
+    .header_title_h1 {
+      font-size: 28px;
+      line-height: 34px;
+      padding-top: 30px;
+      max-width: 240px;
+    }
+  }
+}
+
+// ------------ Custom Hero Banner Work for Aurora
+.aurora_not_used {
+  .widget {
+    width: 340px;
+    //background: aqua;
+
+    @include respond(tablets) {
+      width: 360px;
+      //background: yellow;
+    }
+
+    h2.header_title_h1 {
+      @include respond(portrait-tablets) {
+        font-size: 50px;
+        line-height: 50px;
+      }
+
+      .aurora_large {
+        @include respond(desktop) {
+          display: block;
+          clear: both;
+          font-size: 110px;
+          line-height: 110px;
+          height: 110px;
+          position: relative;
+          //background: red;
+        }
+
+        @include respond(tablets) {
+          display: block;
+          clear: both;
+          font-size: 110px;
+          line-height: 110px;
+          height: 110px;
+          position: relative;
+          //background: red;
+        }
+
+        @include respond(portrait-tablets) {
+          display: block;
+          clear: both;
+          font-size: 90px;
+          line-height: 90px;
+          height: 90px;
+          position: relative;
+          //background: red;
+        }
+
+        @include respond(desktop) {
+          .trade {
+            font-size: 40px;
+            line-height: 110px;
+            height: 102px;
+            top: 8px;
+            position: absolute;
+            display: inline-block;
+            //background: green;
+          }
+        }
+
+        @include respond(tablets) {
+          .trade {
+            font-size: 40px;
+            line-height: 110px;
+            height: 102px;
+            top: 8px;
+            position: absolute;
+            display: inline-block;
+            //background: green;
+          }
+        }
+
+        @include respond(portrait-tablets) {
+          .trade {
+            font-size: 30px;
+            line-height: 90px;
+            height: 82px;
+            top: 8px;
+            position: absolute;
+            display: inline-block;
+            //background: green;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------ Custom Hero Banner Work for 3D Banner
+#{$slide_3} {
+  .widget {
+    width: 370px;
+    //background: aqua;
+
+    @include respond(tablets) {
+      width: 360px;
+    }
+
+    //Headline
+    h2 {
+      font-size: 40px;
+      line-height: 45px;
+      color: $body-font-color;
+      text-shadow: none;
+
+      @include respond(tablets) {
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      @include respond(portrait-tablets) {
+        color: $white;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      @include respond(all-phones) {
+        font-size: 28px;
+        line-height: 34px;
+        color: $body-font-color !important;
+        text-shadow: none;
+      }
+    }
+
+    //Subhead
+    p {
+      color: $IGTMediumBlue;
+      text-shadow: none;
+
+
+      @include respond(portrait) {}
+
+      @include respond(portrait-tablets) {
+        color: $white;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      @include respond(all-phones) { color: $body-font-color; }
+    }
+
+    //Button
+    .btn {
+      background-color: $IGTDarkOrange;
+
+      a { color: $white; }
+
+      @include respond(portrait) {}
+
+      @include respond(portrait-tablets) {
+        background-color: $white;
+
+        a { color: $body-font-color; }
+      }
+
+      @include respond(all-phones) {
+        background-color: $white;
+
+        a { color: $body-font-color; }
+      }
+    }
+  }
+
+  //Reposition Graphic on Portrait Tablets
+  @include respond(portrait-tablets) {
+    .non_mobile_img {
+      background-position: right top !important;
+      background-size: inherit;
+    }
+  }
+}
+
+#{$slide_3_mobile} {
+  @include respond(all-phones) {
+    h2 {
+      color: $body-font-color !important;
+      text-shadow: none;
+      font-size: 21px;
+      line-height: 27px;
+      width: 240px;
+    }
+  }
+}

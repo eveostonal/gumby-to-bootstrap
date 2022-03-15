@@ -1,0 +1,103 @@
+[data-target="video_header"],
+.homepage_carousel {
+  h2 {
+   font-size: 60px !important;
+   line-height: 65px !important;
+
+    @include respond(all-phones) {
+      font-size: 27px !important;
+      line-height: 32px !important;
+    }
+
+    @include respond(portrait-tablets) {
+      font-size: 30px !important;
+      line-height: 35px !important;
+    }
+
+    @include respond(tablets) {
+      font-size: 30px !important;
+      line-height: 35px !important;
+    }
+  }
+   
+  p {
+   font-size: 16px !important;
+   line-height: 21px !important;
+
+    @include respond(all-phones) {
+      font-size: 14px !important;
+      line-height: 19px !important;
+    }
+
+    @include respond(portrait-tablets) {
+      font-size: 14px !important;
+      line-height: 19px !important;
+    }
+
+    @include respond(tablets) {
+      font-size: 14px !important;
+      line-height: 19px !important;
+    }
+  }
+}
+
+.homepage_secondary_carousel {
+  h3 {
+    font-size: 20px !important;
+    line-height: 25px !important;
+  }
+   
+  p {
+   font-size: 14px !important;
+   line-height: 19px !important;
+  }
+}
+
+.owl-dots {
+  &.disabled { display: none !important; }
+  
+  .owl-dot {
+    display: inline-block;
+    font: normal normal normal 12px/1 FontAwesome !important;
+    text-rendering: auto;
+    border: none;
+    padding: 0;
+    margin: 0 3px 0 0;
+    background: none;
+    color: $IGTLightGrey;
+    outline: none;
+    cursor: pointer;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-appearance: none;
+    
+    &:before { content: $fa-var-circle-o; }
+    &:last-child { margin: 0; }
+    span { display: none !important; }
+  }
+  
+  .owl-dot.active {      
+    &:before { content: $fa-var-circle; }
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 1000 ms;
+  animation-duration: 1000 ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}  
+
+.owl-animated-out { z-index: 1; }
+.owl-animated-in { z-index: 0; }
+
+.fadeOut  {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}  
+
+@keyframes fadeOut  {
+  0% { opacity : 1; }  
+  100% { opacity : 0; }
+}

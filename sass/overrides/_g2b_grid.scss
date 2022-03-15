@@ -1,0 +1,49 @@
+.one{@extend .col-md-1;}
+.two{@extend .col-md-2;}
+.three{@extend .col-md-3;}
+.four{@extend .col-md-4;}
+.five{@extend .col-md-5;}
+.six{@extend .col-md-6;}
+.eight{@extend .col-md-8;}
+.seven{@extend .col-md-7;}
+.nine{@extend .col-md-9;}
+.ten{@extend .col-md-10;}
+.eleven{@extend .col-md-11;}
+.twelve{@extend .col-md-12;}
+
+span.btn.medium.default,
+p.btn.medium.default{
+    @extend .btn;
+    @extend .btn-primary;
+    background-color: $IGTDarkOrange;
+    border-color: $IGTDarkOrange; 
+}
+
+span.btn.medium.default>a,
+p.btn.medium.default>a{
+    color: white;
+} 
+
+span.btn.medium.secondary{
+    @extend .btn;
+    @extend .btn-secondary;
+    background-color: $IGTMediumBlue;
+    border-color: $IGTMediumBlue;
+}
+
+span.btn.medium.secondary>a{
+    color: white;
+}
+
+a.btn.btn-light.btn-sm{
+    @extend .btn;
+    @extend .btn-light;
+}
+
+img{
+    @extend .img-fluid;
+}
+
+.row_full{
+    @extend .row;
+}

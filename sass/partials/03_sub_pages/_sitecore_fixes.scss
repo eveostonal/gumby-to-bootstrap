@@ -1,0 +1,462 @@
+[data-panel="body"] {
+  padding: 0 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+// --------------- fix for nested rows ... that should not be nested by SitCore :)
+
+  .page-content > [data-panel="body"] {
+		padding-right: 0;
+	  padding-left: 0;
+  }
+
+  .row > [data-panel="body"] {
+		padding-right: 0;
+	  padding-left: 0;
+  }
+}
+
+
+// --------------- stock-information/interactive-chart
+
+.main_wrapper > .content > [data-panel="body"] > .row > [data-panel="body"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+[data-target="widget-stock"] {
+  display: block;
+  margin: 30px 0 30px 0;
+}
+
+
+[data-source="visual-list-table"] > iframe {
+	width: 100% !important;
+// --------------- height: auto !important;
+
+	html > .no_background {
+
+	}
+}
+
+// --------------- Visual List
+
+[data-source="visual-list-table"] .visual_list .expansion_list li {
+	padding: 0;
+	min-height: auto;
+	// padding: 20px;
+	// min-height: 170px;
+	// Changed by BW 11.12.15 to tighted up teh spacing on Game Search
+	border: 1px solid #eaeaea;
+	cursor: pointer;
+}
+
+[data-source="visual-list-table"] .visual_list .expansion_list .expansion_item {
+	//margin-top: 0;
+	padding: 0;
+}
+
+
+// --------------- forms in modals - select
+
+.picker {
+	border: none;
+}
+
+.mktoForm .mktoOffset {
+	display: none;
+}
+
+.modal.active {
+	font-weight: normal;
+
+	.ten.columns {
+		text-align: left;
+
+		h2 {
+			font-size: 40px;
+		}
+	}
+}
+
+// New Lottery Survey Modal - not limited to lottery...
+
+.content.lottery_survey {
+	top: 15%;
+	min-height: 600px !important;
+
+	@include respond(all-phones) {
+		min-height: 50% !important;
+	}
+}
+
+.lottery_survey {
+	font-weight: normal;
+	//top: 10%;
+	top: 15% !important;
+
+	.ten.columns {
+		text-align: left;
+		margin-left: 0;
+		width: 100%;
+
+		h2 {
+			//font-size: 40px;
+			//padding-top: 0;
+		}
+	}
+}
+
+
+
+
+//-------------- Header Icons - Slideshow Related Fact
+
+[data-source="fact-img-icon"] .item_sub_copy {
+	text-align: center;
+
+	p {
+		line-height: 1.2em;
+	}
+}
+
+
+
+// --------------- Illustrated List Hack
+
+[data-target="illustrated-content"] {
+	display: inline-block;
+
+	[data-target="stagger-row"]:first-child {
+	  display: inline-block;
+
+	  .six.columns .options {
+		  margin-top: 20px;
+	  }
+	}
+}
+
+[data-target="illustrated-content"] > [data-target="stagger-row"] {
+	padding-right: 0;
+	padding-left: 0;
+
+	.row {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+// --------------- Mosaic
+
+//Found not to be needed. Causing poor spacing issues. (SP)
+//[data-target="mosaic-content"] {
+//	margin-top: 40px;
+//}
+
+[data-target="mosaic-content"] > [data-target="mosaic-row-2c"],
+[data-target="mosaic-content"] > [data-target="mosaic-row-3c"] {
+	margin-left: 0;
+	margin-right: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+[data-target="mosaic-content"] > [data-target="mosaic-row-2c"]{
+	@include respond(all-phones) {
+    margin-bottom: 0;
+    height: auto;
+  }
+}
+
+[data-target="mosaic-content"] > [data-target="mosaic-row-3c"] > [data-target="widget-stock"],
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .four,
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .eight {
+	margin: 0;
+	margin-left: 2.88462%;
+
+	// this was removing the cell btm margin -> &:first-child { margin: 0 !important; }
+
+	@include respond(all-phones) {
+    margin-left: 0 !important;
+  }
+}
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .eight .options {
+	@include respond(all-phones) {
+    position: relative !important;
+  }
+}
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .six.columns,
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve >.row > div:first-child {
+	@include respond(all-phones) {
+
+    .hr {
+	    display: none !important;
+    }
+  }
+
+  .twelve.columns > .row > .four .columns .media {
+		display: none !important;
+	}
+}
+
+// Hide all HRs
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row > .hr {
+	@include respond(all-phones) {
+		display: none !important;
+  }
+}
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve>.row .four > .hr {
+	@include respond(all-phones) {
+		display: none !important;
+	}
+}
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .options > p,
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .options > .text_link {
+	@include respond(all-phones) {
+    p {
+	    text-align: left;
+    }
+  }
+}
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve >.row > div:nth-child(1) {
+	@include respond(all-phones) {
+		height: 260px;
+		margin-bottom: 30px;
+	}
+}
+// all this css needs to be migrated into the partials....
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve >.row > div:first-child {
+	@include respond(all-phones) {
+		height: auto;
+		margin-bottom: 30px;
+	}
+}
+
+#ContentPlaceHolder1_main_0_templateb_0_blbRow > .eight.columns {
+	@include respond(all-phones) {
+    height: initial;
+  }
+}
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] {
+	@include respond(all-phones) {
+    margin-bottom: 10px;
+  }
+}
+
+//[data-target="mosaic-content"] > [data-target="mosaic-row-2c"]{ height: auto; }
+[data-target="mosaic-content"] > [data-target="mosaic-row-2c"] .component { margin-bottom: 30px; }
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .options a { display: inline-block !important; }
+
+
+// ---- Stock Ticker Fixs
+
+[data-target="mosaic-content"] [data-target="mosaic-row-2c"] .eight > .stock_ticker_container {
+	@include respond(all-phones) {
+		height: 100%;
+	}
+}
+
+
+// ----- video slide show fix
+
+#video-slideshow-nav {
+	display: none
+}
+
+[data-target="video-slideshow"] {
+	padding: 40px 0 0 0 !important;
+	display: none;
+	visibility: hidden;
+}
+
+[data-target="video-slideshow"] [data-row="utility"] {
+	height: 0 !important;
+}
+
+// --- related footer
+
+div.widget.row.slideshow_nav {
+	@include respond(all-phones) {
+    display: block !important;
+  }
+}
+
+// ---------- Accordion Row / Arrows ... targeting differnet styles needed.
+
+// http://edit.igtblue.com/global-hub/investor-relations/faqs
+
+.accordion .accordion_row p.btn a .fa {
+	background: $IGTBlue;
+}
+
+// http://edit.igtblue.com/en/global/location
+
+[data-target="country-language"] {
+	width: 100%;
+
+	.accordion .accordion_row p.btn a .fa {
+		background: inherit;
+	}
+}
+
+// --------------- Misc
+
+br {
+	display: inherit !important;
+}
+
+.content h3:first-child {
+	margin-top: 30px;
+  display: inline-block;
+}
+
+.divider > br {
+	display: none;
+}
+
+[data-bar="0"] > ul > li:first-child {
+	display: none !important;
+}
+
+[data-bar="0"] > ul > li:nth-child(2) {
+	&:before {
+		display: none !important;
+	}
+}
+
+// ----------- Hide the home page bread crumb
+
+.breadcrumb_off > .sub_nav_container,
+.breadcrumb_off > .content > #HeaderCarousel1_pnlCarousel > .header-carousel > .component > .slideshow_nav {
+	display: none !important;
+}
+
+// ---------- Email Alert form .. tables are evil :)
+
+iframe.emailSignup,
+iframe.emailSignup[scrolling='no'] {
+	overflow: hidden;
+	width: 100% !important;
+
+	html,
+	body {
+		overflow: hidden;
+	}
+
+	html,
+	body,
+	.HeaderColor,
+	.ContentBackgroundColor {
+		width: 100% !important;
+	}
+
+	img,
+	.pageTitle,
+	.ccbnTxt {
+		display: none !important;
+	}
+
+
+	.ccbnTxt,
+	.ccbnLabel {
+		font-family: Arial,Helvetica,sans-serif;
+	  font-weight: 400;
+	  font-size: 16px;
+	  font-size: 1rem;
+	  margin-bottom: 30px;
+	  line-height: 1.625em;
+	}
+
+	.ccbnInput {
+		margin-bottom: 30px;
+		height: 36px;
+		display: block;
+	}
+
+	.ccbnInput > input#control_AlertEmail {
+		height: 35.85532px;
+	  line-height: 33.85532px;
+	  font-size: 16px;
+	  font-size: 1rem;
+	  -moz-border-radius: 7px;
+	  -webkit-border-radius: 7px;
+	  border-radius: 7px;
+	  position: relative;
+	  padding: 0 10px;
+	  border: 1px solid #9a9a9a;
+	  background: #fff;
+	  color: #6e6e6e;
+  }
+
+  .ccbnButton {
+	  background: #fadc5c;
+	  color: #0c51a1;
+	  font-size: 1rem;
+	  height: 35.85532px;
+	  line-height: 35.85532px;
+	  display: inline-block;
+	  width: auto;
+	  -webkit-appearance: none;
+	  text-align: center;
+	  -moz-border-radius: 7px;
+	  -webkit-border-radius: 7px;
+	  border-radius: 7px;
+	  cursor: pointer !important;
+	  position: relative;
+	  border: none;
+	  padding: 0 20px 0 20px;
+	}
+}
+
+#control_AlertEmail {
+	height: 35.85532px;
+  line-height: 33.85532px;
+  font-size: 16px;
+  font-size: 1rem;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  position: relative;
+  padding: 0 10px;
+  border: 1px solid #9a9a9a;
+  background: #fff;
+  color: #6e6e6e;
+}
+
+.ccbnButton {
+  background: #fadc5c;
+  color: #0c51a1;
+  font-size: 1rem;
+  height: 35.85532px;
+  line-height: 35.85532px;
+  display: inline-block;
+  width: auto;
+  -webkit-appearance: none;
+  text-align: center;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  cursor: pointer !important;
+  position: relative;
+  border: none;
+  padding: 0 20px 0 20px;
+}
+
+//---  Press Releases
+
+#ContentPlaceHolder1_main_1_lblRelease > center > b { font-weight: bold; }
+
+center > b,
+p > b {
+	font-weight: bold;
+}
+
+

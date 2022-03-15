@@ -1,0 +1,193 @@
+// --------------------------- PROGRAM STATUS
+
+.program_show {
+	width: 100%;
+
+	h3 {
+  	//@extend %detials_header_row_default_h3;
+	}
+
+	table.table_data_grid {
+    width: 100%;
+
+    caption {
+  		display: none;
+  		padding: 0 0 30px 0;
+  		font-size: 18px;
+  	}
+
+    th.program_cell_header {
+      @extend %detials_header_row_default;
+    }
+
+    td.program_cell_data {
+      margin: 0;
+      padding: 10px 0 10px 10px;
+      font-weight: normal;
+      // font-size: 12px;
+      //color: #eaeaea;
+
+      > a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        cursor: pointer;
+
+        span.search_term {
+          text-decoration: none !important;
+          cursor: pointer;
+        }
+      }
+
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      span.table_data_grid_status_act {
+        color: $status_active;
+        // font-size: 12px
+      }
+
+      span.table_data_grid_status_obs {
+        color: $status_obsolete;
+        text-align: center;
+        // font-size: 12px
+      }
+
+      .selected_jurisdiction {
+        color: $IGTLightGreyMedDark;
+        font-size: 10px;
+        line-height: 10px;
+        //background-color: #444
+      }
+
+      .unselected_jurisdiction {
+        color: $IGTGrey;
+        // font-weight: bold;
+        line-height: 10px;
+        //background-color: $IGTLightGreyMedDark;
+        //font-size: 8px
+      }
+    }
+
+    td.program_cell_data.last {
+      color: $IGTTransparent;
+    }
+
+    th:nth-child(1) {
+      //padding: 0 0 0 10px;
+      //@extend %cell_space_default
+    }
+  }
+}
+
+
+
+
+// ----------
+.program_status_wrapper {
+  table.table_data_grid {
+    width: 100%;
+
+    caption {
+  		display: none;
+  		padding: 0 0 30px 0;
+  		font-size: 18px;
+  	}
+
+    th.program_cell_header {
+      @extend %detials_header_row_default;
+    }
+
+    td.program_cell_data {
+      margin: 0;
+      padding: 10px 0 10px 10px;
+      font-weight: normal;
+      // font-size: 12px;
+      // color: #eaeaea;
+
+      > a {
+        margin: 0;
+        padding: 0;
+        color: $IGTLightGreyMedDark;
+        text-decoration: none;
+        cursor: default;
+
+        span.search_term {
+          text-decoration: none !important;
+          font-weight: normal !important;
+        }
+      }
+
+      a:hover {
+        text-decoration: none;
+        cursor: default;
+      }
+
+      span.table_data_grid_status_act {
+        color: $status_active;
+        // font-size: 12px
+      }
+
+      span.table_data_grid_status_obs {
+        color: $status_obsolete;
+        text-align: center;
+        // font-size: 12px
+      }
+
+      .selected_jurisdiction {
+        color: $IGTLightGreyMedDark;
+        font-size: 10px;
+        line-height: 10px;
+        //background-color: #444
+      }
+
+      .unselected_jurisdiction {
+        color: $IGTGrey;
+        //// font-weight: bold;
+        line-height: 10px;
+        //background-color: $IGTLightGreyMedDark;
+        //font-size: 8px
+      }
+    }
+
+    td.program_cell_data.last {
+      color: $IGTTransparent;
+    }
+
+    th:nth-child(1) {
+      padding: 0 0 0 10px;
+      //@extend %cell_space_default
+    }
+  }
+}
+
+.replacement_programs_cell_data {
+  color: $body-font-color;
+
+  .selected_jurisdiction {
+    color: $IGTLightGreyMedDark;
+  }
+
+  &.cell-1,
+  &.cell-5 {
+    color: $body-font-color;
+  }
+}
+
+.selected_jurisdiction {
+	font-size: 10px;
+	line-height: 10px;
+	//background-color: #ffffcc;
+	//font-weight: bold
+}
+
+.unselected_jurisdiction {
+	color: $body-font-color;
+	font-size: 10px;
+	line-height: 10px;
+	//background-color: $IGTLightGreyMedDark;
+	//font-weight: bold
+}
+

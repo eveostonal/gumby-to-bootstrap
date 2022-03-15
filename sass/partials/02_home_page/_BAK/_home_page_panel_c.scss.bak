@@ -1,0 +1,417 @@
+// -----------------------------------------------------  PANEL 2 - News
+
+[data-target="static_panel_slideshow"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $IGTBackgroundGrey;
+
+  // Below is for inline style images
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  // extend has to be on the bottom
+  @extend %ie_8_imageScale_fix;
+
+  @include respond(all-phones) {
+    height: auto;
+    width: 100%;
+    background: $white;
+    padding: 0;
+  }
+
+  .header_title_h1 {
+    display: block;
+    margin: 0 0 30px 0;
+    padding: 0;
+    color: $IGTMediumBlue;
+    font-size: 60px; //was 72px
+    line-height: 70px;
+
+    @include respond(all-phones) {
+      display: block;
+      padding: 0;
+      margin: 0 0 10px 0;
+      font-size: 36px;
+    }
+
+    //@include respond(portrait-tablets) { margin: 70px 0 0 0; }
+    //Found that 70px wasn't needed on these tablets.
+    @include respond(portrait-tablets) { margin: 0; }
+
+  } // ----- header_title_h1 end
+
+  .header_title {
+    display: block;
+    margin: 0 0 55px 0;
+    color: $IGTLightGreyDrk;
+    font-weight: normal;
+
+    @include respond(all-phones) {
+      margin: 0 0 20px 0;
+    }
+  } // ----- header_title end
+
+  .cycle-slideshow-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    @include respond(all-phones) {
+      height: auto;
+      width: 100%;
+      background: $white;
+      padding: 0;
+    }
+
+    @include respond(portrait-tablets) {
+      height: 85%;
+      width: 100%;
+    }
+
+    @include respond(tablets) {
+      height: 70%;
+      width: 80%;
+    }
+
+    @include respond(desktop) {
+      height: 72%;
+      width: 80%;
+      //top: 10%;
+    }
+
+    @include respond(large-screens) {
+      height: 72%;
+      width: 80%;
+    }
+  }
+
+  .cycle-slideshow {
+    width: 100%;
+    height: 95%;
+    margin: auto;
+    padding: 0;
+
+    @include respond(all-phones) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond(portrait-tablets) {
+      height: 100%;
+    }
+
+    @include respond(tablets) {
+      height: 100%;
+    }
+
+    .cycle-slide {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+
+      @include respond(all-phones) {
+        overflow: visible;
+        padding: 0 20px 0 20px;
+        width: 100% !important;
+        height: auto !important;
+      }
+    }// ----- cycle-slide end
+
+    .slide {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+
+      @include respond(all-phones) {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        // iOS Video jQuery Cycle fix
+        background: $white;
+      }
+
+      @include respond(portrait-tablets) {
+        width: 100%;
+        height: auto;
+        // iOS Video jQuery Cycle fix
+        background: $IGTBackgroundGrey;
+      }
+
+      .widget {
+        position: relative;
+        left: 0;
+        display: block;
+        text-align: left;
+        float: left;
+
+        @include respond(all-phones) {
+          float: none;
+          width: auto;
+          padding: 0;
+        }
+
+        @include respond(portrait-tablets) {
+          float: none;
+          width: 70%;
+          margin: 0 auto;
+          padding: 0 0 30px 0;
+        }
+
+        .date {
+          @extend %date_defaults;
+          text-align: left;
+
+          @include respond(all-phones) {
+            text-align: center;
+          }
+        } // ----- date end
+
+        .article {
+          margin: 0;
+          padding: 0;
+
+          p {
+            color: $body-font-color;
+            font-size: 16px;
+          }
+
+          .figure {
+            float: left;
+            margin: 7px 20px 0 0;
+            width: 170px;
+            line-height: 14px;
+
+            @include respond(all-phones) {
+              width: auto;
+              margin: 0;
+            }
+
+            img {
+              width: 100%;
+
+              @include respond(all-phones) {
+                width: 100%;
+                margin: 7px 20px 0 0;
+              }
+
+              padding: 0;
+              margin: 0;
+              padding-left: 0;
+              padding-right: 0;
+              @extend %img_defaults;
+            }
+          }
+        } // ---- article end
+
+        .header_title {
+          margin: 0;
+          font-weight: normal;
+          //font-weight: 300;
+          padding: 0 0 10px 0;
+          color: $body-font-color;
+          text-align: left;
+          font-size: 34px;
+
+          @include respond(all-phones) {
+            padding: 0 0 20px 0;
+            font-size: 22px;
+            text-align: center;
+          }
+
+          span.h2_sub { display: inherit; }
+
+        } // ----- header_title_h2 end
+
+        p {
+          display: inherit;
+          color: $body-font-color;
+          text-align: left;
+          margin-bottom: 10px;
+          @extend %panel_font_weight_default;
+
+          @include respond(all-phones) {
+            line-height: 24px;
+            color: $body-font-color;
+          }
+        }
+
+        .text_link {
+          position: relative;
+          //bottom: 0;
+          margin-bottom: 20px;
+          //display: block;
+
+          a {
+           @extend %cell_a_tag;
+          }
+
+          a:hover {
+            color: $body-link-hover-color;
+          }
+        } // ----- Button end
+
+        .centered {
+          max-width: 775px;
+          top: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          width: 65%;
+          height: 100%;
+
+          @include respond(all-phones) {
+            top: 1%;
+          }
+
+          @include respond(portrait-tablets) {
+            top: 1%;
+            width: 70%;
+          }
+
+          @include respond(tablets) {
+            width: 55%;
+          }
+
+          p {
+            display: inherit;
+            margin-bottom: $p_tag_bottom;
+            color: $body-font-color;
+            text-align: left;
+          }
+        }
+
+        .one {
+          margin: 0 5% 0 0;
+
+          @include respond(portrait-tablets) {
+            padding: 0 0 30px 0;
+          }
+        }
+
+        .two {
+          margin: 0;
+	      }
+
+      } // ----- widget End
+
+      .video {
+        text-align: center;
+        float: none;
+        padding: 0 0 30px 0;
+        display: table;
+
+        @include respond(all-phones) {
+          padding: 0 0 30px 0;
+          display: table;
+          height: 100%;
+          width: 88%;
+          margin: 0 auto;
+          //background: aqua;
+        }
+
+        @include respond(portrait-tablets) {
+          padding: 100px 0 30px 0;
+          margin-left: inherit;
+          //background: purple;
+        }
+      }// ----- component_video end
+
+      .ten.columns {
+        width: 65.70513%;
+        margin-left: 17.14744%;
+
+        @include respond(portrait-tablets) {
+          width: 74.27885%;
+          margin-left: auto;
+        }
+
+        @include respond(tablets) {
+          width: 82.85256%;
+          margin-left: 8.57372%;
+        }
+      }
+
+      .push_one {
+        margin-left: 8.57372%;
+
+        @include respond(portrait-tablets) {
+          margin-left: auto;
+        }
+      }
+
+      .push_two {
+        margin-left: 17.14744%;
+      }
+
+    } // ----- slide End
+
+    .push_top {
+      padding-top: 80px;
+
+      @include respond(portrait-tablets) {
+        padding-top: 40px;
+      }
+
+      @include respond(tablets) {
+        padding-top: 40px;
+      }
+    }
+  } // --- cycle-slideshow end
+
+  img.non_mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    //background: url(../images/hm_pg_panel_0.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+    padding-top: 0;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+} // ----- .component.static_panel_slideshow end
+
+// News Panel Video
+
+[data-panel="news"] {
+	display: block;
+
+	@include respond(all-phones) {
+    padding-top: 15px;
+    
+		.container {
+			height: auto !important;
+
+			.component {
+				height: auto !important;
+
+				.cycle-slideshow-wrapper {
+					height: auto !important;
+
+					.cycle-slide-active {
+						height: auto !important;
+					}
+				}
+			}
+
+			.slideshow_nav {
+				position: relative !important;
+			}
+		}
+	}
+}

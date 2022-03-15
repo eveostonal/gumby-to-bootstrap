@@ -1,0 +1,1348 @@
+//----- IGTDS-207 - See visual list table (template G)
+
+// 2016 Catalog View Edits
+#search-views1 {
+
+  ul.expansion_list {
+
+    //THREE - 22.83654%
+    //FOUR - 31.41026%
+    //SIX - 48.55769%
+
+    @media only screen and (min-width: 100px) and (max-width: 499px) {
+      li {
+        width: 100%;
+        //background: red;
+        min-height: 270px;
+
+        &:nth-child(1n+1) { margin-left: 0; }
+      }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 669px) {
+      li {
+        width: 48.55769%;
+        //background: pink;
+        min-height: 270px;
+
+        &:nth-child(2n+1) { margin-left: 0; }
+      }
+    }
+
+
+    @media only screen and (min-width: 670px) and (max-width: 1080px) {
+      li {
+        width: 31.41026%;
+        //background: aqua;
+        min-height: 290px;
+
+        &:nth-child(3n+1) { margin-left: 0; }
+      }
+    }
+
+    @media only screen and (min-width: 1081px) and (max-width: 5000px) {
+      li {
+        width: 22.83654%;
+        //background: yellow;
+        min-height: 270px;
+
+        &:nth-child(4n+1) { margin-left: 0; }
+      }
+    }
+
+    li {
+      img { padding: 7px 7px 0 7px; }
+
+      .game-info-set {
+        margin-top: 10px;
+
+        .game-title {
+          margin: 0 7px !important;
+          line-height: 20px !important;
+          font-size: 16px !important;
+        }
+
+        .game-data {
+          margin: 0 7px !important;
+          line-height: 14px !important;
+          font-size: 10px !important;
+        }
+      }
+    }
+  }
+}
+
+// Games List/Catalog views. Questions ask (SP).
+.game-info-set,
+.two > .game-info-set,
+.ten > .game-info-set {
+  position: relative;
+
+  //for the game library catalog (list and catalog) (SP)
+  .title {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    padding: 0 !important;
+    margin: 0 0 5px 0 !important;
+  }
+
+  .game-title {
+    padding: 10px 0 5px 0 !important;
+    margin: 0 !important;
+  }
+
+  .game-data { color: $IGTLightGreyMedDark; }
+
+  .flag-ddi a {
+    height: auto !important;
+    padding: 5px 10px !important;
+    display: table;
+
+    span {
+      display: table-cell;
+      height: auto;
+      line-height: 16px;
+    }
+  }
+
+  .game-data { margin: 0 !important; }
+  .game-link {
+    padding: 20px 0 0 0 !important;
+    a { color: $IGTBlue; }
+  }
+
+  .game-data-additional {
+    font-size: 12px;
+    line-height: 16px !important;
+    color: $IGTLightGreyMedDark;
+    padding: 10px 0  0 0;
+  }
+
+  @include respond(all-phones) {
+    .title,
+    .game-data,
+    .game-link,
+    .game-data-additional {
+      text-align: center !important;
+    }
+  }
+}
+
+.two > .game-info-set {
+  @include respond(portrait-tablets) {
+    .flag-h5g {
+      float: none !important;
+      display: block !important;
+      clear: both !important;
+      margin: 0 auto !important;
+      position: relative;
+      top: 10px;
+    }
+  }
+}
+
+.game-list-catalog {
+
+  li:hover {
+
+    img {
+      position: relative;
+
+      &:before {
+        width: 100%;
+        height: 100%;
+        background: gray;
+      }
+    }
+  }
+}
+
+//--END Games Catalog/List View (SP)
+
+[data-source="visual-list-table"] {
+  margin-left: 0;
+  height: auto;
+
+  .hr {
+    display: none;
+
+    @include respond(all-phones) {
+      border-bottom: 1px solid $IGTLightGrey;
+      height: 1px;
+      display: block;
+      width: 100%;
+      margin: 30px 0 30px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px; // Gumby Over-ride
+  }
+
+// --------------------------------------------- Options - Visual List
+  .visual_list {
+    width: 100%;
+    height: inherit;
+    margin-bottom: 0;
+
+    @include respond(all-phones) {
+      margin-bottom: 40px;
+    }
+
+    [data-source="vl-results"] {
+      display: table;
+      margin-bottom: 30px;
+      width: 100%;
+      height: auto;
+
+      li {
+        //margin-top: 60px;
+        //padding-bottom: 0;
+        //padding: 20px 0;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        display: table;
+
+        @include respond(all-phones) {
+          margin-bottom: 0;
+        }
+
+        .two.columns {
+          min-height: intrinsic;
+        }
+
+        .image {
+          text-align: center;
+          min-height: intrinsic;
+          margin-bottom: 0 !important;
+        }
+
+        a {
+          display: block;
+          opacity: 1.0;
+          //margin: 0 0 20px 0;
+          margin: 0;
+          padding: 0;
+          height: auto;
+          vertical-align: top;
+          color: $white;
+          //color: $header-font-color;
+
+          @include respond(all-phones) {
+            width: 100%;
+          }
+
+          img {
+            padding: 0;
+            width: 100%;
+            height: auto;
+
+            @include respond(all-phones) {
+              max-height: 140px;
+              width: 148px;
+              margin: 0 auto;
+            }
+          }
+
+          &:hover {
+            //color: $header-link-hover-color;
+            color: $white;
+
+            img {
+              opacity: .5;
+            }
+          }
+        }
+
+        .title {
+          margin: 0 0 10px 0;
+          padding: 0;
+          color: $primary-color;
+          font-size: 28px;
+          line-height: 24px;
+
+          a {
+            margin: 0;
+            padding: 0;
+            color: inherit;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+
+          a.text_link {
+            color: inherit;
+            display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        .date {
+          margin: 0 0 20px 0;
+          padding: 0;
+          text-align: left;
+          color: $IGTLightGreyMed;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+
+          a.text_link {
+            color: $IGTBlue;
+            display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        p {
+          margin-bottom: 10px;
+          line-height: 20px;
+
+          a.text_link {
+            color: $IGTBlue;
+            display: inline;
+            line-height: 20px;
+            font-size: 16px !important;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        p:last-child {
+	        margin: 0;
+        }
+
+        .text_link a {
+          color: $IGTBlue;
+          display: inline-block;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+        }
+
+        .addthis_igt {
+	        margin: 0;
+
+	        a {
+		        margin: 0;
+	        }
+        }
+
+        .date, .title, p {
+          text-align: left;
+        }
+      } // END li
+
+      li:first-child {
+        margin-top: 0;
+      }
+
+      li:last-child {
+        margin-bottom: 60px;
+      }
+
+      .expansion_link {
+	      border: none;
+      }
+
+      // Events page
+	    .expansion_link.scrollhere {
+	      margin-top: 60px;
+
+	      &:first-child {
+		      margin-top: 0;
+	      }
+
+	      @include respond(all-phones) {
+		    	margin-top: 20px;
+				}
+	    }
+
+      .two.columns {
+        //min-height: 140px;
+
+        p:last-child {
+	        margin: 0;
+        }
+      }
+
+      .two {
+        //min-height: 150px;
+
+        img:hover {
+        //cursor: auto;
+        }
+      }
+
+			.ten:hover .text_link a {
+        //color: $body-link-hover-color;
+      }
+
+      .full {
+				min-height: initial;
+				margin-top: 30px !important;
+				padding: 20px 20px 20px 0;
+
+				a {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+
+					.image {
+						background: url("../images/IGTLogo_grey_280x140.jpg") no-repeat;
+						//height: 100%;
+						height: 60px !important;
+						max-height: 75px;
+						//width: 12% !important;
+						padding-top: 0;
+						display: block;
+						background-position: center center;
+						background-size: cover;
+						// for mozilla FF
+						background-size: 100%;
+						background-repeat: no-repeat;
+						-moz-background-size: cover;
+						-webkit-background-size: contain;
+						//-webkit-background-size: cover;
+						-o-background-size: cover;
+						z-index: auto !important;
+					  //-ms-behavior: url(http://www.igt.com/polyfill/backgroundsize.htc);
+					  -ms-behavior: url(http://media.igt.com/pollyfills/backgroundsize.htc);
+					  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/IGTLogo_grey_280x140.jpg', sizingMethod='scale');
+					  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/IGTLogo_grey_280x140.jpg', sizingMethod='scale')";
+
+					  @include respond(portrait-tablets) {
+							//width: 12%;
+							//height: 100%;
+						}
+
+						@include respond(tablets) {
+							//width: 12%;
+							//height: 100%;
+						}
+					}
+
+					.ten.columns {
+						width: 80%;
+
+						.title {
+							font-size: 18px;
+						}
+					}
+				}
+      }
+    }
+
+    [data-source="vl-0"],
+    [data-source="vl-1"] {
+      @extend %data_source_default;
+      height: auto;
+
+      li {
+        @extend %data_source_li;
+        margin-top: 0;
+        text-align: center;
+        position: relative;
+
+        @include respond(all-phones) {
+          width: 100% !important;
+          margin-bottom: 20px;
+        }
+
+        img {
+          @extend %data_source_img;
+          display: block; //added to remove whitespace below image (SP)
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .title {
+          // BW chg: @extend %data_source_title;
+          @extend %vl_4col_data_source_title;
+          color: $primary-color;
+
+          a.text_link {
+            color: $IGTBlue;
+            font-size: 28px;
+            //display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        .date {
+          @extend %data_source_date;
+          color: $IGTLightGreyMed;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+
+          a.text_link {
+            color: $IGTBlue;
+            display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        p {
+          @extend %data_source_p;
+        }
+
+        p:last-child {
+	        margin-bottom: 20px;
+	        padding: 0 10px;
+        }
+        
+        .eight.columns p:last-child {
+          margin-bottom: 10px !important;
+          padding: 0 !important;
+        }
+
+        p.game-data {
+	        font-size: 12px;
+	        padding: 0 0 10px 0;
+        }
+
+        .text_link a {
+          color: $IGTBlue;
+          text-align: center;
+          font-size: 1rem;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+        }
+
+        .date, .title, p {
+          text-align: center;
+        }
+      } // END li
+
+      li:hover .text_link a {
+        //color: $body-link-hover-color;
+      }
+
+      li:last-child {
+        // FPO -- will use this later...
+      }
+    }
+
+    [data-source="vl-2"] {
+      @extend %data_source_default;
+      height: 307px;
+
+      li {
+        @extend %data_source_li;
+        display: table;
+        height: inherit !important;
+
+        @include respond(all-phones) {
+          width: 100% !important;
+          margin-bottom: 20px;
+        }
+
+        .wrapper {
+          display: table-cell;
+          vertical-align: middle;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          @include respond(all-phones) {
+            padding: 0 10px 0 10px;
+          }
+
+          @include respond(portrait-tablets) {
+            padding: 0 10px 0 10px;
+          }
+        }
+
+        img {
+          @extend %data_source_img;
+        }
+
+        .title {
+          @extend %data_source_title;
+          color: $white;
+
+          a.text_link {
+            color: $IGTBlue;
+            font-size: 28px;
+            //display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        .date {
+          @extend %data_source_date;
+          color: $white;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+
+          a.text_link {
+            color: $IGTBlue;
+            display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        p {
+          @extend %data_source_p;
+          color: $white;
+          text-align: left;
+        }
+
+        .text_link a {
+          color: $IGTBlue;
+          font-size: 1rem;
+          text-align: center;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+        }
+      } // END li
+
+      li:hover .text_link a {
+        //color: $body-link-hover-color;
+      }
+
+      .non_mobile_img {
+        @extend %ie_8_imageScale;
+        // extend has to be on the bottom
+        @extend %ie_8_imageScale_fix;
+      }
+
+      li:last-child {
+        // FPO -- will use this later...
+      }
+
+      [data-source="vl-more"] {
+        display: table;
+        width: 100%;
+        height: auto;
+        text-align: left;
+
+        div > img {
+          padding: 0;
+          margin: 0;
+
+          @include respond(all-phones) {
+            display: none !important;
+          }
+        }
+
+        .title {
+          margin: 0 0 5px 0;
+          padding: 0;
+          color: $white;
+          font-size: 28px;
+          line-height: 24px;
+          text-align: left;
+
+          @include respond(all-phones) {
+            margin: 0 0 20px 0;
+          }
+        }
+
+        p.date {
+          @extend %data_source_date;
+          color: $white;
+          text-align: left;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+
+          a.text_link {
+            color: $IGTBlue;
+            display: inline;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+        }
+
+        p {
+          margin-bottom: 10px;
+          color: $white;
+          line-height: 20px;
+          text-align: left;
+        }
+
+        .addthis_separator {
+          color: $white;
+        }
+
+        li p {
+          text-align: left
+        }
+
+        ul {
+          margin: 0 0 20px 18px;
+          line-height: 18px;
+          list-style-type: disc !important;
+          list-style-position: outside;
+
+          li {
+            color: $white;
+            display: list-item;
+            text-align: left;
+            //cursor: none;
+          }
+        }
+
+        .text_link a {
+          color: $IGTBlue;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+        }
+
+        .four.columns {
+          margin-left: 0;
+          padding: 0;
+
+          // update for the addition of Videos and images in Template G expansion four cloumn - BW
+          .options > .component {
+	          margin: 0 0 30px 0;
+
+	          span {
+		          margin: 0 0 15px;
+	          }
+
+	          p {
+		          margin: 0;
+		          padding: 0;
+	          }
+          }
+
+          .img_sidebar {
+	          margin: 0 0 30px 0;
+
+	          img {
+		          margin: 0 0 15px;
+	          }
+
+	          p {
+		          margin: 0;
+		          padding: 0;
+	          }
+          }
+        }
+
+        .btn {
+          margin-bottom: 10px;
+        }
+
+        .columns {
+          padding: 0 20px 0 0;
+
+          @include respond(all-phones) {
+            padding: 20px;
+          }
+        }
+      }
+    }
+
+    .expansion_list {
+
+      li {
+        cursor: pointer;
+      }
+
+      .two img:hover {
+        cursor: pointer;
+      }
+
+      .expansion_item {
+        //margin-top: 20px;
+      }
+
+      .expansion_link > .wrapper {
+        font-style: inherit;
+
+        .date, .title, li, p {
+          text-align: center;
+        }
+      }
+
+    }
+
+    .expansion_link {
+      margin-top: 0;
+
+      @include respond(all-phones) {
+        margin-top: 30px !important;
+        margin-bottom: 0;
+      }
+
+      .ten.columns {
+        font: inherit;
+
+        .date, .title, li, p {
+          text-align: left;
+        }
+      }
+
+    }
+
+    .expansion_item {
+      text-align: left !important;
+      height: auto;
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 20px;
+      cursor: auto !important;
+      display: inline-block;
+
+      @include respond(all-phones) {
+        margin-bottom: 40px !important;
+        margin-top: 0 !important;
+      }
+
+      > div {
+        height: auto;
+        width: 100%;
+      }
+
+      [data-source="vl-more"] {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        padding: 30px 20px 13px 20px;
+
+        // have title move to the top of the expansion box
+        .eight.columns > .title {
+	        margin: 0 0 15px 0 !important;
+        }
+      }
+
+      .four.columns {
+        margin-left: 0;
+        //padding: 0 0 20px 20px;
+        padding: 0;
+
+        @include respond(all-phones) {
+          //padding: 30px 20px 20px 20px;
+          display: none;
+          padding: 0 !important;
+          margin: 0 !important;
+          height: 1px;
+        }
+
+        img {
+          display: block;
+
+           @include respond(all-phones) {
+            display: none;
+          }
+        }
+
+        // -- update for the addition of Videos and images in Template G expansion four cloumn - BW
+        .options > .component {
+          margin: 0 0 30px 0;
+
+          span {
+	          margin: 0 0 10px;
+	          display: block;
+
+          }
+
+          p {
+	          margin:0 0 30px 0;
+	          padding: 0;
+          }
+        }
+
+        .img_sidebar {
+          margin: 0 0 30px 0;
+
+          img {
+	          margin: 0 0 10px;
+          }
+
+          p {
+	          margin: 0;
+	          padding: 0;
+          }
+        }
+      }
+
+      .five.columns {
+        margin-left: 0;
+
+        @include respond(all-phones) {
+          margin-top: 20px;
+        }
+      }
+
+      .seven.columns {
+        height: auto;
+        width: 51.55769%;
+        border: none;
+        min-height: intrinsic;
+
+        @include respond(all-phones) {
+          padding: 30px 20px 20px 20px;
+          margin-top: 30px !important;
+          padding: 0;
+        }
+
+        .date, .title, li, p {
+          text-align: left;
+        }
+
+        ul > li {
+					border: none;
+					padding: 0;
+					//min-height: intrinsic; not working in IE
+					min-height: 100%; //also suggested to use auto, yet not W3C valid, trying 100% first
+        }
+
+        p {
+          line-height: 30px;
+        }
+
+        .game-data {
+          margin-bottom: 20px;
+        }
+      }
+
+      .eight.columns {
+        height: auto;
+        width: 63.55769%;
+
+        > br {
+	        display: none;
+        }
+
+        ul > li {
+	        padding: 0;
+					border: none;
+					min-height: initial !important;
+
+					a {
+						color: $IGTBlue;
+
+						&:hover {
+							color: $header-link-hover-color;
+						}
+					}
+        }
+
+        ul > li:last-child {
+	        margin-bottom: 0;
+        }
+
+        @include respond(all-phones) {
+          // was -> padding: 30px 0 0 0;
+          padding: 10px 0 0 0;
+        }
+
+        .date, .title, li, p {
+          text-align: left;
+        }
+      }
+
+      .btn {
+        margin: 10px 0 10px 0;
+
+        a {
+          padding: 0 18px;
+        }
+      }
+
+      .title {
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: $primary-color;
+        font-size: 28px;
+        line-height: 24px;
+
+        a.text_link {
+          color: inherit;
+          display: inline;
+
+          &:hover {
+            color: $body-link-hover-color;
+          }
+        }
+      }
+
+      .game-link {
+        padding: 0;
+
+        a {
+          color: $IGTBlue;
+
+          &:hover {
+            color: $body-link-hover-color;
+          }
+        }
+
+        .text_link {
+          display: block !important;
+        }
+      }
+
+      ul {
+        margin: 4px 0px 5px 16px !important;
+        list-style: disc outside !important;
+      }
+
+      li {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        line-height: 26px;
+        height: auto;
+        cursor: auto !important;
+        display: list-item;
+      }
+
+      li:last-child {
+        margin-bottom: 20px;
+      }
+
+      .date, .title, li, p {
+        text-align: left;
+      }
+
+      p {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    .component {
+      overflow: hidden;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+
+      @include respond(all-phones) {
+        max-width: none;
+        width: 100% !important;
+      }
+
+      .centered {
+        margin-left: 0;
+      }
+
+      .cycle-carousel-wrap,
+      .cycle-slideshow {
+        width: 100%;
+        height: auto;
+      }
+
+      .slideshow_nav {
+        position: relative;
+        margin: 20px 0 0 0;
+        height: 48px;
+        overflow: hidden;
+
+        @include respond(all-phones) {
+          margin: 0;
+        }
+      }
+
+      .game_detail_pagination_01,
+      .game_detail_pagination_02,
+      .game_detail_pagination_03 {
+        display: block !important;
+        list-style: none !important;
+        position: absolute;
+        top: 14px;
+        right: 0;
+        left: 0;
+        margin: 0 auto !important;
+        width: 60%;
+        height: 25px;
+        text-align: center;
+
+        @include respond(all-phones) {
+          top: 10px;
+        }
+
+        li {
+          display: inline-block;
+          padding: 0 5px 0 5px;
+          width: auto;
+
+          @include respond(all-phones) {
+            width: auto !important;
+          }
+
+          a {
+            color: $IGTLightBlue;
+            font-size: 20px;
+          }
+
+          a:hover {
+            color: $IGTLightBlue;
+          }
+        }
+
+        li.cycle-pager-active a {
+          color: $IGTLightGrey;
+          content: "\f111";
+        }
+
+        li.cycle-pager-active a > i.fa:before {
+          color: $IGTLightGrey;
+          content: "\f111";
+        }
+
+        li.cycle-pager-active a:hover > i.fa:before {
+          color: $IGTYellow;
+          content: "\f111";
+        }
+      }
+
+    }
+
+    [data-source="related-img-lg"] {
+      margin: 0 0 0 0;
+      //width: 100%;
+
+      a {
+        width: 100%;
+        text-align: center;
+
+        p, .text_link {
+          text-align: center;
+        }
+
+        .text_link {
+          margin: 0;
+        }
+
+        img {
+          @include respond(all-phones) {
+            width: 230px;
+          }
+        }
+
+        .text_link > .fa {
+          margin: 0 5px 0 0;
+        }
+
+        &:hover img {
+          @include respond(all-phones) {
+            opacity: 100;
+          }
+        }
+      }
+
+      img {
+        @include respond(all-phones) {
+          width: 220px;
+          height: 130px;
+          margin: 0 auto !important;
+          padding: 0 0 10px 0;
+        }
+      }
+    }
+
+    [data-source="vl-more"] {
+      position: relative;
+
+      .close_window {
+        @include respond(all-phones) {
+          width: auto !important;
+          right: 5px;
+        }
+      }
+    }
+
+    [data-target="slideshow-related"] {
+
+    }
+
+    .close_window {
+      padding: 0 !important;
+      height: 22px;
+      width: 65.70513% !important;
+      position: absolute;
+      margin-top: 0 !important;
+      z-index: 10;
+      top: 0;
+      right: 0;
+
+      a {
+        position: relative;
+        top: 9px;
+        right: 5px;
+        float: right;
+        width: 24px;
+        height: 22px;
+
+        i.fa {
+          color: $IGTBlue;
+          text-decoration: none;
+          font-size: 24px;
+        }
+
+        &:hover i.fa {
+          color: $body-link-hover-color;
+        }
+      }
+    }
+
+    // Need to figure out a better way to set height in DIV when its display"none"
+    // This is for the nested Cycle2 Carousel in the expansion boxes ... cycle cannot set height on display"none"
+    [data-cycle-fx="carousel"] {
+      min-height: 300px;
+
+      @include respond(all-phones) {
+        min-height: 165px;
+      }
+
+      @include respond(portrait-tablets) {
+        min-height: 240px;
+      }
+    }
+
+  }
+
+// ----- END .visual_list
+
+  .games_list > .expansion_list {
+    height: auto;
+
+    .expansion_link {
+      margin-bottom: 30px !important;
+      margin-top: 0 !important;
+    }
+  }
+
+  .games_list > ul.expansion_list > .expansion_link {
+    cursor: auto;
+  }
+
+} // END data-source="visual-list-table"
+
+// bw added - testing
+.games_list {
+  background: $white;
+}
+// --------------------------------------------- QUICK VIEW hover state
+
+.game-info-set {
+  z-index: 10;
+  cursor: pointer;
+
+  .game-link {
+    padding: 0;
+
+    .text_link {
+      display: block !important;
+    }
+  }
+}
+
+.quick_view:after,
+.quick_view:before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+
+  @include respond(all-phones) {
+    //height: 280px;
+    display: none;
+  }
+}
+
+.quick_view:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 175px;
+  background: rgba(255,255,255,0.4);
+  content:'\A';
+  cursor: pointer;
+
+  @include respond(all-phones) {
+    //height: 280px;
+    display: none;
+  }
+
+  @include respond(portrait-tablets) {
+    height: 157px;
+  }
+}
+
+.quick_view:before {
+  top: 25%;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 3px;
+  padding-right: 0.5em;
+  min-width: 140px;
+  width: 50%;
+  height: 30px;
+  border-radius: $button-radius;
+  background: $IGTMediumBlue;
+  color: $white;
+  //content:'\f067  QUICK VIEW';
+  content:'\f06e  View Game';
+  text-align: center;
+  font-family: FontAwesome;
+  cursor: pointer;
+  //content:attr(data-content);
+
+  @include respond(all-phones) {
+    display: none;
+    //height: top: 26%;
+  }
+
+  @include respond(portrait-tablets) {
+    top: 18%;
+  }
+}
+
+.quick_view:hover:after,
+.quick_view:hover:before {
+  opacity: 1;
+}
+
+// --------------------------------------------- for Touch Devices ... no hover state
+
+html.gumby-touch > body > form .main_wrapper .content .row .twelve .visual_list .expansion_list .quick_view:after,
+html.gumby-touch > body > form .main_wrapper .content .row .twelve .visual_list .expansion_list .quick_view:before {
+  display: none;
+}

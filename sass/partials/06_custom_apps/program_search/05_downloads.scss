@@ -1,0 +1,65 @@
+// --------------------------- DOWNLOADS
+
+.par_sheet_package_wrapper {
+  font-style: normal;
+
+  h3 {
+    //@extend %detials_header_row_default_h3
+  }
+
+  .par_sheet_package_container {
+    padding: 10px;
+    border: 1px solid #ddd;
+
+    .float_left {
+      float: left;
+      width: 42%;
+      text-align: left;
+
+      @include respond(all-phones) {
+		    float: none;
+		    width: auto;
+		  }
+
+      .module_wrapper {
+        font-style: normal;
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .par_without_path {
+        font-style: normal;
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }// --- float left end
+  } // -----
+
+    .float_right {
+      display: block;
+      float: right;
+      overflow: hidden;
+      margin: 0;
+      width: 48%;
+      height: auto;
+      text-align: left;
+
+      @include respond(all-phones) {
+		    float: none;
+		    width: auto;
+		  }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+// --------------

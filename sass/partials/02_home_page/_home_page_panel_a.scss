@@ -1,0 +1,114 @@
+// ----------------------------------------------------- PANEL 1 - Corporate Splash
+// -- Note, this panel is currently not in use (SP)
+
+[data-target="video_header"] {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 0;
+  line-height: 1em;
+  overflow: hidden;
+  
+  @include respond(all-phones) { min-height: 110px; }
+  
+  a {
+    display: block;
+    //position: relative;
+    //min-height: 100%;
+    cursor: pointer;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    
+    @include respond(all-phones) {
+      height: 110px;
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+    
+  .video_overlay {
+    background: rgba(141,200,232,0.92);;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center !important;
+    
+    h2 {
+      color: white;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      text-align: center !important;
+    }
+    
+    p {
+      color: #0c51a1;
+      margin-bottom: 0;
+      text-align: center !important;
+      
+      @include respond(portrait-tablets) { display: none; }
+      @include respond(all-phones) { display: none; }
+            
+      &.btn {
+        margin-top: 15px;
+        height: 35.85532px;
+        line-height: 35.85532px;
+        
+        @include respond(portrait-tablets) {
+          height: 26px;
+          line-height: 26px 2;
+          display: inline-block;
+        }
+
+        @include respond(all-phones) {
+          height: 26px;
+          line-height: 26px;
+          display: inline-block;
+        }
+        
+        span {
+          background: white;
+          color: #1b9ddb;
+          display: inline-block;
+          height: 35.85532px;
+          line-height: 35.85532px;
+          padding: 0 20px;
+
+          @include respond(portrait-tablets) {
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+          }
+          
+          @include respond(all-phones) {
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    
+    .video_overlay_wrapper { 
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .video_overlay_container {
+      display: table-cell;
+      height: 100%;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+}

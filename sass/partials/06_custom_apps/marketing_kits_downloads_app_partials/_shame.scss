@@ -1,0 +1,17 @@
+// ------------------------------------------------ IE9
+
+
+html.ie9 {
+  display: block;
+  
+  .facet_select_wrapper {
+    overflow-x: hidden;
+         
+    label {
+      margin-top: 7px !important;
+    }
+  }
+}  
+
+
+// ------------------------------------------------ IE8

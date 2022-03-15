@@ -1,0 +1,347 @@
+// ----------------------------------------------------- Mobile Only
+
+.gumby-touch > body > form > .main_wrapper.content > .panel {
+  overflow: hidden;
+  padding-top: 0;
+  display: block;
+}
+
+
+.gumby-touch > body > form > .main_wrapper.content > [data-panel="hero"],
+.gumby-touch > body > form > .main_wrapper.content > [data-panel="search"],
+.gumby-touch > body > form > .main_wrapper.content > [data-panel="information"],
+.gumby-touch > body > form > .main_wrapper.content > [data-panel="product"] {
+	padding-top: 30px;
+}
+
+// ----------------------------------------------------- Slider Arrow Navigation // 01, 02, 03
+
+.gumby-touch > body > form > .main_wrapper.content > .slideshow_nav {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 20px 0;
+  width: 100%;
+  height: 65px;
+  text-align: center;  
+
+	.nav_left {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 17px;
+    height: 48px;
+    
+    a#prev_01, 
+    a#prev_02,
+    a#prev_03 {
+      display: block; 
+      float: left;
+      margin: 0;
+      color: $IGTLightGrey;
+      font-size: 48px;     
+      
+      &:hover {
+        color: $body-link-hover-color;
+      }
+    }
+  } // --- nav_left end
+	
+	.slide_pagination_01, 
+	.slide_pagination_02,
+	.slide_pagination_03 {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    
+          
+    li {
+      display: inline-block;
+      float: none;
+      padding: 0 5px 0 5px;
+      
+      a {
+        color: $IGTLightBlue;
+        font-size: 20px;
+      }
+      
+      a:hover {
+        color: $IGTLightBlue;
+      } 
+    }
+    
+    li.cycle-pager-active a {            
+        color: $IGTLightGrey;
+        content: "\f111";
+    }
+    
+    li.cycle-pager-active a > i.fa:before {
+      color: $IGTLightGrey;
+      content: "\f111";
+    }
+    
+    li.cycle-pager-active a:hover > i.fa:before {
+      color: $IGTYellow;
+      content: "\f111";
+    }
+  }
+	
+	.nav_right {
+    display: block;
+    float: right;
+    margin: 0;
+    width: 17px;
+    height: 48px;
+    
+    a#next_01, 
+    a#next_02,
+    a#next_03 {
+      display: block; 
+      float: right;
+      margin: 0;
+      color: $IGTLightGrey;
+      font-size: 48px;     
+      
+      &:hover {
+        color: $body-link-hover-color;
+      }
+    }        
+  } // --- nav_right end
+}
+
+
+// ----------------------------------------------------- Home Page Only Mobile Gumby-Drawer accordions
+
+.accordion,
+.accordian { 
+  display: block;
+  
+  @include respond(portrait-tablets) {
+    display: block;
+  }
+  
+  @include respond(tablets) {
+    display: block;
+  }
+  
+  @include respond(desktop) {
+    display: none;
+  }
+  
+  @include respond(large-screens) {
+    display: none;
+  }
+    
+  .accordion_row,
+  .accordian_row  {
+    display: block;
+    margin: 0 0 4px 0;
+    padding: 0 20px;
+    background: $IGTLightGreyDrk;
+    
+    p.btn {
+      display: inline-block;
+      margin: 0;
+      padding: 0 !important;
+      width: 100%;
+      height: 50px !important;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      background: $IGTLightGreyDrk;
+      text-align: left;
+      font-size: 18px !important;
+      line-height: 45px !important;
+      -webkit-appearance: none;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      
+      a { 
+				padding: 5px 0 0 0;
+				color: $white;
+				font-size: 18px;
+        
+        span {
+          position: relative;
+          top: 1px;
+          float: right;
+          color: $IGTLightGrey;
+          font-size: 40px;
+        }
+      }
+      
+      a.active > span.fa:before {
+        color: $IGTLightGrey;
+        content: "\f106";
+      }
+    }
+    
+    .row {
+      display: block;
+      
+      .columns {
+        display: block;
+      
+        .drawer {
+          position: relative;
+          overflow: hidden;      
+          max-height: 0;
+          width: 100%;
+          background: $IGTLightGreyDrk;
+          background: $IGTLightGreyDrk;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          text-align: left;
+          -webkit-transition-duration: 0.3s;
+          -moz-transition-duration: 0.3s;
+          -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          
+          img {
+            @extend %img_defaults;
+            margin: 0 0 20px 0;
+            padding-right: 0;
+            padding-left: 0;          
+            width: 100%;
+          }
+          
+          p {
+            margin: 0;
+            padding: 0 0 30px 0;
+						font-size: 18px;
+						line-height: 24px;
+          }
+          
+          .btn { 
+            @extend %button-radius-var;         
+            display: inline-block;
+            margin: 0 0 40px 0 !important;
+            padding: 0;
+            width: auto;
+            height: 45px !important;
+            background: $IGTLightBlue;
+            color: $IGTBlue;
+            text-align: center;
+            font-size: 18px !important;
+            line-height: 45px !important;
+            -webkit-appearance: none;       
+            
+            a {
+              color: $IGTBlue;
+            }
+          } // --- button end
+          
+          .btn:hover {
+            background: $IGTYellow;
+          }
+        } // ---- drawer end
+        
+        .drawer.active {
+          max-height: 800px;
+          height: auto;
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+          
+          div.btn {
+            margin: 0 0 20px;
+            width: 100%;
+          }      
+        }
+      }
+    } // ----- row end
+  }
+}
+
+// ----------------------------------------------------- PANEL 4 - Information
+
+.cycle-slideshow-wrapper {
+  @include respond(all-phones) {
+	  width: 100%;
+		height: auto;
+	}
+}
+  
+.gumby-no-touch > body > form > .main_wrapper > .content > .panel > div > .component > .cycle-slideshow {
+  //height: 100% !important;
+}
+
+.cycle-slide {
+ @include respond(all-phones) {
+    width: 100%;
+  	height: auto;	
+	}
+}
+  
+.component {
+  @include respond(all-phones) {
+    width: 100%;
+  	height: auto;
+  }
+}
+
+.widget {
+  @include respond(all-phones) {
+    display: block;
+    width: 100%;
+    //height: auto;
+    
+    img {
+  	  padding-right: 20px;
+  	  padding-left: 20px;
+  	  width: 100%;
+  	  height: auto;
+    }
+    
+    .icon_title {
+    display: block;
+    padding: 15px 0 20px 0;
+    width: 100%;
+    text-align: center;
+    
+    p {    
+      display: block;
+      margin-bottom: 3px;
+      width: 100%;
+			color: $IGTLightGreyDrk;
+      text-align: center;
+      font-weight: normal;      
+      font-size: 18px;
+      
+      .icon_title_sub {              
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 0 0 0 10px;
+        color: $IGTBlue;
+        font-weight: normal; 
+        font-size: 18px;
+      }
+    }     
+  }
+  }
+}
+
+.proceed_arrow {
+  @include respond(all-phones) {
+    left: -99999px;
+  }
+}
+
+[data-target="static_panel_slideshow"] .cycle-slideshow .push_top {
+  @include respond(all-phones) {
+    padding-top: 0 !important;
+  }
+}
+
+[data-target="half_height"] .center {		
+	@include respond(all-phones) {
+		position: relative !important;
+	}
+}
+

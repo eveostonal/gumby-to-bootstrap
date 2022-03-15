@@ -1,0 +1,674 @@
+[data-index="home"] header { background: $white; }
+
+header {
+  width: 100%;
+  height: 83px;
+  position: fixed;
+  background: $white;
+  border-bottom: 1px solid $IGTLightestGrey;
+
+  @include respond(all-phones) {
+    background: $white !important;
+    height: 60px !important;
+  }
+
+  .logo {
+    position: absolute;
+    display: block;
+    top: 14px;
+    left: 20px;
+    width: 145px;
+    height: 55px;
+    background: url("#{$get-path-to-images}2015/logo-igt.png") no-repeat 0 0;
+    
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+      background: url("#{$get-path-to-images}2015/logo-igt@2x.png") no-repeat 0 0;
+      background-size: 145px 55px;
+    }
+
+    @include respond(all-phones) {
+      top: 10px;
+      left: 10px;
+      width: 105px;
+			height: 40px;
+			background-size: 105px 40px;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: auto !important;
+    }
+  }
+
+  .menu_btn_item {
+    height: 59px;
+    width: 80px;
+    display: block;
+    line-height: 59px;
+    text-align: center;
+    color: $IGTLightBlue;
+    position: absolute;
+    right: 0;
+    background-color: $white;
+    text-transform: uppercase;
+    z-index: 99999;
+
+    &.login_btn {
+	    right: 61px;
+	    //display: none;
+	  }
+	 
+	  &:hover { color: $IGTYellow; }
+
+    &.menu_btn .fa {
+      font-size: 34px;
+      position: absolute;
+      top: 14px;
+      left: 14px;
+    }
+  }
+
+  .main_navigation {
+    position: absolute;
+    display: block;
+    z-index: 500;
+    width: 80%;
+    top: 33px;
+    right: 20px;
+
+    @include respond(portrait-tablets) { width: 100%; }
+    @include respond(tablets) { width: 100%; }
+
+    ul.main_navigation_items {
+      font-size: 0;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      float: right;
+      text-align: right;
+
+      li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        float: left;
+        height: 50px;
+
+        &.search {
+	        color: $IGTMediumBlue;
+
+	        a {
+		        color: $IGTMediumBlue;
+		        &:hover { color: $IGTMediumBlue; }
+	        }
+        }
+
+        a {
+          display: block;
+          padding: 0 20px;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: $IGTMediumBlue;
+          text-decoration: none;
+          height: 50px;
+          line-height: 40px;
+          //font-weight: 700;
+          cursor: pointer;
+          @extend %verlag_book;
+
+          @include respond(portrait-tablets) { padding: 0 10px; }
+          @include respond(tablets) { padding: 0 15px; }
+
+          &.dropdown_active {
+            text-decoration: none;
+            color: $white;
+            background: $IGTMediumBlue !important;
+          }
+          
+          &.text_only {
+            cursor: default !important;
+            color: $IGTBlue !important;
+            background: none !important;
+          }
+          
+          &.text_only:hover {
+            cursor: default !important;            
+            color: $IGTBlue !important;
+          }
+
+          &.no_hover:hover,
+          &.nav_active.no_hover:hover,
+          &.nav_active.no_hover.dropdown_active:hover,
+          &.nav_active.no_hover.dropdown_active {
+            background: none !important;
+            color: $IGTMediumBlue;
+          }
+
+          &.nav_active.no_hover.dropdown_active,
+          &.nav_active { 
+            color: $IGTDarkOrange;
+          }
+          
+          &:hover.nav_active.no_hover.dropdown_active,
+          &:hover.nav_active {
+            color: $IGTMediumBlue;
+          }
+        }
+
+        &.search a {
+          @include respond(portrait-tablets) { padding: 0 0 0 10px; }
+          @include respond(tablets) { padding: 0 10px 0 15px; }
+        }
+
+        &.separator {
+          display: block;
+          height: 40px;
+          line-height: 40px;
+          width: 41px;
+          position: relative;
+          float: left;
+
+          @include respond(portrait-tablets) { width: 21px; }
+          @include respond(tablets) { width: 31px; }
+
+          span {
+            display: block;
+            height: 20px;
+            width: 1px;
+            //background: $white;
+            background: $IGTLighterGrey;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+
+            @include respond(portrait-tablets) { left: 10px; }
+            @include respond(tablets) { left: 15px; }
+          }
+        }
+      }
+      
+      //Added for new global search component
+      @include respond(all-phones) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+
+
+    .navigation_dropdown {
+      background: $IGTMediumBlue;
+      width: 800px;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      height: auto;
+      @extend %global_box_shadow;
+
+      @include respond(portrait-tablets) {
+        width: 100%;
+        right: -20px;
+      }
+
+      @include respond(tablets) {
+        width: 100%;
+        right: -20px;
+      }
+
+      .navigation_header {
+        padding: 20px 20px 0 20px;
+        position: relative;
+
+        .navigation_title {
+          color: $white;
+          font-size: 30px;
+          @extend %verlag_book;
+          margin: 15px 0 0 0;
+        }
+
+        .navigation_close { display: none; }
+      }
+
+      .navigation_content {
+        padding: 20px;
+        position: relative;
+        padding-bottom: 30px;
+
+        .navigation_callout {
+          color: $white;
+          padding-right: 20px;
+          float: left;
+          width: 321px;
+
+          @include respond(portrait-tablets) { width: 40%; }
+          @include respond(tablets) { width: 40%; }
+        }
+
+        .navigation_columns {
+          float: left;
+          width: 439px;
+          padding-left: 40px;
+
+          @include respond(portrait-tablets)  {
+            width: 60%;
+            padding-left: 20px;
+          }
+
+          @include respond(tablets) {
+            width: 60%;
+            padding-left: 20px ;
+          }
+
+          .navigation_column {
+            margin-bottom: 0;
+
+            &.column_1,
+            &.column_2,
+            &.column_3,
+            &.column_4,
+            &.column_5,
+            &.column_6 {
+              width: 50%;
+              float: left;
+
+              li {
+                line-height: 14px;
+                padding: 0 0 10px 0;
+
+                a {
+                  font-size: 14px;
+									color: $white;
+
+                  span {
+                    display: block;
+                    clear: both;
+                    font-size: 12px;
+                    text-transform: none;
+                    color: $IGTLightBlue;
+                    padding: 3px 0 0 0;
+                  }
+
+                  &:hover { color: $IGTLightBlue; }
+                }
+
+                &.nav_header { color: $white; }
+                &:last-child { padding-bottom: 0; }
+              }
+            }
+          }
+        }
+      }
+
+      &.many_columns {
+        //width: 1000px;
+        width: 880px;
+        height: auto;
+
+        @include respond(portrait-tablets) { width: 100%; }
+        @include respond(tablets) { width: 100%; }
+
+        .navigation_content {
+          height: 100%;
+
+          .navigation_columns {
+            width: 100%;
+            height: 100%;
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .navigation_column {
+              border-left: 1px solid rgba(255, 255, 255, .5);
+              height: 100%;
+
+              &:first-child { border-left: none; }
+
+              &.column_1,
+              &.column_2,
+              &.column_3,
+              &.column_4,
+              &.column_5,
+              &.column_6 {
+                //width: 16.6666666666667%;
+                width: auto;
+                max-width: 25%;
+                //float: left;
+                padding-left: 2%;
+                padding-right: 2%;
+                padding-bottom: 2%;
+
+                @include respond(portrait-tablets)  {
+                  font-size: 10px;
+                  padding-left: 2%;
+                  padding-right: 2%;
+                }
+
+                @include respond(tablets) {
+                  font-size: 10px;
+                  padding-left: 2%;
+                  padding-right: 2%;
+                }
+              }
+
+              &.column_1 { padding-left: 0; }
+
+              .nav_header {
+                color: $white;
+                text-transform: uppercase;
+                padding: 0 0 20px 0;
+                //font-weight: 700;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      // Temporarily on the lastline of subpage EO
+      &.many_columns[data-nav="Products and Services"]{
+						.navigation_content {
+							.navigation_columns {
+								.navigation_column {
+									&.column_1 {
+										width: 15% !important;
+									}
+									&.column_2 {
+										max-width: 25% !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.many_columns[data-nav="Support"] {
+				width: 1100px;
+			}
+
+    
+
+
+
+    //Removed due to new global search component. Moved hide to .main_navigation_items
+    //@include respond(all-phones) {
+    //  display: none;
+    //  visibility: hidden;
+    //}
+  
+}
+
+//Global Nav Search
+.navigation_search_dropdown {
+  background: $IGTLightestGrey;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  font-size: 0;
+  font-size: 16px; // had to add this since the a tag for some reason had no font-size available (SP)
+  @extend %global_box_shadow;
+  width: 700px;
+  z-index: 50;
+
+  //@include respond(tablets) { width: 445px; } NOT NEEDED W/ NEW SEARCH
+
+  @include respond(portrait-tablets) {
+    right: -20px;
+  }
+  
+  //Let's start to respond to mobile and small tablets
+  @media only screen and (min-width: 561px) and (max-width: 720px) {
+    width: 100%;  
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 560px) {
+   width: 100%;
+   position: fixed;
+   top: 60px;
+  }
+
+  .field {
+    font-size: 0;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    overflow: visible;
+    text-align: right;
+    
+    @media only screen and (min-width: 320px) and (max-width: 720px) {
+     text-align: left; 
+    }
+
+  	&:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -9px;
+      right: 20px;
+      border-left: 9px solid transparent;
+      border-bottom: 9px solid $IGTLightestGrey;
+      border-right: 9px solid transparent;
+
+      @include respond(tablets) { right: 10px; }
+      
+      @media only screen and (min-width: 320px) and (max-width: 560px) {
+        right: 136px;
+      }
+    }
+
+    .input {
+      width: 305px;
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 16px;
+      border: none;
+      vertical-align: bottom;
+      height: 36px;
+      line-height: 36px;
+
+      //@include respond(portrait-tablets) { width: 200px;}
+      //@include respond(tablets) { width: 300px; }
+      
+      @media only screen and (min-width: 561px) and (max-width: 720px) {
+        width: 37%;
+        margin: 0 2% 0 0;
+      }
+      
+      @media only screen and (min-width: 400px) and (max-width: 560px) {
+        width: 90%;
+        margin: 0 0 10px 0;
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 399px) {
+        width: 85%;
+        margin: 0 0 10px 0;
+      }
+    }
+    
+    .picker {
+      vertical-align: bottom;
+      height: 36px;
+      line-height: 36px;
+      margin: 0 10px 0 0;
+      width: 250px;
+      
+      &:after {
+        font-size: 16px;
+        margin-top: -18px;
+      }
+      
+      @media only screen and (min-width: 561px) and (max-width: 720px) {
+        width: 40%;
+        margin: 0 2% 0 0;
+      }
+      
+      @media only screen and (min-width: 400px) and (max-width: 560px) {
+        width: 58%;
+        margin: 0 3% 0 0;
+      }
+      
+      @media only screen and (min-width: 320px) and (max-width: 399px) {
+        width: 58%;
+        margin: 0 2% 0 0;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 16px;
+      vertical-align: bottom;
+      width: 60px;
+      height: 36px;
+      line-height: 36px;
+      
+      input {
+        @include border-radius(0px);
+      }
+      
+      @media only screen and (min-width: 561px) and (max-width: 720px) {
+        width: 10%;
+        margin: 0;
+      }
+      
+      @media only screen and (min-width: 400px) and (max-width: 560px) {
+        margin: 0;
+        width: 30%;        
+      }
+      
+      @media only screen and (min-width: 320px) and (max-width: 399px) {
+        margin: 0;
+        width: 28%;
+      }
+    }
+
+    .close {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      
+      @media only screen and (min-width: 320px) and (max-width: 720px) {
+        position: absolute;
+        right: 10px;
+        top: 14px;
+      }
+    }
+  }
+}
+
+//Global Search Dropdown (cleanup and move elsewhere (SP))
+.search_dropdown_results {
+  display: none;
+  visibility: hidden;
+  //  color: $IGTLightGrey;
+  //  padding: 10px 0 5px 0;
+  //  margin: 0;
+  //  list-style: none;
+  //  background: $IGTBackgroundGrey;
+  //  width: 380px;
+  //  position: absolute;
+  //  left: 20px;
+  //  top: 45px;
+  //  border: 1px solid $IGTLightestGrey;
+  //  @extend %global_box_shadow;
+  //  @include border-bottom-left-radius($button-radius);
+  //  @include border-bottom-right-radius($button-radius);
+  //
+  //  @include respond(portrait-tablets) { width: 180px; }
+  //  @include respond(tablets) { width: 280px; }
+  //
+  //  li {
+  //    margin: 0 0 5px 0;
+  //    padding: 0;
+  //    list-style: none;
+  //    display: block;
+  //    width: 100;
+  //    line-height: 15px;
+  //    height: 15px;
+  //
+  //    a {
+  //      display: block;
+  //      font-size: 12px;
+  //      color: $IGTBlue;
+  //      padding: 0 10px;
+  //      line-height: 20px;
+  //      height: 20px;
+  //      white-space: nowrap;
+  //      text-overflow: ellipsis;
+  //      overflow: hidden;
+  //      width: 100%;
+  //
+  //      &.result_item { color: $IGTBlue; }
+  //      .fa { margin: 0 5px; }
+  //
+  //      &:hover {
+  //        background: $IGTLightBlue;
+  //        color: $IGTBlue;
+  //      }
+  //    }
+  //  }
+  
+}
+
+.hp_pagination {
+  width: 16px;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  margin-top: -91px;
+
+  li {
+    padding: 0px;
+
+    a {
+      color: $IGTLighterGrey;
+      span { display: none; }
+      font-size: 17px;
+
+      &:hover { color: $IGTDarkYellow; }
+      &.pagi_active { color: $IGTLightBlue; }
+    }
+  }
+
+  @include respond(all-phones) { display: none; }
+  @include respond(portrait-tablets) { display: none; }
+}
+
+.user_header_controls {
+  position: fixed;
+  top: 7px;
+  right: 40px;
+  font-size: 12px;
+  color: #5d5d5d;
+  z-index: 999;
+  
+  @include respond(all-phones) {
+    //position: static;
+    display: none;
+  }
+  
+  .separator {
+    color: #e0e0e0;
+    display: inline-block;
+    padding: 0 5px;
+  }
+  
+  &#mobileMenu,
+  &#megamenu1_lvMegaMainMobile_welcomeMobile {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: $white; 
+		text-align: center;
+		width: 100%;
+    right: 0;
+    position: relative;
+    top: 0;
+    border-bottom: 1px solid $IGTLighterGrey;
+  }
+}

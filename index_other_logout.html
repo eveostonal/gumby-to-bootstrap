@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Logout if IGT.com</title>
+  <link rel="shortcut icon" href="data:image/jpeg;base64,AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////f/+78v/5sSJ/9GgYP/IlVT/07KN//Lp3f/////////////////////////////////////////////////u2Kr/6qwf//CSAP/RbwD/sF0A/5AwAP/BlFD/yaVx//n28P////////////////////////////////9jivX/KFLh/1h94v9/l8n/up1k//C8T//HgRn/yJRG/6ptEf/JpnD/8und//////////////////////+Sxfr/AE3x/wZH9f8hWP//RH7//3Gf///Cytn/++y+/+vVtf/x4sz/t4M5/9e9kP/////////////////v+v//Ep76/wuF9v8idPT/F1Hw/yZY8P8tYvb/dJ3//////////////////+PJpv+0ezr/7N/L////////////rvH//wC0/v8covr/HYv2/yd29P88afL/ZIf1/2qN9v/A0P3/////////8v/WrHD/vodS/+bVuf///////////4Hv//8Azv//ELv//x+h+v9BnPf/Vpb3/0l38/9Nc/P/gaD4/5e1///28+v/5a5L/7FeIP/ZtYL///////////+H8///ANv//wLV//8Wvv//HaH6/wt/9f8HXvL/cZL2/yZY8f9Gev//kajm//bPZv++awD/0JxO////////////uPv//wDi//8A3v//AtX//xK8//8an/r/Lpb3/y169P8APe//YYT3/1GH///Iql3/34cA/+vQm/////////////b///8F7v//AOL//wDf//8D1f//FL3//xuf+v8Zh/b/FGnz/1B68/8ta///opV7//miAP///fT/////////////////oPv//wDq//8A4///AN///wPV//8TvP//HqH6/xeH9v86gvX/FVn//4+Fe///4V////////////////////////////9t+f//AOr//wDi//8A3v//AdX//xG9//8Yovr/BYD2/wBW9v+4wuH//////////////////////////////////////577//8c7f//AOP//wDb//8Az///ALX+/x6g+v+dy/n/////////////////////////////////////////////////+v///8L6//+Y9P//lvH//7vx///3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//w==" />
+  <link rel="stylesheet" type="text/css" href="igt-site/css/igt-logout.css" title="style" />
+</head>
+<body>
+<div class="logout_wrapper">
+  <script>
+    var timer = {
+      t: '',
+      counter: 30, // set timer value here; set at 0 to count up
+      timer_is_on: 0,
+      timedCount: function() {
+        var timerElement = document.querySelector('.preload_count');
+        timerElement.innerHTML = timer.counter;
+        timer.counter--; // set count down/up here: -- to count down, ++ to count up
+        t = setTimeout(function() {
+          timer.timedCount();
+        }, 1000); // set timer speed here 1000ms = 1s
+    
+        if (timer.counter < 0) {
+          // if timer hits 0
+          timer.stopCount();
+          setTimeout(() => {
+            timerElement.innerHTML = timer.counter;
+          }, 1000);
+        }
+      },
+      startCount: function() {
+        if (!timer.timer_is_on) {
+          timer.timer_is_on = 1;
+          timer.timedCount();
+        }
+      },
+      stopCount: function() {
+        clearTimeout(t);
+        timer.counter = 0; //was 30
+        timer.timer_is_on = 0;
+        window.location.replace("//www.igt.com");
+      }
+    };
+    
+    document.addEventListener("DOMContentLoaded", function(event) {
+      timer.timedCount();
+    });
+  </script>
+  <div class="preloader">
+    <div class="logout_container">
+      <div class="loader">
+        <div class="inner one"><div class="ring orange"></div></div>
+        <div class="inner two"><div class="ring blue"></div></div>
+      </div>
+      <div class="preload_count">30</div>
+      <div class="preload_copy">
+        <p class="text">
+          Redirecting you to IGT.com
+          <span class="dot one">.</span>
+          <span class="dot two">.</span>
+          <span class="dot three">.</span>
+        </p>
+        <p>
+          You've been logged out of IGT.com. Here are some common links you may be interested in:
+        </p>
+        <p class="btn small primary"><a href="//www.igt.com/global-settings/security/login" title="Login to IGT.com"><i class="fa fa-arrow-circle-left"></i>&nbsp;&nbsp; Login to IGT.com</a></p>
+        <p class="btn small default"><a href="//ir.igt.com/" title="Visit Our Investor Relations Site">Visit Our Investor Relations Site &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></p>
+        <p class="btn small default last-child"><a href="//www.igt.com/products-and-services/gaming/games/" title="Browse Our Game Catalog">Browse Our Game Catalog &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></p>
+      </div>
+      <h1>IGT</h1>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,506 @@
+// ----------------------------------------------------- PANEL 1 - Hero // Games Slider
+
+[data-target="full_panel_slideshow"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  @include respond(all-phones) { height: 320px;  }
+
+  .cycle-slideshow {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    @include respond(all-phones) {
+      height: auto;
+    }
+
+    .cycle-slide {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+
+      @include respond(portrait-tablets) {
+        &:before {
+          content:"";
+          height: 100%;
+          width: 100%;
+          background: rgba(0, 0, 0, .5);
+          display: block;
+          position: absolute;
+          z-index: 40;
+        }
+      }
+
+      @include respond(all-phones) {
+        overflow: visible;
+        height: auto;
+      }
+    } // --- cycle-slide end
+
+    .slide {
+    	padding: 0;
+      width: 100%;
+      height: 100%;
+    	background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+
+      @include respond(all-phones) {
+        height: auto;
+        position: relative;
+      }
+
+      .widget {
+        text-align: left;
+        display: block;
+        width: 100%;
+
+        .header_title_h1 {
+          color: $white;
+          text-align: left;
+          font-size: 60px; //was 72px
+          line-height: 60px; //was 70px;
+          padding: 0 0 15px 0;
+          margin: 0;
+          text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+          @include respond(all-phones) {
+            padding: 20px 20px 0 30px;
+            position: absolute;
+            font-size: 28px;
+            line-height: 34px;
+            width: 310px;
+          }
+        }
+
+        .header_title_h2 {
+          color: $white;
+          text-align: left;
+
+          @include respond(all-phones) {
+            padding: 70px 50px 0 30px;
+            position: absolute;
+            color: $white;
+            text-align: left;
+          }
+
+          span.h2_sub { display: inherit; }
+        }
+
+        p {
+        	font-size: 18px; //was 24px;
+        	line-height: 26px;
+        	color: $white;
+        	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+          @include respond(all-phones) {
+            margin: 0;
+            padding: 10px 20px 0 20px;
+            color: $body-font-color;
+            font-size: 16px;
+            line-height: 22px;
+            text-shadow: none;
+          }
+
+          span.p_sub { display: inherit; }
+        }
+
+        .btn {
+          min-width: 280px;
+          display: inline-block;
+          background: $white;
+          color: $body-font-color;
+
+          a {
+            color: $body-font-color;
+            font-size: 17px;
+            text-transform: uppercase;
+          }
+
+          @include respond(all-phones) {
+            display: none;
+          }
+        }
+      } // ----- component End
+
+      .one {
+        position: relative;
+        padding-left: 0;
+        top: 32%; // was 40.33%
+        left: 0;
+        float: left;
+        width: 560px;
+
+        @include respond(all-phones) {
+          width: auto;
+          padding: 0;
+        }
+
+        @include respond(portrait-tablets) {
+          position: absolute;
+          padding-left: 0;
+          top: 155px;
+          left: 100px;
+          width: 70%;
+        }
+
+        @include respond(tablets) {
+          position: absolute;
+          padding-left: 4%;
+          top: 32%; // was 40.33%
+          left: 100px;
+          width: 560px;
+        }
+
+      } // ----- one end
+
+      .two {
+        display: none;
+        visibility: hidden;
+        // display: block;
+        // position: relative;
+        // float: right;
+        // left: 0;
+        // margin: 55px 0 0 0;
+        // height: 100%;
+        //
+        // @extend %ie_8_imageScale;
+        // // extend has to be on the bottom
+        // @extend %ie_8_imageScale_fix;
+        // //@include respond(all-phones) { display: none; }
+        // @include respond(portrait-tablets) {
+        //   //right: -80px;
+        //   width: 47.75521%;
+        //   //background-position-x: 40px;
+        //   margin: 0;
+        // }
+        //
+        // @include respond(tablets) {
+        //   width: 48.24587%;
+        // }
+        //
+        // @include respond(desktop) {
+        //   width: 47.24587%;
+        // }
+        //
+        // @include respond(large-screens) {
+        //   width: 47.24587%;
+        // }
+      } // ----- two end
+    } // ----- slide End
+
+    img.non_mobile_img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 0;
+      @extend %ie_8_imageScale;
+      // extend has to be on the bottom
+      @extend %ie_8_imageScale_fix;
+
+      @include respond(all-phones) {
+        display: none;
+      }
+    }
+
+    div.non_mobile_img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 0;
+      @extend %ie_8_imageScale;
+      // extend has to be on the bottom
+      @extend %ie_8_imageScale_fix;
+      background-position: center center !important;
+
+      @include respond(all-phones) {
+        display: none;
+      }
+    }
+
+    .mobile_img {
+      padding: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: none;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+
+      @include respond(all-phones) {
+        display: block;
+      }
+    }
+  } // --- cycle-slideshow end
+} // ----- .component.full_panel_slideshow end
+
+$slide_1: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2_0_ctl00_0_pnlDesktop_0;
+$slide_2: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2_0_ctl00_1_pnlDesktop_1;
+$slide_3: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2_0_ctl00_2_pnlDesktop_2;
+$slide_4: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2_0_ctl00_3_pnlDesktop_3;
+$slide_5: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2_0_ctl00_4_pnlDesktop_4;
+
+$slide_1_mobile: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2Mobile_0_ctl00_0_pnlMobile_0;
+$slide_2_mobile: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2Mobile_0_ctl00_1_pnlMobile_1;
+$slide_3_mobile: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2Mobile_0_ctl00_2_pnlMobile_2;
+$slide_4_mobile: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2Mobile_0_ctl00_3_pnlMobile_3;
+$slide_5_mobile: #ContentPlaceHolder1_myRepeater_ctl00_0_lvPanel2Mobile_0_ctl00_4_pnlMobile_4;
+
+// ------------ Custom Hero Banner Work for Gemini
+#{$slide_2} {
+  .header_title_h1 {
+    font-size: 60px;
+    line-height: 60px;
+
+    span {
+      display: block;
+      clear: both;
+    }
+  }
+
+  p { width: 340px; }
+
+   //Button
+  .btn {
+    background-color: $IGTDarkOrange;
+
+    a { color: $white; }
+  }
+}
+
+#{$slide_2_mobile} {
+  @include respond(all-phones) {
+    .header_title_h1 {
+      font-size: 28px;
+      line-height: 34px;
+      padding-top: 30px;
+      max-width: 240px;
+    }
+  }
+}
+
+// ------------ Custom Hero Banner Work for Aurora
+.aurora_not_used {
+  .widget {
+    width: 340px;
+    //background: aqua;
+
+    @include respond(tablets) {
+      width: 360px;
+      //background: yellow;
+    }
+
+    h2.header_title_h1 {
+      @include respond(portrait-tablets) {
+        font-size: 50px;
+        line-height: 50px;
+      }
+
+      .aurora_large {
+        @include respond(desktop) {
+          display: block;
+          clear: both;
+          font-size: 110px;
+          line-height: 110px;
+          height: 110px;
+          position: relative;
+          //background: red;
+        }
+
+        @include respond(tablets) {
+          display: block;
+          clear: both;
+          font-size: 110px;
+          line-height: 110px;
+          height: 110px;
+          position: relative;
+          //background: red;
+        }
+
+        @include respond(portrait-tablets) {
+          display: block;
+          clear: both;
+          font-size: 90px;
+          line-height: 90px;
+          height: 90px;
+          position: relative;
+          //background: red;
+        }
+
+        @include respond(desktop) {
+          .trade {
+            font-size: 40px;
+            line-height: 110px;
+            height: 102px;
+            top: 8px;
+            position: absolute;
+            display: inline-block;
+            //background: green;
+          }
+        }
+
+        @include respond(tablets) {
+          .trade {
+            font-size: 40px;
+            line-height: 110px;
+            height: 102px;
+            top: 8px;
+            position: absolute;
+            display: inline-block;
+            //background: green;
+          }
+        }
+
+        @include respond(portrait-tablets) {
+          .trade {
+            font-size: 30px;
+            line-height: 90px;
+            height: 82px;
+            top: 8px;
+            position: absolute;
+            display: inline-block;
+            //background: green;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------ Custom Hero Banner Work for 3D Banner
+#{$slide_3} {
+  .widget {
+    width: 370px;
+    //background: aqua;
+
+    @include respond(tablets) {
+      width: 360px;
+    }
+
+    //Headline
+    h2 {
+      font-size: 40px;
+      line-height: 45px;
+      color: $body-font-color;
+      text-shadow: none;
+
+      @include respond(tablets) {
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      @include respond(portrait-tablets) {
+        color: $white;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      @include respond(all-phones) {
+        font-size: 28px;
+        line-height: 34px;
+        color: $body-font-color !important;
+        text-shadow: none;
+      }
+    }
+
+    //Subhead
+    p {
+      color: $IGTMediumBlue;
+      text-shadow: none;
+
+
+      @include respond(portrait) {}
+
+      @include respond(portrait-tablets) {
+        color: $white;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      @include respond(all-phones) { color: $body-font-color; }
+    }
+
+    //Button
+    .btn {
+      background-color: $IGTDarkOrange;
+
+      a { color: $white; }
+
+      @include respond(portrait) {}
+
+      @include respond(portrait-tablets) {
+        background-color: $white;
+
+        a { color: $body-font-color; }
+      }
+
+      @include respond(all-phones) {
+        background-color: $white;
+
+        a { color: $body-font-color; }
+      }
+    }
+  }
+
+  //Reposition Graphic on Portrait Tablets
+  @include respond(portrait-tablets) {
+    .non_mobile_img {
+      background-position: right top !important;
+      background-size: inherit;
+    }
+  }
+}
+
+#{$slide_3_mobile} {
+  @include respond(all-phones) {
+    h2 {
+      color: $body-font-color !important;
+      text-shadow: none;
+      font-size: 21px;
+      line-height: 27px;
+      width: 240px;
+    }
+  }
+}
+
+
+// News Panel Video
+
+[data-panel="news"] {
+	display: block;
+
+	@include respond(all-phones) {
+
+		.container {
+			height: auto !important;
+
+			.component {
+				height: auto !important;
+
+				.cycle-slideshow-wrapper {
+					height: auto !important;
+
+					.cycle-slide-active {
+						height: auto !important;
+					}
+				}
+			}
+
+			.slideshow_nav {
+				position: relative !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+// Import Google Web Fonts
+// The use of HTTPS may need to be mofifdied. HTTPS is being used for font support in the Support section (support.igt.com) (SP)
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic&subsets=latin');
+
+%verlag_extra_light {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+%verlag_extra_light_italic {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+%verlag_light {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%verlag_light_italic {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+%verlag_book {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%verlag_book_italic {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+%verlag_bold {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%verlag_bold_italic {
+  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}

@@ -1,0 +1,44 @@
+// ----- Status
+$status_active: #78B92E;
+$status_obsolete: #cb0032;
+
+// ---------- Widths
+$hundred_percent_width: 100%;
+$fifty_percent_width: 50%;
+
+// ---------- Heights
+$hundred_percent_height: 100%;
+
+%default_font {
+  //font-family: Arial, sans-serif;
+}
+
+%default_font_light {
+  //font-family: Arial, sans-serif;
+}
+
+
+%detials_header_row_default {
+  // padding: 0 0 0 10px !important;
+  border-bottom: none;
+  // background: #ddd;
+  text-align: left;
+  // font-size: 12px;
+}
+
+%detials_header_row_default_h3 {
+	//margin: 0 !important;
+	//padding: 0 !important;
+	//height: 20px;
+  //border-bottom: 4px solid #126cab !important;
+	//// color: #126cab !important;
+  //text-transform: uppercase;
+}
+
+%cell_space_default {
+	padding: 0 0 0 10px;
+}
+
+%cell_space_ai_default {
+	padding: 10px 0 0 10px;
+}

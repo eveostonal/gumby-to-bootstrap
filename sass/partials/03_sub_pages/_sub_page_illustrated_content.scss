@@ -1,0 +1,573 @@
+//----- IGTDS-202 - Illustrated content template (Template C)
+
+[data-target="illustrated-content"] {
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+
+  .addthis_igt {
+    margin: 10px 0 20px 0;
+  }
+
+  .non_mobile_img {
+    @extend %ie_8_imageScale;
+    position: absolute;
+    top: 0;
+    display: block;
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+  }
+
+// --------------------------------------------- Staggered Row - Options
+
+  [data-target="stagger-row"] {
+    @extend %element_btm_margin;
+
+    @include respond(all-phones) {
+      margin-bottom: $element_mobil_btm_margin;
+    }
+
+    .six.columns {
+      display: block;
+
+      h2 {
+        @extend %h2-default;
+      }
+
+      .summary {
+        @extend %summary-default;
+      }
+
+      .article p {
+        @extend %p-default;
+      }
+
+      .btn {
+        margin-bottom: 20px;
+      }
+
+      .text_link {
+        line-height: 14px;
+        @extend %text_link;
+        margin: 10px 0 10px 0;
+        display: table;
+
+        @include respond(all-phones) {
+          text-align: left;
+        }
+
+        a {
+          color: $IGTBlue;
+          font-size: 14px;
+
+          &:hover {
+            color: $body-link-hover-color;
+          }
+        }
+
+        .fa-angle-right {
+          font-size: 14px;
+          margin: 0 4px 0 0;
+        }
+      }
+
+      .options {
+        position: relative;
+        z-index: 10;
+        margin-top: 16.9865%; // there might be a better solution for this
+
+        @include respond(all-phones) {
+          margin: 0 0 30px 0;
+        }
+
+        blockquote {
+          @extend %blockquote;
+        }
+
+        p {
+	        color: inherit;
+        }
+
+        .img {
+          @extend %image-default;
+
+          a {
+            display: block;
+            text-decoration: none;
+            border: none;
+            max-height: inherit;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .stock_ticker_container {
+        @extend %options_stock_ver_01;
+        // below is custom only to mosaic
+        position: relative;
+        margin-bottom: 0;
+        min-height: 284px;
+        width: 100%;
+        overflow: hidden;
+
+        @include respond(all-phones) {
+          min-height: intrinsic;
+        }
+
+        .header {
+          @extend %header_stock_ver_01;
+
+          [data-symbol="name"] {
+          @extend %data_name_stock_ver_01;
+
+    			span {
+    				font-size: 12px;
+    				//color: $IGTBlue;
+    			}
+    		}
+      }
+
+        .stock_volume {
+         @extend %stock_volume_stock_ver_01;
+
+          .flt_l {
+      			@extend %flt_l_stock_ver_01;
+      		}
+
+      		[data-value="amount"] {
+      			@extend %data_value_stock_ver_01;
+      		}
+
+      		[data-icon="up"] {
+      			@extend %data_icon_stock_ver_01;
+      		}
+
+      		[data-change="volume"] {
+              @extend %data_volume_stock_ver_01;
+        		}
+          }
+
+        [data-title="name"] {
+          @include respond(all-phones) {
+            text-align: center;
+          }
+        }
+
+        [data-symbol="name"] {
+
+        }
+
+        [data-value="amount"] {
+
+        }
+
+        [data-change="volume"],
+        [data-timestamp="date"] {
+          font-size: 18px;
+          margin-bottom: 5px;
+          color: $IGTLightGreyMedDark;
+          @extend %data_date_stock_ver_01;
+
+          @include respond(all-phones) {
+            text-align: center;
+            margin-bottom: 1px;
+          }
+        }
+
+        [data-update="difference"] {
+          font-size: 16px;
+          margin-bottom: 0;
+          color: $IGTLightGrey;
+
+          @include respond(all-phones) {
+            text-align: left;
+            margin-bottom: 1px;
+          }
+        }
+
+        .text_link {
+          line-height: 14px;
+          @extend %mosaic-text_link;
+          margin: 20px 0 10px 0;
+          display: table;
+          font-size: 14px;
+
+          @include respond(all-phones) {
+            text-align: left;
+          }
+
+          a {
+            color: $IGTBlue;
+            font-size: 14px;
+
+            @include respond(all-phones) {
+              font-size: 18px;
+            }
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+
+          .fa-angle-right {
+            font-size: 14px;
+            margin: 0 4px 0 0;
+
+            @include respond(all-phones) {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .text_link a:after {
+          color: $IGTBlue;
+          content: "\f105";
+          margin-left: 5px;
+          font-family: fontawesome;
+        }
+
+        .text_link:hover > a:after {
+          color: $body-link-hover-color;
+          content: "\f105";
+          margin-left: 5px;
+          font-family: fontawesome;
+        }
+
+        .ticker_widget {
+          width: 28.55769%;
+          min-height: 250px;
+          margin-left: 0;
+          float: left;
+          //min-height: 1px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+          @include respond(all-phones) {
+            width: 100%;
+            height: auto;
+            min-height: intrinsic;
+            float: none;
+            margin-bottom: 20px;
+          }
+
+          @include respond(portrait-tablets) {
+            width: 100%;
+          }
+
+          @include respond(tablets) {
+            width: 28.55769%;
+          }
+        }
+
+        .stockticker {
+          font-variant: normal;
+          position: relative;
+          width: 68.55769%;
+          height: 275px;
+          margin-left: 2.88462%;
+          float: left;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+          @include respond(all-phones) {
+            display: none;
+          }
+
+          @include respond(portrait-tablets) {
+            display: none;
+          }
+        }
+
+      } // end stock_ticker_container
+    }
+  }
+
+  .row {
+    @extend %row-default;
+  }
+
+// --------------------------------------------- Full Width Row - Options
+
+  [data-target="full-width"] {
+    // @extend %element_btm_margin;
+    margin-bottom: 0;
+    position: relative;
+    min-height: 450px;
+    width: 100%;
+    margin-bottom: 3px;
+
+    @include respond(all-phones) {
+      min-height: 360px;
+      margin-bottom: $element_mobil_btm_margin;
+    }
+
+    @include respond(portrait-tablets) {
+      min-height: 400px;
+    }
+
+    @include respond(tablets) {
+      min-height: 410px;
+    }
+
+    .row {
+      @extend %row-default;
+    }
+
+    .six.columns {
+      display: block;
+
+      .options {
+        position: relative;
+        z-index: 10;
+        margin-top: 16.9865%;
+        max-height: 390px;
+        overflow: hidden;
+
+        @include respond(all-phones) {
+          margin: 0 0 30px 0;
+        }
+
+        p, .summary {
+          color: $white;
+          @extend %p-default;
+        }
+
+        h2 {
+          @extend %h2-default;
+          color: $IGTBlue;
+
+          @include respond(all-phones) {
+            margin: 30px 0 30px 0;
+          }
+        }
+
+        blockquote {
+          @extend %blockquote;
+        }
+
+        .img {
+          @extend %image-default;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        iframe {
+          display: inherit;
+
+          @include respond(all-phones) {
+            margin: 30px 0 30px 0;
+          }
+        }
+
+        .summary {
+          @extend %summary-default;
+        }
+
+        .text_link {
+          line-height: 14px;
+          @extend %text_link;
+
+          @include respond(all-phones) {
+            text-align: left;
+          }
+
+          a {
+            color: $IGTBlue;
+            font-size: 14px;
+
+            &:hover {
+              color: $body-link-hover-color;
+            }
+          }
+
+          .fa-angle-right {
+            font-size: 14px;
+            margin: 0 4px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------- Header Icon Layout
+
+[data-target="icons"] {
+  @extend %row-default;
+  @extend %element_btm_margin;
+
+  @include respond(all-phones) {
+    margin-bottom: $element_mobil_btm_margin;
+  }
+
+  .columns {
+    @include respond(all-phones) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .icon {
+    text-align: center;
+    max-height: 100px;
+    margin: 0 0 10px 0;
+  }
+
+  .item_title {
+    text-align: center;
+    font-size: 34px;
+    margin: 0 0 10px 0;
+    color: $IGTBlue;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+// --------------------------------------------- Related Links Footer
+
+[data-target="related-footer"] {
+  @extend %row-default;
+
+  h2 {
+    margin: 50px 0 30px 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .columns {
+    margin-bottom: 10px;
+  }
+
+  .item_title {
+		font-weight: Normal;
+		text-rendering: optimizeLegibility;
+		padding-top: 0.273em;
+		line-height: 1.15538em;
+		padding-bottom: 5px;
+		font-size: 18px;
+		font-weight: bold;
+
+		a {
+			color: $IGTBlue;
+
+			&:hover {
+        color: $body-link-hover-color;
+      }
+		}
+
+    @include respond(all-phones) {
+      font-size: 16px;
+    }
+  }
+
+  .text_link {
+    line-height: 14px;
+    @extend %text_link;
+
+    @include respond(all-phones) {
+      text-align: left;
+    }
+
+    a {
+      color: $IGTBlue;
+      font-size: 14px;
+
+      &:hover {
+        color: $body-link-hover-color;
+      }
+    }
+
+    .fa-angle-right {
+	    display: none;
+      font-size: 14px;
+      margin: 0 4px 0 0;
+    }
+  }
+}
+
+// --------------------------------------------- Template C Hacks
+
+// remove rows
+
+#ContentPlaceHolder1_main_0_templatec_0__row > .row,
+#ContentPlaceHolder1_main_0_templatec_2__row > .row {
+	padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-bottom: 60px;
+
+	// item 1 and 2
+	.six:nth-child(-n+2) {
+		display: none;
+		height: 0;
+		width: 0;
+		position: absolute;
+		left: -2500px;
+	}
+}
+
+#ContentPlaceHolder1_main_0_templatec_1__row > .row ,
+#ContentPlaceHolder1_main_0_templatec_3__row > .row {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	margin-bottom: 60px;
+
+	.six:nth-child(n+3) {
+		display: none;
+		height: 0;
+		width: 0;
+		position: absolute;
+		left: -2500px;
+	}
+}
+
+// other rows remove margin
+#ContentPlaceHolder1_main_0_templatec_0__row > .row,
+#ContentPlaceHolder1_main_0_templatec_2__row > .row {
+	// row 0 & 3 ----> item 3
+	.six:nth-child(3) {
+		margin-left: 0;
+	}
+
+	// row 0 & 3 ----> item 4
+	.six:last-child {
+		margin-left: 2.88462%;
+	}
+}
+
+
+#ContentPlaceHolder1_main_0_templatec_1__row > .row,
+#ContentPlaceHolder1_main_0_templatec_3__row > .row {
+	// row 1 & 2 ----> item 1
+	.six:first-child {
+		margin-left: 0;
+	}
+
+	// row 1 & 2 ----> item 2
+	.six:nth-child(2) {
+		margin-left: 2.88462%;
+	}
+}
+
+#ContentPlaceHolder1_main_0_templatec_0__row > .row > .six > .options > a,
+#ContentPlaceHolder1_main_0_templatec_1__row > .row > .six > .options > a,
+#ContentPlaceHolder1_main_0_templatec_2__row > .row > .six > .options > a,
+#ContentPlaceHolder1_main_0_templatec_3__row > .row > .six > .options > a {
+	// spacing issue need to be removed from the html when this is not populated
+	> blockquote {
+		display: none;
+	}
+}

@@ -1,0 +1,51 @@
+
+//--------------------------------------- SearchResults.aspx and pagination cleanup
+
+.result-item {
+	display: inherit;
+
+	.result-title {
+		display: block;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		color: $IGTBlue;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 24px;
+		line-height: 24px;
+		-webkit-text-overflow: ellipsis;
+	}
+
+	// ------ cite
+	.result-url {
+		margin: 0;
+		padding: 0;
+		color: $IGTLightGreyMedDark;
+		text-align: left;
+		font-size: 16px;
+		//white-space: nowrap;
+	}
+
+	.result-copy {
+		color: $IGTLightGreyDrk;
+		word-wrap: break-word;
+		line-height: 1.4;
+		font-size: 16px;
+	}
+}
+
+.search-button > input {
+	width: 100%;
+}
+
+
+.result-cta {
+	margin: 0;
+	color: $IGTLightGreyMed;
+	//display: inline-block;
+
+	.result-keyword {
+		color: #444;
+	}
+}

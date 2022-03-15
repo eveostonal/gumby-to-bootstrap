@@ -1,0 +1,161 @@
+// ----------------------------------------------------- PANEL 3 - Search
+
+[data-target="search_games"] {
+
+ h2 {
+   padding: 0;
+   margin: 0 0 30px 0;
+ }
+  
+  @include respond(all-phones) {
+    padding: 0 30px 30px 30px;
+  }
+  
+  @include respond(portrait-tablets) {
+    width: 80%;
+    height: 645px;;
+  }
+  
+  @include respond(tablets) {
+    width: 80%;
+    height: 545px;
+  }
+  
+  @include respond(desktop) {
+    width: 80%;
+    height: 672px;
+  }
+  
+  @include respond(large-screens) {
+    width: 80%;
+    height: 672px;
+  }
+
+  .header_title {
+    padding: 0 10% 30px 10%;
+    margin: 0;
+    
+    @include respond(all-phones) {
+      padding: 0 0 30px 0;
+    }
+    
+    @include respond(portrait-tablets) {
+      padding: 0 5% 30px 5%;
+    }
+  }
+
+  ul.homepage_search_games_control {
+    padding: 0;
+    margin: 0;
+      
+    li {
+      padding: 0;
+      margin: 0;
+      height: 82px;
+      text-align: center;
+      
+      @include respond(all-phones) { height: 92px; }
+      
+      .picker {
+        padding: 0;
+        margin: 0;
+        background-image: none;
+        width: 440px;
+        border: 1px solid $IGTLightBlue;
+        -webkit-border-radius: $button-radius;
+        -moz-border-radius: $button-radius;
+        -ms-border-radius: $button-radius;
+        -o-border-radius: $button-radius;
+        border-radius: $button-radius;
+        
+        @include respond(all-phones) { width: 100%; }
+        
+        select {
+          width: 100%;
+          height: 60px;
+          line-height: 60px;
+          padding: 0 18px;
+          color: $white;
+          font-style: normal;
+          font-family: $font-family;
+        }
+        
+        &:after {
+          color: $white;
+          right: 25px;
+          font-size: 24px;
+          content: "\f107";
+          font-family: FontAwesome;
+        }           
+      }
+
+      input {
+        width: 100%;
+        height: 62px;
+        line-height: 60px;
+        padding: 0 18px;
+        margin: 0;
+        background: none;
+        color: $white;
+        font-style: normal;
+        background-image: none;
+        width: 440px;
+        border: 1px solid $IGTLightBlue;
+        -webkit-border-radius: $button-radius;
+        -moz-border-radius: $button-radius;
+        -ms-border-radius: $button-radius;
+        -o-border-radius: $button-radius;
+        border-radius: $button-radius;
+        font-family: $font-family;
+        //font-weight: 400;
+        
+        @include respond(all-phones) { width: 100%; }
+      }
+    }
+  }
+  
+  .btn {
+    width: 300px;
+    margin-top: 40px;
+    
+    @include respond(all-phones) {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+  
+  .homepage_search_games_trending {
+    margin-top: 80px;
+    font-size: 14px;
+    text-align: center;
+        
+    @include respond(tablets) {
+      margin: 40px 0 0 0;
+    }
+    
+    li {
+      margin: 0 0 0 10px;
+      display: inline-block;
+      
+      .badge.info {
+        font-size: 14px;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 10px;
+        border: none !important;
+        background: $IGTBlue;
+        -webkit-border-radius: $button-radius;
+        -moz-border-radius: $button-radius;
+        -ms-border-radius: $button-radius;
+        -o-border-radius: $button-radius;
+        border-radius: $button-radius;
+      }
+      
+      &.label {
+        margin: 0 10px 0 0;
+        padding: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

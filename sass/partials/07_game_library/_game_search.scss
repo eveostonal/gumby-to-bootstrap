@@ -1,0 +1,2116 @@
+// ------------------------------ GAME SEARCH V4.0
+
+
+// ------------------------------ over-rides - temp?
+
+.content {
+
+	h2 {
+	  padding-top: 0;
+	  padding-bottom: 15px;
+	}
+
+	h3:first-child {
+	  display: inline-block;
+	  margin-top: 0;
+	  padding-top: 0;
+	  padding-bottom: 0;
+	}
+
+	[data-igt-id="PromoHeader"] {
+		margin-top: 0 !important;
+		padding-top: 9px !important;
+	}
+}
+
+
+// ------------------------------ Secondary Features
+
+.secondary_feature {
+	margin: 0 0 40px 0;
+
+	#HeaderCarousel1_video {
+		margin-bottom: 15px;
+	}
+
+	&:last-child {
+		margin: 0 0 60px 0;
+	}
+}
+
+
+// ------------------------------ Left Column Navigation
+
+
+.gm_navigation {
+
+	@include respond(all-phones) {
+		margin-left: 0 !important;
+	}
+
+	@include respond(portrait-tablets) {
+		margin-left: 0;
+		width: 100% !important;
+	}
+	
+	[data-igt-id="CategoriesHeader"] {
+		.fa-chevron-right {
+			font-size: 16px;
+	    color: $white;
+		}
+		
+		&:hover {    
+	    .fa-chevron-right {
+				font-size: 16px;
+		    color: #1b9ddb;
+			}
+		}
+	}
+// --------------- Mobile Select Menu
+	[data-igt-id="Categories_Mobile"] {
+		@include respond(all-phones) {
+			display: block;
+			width: 100%;
+			height: 40px;
+			background: #ccc;
+			border: none;
+			background-size: 100%;
+			font-size: 12px;
+			font-weight: 600;
+			font-family: "Lato",Arial,Helvetica,sans-serif;
+			margin: 0 0 20px 0;
+		}
+
+		@include respond(portrait-tablets) {
+			display: block;
+			width: 50%;
+			height: 40px;
+			background: #ccc;
+			border: none;
+			background-size: 100%;
+			font-size: 12px;
+			font-weight: 600;
+			font-family: "Lato",Arial,Helvetica,sans-serif;
+			margin: 0 0 20px 0;
+		}
+
+		@include respond(tablets) {
+			display: none;
+		}
+
+		@include respond(desktop) {
+			display: none;
+		}
+
+		@include respond(large-screens) {
+			display: none;
+		}
+	}
+
+// --------------- Hide Left Column Navigation
+	.game_categories {
+		display: block;
+		margin-bottom: 40px;
+		min-width: 205px;
+
+		@include respond(all-phones) {
+			display: none;
+		}
+
+		@include respond(portrait-tablets) {
+			display: none;
+		}
+
+		@include respond(tablets) {
+			display: block;
+		}
+
+		@include respond(desktop) {
+			display: block;
+		}
+
+		@include respond(large-screens) {
+			display: block;
+		}
+
+		li.gm_cat_container {
+			margin: 10px 0 0 0;
+			padding-bottom: 0;
+
+			.gm_cat_title {
+			  margin: 0 0 5px 0;
+			  color: #0c51a1;
+				font-weight: 700;
+			  font-size: 14px;
+			  line-height: 16px;
+			}
+
+			.gm_cat_title:after {
+				display: block;
+				width: 90%;
+				border-bottom: 1px solid #e0e0e0;
+				content: "";
+			}			
+			
+			ul.gm_cat {
+				margin: 0;
+
+				li {
+					font-size: 14px;
+					line-height: 16px;
+
+					div > i {
+						//margin-right: 0;
+						margin-right: 3px;
+						float: left;
+					}
+
+					a {
+						cursor: pointer;
+
+						&.selected_blk {
+							color: $body-font-color;
+						}
+					}
+				}
+
+				&:last-child {
+					//margin-bottom: 20px
+				}
+			}
+		}
+	}
+	
+	.igt_mouseover_expand {
+		margin: 0;
+		
+		.gm_cat_sub_title {
+			cursor: pointer;
+			font-size: 14px;
+			color: #1b9ddb;
+			text-decoration: none;
+			outline: 0;
+			line-height: inherit;
+			line-height: 16px;
+		}		
+		
+		ul.gm_cat > li {
+			margin-left: 6px;
+		}
+	}
+
+	[data-igt-id="PromoHeader"] {
+		margin-top: 0;
+	}
+	
+// --------------- module tertiary feature under the Navigation
+
+	.tertiary_feature {	
+		a {
+			img {
+				float: left; 
+				width: 30%;
+			}
+			
+			p {
+				float: right;
+				width: 68%; 
+				margin: 0 0 0 2%; 
+				font-size: 14px; 
+				line-height: 16px;
+				color: #2c2c2c;
+				
+				span {
+					display: block;
+			    padding: 0 0 8px 0;
+			    color: #0c51a1;
+			    font-size: 18px;
+				}				
+			}
+			
+			&:hover {
+				//color: #0c51a1;
+			}		
+		}
+	}	
+	
+	// ------------- Show Hide items
+	.three.columns {
+
+		@include respond(all-phones) {
+			width: 100% !important;
+		}
+
+		@include respond(portrait-tablets) {
+			width: 100% !important;
+		}
+	}
+}
+
+
+// ------------------------------ Right Column Results
+
+.gm_results {
+
+	@include respond(all-phones) {
+		margin-left: 0 !important;
+	}
+
+	@include respond(portrait-tablets) {
+		margin-left: 0;
+		width: 100% !important;
+	}
+
+	h3 {
+		padding-top: .273em !important;
+		padding-bottom: .273em !important;
+	}
+
+	h4 {
+		padding-top: 30px !important;
+		padding-bottom: 0 !important;
+	}
+
+// ------------------------------ Search
+
+	.current_cat {
+		margin-bottom: 12px;
+		margin-top: 0 !important;
+		//margin-bottom: 30px
+	}
+
+	.keyword {
+		position: relative;
+		z-index: 10;
+		margin-top: 13px;
+		margin-left: 0;
+		//margin-top: 30px;
+
+		.append > .medium.primary.btn {
+			background: #e77600;
+		}
+	}
+
+	input.normal,
+	.input.normal {
+		margin: 0;
+		width: 91.122%;
+
+		@include respond(all-phones) {
+			width: 80%;
+		}
+	}
+
+	input[type=search] {
+		outline: 0;
+		border: 1px solid #ccc;
+		border-right: 1px solid $white;
+		-webkit-border-radius: 3px 0 0 3px;
+		-moz-border-radius: 3px 0 0 3px;
+		border-radius: 3px 0 0 3px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		//box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+
+		&:focus {
+			border-color: #e77600;
+			box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+		}
+	}
+
+// ------------------------------ Filters
+
+	// wrapper for filter groups - not utilized, staged..
+	.landbased_filters,
+	.online_filters {
+		//width: 100%
+	}
+
+	.online_filters {
+		display: inline-block;
+
+		.product_line .d-menu {
+			margin: 0 10px 0 0;
+		}
+
+		.product_line:last-child .d-menu {
+			margin: 0;
+		}
+	}
+
+	.gm_dropdown_content {
+
+		.filter_facet_panel:first-child {
+			margin: 0;
+		}
+
+		[data-igt-selected="false"] {
+			> img {
+				width: 35px !important;
+				margin-top: 6px !important;
+			}
+		}
+
+		[data-igt-selected="true"] {
+			> img {
+				width: 40px !important;
+				margin-top: auto;
+			}
+		}
+
+		[data-igt-id=JurSubControlPanel] {
+			position: relative;
+			margin: 0;
+			width: auto;
+			
+			.selected_jur {
+				//IE hack, testng  
+				width: 82px;
+				height: 18px;
+				overflow: hidden;
+			}
+			
+			.all_jur {
+				//IE hack, testng  
+				width: 82px;
+				height: 18px;
+				overflow: hidden;
+			}
+
+			@include respond(all-phones) {
+				width: 100%;
+			}
+
+			.d-menu-item {
+				margin-right: 10px;
+				margin-bottom: 10px;
+				height: 43px;
+				
+				.d-menu-sub {
+					line-height: 17px;
+				}
+
+				.small.btn {
+					//margin-right: 6px;
+					height: 18px;
+					width: 82px;
+					font-size: inherit;
+					line-height: 18px;
+					display: block;
+					//height: 20.54177px
+					
+					&:first-child {
+						margin: 2px 0 6px 0;
+						//margin-right: 0;
+					}
+				}
+
+				.secondary {
+					margin-right: 0 !important;
+				}
+			}
+		}
+
+		.facets_viewtoggle:nth-child(2) {
+			margin: 0;
+		}
+
+		fieldset {
+			display: inline-block;
+	    margin: 0;
+	    padding: 6px 10px 1px 10px;
+	    border: 1px solid #ccc;
+	    -webkit-border-radius: 3px;
+	    -moz-border-radius: 3px;
+	    border-radius: 3px;
+			border-top-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 3px;
+			font-size: 12px;
+	    // IE fix
+			border-top-right-radius: 3px;
+
+	    legend {
+			  padding: 0 5px;
+			  height: 10px;
+				font-weight: bold;
+				line-height: 10px;
+			}
+		}
+
+		fieldset[data-igt-id="JurSubControlPanel"] {
+			display: inline-block;
+	    margin: 0;
+	    padding: 3px 10px 0 10px;
+
+	    .d-menu-item {
+		    //position: inherit;
+		    //line-height: inherit
+	    }
+
+			//new UI Picker
+			.d-menu-item.jur_picker {
+				position: relative;
+				top: 2px;
+				margin-right: 0;
+				
+				@include respond(all-phones) {
+					width: 70%; 
+				}
+				
+				.jur_swap_all {
+					margin: 0;
+					padding: 8px 0 0 0;
+					width: 192px !important;
+					height: 42px;
+					border-radius: 4px;
+					background-color: #eaeaea !important;
+					color: #333;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.d-menu-item {
+		float: left;
+
+		.d-menu {
+		  position: relative;
+		  display: inline-block;
+		  overflow: hidden;
+		  margin: 0;
+		  margin-right: 10px;
+		  width: 108px;
+		  height: 20px;
+		  border: 0;
+		  -webkit-border-radius: 2px;
+		  -moz-border-radius: 2px;
+		  border-radius: 2px;
+		  background: #ccc;
+		  background-size: 100%;
+		  font-weight: 600;
+		  font-family: "Lato",Arial,Helvetica,sans-serif;
+		  //background: transparent;
+
+		  &:after {
+				position: absolute;
+				top: 46%;
+				right: -3%;
+				z-index: 0;
+				margin-top: -12px;
+				width: 16px;
+				color: $body-font-color;
+				content: "\f0d7";
+				font-family: "FontAwesome";
+			}
+
+			select {
+			  position: relative;
+			  z-index: 99;
+			  display: block;
+			  padding: 0 15px 0 2px;
+			  min-width: 127%;
+			  width: auto;
+			  height: 20px;
+			  outline: none;
+			  border: none;
+			  background: transparent;
+			  color: $body-font-color;
+			  font-size: 12px;
+			  /* font-size: 1rem; */
+			  cursor: pointer;
+			  -webkit-appearance: menulist ;
+			}
+		}
+
+		.d-menu-sub {
+			display: table;
+			margin-bottom: 2px;
+			color: #0c51a1;
+			font-size: 11px;
+			//line-height: 2vh;
+			line-height: 17px;
+		}
+	}
+
+	.number_reels > .d-menu,
+	.lines_ways > .d-menu,
+	.credits > .d-menu,
+	.show_mo > .d-menu {
+		width: 80px;
+	}
+
+	.lines_ways > .d-menu-sub.not-active,
+	.credits > .d-menu-sub.not-active {
+    color: #999999;
+    cursor: not-allowed;
+	}
+
+	.number_reels {
+		.d-menu {
+			.menu_item {
+				width: 115px;
+			}
+		}
+	}
+
+	/*
+.cabinet {
+		.d-menu {
+			.menu_item {
+				width: 140px;
+			}
+		}
+	}
+*/
+
+	.platform {
+		.d-menu {
+			.menu_item {
+				width: 144px;
+			}
+		}
+	}
+
+	.number_reels {
+		.d-menu {
+			.menu_item {
+			}
+		}
+	}
+
+	.credits {
+		.d-menu {
+			.menu_item {
+				width: 115px;
+			}
+		}
+	}
+
+	.show_mo {
+		.d-menu {
+			width: 60px;
+
+			.menu_item {
+				width: 92px;
+				//width: 55px
+			}
+		}
+	}
+
+	// dnu .show_months
+	.show_months {
+	//	float:left;
+	//	width:400px;
+	//	font-size: 14px;
+
+	//	 > span {
+	//		font-size: 14px;
+	//	}
+	}
+
+	.count {
+
+		.d-menu {
+			width: 41px;
+
+			.menu_item {
+				width: 80px;
+			}
+		}
+
+		> select {
+			width: 55px;
+		}
+	}
+
+	.sortby {
+		width: auto !important;
+
+		.d-menu {
+			width: 59px;
+
+			.menu_item {
+				width: 100px;
+				//width: 45px
+			}
+		}
+	}
+	
+	// Reset Button Fix
+	.coreseg {
+		width: auto !important;
+
+		.d-menu {
+			width: 95px;
+
+			.menu_item.core_seg {
+				width: 110px;
+				
+				// IE Only Hack 
+				@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					width: auto;
+				}
+			}
+		}
+	}
+
+	.product_line {
+		margin: 0;
+
+		.d-menu {
+			margin-right: 0;
+			width: 125px;
+		}
+	}
+
+	.landbase_interactve {
+		.d-menu {
+			width: 94px;
+
+			.menu_item {
+				width: 133px;
+			}
+		}
+	}
+
+	.view_toggle {
+
+		> .v-menu {
+			margin-top: 0;
+			width: auto;
+
+			li {
+				float: left;
+				margin-left: 5px;
+				padding-bottom: 0;
+				height: 26px;
+
+				&:first-child {
+					float: left;
+					margin-left: 0;
+				}
+			}
+			
+			
+		}
+
+		> .d-menu-sub {
+			margin-bottom: 2px;
+			line-height: 17px;
+		}
+
+		#ResultViewSelect {
+			display: block;
+			height: 26px;
+			position: relative;
+			margin-right: 10px;
+
+			li {
+				top: -2px;
+			}
+
+			.fa {
+				color: #999;
+				font-size: 26px;
+			}
+
+			.selected {
+				color: #1B9DDB;
+				font-size: 26px;
+			}
+		}
+		
+		.reset_filters {
+			display: block;
+			height: 26px;
+			position: relative;
+			
+			li {
+				top: -2px;
+				
+				a {
+					display: block;
+					
+					.fa {
+						color: #1B9DDB;
+						font-size: 24px;
+					}		
+					
+					&.selected {
+						color: #999;
+						font-size: 26px;
+					}			
+				}
+			}
+		}
+	}
+
+	.jurs {
+		width: 100%;
+
+		.d-menu {
+			line-height: 16px;
+		}
+
+		.btn {
+			margin: 0 0 6px 0;
+			width: 100%;
+		}
+
+		.d-menu-sub {
+			display: table-cell;
+			font-size: 11px;
+			line-height: 17px;
+
+			.btn > a > .juri_count {
+				padding: 0 0 0 5px;
+				width: 32px;
+				border-left: 1px solid #fff;
+				background: transparent;
+
+				&:before {
+				  border-right: solid 1px #fff;
+				}
+			}
+
+			.btn > a > span .juri_count:before {
+			  border-right: solid 1px #fff;
+			}
+		}
+	}
+
+// ------------------------------
+
+	.filter_controls_panel {
+		position: inherit;
+		top: auto;
+		padding: 0 0 11px 0;
+		//padding: 15px 0 10px 0
+	}
+
+	.games_list.catalog_view ul.games_list_container li {
+		padding-top: 0;
+
+		img {
+		  padding: 0;
+		}
+
+		.game-title {
+		  font-size: 12px;
+		  line-height: 18px;
+		}
+	}
+
+	.page_count {
+		margin-bottom: 0;
+		color: $body-font-color;
+		font-size: 12px;
+
+		&:after {
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid #e0e0e0;
+			content: "";
+		}
+
+		> .category {
+			color: #0c51a1;
+		}
+	}
+
+}
+
+[data-igt-id="GeneralResults"],
+[data-igt-id="KeywordSearch"],
+[data-igt-id="ErrorMessage"],
+[data-igt-id="LoadingPageGroup"],
+[data-igt-id="NoResults"],
+[data-igt-id="LoadingGamesGroup"] {
+	margin: 0;
+
+	> ul {
+		margin: 0 !important;
+	}
+}
+
+[data-igt-id="NoResults"] {
+	h4 {margin-bottom: 20px;}
+}
+
+[data-igt-id="BetweenSearchesKeyword"] {
+
+	p {
+		margin: 0;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		line-height: 14px;
+	}
+
+	span > p {
+		margin-top: 0;
+		//margin-bottom: 10px;
+		//font-size: 12px;
+		line-height: 14px;
+	}
+
+	span > p:nth-child(4) {
+		margin-bottom: 30px;
+	}
+}
+
+[data-igt-id="ResultsUpdatePanel"] {
+	margin: 0;
+
+
+// ------------------------------  might need this in the future, should make it a seperate sass partial...
+
+	.pagination {
+		margin-bottom: 20px;
+
+		.option {
+			display: block;
+
+			.item {
+		    display: inline-block;
+		    margin: 0;
+		    padding: 0;
+		    width: 100%;
+		    text-align: right;
+
+				li:first-child {
+					margin: 0;
+				}
+
+				li {
+					display: inline-block;
+					margin: 0 0 0 5px;
+					padding: 0;
+					width: auto;
+					text-align: center;
+
+					a {
+						display: inline;
+						margin: 0;
+						padding: 0;
+						color: #1b9ddb;
+						font-weight: bold;
+
+						&.aspNetDisabled {
+							color: #b3b3b3;
+							cursor: not-allowed;
+						}
+					}
+
+					span.selected {
+						color: #0c51a1;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// ------------------------------ Predictive Search
+
+$pad_btm: 2px;
+$ui_pad: 2px 0 0 4px;
+
+#ui-id-1 {
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+	padding: 5px 0 5px 0 !important;
+	max-height: 250px !important;
+	border-right: 1px solid #ccc !important;
+	border-bottom: 1px solid #ccc !important;
+	border-left: 1px solid #ccc !important;
+	background: #fff !important;
+
+	-webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.25) !important;
+	 	 -moz-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.25) !important;
+	 				box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.25) !important;
+
+	li {
+		padding-bottom: $pad_btm !important;
+	}
+
+	li.ui-menu-item {
+		display: block;
+		margin: 0;
+		padding: $ui_pad;
+		width: 100%;
+		outline: 0;
+		color: #1b9ddb;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 22px;
+		cursor: pointer;
+
+		&:hover {
+			margin: 0;
+			padding: $ui_pad;
+			background: #eaeaea;
+			color: #0c51a1;
+			cursor: pointer;
+			//padding: 0 0 $pad_btm 0;
+			//padding-bottom: .273em;
+		}
+
+		div:first-child,
+		&:first-child {
+			//display: block;
+			//margin: 0;
+			//padding: 2px 0 0 4px;
+			//width: 100%;
+			//outline: 0;
+			//color: #1b9ddb;
+			//text-decoration: none;
+			//font-size: 14px
+		}
+	}
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+
+// ------------------------------ Jur Chosen - // need to migrate to the Chosen css file
+.chosen-container {
+	width: 193px !important;
+	
+	@include respond(all-phones) {
+		width: 100% !important; 
+	}
+	
+	@include respond(portrait-tablets) {
+		width: 175px !important;
+	}
+	
+	@include respond(tablets) {
+		width: 175px !important;
+	}
+	
+	@include respond(desktop) {
+		
+	}
+	
+	@include respond(large-screens) {
+		
+	}
+}
+
+.chosen-container-multi {
+
+	.chosen-choices {
+		overflow-x: hidden !important;
+		overflow-y: auto !important;
+		margin: 0;
+		padding: 2px;
+		max-height: 42px;
+		width: 100%;
+		height: auto;
+		border: 0;
+		//background-color: #fff;
+		border-radius: 4px;
+    background-color: #eaeaea;
+		background-image: none;
+		cursor: text;
+		//height: auto !important;
+
+		li.search-choice {
+			position: relative;
+			margin: 0;
+			padding: 1px 19px 1px 1px;
+			max-width: 100%;
+			border: 0;
+			border-radius: 3px;
+			background-color: transparent;
+			background-image: none;
+			background-clip: padding-box;
+			background-size: 0;
+			background-repeat: no-repeat;
+			box-shadow: none;
+			color: #333;
+			line-height: 13px;
+			cursor: default;
+
+			.search-choice-close {
+				top: 2px;
+			}
+		}
+
+		li.search-field {
+			display: block;
+
+			input[type="text"] {
+				margin: 0;
+				width: 192px;
+				height: 42px;
+				border-radius: 4px;
+				background-color: #eaeaea;
+				color: #333;
+				text-align: center;
+			}
+		}
+
+		li:last-child > input[type="text"] {
+			margin: 0;
+			width: 172px;
+			height: auto;
+			border-radius: 4px;
+			background-color: #fff;
+			color: #333;
+			text-align: center;
+		}
+
+		li:first-child > input[type="text"] {
+			margin: 0;
+			width: 192px !important;
+			height: 42px;
+			border-radius: 4px;
+			background-color: #eaeaea !important;
+			color: #333;
+			text-align: center;
+		}
+	}
+}
+
+.chosen-container .chosen-results li {
+    text-align: left;
+}
+
+
+// ------------------------------ Game Search results ----- List View
+
+.games_list.list_view {
+	display: block;
+
+	ul.games_list_container {
+		margin-bottom: 30px;
+
+		li {
+			margin-left: 0;
+			padding-top: 7px;
+			padding-bottom: 0;
+			width: 100% !important;
+			height: auto !important;
+			border: 1px solid $IGTLightestGrey;
+			text-align: left;
+			margin-bottom: 10px;
+			
+			.hover_wrapper {
+				display: none;
+			}
+
+			a {
+				display: block;
+				height: 34px;
+				width: 100%;
+	      text-decoration: none;
+	      cursor: pointer;
+
+				.game-image,
+			  .flag-wrapper {
+			    display: block;
+					//visibility: hidden
+			  }
+
+			  .game-image,
+			  .flag-wrapper,
+			  .game-data,
+			  .game-title {
+				  float: left;
+				  text-align: left;
+				}
+
+				.game-title {
+				  margin: 0 7px;
+	        font-size: 14px;
+	        line-height: 20px;
+				}
+
+			  .game-image {
+				  width: 80px;
+
+				  img { padding: 0 7px; }
+			  }
+			  
+			  .game_segment { 
+			  	padding: 0;
+			    float: left;
+			    width: 47px;
+			  	
+			  	.icon_set {
+						margin: 0;
+						padding: 0;
+						width: auto;						
+				  	
+				  	li {
+					  	//margin: 0;
+					  	//padding: 0;
+					  	border: none;
+							padding-top: 0;
+							margin-bottom: 0;
+					  	width: 75% !important;
+					  	
+					  	img {
+							  //margin-left: 10px;
+							  //width: 42px !important;
+						  }
+				  	}
+			  	}
+			  }
+
+			  .flag-wrapper {
+				  float: left;
+				  width: auto;
+			  }
+
+			 	.game-data {
+				 	margin: 0 7px;
+				 	padding-bottom: 0;
+	        font-size: 10px;
+				 	line-height: 22px;
+				 	color: $IGTLightGreyMedDark;
+			 	}
+			}
+		}
+	}
+}
+
+
+// ------------------------------ 2016 Catalog View Edits (SP)
+
+.flag-wrapper {
+  display: block;
+  padding: 0 0 5px 0;
+  width: 100%;
+
+  &.game-list-item {
+    position: static;
+    top: 0;
+    margin-top: 5px;
+  }
+
+  .flag-container {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+
+    div {
+      margin-left: 10px;
+      &:first-child { margin: 0; }
+    }
+
+    .flag-new {
+      @include line-and-height(23px);
+      display: inline-block;
+      float: left;
+      padding: 0 10px;
+      width: 50px;
+      background: $IGTBlue;
+      color: $white;
+      font-size: 12px;
+      //margin: 0
+    }
+
+    .flag-featured {
+      @include line-and-height(23px);
+      display: inline-block;
+      float: left;
+      padding: 0 10px;
+      min-width: 35px;
+      background: $IGTYellow;
+      color: $white;
+      font-size: 12px;
+      //margin: 0;
+
+      .fa { color: $IGTBlue; }
+    }
+
+    .flag-h5g {
+      display: inline-block;
+      float: left;
+    }
+  }
+}
+
+
+// ------------------------------ Game Search results ----- Catalog View
+
+.games_list.catalog_view {
+
+  ul.games_list_container {
+    margin-bottom: 30px;
+
+    @media only screen and (min-width: 100px) and (max-width: 499px) {
+      li {
+        width: 100%;
+        //background: red;
+        //min-height: 270px;
+
+        &:nth-child(1n+1) { margin-left: 0; }
+      }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 669px) {
+      li {
+        width: 48.55769%;
+        //background: pink;
+        //min-height: 270px;
+
+        &:nth-child(2n+1) { margin-left: 0; }
+      }
+    }
+
+    @media only screen and (min-width: 670px) and (max-width: 1080px) {
+      li {
+        width: 31.41026%;
+        //background: aqua;
+        //min-height: 290px;
+
+        &:nth-child(3n+1) { margin-left: 0; }
+      }
+    }
+
+    @media only screen and (min-width: 1081px) and (max-width: 5000px) {
+      li {
+        margin-left: 1.88462%;
+        width: 18.48999%;
+        //width: 22.83654%;
+        //background: yellow;
+        //min-height: 270px;
+
+        &:nth-child(5n+1) { margin-left: 0; }
+      }
+    }
+
+    a .game-data {
+			color: $IGTLightGreyMedDark !important;
+			text-decoration: none !important;
+
+      &:hover { color: $IGTLightGreyMedDark !important; }
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding-top: 7px;
+      border: 1px solid $IGTLightestGrey;
+      text-align: center;
+
+      img { padding: 0 7px; }
+
+      .game-image {
+        line-height: 1em;
+        font-size: 0px;
+        margin-bottom: 7px;
+    
+        img {
+          padding: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .game-title {
+        margin: 0 7px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .game-data {
+        margin: 0 7px;
+        padding-bottom: 5px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+
+// ------------------------------ Game Search results ----- Program List View
+
+.games_list.program_view {
+	display: block;
+
+	table {
+		display: table;
+
+		tbody tr th {
+			font-size: 14px !important;
+			line-height: 18px !important;
+			padding: 5px;
+		}
+
+		.table_theme,
+		.table_base_program,
+		.table_config,
+		.table_top_award {
+			font-size: 14px;
+		}
+
+		.table_config {
+			line-height: 18px;
+		}
+
+		.table_top_award {
+		}
+
+		.table_base_program {
+		}
+
+		.table_jurs {
+			font-size: 10px;
+			line-height: 15px;
+		}
+	}
+}
+
+.facet_scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 0 0 1px !important;
+  max-height: 225px;
+}
+
+#ContentPlaceHolder1_main_0_UpdatePanelGameSearch {
+  padding-bottom: 40px;
+}
+
+#ResultViewSelect {
+  text-align: right;
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+
+    div:nth-child(1) {
+      float: left;
+      width: 49%;
+      height: 35.85532px;
+      font-size: 16px;
+      line-height: 35.85532px;
+    }
+
+    div:nth-child(2) {
+      float: right;
+      width: 49%;
+      height: 35.85532px;
+      font-size: 16px;
+      line-height: 35.85532px;
+    }
+  }
+}
+
+
+// ------------------------------ Game Search v4 TT (BW)
+
+.ttip_gms {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    bottom: 101%;
+    left: 0;
+    display: block;
+    margin-bottom: 5px;
+    padding: 4px 6px 0.5em;
+    max-width: 500px;
+    width: auto;
+    border: 1px solid #1b9ddb;
+    border-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #1b9ddb;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #20b4fb), color-stop(100%, #1b9ddb));
+    background-image: -moz-linear-gradient(top, #20b4fb, #1b9ddb);
+    background-image: -webkit-linear-gradient(top, #20b4fb, #1b9ddb);
+    background-image: linear-gradient(to bottom, #20b4fb, #1b9ddb);
+    background-size: 100%;
+    -webkit-box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25);
+    -moz-box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25);
+    box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -webkit-transition: opacity 0.1s ease;
+    -moz-transition: opacity 0.1s ease;
+    -o-transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+    overflow: hidden;
+	}
+
+	&:before {
+    position: absolute;
+    bottom: 95%;
+    left: 8px;
+    width: 0;
+    height: 0;
+    border-top: 9px solid #1b9ddb !important;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    content: " ";
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -webkit-transition: opacity 0.1s ease;
+    -moz-transition: opacity 0.1s ease;
+    -o-transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    -webkit-transition: opacity 0.1s ease;
+    -moz-transition: opacity 0.1s ease;
+    -o-transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
+  }
+
+  &.left-ttip {
+    &:after { left: 29px; }
+
+  	&:before {
+  	  left: 20px;
+      border-right: 9px solid $body-link-color;
+      border-left: none;
+    }
+  }
+}
+
+.ttip:after,
+.ttip:before {
+	@include respond(portrait-tablets) {
+		display: none;
+	}
+}
+
+// core segementation display
+
+[data-igt-id="ResultsBannerList"] {
+	li {
+		
+		ul {
+			
+		}
+	}
+}
+
+[data-igt-id="CoreSegmentation"] {
+	padding-bottom: 0;
+	margin-top: 20px;
+	
+	ul {
+		margin: 0;
+		
+		li {
+			padding-bottom: 0;
+		}
+	}
+}
+
+// ------------------------------ For Games, Game results for Spinning and Video reel
+.coreseg_disp {
+	display: inline-block;
+	margin-left: 0;	
+	
+	&.inno {
+		border: solid 2px #ffa300;
+	}
+	
+	&.allstar {
+		border: solid 2px #005ca8;
+	}
+	
+	&.jackp {
+		border: solid 2px #0a3b61;
+	}
+	
+	&.play {
+		border: solid 2px #d87b28;
+	}
+	
+	&.pure {
+		border: solid 2px #d54728;
+	}
+	
+	&.water {
+		border: solid 2px #8fc7e9;
+	}
+	
+	&.linked {
+		border: solid 2px #2d3338;
+	}
+	
+	.coreseg_icon {
+		width: 20% !important;
+		padding: 5px 0 5px 5px;		
+		
+		&.inno {
+			background: #ffa300;
+		}
+		
+		&.allstar {
+			background: #005ca8;
+		}
+		
+		&.jackp {
+			background: #0a3b61;
+		}
+		
+		&.play {
+			background: #d87b28;
+		}
+		
+		&.pure {
+			background: #d54728;
+		}
+		
+		&.water {
+			background: #8fc7e9;
+		}
+		
+		&.linked {
+			background: #71818d;
+		}
+		
+		img {
+			width: 25%;
+			height: auto;
+			float: left;
+			margin-right: 10px;
+		}
+
+$seg_font: "Lato", Arial, Helvetica, sans-serif;
+$seg_font_size: 18px;
+
+		.coreseg_name {
+			
+			&.single_line {
+				margin: 10px 0 0 0;
+				
+				.inline {
+					float: left;
+					margin: 0 5px 0 0;
+					
+					&:nth-child(2) {
+						margin: 3px 0 0 0;
+					}
+				}
+			}
+			
+			.seg_hvy {
+				font-family: $seg_font;
+				font-size: $seg_font_size;	
+				color: $white;
+				font-weight: 800;							
+				line-height: 16px;
+				margin-bottom: 5px;				
+			}
+			
+			.seg_lgt {
+				font-family: $seg_font;
+				font-size: $seg_font_size;
+				color: $white;
+				font-weight: 400;				
+				line-height: 13px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.coreseg_copy {
+		width: 80% !important;
+		margin-left: 0;
+		padding: 5px 0 5px 1%;
+		
+		p {
+			float: left;
+			width: 75%;
+			margin: 0;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		
+		.btn {
+			float: right;
+			width: 140px;
+			margin-right: 5px;
+		}
+	}	
+	
+}
+
+// ------------------------------ For the Game Pages
+#primaryGameSegmentLogo {
+	
+	.coreseg_icon {
+		width: 100% !important;
+		padding: 5px 0 5px 5px;		
+		
+		&.inno {
+			background: #ffa300;
+		}
+		
+		&.allstar {
+			background: #005ca8;
+		}
+		
+		&.jackp {
+			background: #0a3b61;
+		}
+		
+		&.play {
+			background: #d87b28;
+		}
+		
+		&.pure {
+			background: #d54728;
+		}
+		
+		&.water {
+			background: #8fc7e9;
+		}
+		
+		&.linked {
+			background: #71818d;
+		}
+		
+		img {
+			width: 25% !important;
+			height: auto;
+			float: left;
+			margin-right: 10px;
+		}
+
+$seg_font: "Lato", Arial, Helvetica, sans-serif;
+$seg_font_size: 18px;
+
+		.coreseg_name {
+			padding: 0;
+			
+			&.single_line {
+				margin: 10px 0 0 0;
+				
+				.inline {
+					float: left;
+					margin: 0 5px 0 0;
+					
+					&:nth-child(2) {
+						margin: 3px 0 0 0;
+					}
+				}
+			}
+			
+			.seg_hvy {
+				font-family: $seg_font;
+				font-size: $seg_font_size;	
+				color: $white;
+				font-weight: 800;							
+				line-height: 16px;
+				margin-bottom: 5px;				
+			}
+			
+			.seg_lgt {
+				font-family: $seg_font;
+				font-size: $seg_font_size;
+				color: $white;
+				font-weight: 400;				
+				line-height: 13px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.coreseg_copy {
+		width: 80% !important;
+		margin-left: 0;
+		padding: 5px 0 5px 1%;
+		
+		p {
+			float: left;
+			width: 75%;
+			margin: 0;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		
+		.btn {
+			float: right;
+			width: 140px;
+			margin-right: 5px;
+		}
+	}	
+}
+
+// ------------------------------ this css is for Video and Spining Reel initial user click in, they will see a ribbon of segments and can either select one of them or use the drop menu 
+
+.coreseg_landing {
+	/* temp width */
+	width: 770px;
+	
+	.coreseg_icon {
+		padding: 5px 0 5px 5px;		
+		margin-left: 0;
+		width: 128.33px;
+		height: 47.25px;
+		//width: 14.26282%;
+		
+		&.allstar {
+			background: #005ca8;
+		
+			a {
+				display: block;	
+				position: relative;			
+			}
+			
+			a:hover .coreseg_learn_more {
+				display: block;
+				position: absolute;
+				width: 770px;
+				height: 50px;
+				left: -5px;
+				top: 42px;
+				border: 2px solid #ccc; 
+			}
+		}
+		
+		&.inno {
+			background: #ffa300;
+		}
+				
+		&.jackp {
+			background: #0a3b61;
+		}
+		
+		&.play {
+			background: #d87b28;
+		}
+		
+		&.pure {
+			background: #d54728;
+		}
+		
+		&.water {
+			background: #8fc7e9;
+		}
+		
+		&.linked {
+			background: #71818d;
+		}		
+		
+		img {
+			width: 30% !important;
+			height: auto;
+			float: left;
+			margin-right: 5px;
+		}
+
+$seg_font: "Lato", Arial, Helvetica, sans-serif;
+$seg_font_size: 16px;
+$seg_font_size_bg: 15px;
+
+		.coreseg_name {
+			padding: 0;
+			
+			&.single_line {
+				margin: 10px 0 0 0;
+				
+				.inline {
+					float: left;
+					margin: 0 5px 0 0;
+					
+					&:nth-child(2) {
+						margin: 1px 0 0 0;
+					}
+				}
+			}
+			
+			.seg_hvy {
+				font-family: $seg_font;
+				font-size: $seg_font_size_bg;	
+				color: $white;
+				font-weight: 800;							
+				line-height: 16px;
+				margin-bottom: 2px;				
+			}
+			
+			.seg_lgt {
+				font-family: $seg_font;
+				font-size: $seg_font_size;
+				color: $white;
+				font-weight: 400;				
+				line-height: 13px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.coreseg_learn_more {
+		width: 100%;
+		margin-left: 0;
+		padding: 5px 0 5px 1%;
+		float: left;
+		display: none;		
+		
+		p {
+			float: left;
+			width: 75%;
+			margin: 0;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		
+		.btn {
+			float: right;
+			width: 140px;
+			margin-right: 5px;
+		}
+	}	
+}
+
+
+// ----- // END GAME SEARCH V4.0
+
+
+
+
+// ------------------------------------------------------------ Integrate (might...or keep here) Remove all this and update the _game_search.scss
+
+// ------------------------------ to evaluate
+
+.facets_viewtoggle {
+  margin: 9px 0 0 0;
+
+  .facets_header {
+	  font-size: 12px;
+	}
+}
+
+.hr {
+	display: block;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.disabled {
+	opacity: 0.25;
+  cursor: not-allowed !important;
+}
+
+// ------------------------------ need to 4X see if these are being used??
+
+a.selected_jurisdictions_button {
+	padding: 0 7.4133px !important;
+	font-size: 13px;
+}
+
+.jurisdiction_wrapper {
+	margin-bottom: 0;
+}
+
+.jurisdiction_wrapper > hr {
+	margin: 0;
+}
+
+.gamesearch_juri_control {
+	float: right;
+}
+
+.gamesearch_juri_control .btn {
+  display: inline-block;
+  float: right;
+  margin: 0 0 10px 0;
+}
+
+.float_l {
+
+	> li {
+		float: left;
+		margin: 0 0 0 5px;
+		padding: 0;
+		width: auto;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	> li:first-child {
+		margin: 0;
+		font-weight: normal;
+	}
+
+	> li:last-child {
+		font-weight: normal;
+	}
+
+	> li.selected {
+		color: #0c51a1;
+		font-weight: bold;
+	}
+}
+
+.display {
+	position: relative;
+
+	> .d-menu-sub {
+	  display: inline;
+	  float: left;
+	  margin: 0 !important;
+	  font-size: 14px;
+	}
+}
+
+.pager, .display {
+  height: 20px;
+}
+
+.gamesearch_juri_control .btn.secondary .juri_count .gamesearch_juri_control {
+  margin-top: 16px;
+
+  .btn {
+	  height: auto;
+	}
+}
+
+span.result {
+  color: #999;
+  font-size: 12px;
+}
+
+
+// BW edits - need to chnage to this when we go live with the newer 2017 GS v4
+
+label[AllOsCheckbox], label[for] {
+	display: inline !important;
+}
+
+#ContentPlaceHolder1_main_0_divBottomPager {
+	background: $white;
+}
+
+._filter_panel {
+	//background: #eaeaea
+}
+
+._dropdown_content {
+	margin: 0 0 30px 0;
+
+	padding: 6px 10px 3px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  //padding: 4px 10px 0 10px;
+  //margin: 0 0 30px 0;
+  //background: #eaeaea;
+  //border-radius: 5px;
+
+  .filter_content {
+	  margin: 0;
+
+	  .btn.non_interactive {
+			margin: 4px 0 10px 0;
+	  }
+
+	  .btn.interactive {
+			margin: 4px 20px 10px 0;
+	  }
+
+	  ul {
+			margin: 0 0 4px 0 !important;
+			width: auto !important;
+
+			li {
+
+				a {
+					margin: 0 !important;
+				}
+
+				ul li:last-child {
+					margin: 0 0 2px 0;
+				}
+			}
+// ------------------------------ specific classes implemented if needed for future targeting
+			&.number_reels {
+				margin: auto;
+			}
+
+			&.lines_ways {
+				margin: auto;
+			}
+
+			&.number_credits {
+				margin: auto;
+			}
+
+			&.denomination {
+				margin: auto;
+			}
+
+			&.product_line {
+				margin: auto;
+			}
+
+			&.cabinet {
+				margin: auto;
+			}
+
+			&.volatility {
+				margin: auto;
+			}
+
+			&.base_hit {
+				margin: auto;
+			}
+
+			&.brand {
+				margin: auto;
+			}
+
+			//interactive
+
+			&.interactive_game_type {
+				margin: auto;
+			}
+
+			&.interactive_game_cat {
+				margin: auto;
+			}
+
+			&.interactive_devices {
+				margin: auto;
+			}
+		}
+  }
+}
+
+// bw end
+
+
+//Used for Testing Mobile on Desktop (SP)
+//[data-chapter="desk_alert"] {
+//  display: none !important;
+//  visibility: hidden !important;
+//}
+
+
+
+

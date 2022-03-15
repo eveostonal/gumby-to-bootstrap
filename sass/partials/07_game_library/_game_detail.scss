@@ -1,0 +1,694 @@
+// -------------------- Game Detail
+// ----- add Game Page Stuff Here ... that is outside of the Accordions ?
+
+
+
+// -------------------------------------------------------------- Tabs and Accordions --  Font Awesome Icons
+
+// -------------------------------- Lock Icon
+
+.secure:after {
+  margin-left: 12px;
+  color: $white;
+  content: "\f023";
+  font-family: FontAwesome;
+}
+
+.secure-unlocked:after {
+  margin-left: 12px;
+  color: $white;
+  content: "\f13e";
+  font-family: FontAwesome;
+}
+
+// -------------------------------- down chevron
+
+.facet_button:after {
+  margin-left: 8px;
+  font-size: 18px;
+  color: #ffffff;
+  content: "\f107";
+  font-family: FontAwesome;
+}
+
+.facet_button:hover:after {
+  margin-left: 8px;
+  font-size: 18px;
+  color: #ffffff;
+  content: "\f106";
+  font-family: FontAwesome;
+}
+
+// --------------------------------------------------------------- IGT Game Details -- Accordion - Style
+
+$color_1: $IGTBlue;
+$color_2: $IGTLightGreyMed;
+$color_3: $IGTLighterGrey;
+
+.accordion,
+//the .accordian class below is a temp measure
+.accordian  {
+  display: none;
+
+// -------------------------------------------------------------- Game Detail Specific Tweaks
+
+  [data-target="game-accordion-content"] {
+    margin-bottom: 40px;
+
+    @include respond(all-phones) {
+      margin-bottom: 30px;
+    }
+
+    .exec_summary {
+      margin-bottom: 0 !important;
+      //only for Meger
+      display: none;
+
+
+      ul > li:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .sub_title {
+      margin-bottom: 0;
+    }
+
+    .info {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+
+      @include respond(all-phones) {
+        margin-top: 0;
+      }
+    }
+
+// -------------------------------------------------------------- M14 Facets
+
+    .three.columns {
+      width: 16.83654%;
+
+      @include respond(all-phones) {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .nine.columns {
+      width: 80.27885%;
+      padding: 0;
+      margin-left: 0;
+
+      &.filter_trending ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-left: 0;
+          margin: 0 0 5px 5px;
+        }
+      }
+    }
+
+    .facet {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 20px 10px 0;
+      font-weight: normal;
+    }
+
+    a.show_less-more {
+      float: right;
+      color: $IGTLightGreyMed;
+      text-align: right;
+      width: 100%;
+      display: block;
+
+      @include respond(all-phones) {
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      &:hover {
+        color: $IGTLightGreyDrk;
+      }
+    }
+
+    ul {
+      margin-bottom: 0;
+      list-style: disc;
+
+      li {
+        margin-left: 30px;
+      }
+
+      li:last-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    .btn {
+      @include respond(all-phones) {
+	      margin-bottom: 20px;
+	      width: 100%;
+	    }
+
+	    &.medium.default {
+  	    margin-right: 10px;
+
+  	    @include respond(all-phones) {
+  	      margin-right: 0;
+  	    }
+	    }
+    }
+
+    li.field {
+      margin-bottom: 0 !important;
+      margin-left: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .two.columns > img {
+       max-width: intrinsic !important;
+       width: auto;
+    }
+
+// -------------------------------------------------------------- Game Detail Specific - Slide Show - Gallery
+
+    .component {
+  		margin-bottom: 0;
+
+  		.cycle-slideshow {
+    		max-height: 500px;
+
+    		@include respond(all-phones) {
+
+// -------------------------------------------------------------- hack for cycle2 -- set height on slideshow when its within a Accordion
+
+  	      min-height: 272px;
+  	      max-height: intrinsic;
+  	    }
+  		}
+
+      [data-source="accordion_slideshow"] {
+  	    padding-top: 0;
+// -------------------------------- hack for cycle2 -- set height on slideshow when its within a Accordion
+  	    min-height: 325px;
+
+  	    @include respond(all-phones) {
+// -------------------------------- hack for cycle2 -- set height on slideshow when its within a Accordion
+  	      min-height: 272px;
+  	    }
+
+  	    img {
+	  	    // sitecore fixes
+  		    width: auto !important;
+  		    height: auto !important;
+
+  		    @include respond(all-phones) {
+  		      width: 100%;
+  		    }
+  	    }
+
+  	    p {
+    	    margin: 0;
+    	    margin-bottom: 0;
+    	    text-align: center;
+  	    }
+
+  	    .media {
+    	    width: 65%;
+    	    margin: 0 auto;
+
+    	    @include respond(all-phones) {
+    	      width: 100%;
+    	    }
+        }
+      }
+
+      .cycle-slide {
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 0 !important;
+        /// Site core fix - the file size is not correct on the server
+        max-width: 500px !important;
+        margin-left: 25%;
+
+        .game-info-set {
+          display: inherit;
+
+          .game-title {
+            margin: 0 !important;
+            padding: 20px 0 5px 0 !important;
+            color: #336699;
+          }
+
+          .game-data { color: $IGTLightGreyMedDark; }
+
+          .flag-ddi a {
+            display: table;
+            padding: 5px 10px !important;
+            height: auto !important;
+
+            span {
+              display: table-cell;
+              height: auto;
+              line-height: 16px;
+            }
+          }
+
+          .game-data {
+            margin: 0 !important;
+            color: $IGTLightGreyMedDark;
+            font-size: 1rem;
+            line-height: 20px;
+          }
+
+          .game-link {
+            padding: 20px 0 0 0 !important;
+            a { color: $IGTBlue; }
+          }
+        }
+
+        .options {
+
+          @include respond(all-phones) {
+            position: relative;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+
+          .btn {
+            @include respond(all-phones) {
+              margin-bottom: 30px;
+              width: 100%;
+            }
+          }
+        }
+
+        img {}
+
+        a {
+    	    display: block;
+
+    	    img {
+      	    display: block;
+    	    }
+        }
+      }
+
+      .text_link {
+        @extend %mosaic-text_link;
+  	    text-align: center;
+  	    padding-top: 10px;
+  	    font-size: 14px;
+
+  	    a {
+    	    display: inline-block;
+    	    color: $IGTBlue;
+    	    font-size: 14px;
+
+    	    @include respond(all-phones) {
+            font-size: 18px;
+          }
+
+    	    &:hover {
+      	    color: #ffcc00;
+    	    }
+  	    }
+      }
+
+      .cycle-slideshow {
+  	    overflow: hidden;
+      }
+
+      .slideshow_nav {
+  			position: absolute;
+  			top: 0;
+  			right: 0;
+  			bottom: 0;
+  			left: 0;
+  			z-index: 0;
+  			display: block;
+  			overflow: auto;
+  			overflow: hidden;
+  			margin: auto;
+  			padding: 0;
+  			padding-right: 0;
+  			padding-left: 0;
+  	    max-width: 1080px;
+
+  			@include respond(all-phones) {
+          position: relative;
+          padding: 20px 0 20px 0;
+        }
+
+        ul {
+          top: 20px;
+          list-style: none outside;
+
+          li {
+            margin-left: auto;
+          }
+        }
+
+        .slide_pagination_06 {
+  	      top: 0;
+  				right: 0;
+  				bottom: 0;
+  				left: 0;
+  				z-index: 0;
+  				overflow: none;
+  				margin: auto;
+        }
+      }
+    }
+
+// --------------------------------
+
+    .game_overview {
+      width: 100%;
+
+      @include respond(all-phones) {
+        width: auto;
+      }
+
+			// target Alt attribute in the img tag
+      img[alt^="Available"] {
+	      display: none;
+      }
+
+      #ContentPlaceHolder1_main_0_Overview_availableChannels > h3 {
+	      margin-top: 0;
+      }
+    }
+
+    .game_image {
+      float: right;
+      padding: 0 0 2.335% 2.335%;
+
+      @include respond(all-phones) {
+        width: auto;
+        float: none;
+        padding: 0 0 30px 0;
+      }
+
+      @include respond(portrait-tablets) {
+        //display: block;
+        //margin: 0 auto;
+        //float: none;
+      }
+
+      img {
+        max-width: 495px;
+
+        @include respond(all-phones) {
+          max-width: 300px;
+          display: block;
+          margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+          max-width: 300px;
+        }
+
+        @media only screen and (max-width: 800px) {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+
+// -------------------------------------------------------------- Footer Related Carousel
+  [data-target="slideshow-related"] {
+    margin-bottom: 30px;
+    padding: 0;
+
+    @include respond(all-phones) {
+      padding: 0;
+    }
+
+    .component {
+  		box-sizing: border-box;
+  		//margin-bottom: 60px;
+
+  		@include respond(all-phones) {
+        margin-bottom: 0;
+      }
+
+      [data-source="related-img-lg"] {
+  	    padding-top: 0;
+
+  	    img {
+  		    width: 100%;
+          height: auto;
+          margin: 0 0 20px 0;
+          cursor: pointer;
+
+  		    @include respond(all-phones) {
+  		      width: 100%
+  		    }
+  	    }
+
+  	    a {
+    	    display: block;
+
+    	    img {
+      	    display: block;
+    	    }
+        }
+      }
+
+      .cycle-slide,
+      .cycle-carousel-wrap {
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+
+        .cycle-slide {
+         display: block;
+        }
+
+        .game-info-set {
+          display: inherit;
+
+          .game-title {
+            padding: 20px 0 5px 0 !important;
+            margin: 0 !important;
+            color: #336699;
+            font-size: 16px !important;
+          }
+
+          .game-data { color: $IGTLightGreyMedDark; }
+
+          .flag-ddi a {
+            height: auto !important;
+            padding: 5px 10px !important;
+            display: table;
+
+            span {
+              display: table-cell;
+              height: auto;
+              line-height: 16px;
+            }
+          }
+
+          .game-data {
+            margin: 0 !important;
+            color: $IGTLightGreyMedDark;
+            font-size: 1rem;
+            line-height: 20px;
+          }
+
+          .game-link {
+            padding: 20px 0 0 0 !important;
+            a { color: $IGTBlue; }
+          }
+        }
+
+        .options {
+
+          p {
+            font-size: 1rem;
+          }
+
+          @include respond(all-phones) {
+            position: relative;
+          }
+
+          .btn {
+            @include respond(all-phones) {
+              width: 100%;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+
+      .cycle-slide {
+        margin-bottom: 0;
+        width: 220px !important;
+      }
+
+      .cycle-slideshow {
+  	    overflow: hidden;
+  	    //max-height: 500px;
+// -------------------------------- need to look deeper in to this - why does this need a min height...
+  	    min-height: 238px;
+      }
+
+      .text_link {
+        @extend %mosaic-text_link;
+  	    text-align: center;
+  	    padding-top: 10px;
+  	    font-size: 14px;
+
+  	    a {
+    	    display: inline-block;
+    	    color: $IGTBlue;
+    	    font-size: 14px;
+
+    	    @include respond(all-phones) {
+            font-size: 18px;
+          }
+
+    	    &:hover {
+      	    color: #ffcc00;
+    	    }
+  	    }
+      }
+
+      .slideshow_nav {
+  	    max-width: 1080px;
+  			position: absolute;
+  			top: 0;
+  			right: 0;
+  			bottom: 0;
+  			left: 0;
+  			z-index: 0;
+  			display: block;
+  			overflow: auto;
+  			margin: auto;
+  			padding-right: 0;
+  			padding-left: 0;
+  			overflow: hidden;
+
+  			@include respond(all-phones) {
+          position: relative;
+          //padding: 20px 0 20px 0;
+        }
+
+        .slide_pagination_06 {
+  	      top: 0;
+  				right: 0;
+  				bottom: 0;
+  				left: 0;
+  				z-index: 0;
+  				//display: table;
+  				overflow: none;
+  				margin: auto;
+        }
+      }
+    }
+  }
+
+// -------------------------------- Row average bottom margin -- need to update??
+
+  [data-target="game-accordion-content"],
+  [data-target="slideshow-related"] {
+    h2 {
+      margin-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// -------------------------------------------------------------- Tabs to Accordions Version
+
+// -------------------------------- VARIABLE ----- tab width to adjust per how many are displaying before you want the accordions to show...
+
+$break-tab-to-accordion: 813px;
+
+.tabs_to_accordions {
+  display: block;
+
+  .accordion_row {
+    display: none;
+
+    @media only screen and (max-width: $break-tab-to-accordion) {
+      display: block;
+    }
+  }
+
+  table.table {
+    margin-top: 20px;
+
+    table > thead {
+      background: $IGTLightGreyMed;
+    }
+  }
+
+  @media only screen and (max-width: $break-tab-to-accordion) {
+    table.table > thead {
+      background: $IGTLightGreyMed;
+    }
+  }
+}
+
+.accordion_tabs {
+  display: block;
+  margin-bottom: 20px !important;
+
+  @media only screen and (max-width: $break-tab-to-accordion) {
+    display: none;
+  }
+
+// -------------------------------------------------------------- For the sticky header
+
+  &.fixed {
+    position: fixed;
+    z-index: 100;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    background: $white;
+    @extend %global_box_shadow;
+  }
+}
+
+// -------------------------------------------------------------- Game Search Tweaks
+
+.filter_content {
+  .accordion {
+    margin: 0 20px 20px 0;
+
+    .accordion_row {
+      margin: 0;
+      display: block;
+      background: $IGTLighterGrey;
+
+      p.btn {
+        background: $IGTLighterGrey;
+        color: $IGTBlue;
+
+        a { color: $IGTBlue; }
+        a > .fa { color: $IGTBlue; }
+      }
+    }
+
+    dd.row {
+      padding: 16px 0 0 20px;
+      border: solid $IGTLighterGrey;
+      border-width: 0 1px 1px 1px;
+    }
+  }
+}
+

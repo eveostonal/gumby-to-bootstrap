@@ -1,0 +1,120 @@
+// -------------------- IGT Select Your Country/Language and Accordion
+
+
+// ---------- Desktop - Mobile // Tabs Tweaks
+
+[data-target="country-language"] { 
+  width: 100%;
+
+  .tab-content {
+    margin-bottom: 60px;
+    padding: 20px 0 0 0;
+    
+    h3 {
+      margin-bottom: 30px;
+    }
+    
+    .accordion > .row > .twelve,
+    .accordian > .row > .twelve  {
+      margin-left: 0;
+    }
+    
+    .text_link {
+      @extend %text_link;
+      display: table;
+      margin: 20px 0 20px 0;
+      width: 100%;
+      text-decoration: none;    
+      line-height: 14px; 
+         
+      @include respond(all-phones) {
+        margin: 10px 0 10px 0;
+        background: #F8F8F8;
+        text-align: left;
+      }         
+      
+      .icon_flag {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        width: 46px;
+        height: 33px;
+      }
+      
+      .icon_name {
+        display: block;
+        float: left;
+        width: 59.33355%;
+        font-size: 14px;
+        
+        @include respond(all-phones) {
+          padding: 10px 0 0 0;
+          text-align: left;
+        }         
+      }
+    } 
+    
+    a {
+      display: block;
+      color: $IGTBlue;
+      
+      &:hover {
+        color: $body-link-hover-color;
+      }
+    }
+  } // end .tab-content
+  
+  .tab-nav {
+    overflow: visible;
+    
+    > li:first-child {
+      border-right: 1px solid $white;
+      vertical-align: middle;
+      
+      a {
+        border-right: 0px !important;
+      }
+    }
+    
+    > li > a {    
+      height: auto !important;
+      border-right: none !important;
+      background: none;
+      color: $white;
+      text-shadow: none;
+      
+      @include respond(all-phones) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 24px !important;
+      }    
+    }
+    
+    > li > a:hover {
+      background: darken($IGTBlue, 15);
+    }
+    
+    li .active > a {
+      background: none !important;
+    }
+    
+    li.active {
+      background: darken($IGTBlue, 15);
+    }
+    
+    li {
+      background: $IGTBlue;
+      cursor: pointer;    
+    }
+    
+    li:nth-child(1),
+    li:nth-child(2) {
+      border-right: 1px solid $white;
+    }
+  } // end .tab-nav
+  
+  .tab-nav > li.active > a {
+    background: none;
+  }
+
+} // end [data-target="country-language"]

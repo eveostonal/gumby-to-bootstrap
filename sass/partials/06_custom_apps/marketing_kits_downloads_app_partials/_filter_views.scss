@@ -1,0 +1,678 @@
+ %animate_1 {
+-webkit-transition: .5s;
+   -moz-transition: .5s;
+    -ms-transition: .5s;
+     -o-transition: .5s;
+}
+
+%animate_2 {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+// --------------------------------------------------------------- Isotope Container
+
+#container {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  margin-bottom: 60px;
+
+  @media only screen and (max-width: 1100px) {
+    width: 785px !important;
+  }
+
+  .catalog_item {
+    display: block;
+
+    a {
+      border: none;
+
+      img {
+        width:137px;
+        height:109px;
+      }
+    }
+  }
+}
+
+
+// --------------------------------------------------------------- Add Hover while in Media Downloads
+
+.isotope_container {
+  margin: 0;
+
+  .element:hover {
+    background: url('../images/in_cart_background_235px.png') repeat-y;
+  }
+
+  // grid
+  .element.in_cart:hover {
+    background: url('../images/in_cart_background_235px.png') repeat-y;
+  }
+
+  .element.in_cart {
+    background: url('../images/in_cart_background_235px.png') repeat-y;
+  }
+
+  // rows
+  .element.large:hover {
+    background: #f4f4f4;
+  }
+
+  .element.in_cart.large {
+    background: #f4f4f4;
+  }
+}
+
+// --------------------------------------------------------------- MDA Results
+
+.mda_results {
+  margin: 0 0 10px 0;
+  width: 100%;
+  height: auto; // 275px
+  text-align: center;
+}
+
+// --------------------------------------------------------------- GRID VIEW
+
+.element {
+  @extend %animate_1;
+  position: relative;
+  //width: 235px;
+  width: 260px;
+  height: 205px;
+  border: none;
+  border-top: 2px solid $white;
+  color: $IGTLightGreyMed;
+  text-align: center;
+  cursor: pointer;
+
+  .element_button {
+    position: relative;
+    top: 160px;
+    display: block;
+
+    a.btn {
+      margin: 0;
+      width: auto;
+      height: auto;
+      font-size: 12px;
+      line-height: 28px;
+
+      i.fa {
+        margin: 6px;
+        font-size: 14px;
+        color: $white;
+      }
+
+      span {
+        color: $white;
+        margin: 6px 6px 6px 0;
+      }
+
+      span:after {
+        content: "Add to Cart";
+      }
+    }
+
+    a.in_cart {
+      background-color: $IGTLightGreyMed;
+
+      span:after {
+        content: "Go to Cart";
+      }
+    }
+
+// --------------------------------------------------------------- Cart Button states
+
+    a.remove {
+      @extend %animate_1;
+      display: none;
+      margin: 0 0 0 10px;
+      width: auto;
+      font-size: 11px;
+      color: #126cab;
+      background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a.remove.in_cart {
+      @extend %animate_1;
+      display: inline-block;
+      margin: 0 0 0 10px;
+      width: auto;
+      font-size: 11px;
+      color: #126cab;
+      background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .element_image {
+    position: relative;
+    top: -4px;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+// --------------------------------------------------------------- Element Description
+
+  .element_description {
+    position: relative;
+    top: 2px;
+    color: $IGTBackgroundGrey;
+
+    .description_title {
+      display: none;
+    }
+
+    .description_screen_name {
+      display: none;
+    }
+
+    .description_lang {
+      display: none;
+    }
+
+    .description_file_name {
+      overflow: hidden;
+      margin: auto;
+      width: 220px;
+      color: $IGTLightGreyMed;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 11px;
+      font: $font-family;
+    }
+
+    .description_file_size,
+    .description_file_dimensions {
+      display: none;
+    }
+
+    .description_file_dimensions,
+    .description_file_size {
+
+    }
+  }
+}
+
+// --------------------------------------------------------------- ROW VIEW -- Large
+
+.element.large {
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid #ddd;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+
+  .element_button {
+    position: relative;
+    top: 52px;
+    display: block;
+    float: left;
+    margin: 0 40px 0 40px;
+    width: 120px;
+    height: 37px;
+    text-align: center;
+
+    a.btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      height: 40px;
+      font-size: inherit;
+      line-height: 40px;
+
+      i.fa {
+        display: inline-block;
+        margin: 7px 0 0 5px;
+        width: 28px;
+        text-align: left;
+        font-size: 24px;
+        color: $white;
+      }
+
+      span {
+        position: relative;
+        top: -2px;
+        color: $white;
+      }
+
+      span:after {
+        content: "Add to Cart";
+      }
+
+      &.in_cart span:after {
+        content: "Go to Cart";
+      }
+
+      &.remove {
+        display: none;
+      }
+    }
+
+    a.btn.in_cart {
+      //display: none;
+
+      span:after {
+        content: "Go to Cart";
+      }
+    }
+
+    a.in_cart.remove {
+      display: block;
+      margin: 10px 0 0 0;
+      width: auto;
+      height: 15px;
+      font-size: 11px;
+
+      i.fa {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .element_image {
+    top: auto;
+    float: left;
+    margin: 20px 40px 0 0;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .element_description {
+    top: auto;
+    float: left;
+    margin-top: 20px;
+    width: 540px;
+    height: 130px;
+    color: $IGTLightGreyMed;
+    text-align: left;
+
+    @include respond(tablets) {
+      width: auto;
+    }
+
+    @include respond(portrait-tablets) {
+      width: auto;
+    }
+
+    .description_title {
+      display: block;
+      color: $IGTLightGreyMed;
+      font-family: $font-family;
+    }
+
+    .description_screen_name {
+      display: block;
+      color: $IGTLightGreyMed;
+    }
+
+    .description_lang {
+      display: block;
+      color: $IGTLightGreyMed;
+      font-size: 12px;
+    }
+
+    .description_file_name {
+      display: block;
+      width: auto;
+      color: $IGTLightGreyMed;
+      text-align: left;
+      text-overflow: inherit;
+      font-size: 11px;
+      font-family: $font-family;
+    }
+
+    .description_file_dimensions,
+    .description_file_size {
+      display: block;
+      float: left;
+      color: $IGTBackgroundGrey;
+      font-size: 10px;
+    }
+
+    .description_file_size {
+      padding: 0 10px 0 0;
+      //display: none;
+    }
+  }
+}
+
+// --------------------------------------------------------------- Add Hover while in Media Downloads - 4th Column only
+
+.in_cart:nth-child(4n+4) {
+  background: #f4f4f4;
+}
+
+.in_cart:nth-child(4n+4) {
+  background: #f4f4f4;
+}
+
+// --------------------------------------------------------------- Kill Hover while in Cart
+
+.cart {
+  margin: 0;
+
+  .in_cart.large:hover {
+    background: none !important;
+  }
+
+  .in_cart.large {
+    background: none !important;
+  }
+
+// ----- Over-ride height while in the cart
+
+  .in_cart {
+    //height: 140px;
+
+    .element_button {
+      //top: 50px
+    }
+
+    .element_image {
+     //margin: 10px 40px 0 0
+    }
+
+    .element_description {
+      //margin-top: 10px
+    }
+  }
+}
+
+// --------------------------------------------------------------- might need to place elsewhere ....?
+
+.media_selection_page_button {
+  display: block;
+  padding-bottom: 0;
+}
+
+
+// --------------------------------------------------------------- Back Button
+
+.back_button {
+  float: left;
+  margin-top: 12px;
+  width: auto;
+  height: 18px;
+
+  a {
+    font-size: 16px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a > .fa {
+    margin-right: 4px;
+  }
+}
+
+
+// --------------------------------------------------------------- Zip Button
+
+.game_page_dl_gallery_zip_button {
+  margin: 0;
+
+  .zip_button {
+    float: right;
+    width: 123px;
+  }
+
+  .zip_assets {
+    float: right;
+    padding: 0 0 5px 0 !important;
+    padding-top: 0 !important;
+    text-align: right;
+  }
+
+  .recent_downloads > a {
+    float: right;
+    font-size: 12px;
+
+    i.fa {
+      margin: 0 4px 0 0;
+    }
+  }
+
+  .recent_downloads > a:hover {
+    text-decoration: underline;
+  }
+}
+
+// --------------------------------------------------------------- DNU ??
+
+.mda_control_cart {
+  width: 100%;
+  height: 50px;
+
+  .mda_control_cart_container {
+    float: right;
+
+    a {
+      padding: 0 8px 0 8px;
+      color: $white;
+
+      .cta {
+        display: inline-block;
+      }
+
+      .cta:after {
+        content: 'Download Assets';
+      }
+    }
+
+    .fa-download:before {
+      margin-right: 5px;
+      color: $white;
+      font-size: 16px;
+      font-family: 'FontAwesome';
+    }
+
+    .primary_download_assets_button {
+	    float: left;
+	    margin-right: 4px;
+    }
+  }
+}
+
+.media_header_panel.shadow,
+.cart_header_panel.shadow {
+  @extend %shadow_btm_two;
+  height: 142px;
+}
+
+.mda_control {
+  z-index: 100;
+  display: inline-block;
+  height: auto;
+  background: $white;
+  width: 100%;
+
+  .mda_control_go-to-cart {
+    float: right;
+
+    a {
+      outline: 0;
+      //background: #78b92e;
+      height: 40px;
+    }
+  }
+}
+
+
+// ----- Modal multi-step processes -- Download
+
+.wrap_url {
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+.download_progress_complete_image {
+ height: 32px;
+ width: 32px;
+ margin: 0 auto;
+ padding: 0 0 20px 0;
+ background-image: url(../images/download_complete_icon.jpg);
+ background-repeat: no-repeat;
+}
+
+
+.download_progress_wrapper {
+ padding: 20px 0px 10px 0;
+ width: auto;
+ height: auto;
+ margin: 0 auto;
+ background-color: $white;
+}
+
+.download_progress_image {
+ height: 32px;
+ width: 32px;
+ margin: 0 auto;
+ padding: 0 0 20px 0;
+ background-image: url(../images/progress_spinner.gif);
+ background-repeat: no-repeat;
+}
+
+
+.download_progress_message {
+	height: 16px;
+	width: auto;
+	padding: 0 0 20px 0;
+	text-align: center;
+	font-size: 16px;
+	font-family: $font-family;
+}
+
+.download_progress_sub_message {
+	padding: 20px 0 40px 0;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	width: auto;
+	display: inline-block;
+}
+
+.download_complete_sub_message p {
+	padding: 10px 0 10px 0;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	width: 100%;
+	display: inline-block;
+}
+
+.download_progress_link, .download_complete_link {
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	width: 100%;
+	display: inline-block;
+}
+
+.download_progress_link, .download_complete_link a {
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+}
+
+.download_progress_link, .download_complete_link a:hover {
+ text-decoration: underline;
+}
+
+.download_progress_text_small p {
+	color: #444;
+	font-size: 10px;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	padding: 0 0 10px 0;
+}
+
+.download_complete_background { margin: 10px; }
+
+.download_progress_wrapper > fieldset {
+ border-top: 3px solid $black;
+ border-bottom: 3px solid $black;
+ border-left: none;
+ border-right: none;
+ margin: 15px 20px 30px 20px;
+ padding: 0 10px;
+ clear: both;
+}
+
+.download_progress_wrapper > fieldset > legend {
+	font-family: $font-family;
+	color: $black;
+	padding: 0 8px;
+	margin: 0;
+	border: none;
+	background: $white;
+	clear: both;
+}
+
+.tooltip {
+	position: relative;
+	z-index: 1000;
+	font-weight: normal;
+	font-size: 11px;
+	cursor: pointer;
+}
+
+.tooltip:hover:after {
+  @extend %shadow_btm;
+	position: absolute;
+  margin: -10px 0 0 -104px;
+	padding: 0px 5px;
+	height: 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-color: rgba(18, 108, 171, 0.9);
+	color: $white;
+	content: attr(title);
+	white-space: nowrap;
+	font-size: 11px;
+	line-height: 19px;
+	behavior: url(http://media.igt.com/pollyfills/PIE.htc);
+}
+

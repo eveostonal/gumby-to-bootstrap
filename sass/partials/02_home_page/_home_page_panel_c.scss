@@ -1,0 +1,346 @@
+// ----------------------------------------------------- PANEL 3 - Explore IGT
+
+.explore_igt {
+  padding: 80px 20px 30px 20px;
+  
+  &.secondary {
+    padding: 60px 20px 50px 20px;
+    overflow: hidden; // fixes About IGT iPad overflow issue
+  }
+  
+  @include respond(all-phones) { padding: 30px 10px 10px 10px; }
+  
+  h2 {
+    margin: 0 0 30px 0;
+    padding: 0;
+    font-size: 82px;
+    
+    @include respond(all-phones) { font-size: 42px; }
+    @include respond(tablets) { font-size: 62px; }
+    @include respond(portrait-tablets) { font-size: 52px; }
+  }
+  
+  h3 { 
+    font-size: 20px;
+    line-height: 25px;
+  }
+  
+  h3, h4, h5, h6 {
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+  
+  .columns { position: relative; }
+
+  //Pagination
+  .new_hp_pagination {
+    position: absolute;
+    height: 12px;
+    top: 7px;
+    right: 0;
+    font-size: 0;
+  }
+  
+  //Upcoming Events
+  .hp_upcoming_events_wrapper {
+    display: block;
+    margin-bottom: 30px;
+    
+    .hp_upcoming_events_container {
+      position: relative;
+      display: block;
+      
+      .hp_upcoming_events_text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        
+        .position_table_outer {
+          display: table;
+          width: 100%;
+          height: 100%;
+          
+          .position_table_inner {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            
+            h4, h5, h6, p { color: $white; }
+            
+            h4 { 
+              font-size: 25px;
+              line-height: 30px;
+            }
+            
+            h5 {
+              margin: 0;
+              font-size: 16px;
+              line-height: 21px;              
+            }
+            
+            h6 {
+              font-size: 12px;
+              line-height: 17px;
+              margin-bottom: 10px;
+            }
+            
+            p.btn {
+              margin: 0;
+              
+              a {
+                background: $IGTMediumBlue;
+                font-size: 12px;
+                
+                &:hover {
+                  background: $white;
+                  color: $IGTMediumBlue;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .hp_upcoming_events_image {
+        font-size: 0;
+              
+        img {
+          width: 100%;
+          height: auto;
+          padding: 0;
+          margin: 0;
+          display: block;
+        }  
+      }    
+    }
+  }
+
+  //Featured Article  
+  .hp_featured_article {
+    margin-bottom: 30px;
+    position: relative;
+    
+    .owl-stage-outer {
+      &::after {
+        width: 1px;
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: $white;
+      }
+    }
+    
+    //@include respond(all-phones) { margin-bottom: 0; }
+    
+    .hp_featured_article_item {
+      .five {
+        margin: 0;
+        padding: 0;
+        width: 45%;
+        font-size: 0;
+
+        img {
+          min-height: 100%;
+          min-width: 100%;
+          width: auto;
+          height: auto;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          object-fit: cover;
+        }
+
+        @media only screen and (max-width: 850px) and (min-width: breakpoint($min-device-width)) {
+          width: 100%;
+          float: none;
+        }
+      }
+
+      .seven {
+        background: $IGTOrange;
+        margin: 0;
+        padding: 20px;
+        width: 55%;
+
+        @media only screen and (max-width: 850px) and (min-width: breakpoint($min-device-width)) {
+          width: 100%;
+          float: none;
+        }
+
+        h3, h4, h5, h6, p { color: $white; }
+
+        h4 {
+          font-size: 20px;
+          line-height: 25px;
+        }
+
+        h5 {
+          font-size: 12px;
+          line-height: 17px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 21px;
+          margin-bottom: 15px;
+          
+          a { font-size: 12px; }
+        }
+
+        .row.no_mobile_break {
+          .five {
+            background: none;
+            width: 90px !important;
+
+            @media only screen and (max-width: 850px) and (min-width: breakpoint($min-device-width)) {
+              width: 90px !important;
+              float: left;
+            }
+
+            p.btn {
+              font-size: 12px;
+              width: 90px;
+              margin: 12px 0 0 0;
+            }
+          }
+
+          .seven {
+            background: none;
+            width: calc(100% - 90px) !important;
+            padding: 0 !important;
+            margin: 0 !important;
+
+            @media only screen and (max-width: 850px) and (min-width: breakpoint($min-device-width)) {
+              width: calc(100% - 90px) !important;
+              float: left;
+              margin: 0 !important;
+            }
+
+            .hp_featured_article_auth {
+              img {
+                float: right;
+                height: 45px;
+                width: 45px;
+                border-radius: 22.5px;
+                border: 2px solid white;
+                margin-left: 10px;
+              }
+
+              p {
+                line-height: 45px;
+                text-align: right;
+                margin: 0;
+                float: right;
+
+                small {
+                  line-height: inherit !important;
+                  color: #fcdeaa;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  //Latest News Header
+  .hp_latest_news_header.no_mobile_break {
+    .six {
+      width: calc(100% - 80px);
+      
+      @media only screen and (max-width: 850px) and (min-width: breakpoint($min-device-width)) {
+        width: calc(100% - 80px) !important;
+      }
+    }
+    
+    .six.button {
+      width: 80px;
+      margin: 0;
+      position: relative;
+      
+      @media only screen and (max-width: 850px) and (min-width: breakpoint($min-device-width)) {
+        width: 80px !important;
+        margin: 0 !important;
+      }
+      
+      p {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+  
+  //Latest News Listings 
+  .hp_latest_news {
+    margin: 0 0 30px 0;
+    border-left: 10px solid #efefef;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+    @include respond(all-phones) { height: 300px !important; }
+    
+    &::-webkit-scrollbar-track {
+	    background-color: #efefef;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: #efefef;
+    }
+
+    &::-webkit-scrollbar-thumb { background-color: lighten($IGTLightBlue, 10%); }
+    
+    li {
+      padding: 15px 20px;
+      font-size: 13px;
+      line-height: 18px;
+      background: #f9f9f9;
+      
+      &:nth-child(odd) { background: #fff; }
+      
+      .hp_news_date {
+        font-size: 10px;
+        color: #909090;
+      }
+      
+      &.button {
+        padding: 0;
+        position: relative;
+        
+        .btn {
+          width: 100%;
+          height: 60px;
+          
+          a {
+            font-family: 'Verlag A', 'Lato', Helvetica, Arial, sans-serif;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            font-size: 14px;
+            background: $IGTLightBlue;
+            color: $white;
+            
+            &:hover {
+              background: $IGTMediumBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

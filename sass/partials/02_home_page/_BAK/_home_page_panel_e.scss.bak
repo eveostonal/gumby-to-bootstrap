@@ -1,0 +1,358 @@
+// ----------------------------------------------------- PANEL 4 - Information // Webinar / IGT By The Numbers
+
+[data-panel="information"] {
+  .component {
+    &:first-child { background: $IGTDarkOrange !important; }
+    &:last-child { background: $white !important; }
+  }
+}
+
+[data-target="half_height"] {
+  display: block;
+  text-align: left;
+  padding: 0px;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  background: $white;
+
+  @include respond(all-phones) {
+    float: none;
+    width: auto;
+    background: $white !important;
+  }
+
+  .header_title_h2_sub {
+    text-align: center;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 34px;
+    color: $white;
+
+    @include respond(all-phones) {
+  		margin: 20px 0 20px 0;
+  		color: $white;
+  		font-size: 34px;
+  		text-align: left;
+    }
+  }
+
+  .header_title {
+    padding: $h2_tag_bottom;
+    text-align: center;
+    color: $IGTBlue;
+
+    @include respond(all-phones) {
+      color: $white;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  h3 {
+	  padding: $h2_tag_bottom;
+	  color: $navbar-color;
+	  margin: 3% 0 3% 0;
+
+	  @include respond(all-phones) {
+	    color: $white;
+	    margin: 0;
+	  }
+
+	  @include respond(tablets) {
+	    margin: 0;
+	    //background: grey;
+	  }
+	}
+
+  p {
+    display: inherit;
+    color: $white;
+    //margin-bottom: $p_tag_bottom;
+    margin-bottom: 10px;
+    @extend %panel_font_weight_default;
+
+    @include respond(all-phones) {
+      color: $white;
+      text-align: left;
+    }
+  }
+
+  .img {
+	  margin-bottom: 5px;
+  }
+
+  img {
+    width: 100%;
+    @extend %img_defaults;
+  }
+
+  .text_link {
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding-bottom: 30px;
+
+    a {
+      display: block;
+      padding: 0;
+      color: $IGTYellow;
+
+      @include respond(all-phones) {
+        text-align: left;
+      }
+    }
+
+    a:hover {
+      color: $IGTDarkYellow;
+    }
+    
+    @include respond(all-phones) {
+      padding: 0 0 40px 0 !important;
+    }
+  }
+
+  .date {
+    @extend %date_defaults;
+    color: $white;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+
+  .article {
+    margin: 0;
+    padding: 0;
+
+    @include respond(all-phones) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .figure {
+      float: left;
+      margin: 7px 20px 0 0;
+      width: 170px;
+      line-height: 14px;
+
+      img {
+        width: 100%;
+        @extend %img_defaults;
+      }
+    }
+  }
+
+  .one,
+  .two {
+    padding: 0;
+    margin: 0;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+
+  .three {
+    padding: 0;
+
+    @include respond(all-phones) {
+      padding: 2% 0 0;
+    }
+  }
+
+  .center {
+    top: 15%;
+    width: 80%;
+    height: 55%;
+    max-width: 1090px;
+    padding: 0;
+
+    @include respond(all-phones) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include respond(portrait-tablets) {
+      top: 20%;
+      width: 85%;
+      height: 67%;
+    }
+
+    @include respond(tablets) {
+      top: 20%;
+      width: 80%;
+      height: 60%;
+    }
+
+    @include respond(desktop) {
+      top: 10%;
+    }
+
+    .widget {
+      padding: 0;
+
+      @include respond(all-phones) {
+        padding: 0;
+      }
+    }
+
+    .five {
+	    float: right;
+	    margin-left: 2.88462% !important;
+
+	    @include respond(all-phones) {
+        float: none;
+        padding: 0 20px 20px;
+      }
+    }
+
+    .seven {
+	    margin-left: 0 !important;
+
+	    @include respond(all-phones) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .icon_title {
+    //padding: 15px 0 20px 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    .icon_title_sub {
+      padding: 10px 0 0 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: $IGTLightGrey;
+      font-weight: normal;
+      display: block;
+
+      @include respond(all-phones) {
+        display: inline-block;
+        padding: 0 0 0 10px;
+      }
+    }
+
+    p > span:first-child {
+      font-size: 36px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      color: $IGTBlue;
+      font-weight: normal;
+      line-height: 34px;
+      margin: 0;
+      padding: 0;
+      @extend %verlag_book;
+
+      @include respond(all-phones) {
+        font-size: 18px;
+      }
+    }
+
+    p > span:nth-child(2) {
+      padding: 10px 0 0 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: $IGTLightGrey;
+      font-weight: normal;
+      display: block;
+
+      @include respond(all-phones) {
+        display: inline-block;
+        padding: 0 0 0 10px;
+      }
+		}
+
+		p:first-child {
+      font-size: 36px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-bottom: 3px;
+      //font-weight: 300;
+      color: $IGTBlue;
+      font-weight: normal;
+
+      @include respond(all-phones) {
+        font-size: 18px;
+        color: $IGTBlue;
+      }
+    }
+
+    p:nth-child(2) {
+      padding: 10px 0 0 0;
+      font-size: 18px;
+      margin-bottom: 0;
+      //font-weight: 300;
+      color: $IGTBlue;
+      font-weight: normal;
+      display: block;
+
+      @include respond(all-phones) {
+        display: inline-block;
+        padding: 0 0 0 10px;
+        color: $IGTBlue;
+      }
+		}
+  }
+
+  .adj_top {
+    top: 0;
+    width: 80%;
+    max-width: 1090px;
+    height: 78%;
+
+    @include respond(all-phones) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include respond(portrait-tablets) {
+      top: 0;
+      width: 90%;
+      height: 60%;
+    }
+
+    @include respond(tablets) {
+      height: 55%;
+    }
+
+    @include respond(desktop) {
+      height: 70%;
+    }
+
+    .header_title_h2_sub {
+      text-align: center;
+      margin: 0 0 20px 0;
+      padding: 0;
+      color: $IGTDarkOrange;
+
+      @include respond(all-phones) {
+        //font-weight: 700;
+        margin: 0 0 10px 0;
+        color: $IGTBlue;
+        font-size: 34px;
+      }
+    }
+  }
+
+  .header_text_mobile {
+	  text-align: left;
+
+	  @include respond(all-phones) {
+	    color: $white;
+	    text-align: left;
+	    font-size: 22px;
+      padding-left: 20px;
+	  }
+  }
+}
+
+// Spacing Hack
+[data-panel="information"] > .container > hr {
+	margin: 16px 0 40px;
+}

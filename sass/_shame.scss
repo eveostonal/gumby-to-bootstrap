@@ -1,0 +1,1084 @@
+%ie_8_imageScale {
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+}
+
+%ie_8_imageScale_fix {
+  z-index: auto !important;
+  -ms-behavior: url("http://media.igt.com/pollyfills/backgroundsize.htc");
+}
+
+// -------------------- IE8
+
+html.ie8 {
+	height: 100%;
+
+	[data-index="home"] header {
+  	background: transparent url("#{$get-path-to-images}2015/spacer_white_95.png")
+  }
+
+  //.sub_nav ul [data-bar="0"] ul li + li:before { display: none; }
+
+  // -------------------- Scott's Changes
+
+	// Homepage Info Height Adjustment
+	[data-panel="information"] { height: 946px; }
+
+  @media only screen and (max-width: 900px) {
+  	[data-target="half_height"] p { font-size: 12px !important; }
+  }
+
+  [data-chapter="desk_alert"] {
+    @media all and (max-width: 760px) {
+      background: $black;
+    }
+  }
+
+  [data-source="visual-list-table"] .expansion_list .expansion_item .eight.columns ul > li { min-height: inherit !important; }
+
+  // -------------------- END Scott's Changes
+  // -------------------- Brent's Changes
+
+	//double input field fix
+	.xxwide,
+	.xwide,
+	.wide,
+	.normal,
+	.narrow,
+	.xnarrow {
+		display: inline;
+		&+input {
+			display: inline;
+			margin: 0 0 0 -.25em;
+		}
+	}
+
+	// tooltip 'fade' fix
+	.ttip {
+		&:before, &:after {
+			display: none;
+		}
+		&:hover {
+			&:before, &:after {
+				display: block;
+			}
+		}
+	}
+
+	.toggle_menu {
+    display: none;
+
+    @include respond(all-phones) {
+      display: block;
+
+      .toggle_button {
+        margin-bottom: 30px;
+        width: 100%;
+
+        .btn {
+          width: 100%;
+
+          .fa {
+            font-size: 18px;
+            margin: 0 0 0 4px;
+          }
+        }
+      }
+    }
+  }
+
+// ----- New
+
+// ---- Game Detail
+
+  .tab-nav > li {
+    width: 24%;
+  }
+
+  // sub-nav tansparency Issue
+  //.sub_nav_container .sub_nav ul [data-bar="1"],
+	//.sub_nav_container .sub_nav ul [data-bar="2"] {
+	  // old ---- background: rgba(249,249,249,0.95);
+		//background: url("#{$get-path-to-images}background_subnav_ie8.png") repeat;
+	//}
+
+	//subnav breadcumb arrow issue
+	.sub_nav_container .sub_nav ul [data-bar="0"] ul li:first-child{ &:before { display: none; } }
+
+  // ----- Mosaic -- Need to look back into this css to make sure its needed
+
+  [data-target="mosaic-row-3c"] {
+    height: 326px;
+    //overflow: hidden;
+    @include respond(all-phones) {
+      height: auto;
+    }
+  }
+
+  [data-target="mosaic-row-2c"] {
+    position: relative;
+    //overflow: hidden;
+    // don't think we need this ... max-height: 290px;
+
+    @include respond(all-phones) {
+      height: auto;
+      max-height: none;
+      display: block;
+
+      .options {
+        position: relative;
+        padding: 20px;
+      }
+    }
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] .article,
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] .media,
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] .widget {
+    height: 100%;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns {
+    position: relative;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns:first-child {
+    margin: 0 !important;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns .options a { display: block !important; }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns .options {
+    position: absolute;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .eight .options {
+    position: absolute;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .toggle {
+    color: $white;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .img_custom {
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  [data-target="mosaic-content"] .options .text_link a {
+    color: $IGTMediumBlue;
+    font-size: 14px;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] p a {
+    color: $IGTMediumBlue;
+  }
+
+  [data-target="mosaic-content"] .options [data-update="difference"] {
+    font-size: 16px;
+    color: $IGTLightGreyMedDark;
+    margin-bottom: 0;
+  }
+
+  [data-target="mosaic-content"] .options [data-change="volume"],
+  [data-target="mosaic-content"] .options [data-timestamp="date"] {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: $IGTLightGreyMedDark;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .component .widget.slideshow_nav {
+    max-width: 1080px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: table;
+    overflow: auto;
+    margin: auto;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .component .widget.slideshow_nav {
+    max-width: 1080px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: table;
+    overflow: auto;
+    margin: auto;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+
+   @include respond(all-phones) {
+      position: static;
+    }
+  }
+
+  .hr {
+    display: none;
+
+    @include respond(all-phones) {
+      border-bottom: 1px solid #cccccc;
+      //display: none;
+      //float: left;
+      height: 1px;
+      display: block;
+      width: 100%;
+      margin: 16px 0 30px;
+    }
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns .options {
+    @include respond(all-phones) {
+      position: relative;
+      //background: $white;
+    }
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] p,
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] p,
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .text_link {
+    font-size: 14px;
+
+    @include respond(all-phones) {
+      text-align: center;
+    }
+  }
+
+  [data-target="mosaic-row-2c"],
+  [data-target="mosaic-row-3c"] {
+    @include respond(all-phones) {
+      text-align: center;
+    }
+  }
+
+  .background-size-polyfill img {
+    @include respond(all-phones) {
+      width: 100% !important;
+      height: 100% !important;
+      left: auto !important;
+    }
+  }
+
+  [data-target="mosaic-content"] .wht_bkgrnd_mobil {
+    @include respond(all-phones) {
+      //background: $white;
+    }
+  }
+
+  .non_mobile_img {
+    //@extend %ie_8_imageScale;
+    //position: absolute;
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: block;
+    padding-top: 0;
+    //min-width: 100%;
+    //height: 100%;
+    // extend has to be on the bottom
+
+    img {
+      display: block;
+    }
+  }
+
+  // ----- Mosaic End
+  // ---- widgets
+
+  [data-target="widget-stock"] {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+  }
+
+  // End Widgets
+
+  .panel .container {
+    display: block;
+    width: 100%;
+    position: relative;
+    min-height: inherit !important;
+  }
+
+  [data-target="full_panel_slideshow"] {
+    background: $IGTLightestGrey;
+
+    .cycle-slideshow {
+      .cycle-slide {
+        @include respond(portrait-tablets) {
+          &:before {
+            background: transparent url("#{$get-path-to-images}2015/spacer_black_50.png")
+          }
+        }
+      }
+    }
+  }
+
+  [data-target="full_panel_slideshow"] .cycle-slideshow .slide {
+    z-index: 50;
+  }
+
+  .proceed_arrow {
+    top: auto;
+    bottom: 0;
+    width: 300px;
+    height: 117px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  [data-target="half_height"] {
+    display: block;
+    text-align: left;
+    padding: 0px;
+    width: 100%;
+    height: 512px;
+  }
+
+  [data-target="static_panel_slideshow"] {
+    min-height: inherit;
+  }
+  // -- temp // remove when images are inline
+
+  .news-background-temp {
+    height: 1024px;
+    background: url('../images/temp/panel-news-fpo.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    // extend has to be on the bottom
+    z-index: auto !important;
+    //-ms-behavior: url(http://www.igt.com/polyfill/backgroundsize.htc);
+    -ms-behavior: url(http://media.igt.com/pollyfills/backgroundsize.htc);
+  } // --- news-background-temp end
+
+  // -------------------- Fine-Tuning Casses
+
+  [data-index="home"],
+  .non_mobile_img,
+  .slide {
+    @extend %ie_8_imageScale;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+  }
+
+  .slide {
+    z-index: 60 !important;
+  }
+
+  #HeaderCarousel1_pnlStatic {
+    .non_mobile_img {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  //------ You might also Like
+
+  .cycle-carousel-wrap {
+    left: 0px !important;
+  }
+}
+
+html.ie8.oldie {
+	[data-source="fact-img-icon"],
+	[data-source="related-img-lg"] {
+		float: left;
+	}
+}
+// -------------------- IE9
+
+.ie9 {
+	// IE9 checkbox fix
+	.radio.checked i,
+	.checkbox.checked i {
+		top: 0;
+	}
+
+	.widget {
+  	zoom: 1 !important;
+	}
+
+	.toggle_menu {
+    display: none;
+
+    @include respond(all-phones) {
+      display: block;
+
+      .toggle_button {
+        margin-bottom: 30px;
+        width: 100%;
+
+        .btn {
+          width: 100%;
+
+          .fa {
+            font-size: 18px;
+            margin: 0 0 0 4px;
+          }
+        }
+      }
+    }
+  }
+
+	// ----- Mosaic
+
+  [data-target="mosaic-row-3c"] {
+    height: 326px;
+    //overflow: hidden;
+    @include respond(all-phones) {
+      height: auto;
+    }
+  }
+
+  [data-target="mosaic-row-2c"] {
+    position: relative;
+    //overflow: hidden;
+    // don't think we need this ... max-height: 290px;
+
+    @include respond(all-phones) {
+      height: auto;
+      max-height: none;
+      display: block;
+
+      .options {
+        position: relative;
+        padding: 20px;
+      }
+    }
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] .article,
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] .media,
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] .widget {
+    height: 100%;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns {
+    position: relative;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns .options {
+    position: absolute;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .eight .options {
+    position: absolute;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .toggle {
+    color: $white;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .img_custom {
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  [data-target="mosaic-content"] .options .text_link a {
+    color: $IGTMediumBlue;
+    font-size: 14px;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] p a {
+    color: $IGTMediumBlue;
+  }
+
+  [data-target="mosaic-content"] .options [data-update="difference"] {
+    font-size: 16px;
+    color: $IGTLightGreyMedDark;
+    margin-bottom: 0;
+  }
+
+  [data-target="mosaic-content"] .options [data-change="volume"],
+  [data-target="mosaic-content"] .options [data-timestamp="date"] {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: $IGTLightGreyMedDark;
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .component .widget.slideshow_nav {
+    max-width: 1080px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: table;
+    overflow: auto;
+    margin: auto;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+
+   @include respond(all-phones) {
+      position: static;
+    }
+  }
+
+  .hr {
+    display: none;
+
+    @include respond(all-phones) {
+      border-bottom: 1px solid #cccccc;
+      //display: none;
+      //float: left;
+      height: 1px;
+      display: block;
+      width: 100%;
+      margin: 16px 0 30px;
+    }
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row .columns .options {
+    @include respond(all-phones) {
+      position: relative;
+      //background: $white;
+    }
+  }
+
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] p,
+  [data-target="mosaic-content"] [data-target="mosaic-row-3c"] p,
+  [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .text_link {
+    font-size: 14px;
+
+    @include respond(all-phones) {
+      text-align: center;
+    }
+  }
+
+  [data-target="mosaic-row-2c"],
+  [data-target="mosaic-row-3c"] {
+    @include respond(all-phones) {
+      text-align: center;
+    }
+  }
+
+  .background-size-polyfill img {
+    @include respond(all-phones) {
+      width: 100% !important;
+      height: 100% !important;
+      left: auto !important;
+    }
+  }
+
+  [data-target="mosaic-content"] .wht_bkgrnd_mobil {
+    @include respond(all-phones) {
+      //background: $white;
+    }
+  }
+
+  .non_mobile_img {
+    //on 09192016 (SP) found the top attribute to causing IE 9 issues. Commented out.
+    //@extend %ie_8_imageScale;
+    //position: absolute;
+    //position: static;
+    //top: auto;
+    //left: auto;
+    //right: auto;
+    //bottom: auto;
+    display: block;
+    padding-top: 0;
+    //min-width: 100%;
+    height: 100%;
+    // extend has to be on the bottom
+    //@extend %ie_8_imageScale_fix;
+
+    img {
+      display: block;
+    }
+  }
+ // ----- Mosaic End
+}
+
+
+// -------------------- IE9 For Game Details / Marketing Downloads
+
+html.ie9 {
+  display: block;
+
+  .facet_select_wrapper {
+    overflow-x: hidden;
+
+    label {
+      margin-top: 7px !important;
+    }
+  }
+}
+
+//------ AddThis ------
+
+.at3lblight {
+  background-image: none !important;
+  background: $black !important;
+	opacity: .90  !important;
+	filter: Alpha(Opacity=90) !important;
+}
+
+// Not sure why this is needed. (SP)
+[data-index="home"] [data-panel="footer"] { height: auto !important; }
+
+//------- Homepage Fixes
+
+$mobile_news_height: 1050px !important;
+
+@include respond(all-phones) {
+
+  //[data-panel="hero"] { background: aqua; }
+  //[data-panel="news"] { background: blue; }
+
+  [data-panel="product"] {
+    .accordian .accordian_row {
+      background: $white;
+      color: $body-font-color;
+
+      p.btn {
+        background: $white;
+        a { color: $IGTMediumBlue; }
+      }
+
+      .row .columns .drawer {
+        background: $white;
+        color: $body-font-color;
+      }
+
+      .row .columns .drawer .btn {
+        margin-bottom: 20px !important;
+
+        a { color: $white; }
+      }
+    }
+  }
+
+  [data-panel="hero"] {
+    @include respond(all-phones) {
+      padding: 60px 0 0 0 !important;
+
+      .container { padding-bottom: 55px; }
+
+      .slideshow_nav .nav_left a#prev_01,
+      .slideshow_nav .nav_right a#next_01 {
+        color: $IGTLightGrey !important;
+      }
+
+      .slideshow_nav .slide_pagination_01 li a,
+      .slideshow_nav .slide_pagination_01 li a > i.fa:before {
+        color: $IGTLightGrey !important;
+      }
+
+      .slideshow_nav .slide_pagination_01 li.cycle-pager-active a,
+      .slideshow_nav .slide_pagination_01 li.cycle-pager-active a > i.fa:before {
+        color: $IGTLightGrey !important;
+      }
+    }
+  }
+
+  [data-panel="news"] {
+    clear: both;
+    display: block;
+    //height: $mobile_news_height;
+    height: auto;
+    width: 100%;
+    position: relative;
+
+    .container {
+      clear: both;
+      display: block;
+      //height: $mobile_news_height;
+      height: auto;
+      width: 100%;
+      position: relative;
+
+      .component {
+        clear: both;
+        display: block;
+        //height: $mobile_news_height;
+				height: auto;
+        width: 100%;
+        position: relative;
+
+        .cycle-slideshow-wrapper {
+          clear: both;
+          display: block;
+          //height: $mobile_news_height;
+					height: auto;
+          width: 100%;
+          position: relative;
+
+          .cycle-slideshow {
+            clear: both;
+            display: block;
+            //height: $mobile_news_height;
+						height: auto;
+
+            .cycle-slide {
+              clear: both;
+              display: block;
+              //height: $mobile_news_height;
+							height: auto;
+
+              .slide {
+                clear: both;
+                display: block;
+                height: auto !important;
+
+                .header_title,
+                .date { text-align: left !important; }
+              }
+            }
+          }
+        }
+      }
+
+      .slideshow_nav {
+				position: relative !important;
+				display: block !important;
+			}
+
+			.slideshow_nav {
+        display: block !important;
+        position: relative !important;
+        width: 100%;
+        height: 48px;
+        margin: 20px 0 20px 0;
+
+        .nav_left a#prev_03,
+        .nav_right a#next_03 {
+          color: $IGTLightGrey !important;
+        }
+
+
+        .slide_pagination_03 li a,
+        .slide_pagination_03 li a > i.fa:before {
+          color: $IGTLightGrey !important;
+        }
+
+        .slide_pagination_03 li.cycle-pager-active a,
+        .slide_pagination_03 li.cycle-pager-active a > i.fa:before {
+          color: $IGTLightGrey !important;
+        }
+
+        .nav_left,
+        .nav_right {
+          color: $white;
+          height: 48px;
+          line-height: 48px;
+          top: 0;
+        }
+
+        .slide_pagination_03 {
+          position: static;
+          line-height: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+
+  [data-panel="information"] {
+    background: red;
+    padding-top: 0;
+
+    .container {
+      hr { display: none; }
+
+      .component {
+        //About IGT
+        &:first-child {
+          .row {
+            padding: 40px 0 0 0;
+          }
+        }
+
+        //IGT By the Numbers
+        &:last-child {
+          .row {
+            padding: 40px 0 0 0;
+
+            .header_title_h2_sub {
+              color: $IGTDarkOrange;
+            }
+
+            .slideshow_nav {
+              display: block !important;
+              position: relative !important;
+              width: 100%;
+              height: 48px;
+              margin-bottom: 20px;
+
+              .nav_left a#prev_03,
+              .nav_right a#next_03 {
+                color: $IGTLightGrey !important;
+              }
+
+
+              .slide_pagination_03 li a,
+              .slide_pagination_03 li a > i.fa:before {
+                color: $IGTLightGrey !important;
+              }
+
+              .slide_pagination_03 li.cycle-pager-active a,
+              .slide_pagination_03 li.cycle-pager-active a > i.fa:before {
+                color: $IGTLightGrey !important;
+              }
+
+              .nav_left,
+              .nav_right {
+                color: $white;
+                height: 48px;
+                line-height: 48px;
+                top: 0;
+              }
+
+              .slide_pagination_03 {
+                position: static;
+                line-height: 48px;
+                height: 48px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Tablet Repairs
+@media only screen and (min-width: 560px) and (max-width: 1023px) {
+  //Repairs to Small Tablet version of Homepage Slider=
+  //.mobile_cycle {
+  //  [data-target="full_panel_slideshow"] {
+  //    .cycle-slideshow {
+  //      .slide {
+  //        .widget {
+  //          position: relative;
+  //          top: 0;
+  //          left: 0;
+  //          padding: 125px 60px 0 60px;
+  //          width: 100%;
+  //          height: 100%;
+  //
+  //          img {
+  //            position: absolute;
+  //            z-index: 50;
+  //            top: 0;
+  //            left: 0;
+  //            width: 100%;
+  //            height: 100%;
+  //            object-fit: cover;
+  //          }
+  //
+  //          p, h2 {
+  //            position: relative;
+  //            z-index: 75;
+  //          }
+  //
+  //          .btn.small {
+  //            z-index: 75;
+  //            line-height: 45px;
+  //            height: 45px;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+
+  [data-panel="information"] {
+    .container {
+
+      hr {
+        display: none;
+        visibility: hidden;
+      }
+
+      #Panel1Mobile {
+        .row {
+           padding: 30px 30px 0 30px;
+
+          .five.columns {
+            float: right;
+          }
+
+          .seven.columns {
+            margin: 0 2.88462% 0 0;
+          }
+        }
+      }
+
+      #ContentPlaceHolder1_myRepeater_ctl00_2_Panel2Mobile_2 {
+        .adj_top {
+          width: 100%;
+          height: 100%;
+
+          h2 {
+            margin: 0;
+            padding: 60px 0 30px 0;
+          }
+
+          @media (orientation: landscape) {
+            h2 { padding: 20px 0 0 0; }
+          }
+
+          .slideshow_nav {
+            bottom: 0;
+            height: 48px;
+            padding: 0;
+
+            .nav_left a#prev_03,
+            .nav_right a#next_03 {
+              color: $IGTLightGrey;
+              width: 17px;
+              height: 48px;
+              line-height: 48px;
+              font-size: 50px;
+            }
+
+            .slide_pagination_03 {
+              margin: 0 auto;
+              width: 100%;
+              text-align: center;
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              z-index: 100;
+              height: 48px;
+
+              a .fa:before {
+                color: $IGTLightGrey;
+              }
+            }
+          }
+
+          [data-target="half_height"] {
+            display: block;
+            height: auto;
+
+            .cycle-slide {
+              width: 100%;
+
+              .widget {
+                .img {
+                  img {
+                    margin: 0 auto;
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Product & Services Fixes (Tablet) Part 1
+  [data-panel="product"] {
+    .accordian .accordian_row {
+      background: $white;
+      color: $body-font-color;
+
+      p.btn {
+        background: $white;
+        a { color: $IGTMediumBlue; }
+      }
+
+      .row .columns .drawer {
+        background: $white;
+        color: $body-font-color;
+      }
+
+      .row .columns .drawer .btn {
+        margin-bottom: 20px !important;
+
+        a { color: $white; }
+      }
+    }
+  }
+
+  //Product & Services Fixes (Tablet) Part 2
+  #ContentPlaceHolder1_myRepeater_ctl00_3_pnlMobile_3 {
+    clear: both;
+    height: auto;  //was 100%
+
+    .panel {
+      overflow: visible;
+      clear: both;
+      height: inherit;
+
+      .container {
+        display: block;
+        height: inherit;
+        position: relative;
+
+        [data-target="no_background_slideshow"] {
+          position: relative;
+          width: 90%;
+          margin: 0 auto;
+          padding: 0 0 30px 0;
+
+          .header_title {
+            margin: 0;
+            padding: 75px 0 30px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//hide the mobile modal
+[data-index="home"] #modal1 {
+  display: none !important;
+  visibility: hidden !important;
+  position: static !important;
+  z-index: 0 !important;
+}
+
+//fix line heights on form fields using p tag
+p.field {
+  height: 36px;
+  line-height: 36px;
+}
+
+//fix service ticket search input
+.st_filtering {
+  .row_end {
+    a .fa-search {
+      font-size: 12px;
+      top: 4px;
+      position: relative;
+    }
+  }
+}
+
+//fix news items from having too big of URLs
+.xn-content a {
+  word-wrap: break-word;
+}

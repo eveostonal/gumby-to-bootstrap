@@ -1,0 +1,128 @@
+// --------------------------- Pay Tables
+
+
+.par_paytables {
+	font-weight: normal !important;
+
+  h3 {
+    //@extend %detials_header_row_default_h3
+  }
+
+	.table_data_grid {
+	 width: 100%;
+
+	 .table_data_grid_header {
+		 //background: $white
+	 }
+
+   tr:nth-child(even) {
+      padding: 3px 0 7px 10px;
+      list-style: none;
+      //height: 14px;
+      //background: $white;
+    }
+
+   tr:nth-child(odd) {
+      padding: 3px 0 7px 10px;
+      background: #eaeaea;
+      list-style: none;
+      //height: 14px;
+		}
+
+   //----- Pay Tables - ROws Cells
+
+    .table_data_grid_header {
+      @extend %cell_space_default;
+      padding: 0 !important;
+      border-bottom: none;
+      background: none !important;
+      // background: #ddd;
+      text-align: left;
+      // font-size: 12px;
+
+    	th {
+    		border-bottom: none;
+    		//padding: 0
+    	}
+    }
+
+    .par_paytable_row {
+     @extend %cell_space_default;
+
+     .par_paytable_cell {
+    	 padding: 10px 0 10px 10px;
+    	 //@extend %cell_space_default
+     }
+    }
+
+    .pay_table_row {
+    	display: table-row;
+
+    	.pay_table_cell {
+    		@extend %cell_space_ai_default;
+    	}
+    }
+	}
+}
+
+// ------
+
+.paytables_show {
+  width: 100%;
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    .paytable_cell_header {
+      // padding: 0 0 0 10px !important;
+      border-bottom: none;
+      // background: #ddd;
+      text-align: left;
+      // font-size: 12px
+    }
+
+    .paytable_cell_data {
+      padding: 0 0 0 10px;
+      // font-size: 12px
+    }
+  }
+}
+
+.pay_table_Values {
+  font-style: normal;
+
+  tbody {
+	  width: 100%;
+  }
+
+  .pay_table_row {
+  	display: table-row;
+  	width: 100%;
+    // font-size: 12px;
+
+  	.pay_table_cell {
+  		@extend %cell_space_ai_default;
+  	}
+  }
+}
+
+// ------
+
+.par_paytables_none,
+.par_theme_none,
+.par_details_sheet_with_path {
+	margin: 0;
+	padding: 10px 10px 10px 0;
+	//border-right: 1px #ddd solid;
+	//border-bottom: 1px #ddd solid;
+	//border-left: 1px #ddd solid;
+
+	p {
+		margin: 0;
+		padding: 0;
+		padding-bottom: 0;
+		line-height: normal;
+	}
+}

@@ -1,0 +1,990 @@
+// --------------------------------------------------------------- FILTER BAR EXTENDS
+
+%refine_defaults {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%drop_menu_defaults {
+  position: relative;
+  display: block;
+  margin-left: 0;
+  padding-left: 5px;
+  height: 23px;
+  border: 1px solid #ddd;
+  background: $white;
+  color: #444;
+  text-align: left;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 31px;
+  cursor: pointer;
+}
+
+%drop_menu_defaults_2 {
+  position: relative;
+  display: inline-block;
+  padding: 6px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background: $IGTLightGrey;
+  color: $white;
+  text-align: center;
+  font-family: $font-family;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+%drop_menu_mk {
+  position: relative;
+  display: inline-block;
+  padding: 6px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background: $IGTDarkOrange;
+  color: $white;
+  text-align: center;
+  font-family: $font-family;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+%fa_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 8px 0 5px;
+  height: 23px;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+%check_box_defaults {
+  position: relative;
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 0;
+  cursor: default;
+}
+
+%facet_panel_defaults {
+  position: absolute;
+  top: 41px;
+  left: 0px;
+  z-index: 150;
+  display: none;
+  overflow: visible;
+  padding: 0;
+  width: 199px;
+  border: 1px solid #ddd;
+  background: #F9F9F9 !important;
+  text-align: left;
+  font-size: 10px;
+}
+
+%refinement_row {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 10px;
+}
+
+%shadow_1 {
+  -webkit-box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.5);
+}
+
+%shadow_2 {
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.6);
+     -moz-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.6);
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.6);
+}
+
+%shadow_btm {
+  -webkit-box-shadow: 0 8px 6px -6px rgba(50, 50, 50, 0.8);
+     -moz-box-shadow: 0 8px 6px -6px rgba(50, 50, 50, 0.8);
+          box-shadow: 0 8px 6px -6px rgba(50, 50, 50, 0.8);
+}
+
+%shadow_btm_two {
+  -webkit-box-shadow: 0 10px 6px -6px rgba(50, 50, 50, 0.3);
+     -moz-box-shadow: 0 10px 6px -6px rgba(50, 50, 50, 0.3);
+          box-shadow: 0 10px 6px -6px rgba(50, 50, 50, 0.3);
+}
+
+label[AllOsCheckbox],
+label[for] {
+	font-size: inherit;
+	font-weight: normal;
+	line-height: normal;
+	margin-bottom: auto;
+	//display: initial;
+	display: inline-block;
+}
+
+// --------------------------------------------------------------- ISOTOPE transitions
+
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+
+// --------------------------------------------------------------- Filtering Controls
+
+.mda_filtering {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 30px;
+  line-height: normal;
+
+  .text_learn_more {
+		display: block;
+		float: left;
+		margin: 6px 0 0 0;
+		width: 200px;
+
+		.btn.small {
+			font-size: 0.895rem;
+
+			small {
+				color: $IGTBlue;
+			}
+		}
+  }
+
+  .facet_container {
+    width: auto;
+  }
+
+  .facet_layout_container {
+    width: 228px;
+    float: right;
+		padding: 0;
+		height: auto;
+		text-align: right;
+		line-height: normal;
+
+		a {
+	    display: inline-block;
+	    margin-left: 5px;
+	    width: 28px;
+	    height: 25px;
+	    color: $IGTBackgroundGrey;
+	    text-decoration: none;
+	  }
+
+	  .selected {
+	    color: $IGTBlue;
+	  }
+
+	  .fa {
+	    font-size: 28px;
+	  }
+
+    .zip_assets {
+      padding: 0 !important;
+      height: 12px !important;
+      line-height: 10px !important;
+    }
+
+    .recent_downloads {
+      padding: 0;
+      margin-bottom: 0;
+      height: 18px;
+			margin: 11px 0 0 0;
+
+      a {
+        display: block;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+        color: $IGTBlue;
+        font-size: 12px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a > .fa {
+        color: #126cab;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+    } // recent_downloads
+  } // facet_layout_container;
+} // mda_filtering
+
+
+.mda_wrapper.fixed > .mda_filtering {
+  margin-bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.facet_container div.facet:hover > .refine_item_1 > a .i.fa {
+  color: red;
+}
+
+.facet_container {
+  width: auto;
+  display: block;
+
+  ul.column_size {
+    display: block;
+    margin: 0;
+    padding: 0 0 30px 0;
+
+    li {
+      display: block;
+      float: left;
+      margin: 0;
+      list-style: none;
+
+      input {
+        padding: 0 10px 20px 0;
+      }
+    }
+  }
+
+  $menu_width_1: 200px;
+  $menu_drop_width_1: 199px;
+  $menu_textbox_width_1: 187px;
+
+  $menu_width_2: 110px;
+  $menu_drop_text: 160px;
+
+  .facet {
+    @extend %check_box_defaults;
+
+    .refine_item_1 {
+      @extend %refine_defaults;
+
+      a {
+        @extend %drop_menu_defaults_2;
+        width: $menu_width_1;
+
+//--------------------------------------------------------------- Games Filtering autocomplete textbox
+
+        input.autocomplete_textbox {
+          width: 70px;
+          height: 90%;
+          border: 0;
+        }
+
+        i.fa { @extend %fa_icon; }
+
+        &:hover {
+          background: darken($IGTLightGrey, 15);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .refine_item_2 {
+      @extend %refine_defaults;
+
+      a {
+        @extend %drop_menu_defaults_2;
+        width: $menu_width_2;
+
+        i.fa { @extend %fa_icon; }
+
+        &:hover {
+          background: darken($IGTLightGrey, 15);
+          text-decoration: none;
+       }
+      }
+    }
+
+    .refine_item_3 {
+      @extend %refine_defaults;
+
+      a {
+        @extend %drop_menu_defaults_2;
+        width: $menu_width_2;
+
+        i.fa { @extend %fa_icon; }
+
+        &:hover {
+          background: darken($IGTLightGrey, 15);
+          text-decoration: none;
+       }
+      }
+    }
+
+    .refine_item_4 {
+      @extend %refine_defaults;
+
+      a {
+        @extend %drop_menu_defaults_2;
+        width: $menu_width_2;
+
+        i.fa { @extend %fa_icon; }
+
+        &:hover {
+          background: darken($IGTLightGrey, 15);
+          text-decoration: none;
+       }
+      }
+    }
+
+    .refine_item_5 {
+      @extend %refine_defaults;
+
+      a {
+        @extend %drop_menu_defaults;
+        width: $menu_width_2;
+
+        i.fa { @extend %fa_icon; }
+      }
+    }
+
+    .refine_item_6 {
+      @extend %refine_defaults;
+
+      a {
+        @extend %drop_menu_defaults;
+        width: 106px;
+
+        i.fa { @extend %fa_icon; }
+      }
+    }
+
+    .refine_item_marketing_kit {
+      @extend %refine_defaults;
+      color: $IGTDarkOrange;
+
+      a {
+        @extend %drop_menu_mk;
+        //width: $menu_width_2;
+
+        //i.fa { @extend %fa_icon; }
+
+        span {
+	         color: $IGTLightGreyDrk;
+	         font-size: 12px;
+        }
+
+        &:hover {
+          background: $IGTYellow;
+          text-decoration: none;
+       }
+      }
+    }
+
+    .facet_panel {
+      @extend %facet_panel_defaults;
+      @extend %shadow_btm;
+
+      .refinement_row { @extend %refinement_row; }
+      .list_border { border-bottom: 1px solid #ddd; }
+
+      .disable {
+        background: #eaeaea;
+        color: #ccc;
+
+        input {
+          border: none;
+          background: #ccc;
+          color: #ccc;
+          opacity: 0.5;
+        }
+      }
+
+      .enable {
+        background: transparent;
+        color: inherit;
+
+        input {
+          border: none;
+          background: transparent;
+          color: inherit;
+          opacity: 1;
+        }
+      }
+
+      ul {
+        display: block;
+        margin: 0;
+        padding: 4px 6px 4px 6px;
+        width: 94%;
+        list-style: none;
+
+        hr {
+          display: block;
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+
+      li {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        padding: 0 0 5px 1px;
+        width: 100%;
+        height: 15px;
+        background: none;
+        list-style: disc;
+        list-style-type: none;
+        line-height: normal;
+      }
+
+      ul {
+        margin: 4px 0 0 0;
+        padding: 0 4px 4px 4px;
+  		}
+
+  		ul.margin_0 {
+  			padding: 0 0 0 4px;
+  		}
+
+			li.label_l1 {
+				position: relative;
+				left: 3px;
+				display: inline-block;
+        float: left;
+        width: 100%;
+        list-style-type: none;
+        line-height: normal;
+        height: 13px;
+        background: none;
+        list-style: disc;
+        margin: 0;
+        padding: 0 0 5px 5px;
+			}
+
+			li.label_l2 {
+				position: relative;
+				left: 14px;
+			}
+
+			li.checkbox_l1 {
+				position: relative;
+				left: 1px;
+			}
+
+			li.checkbox_l2 {
+				position: relative;
+				left: 12px;
+				height: 20px;
+			}
+
+			li.checkbox_l3 {
+				position: relative;
+				left: 24px;
+			}
+
+// ---------------------------------------------------------------  Filter Bar List
+
+      .filter_list {
+        padding: 4px 6px 0 5px;
+        height: 22px;
+
+        input {
+          background: $white url('http://media.igt.com/_dev/blue-spruce-all/igt-site/images/game_pages/icon-search.png') no-repeat 99% 1px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 1px 0;
+          padding: 4px 20px 4px 5px;
+          width: $menu_textbox_width_1;
+          height: auto;
+          outline: 0;
+          border: 1px solid #ccc;
+          border-radius: 0;
+          color: $IGTLightGreyDrk;
+          font-size: 1em;
+          font-size: 11px;
+          line-height: normal;
+        }
+      }
+
+// --------------------------------------------------------------- Filter Bar - facet select wrapper
+
+      .facet_select_wrapper {
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+        width: $menu_drop_width_1;
+        height: 200px;
+        border-top: 1px solid #ddd;
+
+        input[type="checkbox"] {
+          float: left;
+          margin: 3px 3px 3px 0;
+          font-size: 11px;
+        }
+
+        label {
+          display: block;
+          float: left;
+          margin: 3px 0 0;
+          font-size: 10px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+
+      .drop_1 {
+        //width: 150px
+      }
+
+      .drop_2 {
+        //width: 150px;
+        height: auto;
+        width: auto;
+      }
+
+      .drop_3 {
+        //width: 120px;
+        height: auto;
+        width: auto;
+      }
+
+      .drop_4 {
+        height: auto;
+        width: auto;
+      }
+
+      div.all_games {
+        padding: 4px 6px 4px 6px;
+        display: inline-block;
+        //border-bottom: 1px solid #ddd;
+
+        input[type="checkbox"] {
+          margin: 3px 3px 3px 0;
+        }
+
+        input[type="checkbox"] {
+          float: left;
+          margin: 3px 3px 3px 0;
+          font-size: 11px;
+        }
+
+        label {
+          display: block;
+          float: left;
+          margin: 3px 0 0;
+          font-size: 10px;
+        }
+
+        #AllGamesCheckbox,
+        #AllTypesCheckbox,
+        #AllLanguagesCheckbox,
+        #AllDevicesCheckbox {
+          margin: 10px 0 0;
+        }
+
+        label {
+          margin: 10px 0 0 5px;
+        }
+      }
+
+    }
+
+// --------------------------------------------------------------- drop menus
+
+
+    %menu_defaults {
+	    width: $menu_width_2;
+      border-radius: 7px;
+    }
+
+    $menu_padding_defaults: 0px 6px 4px 6px;
+
+
+// -------------------------------- drop menu 1
+
+    .menu_1 {
+      width: $menu_width_1;
+      border-radius: 7px;
+    }
+
+    .menu_1 > .drop_1 > .checkbox_l1 > label {
+      display: block;
+      float: left;
+      overflow: hidden;
+      margin: 3px 0 0;
+      width: $menu_drop_text;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 10px;
+    }
+
+// -------------------------------- drop menu 2
+
+    .menu_2 {
+      @extend %menu_defaults;
+      width: 136px;
+
+      .all_games {
+        padding: $menu_padding_defaults;
+
+        #AllGamesCheckbox {
+          margin: 9px 0 0;
+        }
+      }
+    }
+
+// -------------------------------- drop menu 3
+
+    .menu_3 {
+      @extend %menu_defaults;
+
+      .all_games {
+        padding: $menu_padding_defaults;
+
+        #AllGamesCheckbox {
+          margin: 9px 0 0;
+        }
+      }
+    }
+
+// -------------------------------- drop menu 4
+
+    .menu_4 {
+      @extend %menu_defaults;
+      height: auto;
+
+      ul.facet_select_wrapper {
+        display: inline-block;
+        overflow: hidden;
+        margin: 0 0 3px 0;
+        padding: 0 0 0 4px;
+        width: auto;
+        height: auto;
+        border-top: 1px solid #ddd;
+
+        li:first-child {
+          margin-top: 1px;
+        }
+      }
+
+      ul.subfacet_select_wrapper {
+        display: inline-block;
+        margin: 4px 0 0 0;
+        padding: 0 0 4px 4px;
+        background: transparent;
+        color: inherit;
+      }
+    }
+
+// -------------------------------- Arrow above drop menu
+
+    //.menu_1,
+    //.menu_2,
+    //.menu_3,
+    //.menu_4
+    .menu_arrow {
+	    //top: 41px;
+      //overflow: visible;
+    }
+
+    //.menu_1:before,
+    //.menu_2:before,
+    //.menu_3:before,
+    //.menu_4:before,
+    .menu_arrow {
+			position: absolute;
+			top: -14px;
+			right: 0;
+			left: 0;
+			margin: auto;
+			display: block !important;
+			width: 100%;
+			height: 14px;
+			background: url("#{$get-path-to-images}background_filter_dropdown_pointer.png") no-repeat;
+			content: "";
+		}
+
+		.menu_2 > .menu_arrow {
+			background-position-x: 40%;
+			background-position-y: 0;
+		}
+
+		.menu_3 > .menu_arrow {
+			background-position-x: 45%;
+			background-position-y: 0;
+		}
+
+		.menu_4 > .menu_arrow {
+			background-position-x: 45%;
+			background-position-y: 0;
+		}
+  }
+
+
+
+// --------------------------------------------------------------- Arrow hover when menu showing
+
+  .facet:hover {
+    display: block;
+
+    .refine_item_1 > a > i.fa,
+    .refine_item_2 > a > i.fa,
+    .refine_item_3 > a > i.fa,
+    .refine_item_4 > a > i.fa {
+      //color: #999999;
+    }
+  } // .facet:hover end
+}
+
+
+// --------------------------------------------------------------- Primary Go To Cart button
+
+.filter_bar_options {
+  float: right;
+  width: auto;
+  margin: 0;
+
+  .filter_bar_page_vol {
+		float: left;
+		margin: 13px 0 0 0;
+		width: auto;
+		height: 17px;
+
+	  .figure {
+			width: auto;
+
+			.text_link {
+				margin-right: 0;
+			}
+	  }
+
+	  .label {
+			padding: 0 5px;
+			color: $body-font-color;
+			font-weight: normal;
+			font-style: normal;
+	  }
+
+	  & > span:last-child {
+			padding: 0 0 0 5px;
+	  }
+  }
+
+  .filter_bar_cart {
+		position: relative;
+		float: left;
+		margin: 0 20px;
+		width: 32px;
+		height: 30px;
+
+		a.link {
+			display: block;
+			width: 32px;
+			height: 30px;
+		}
+
+    .fa {
+      margin: -2px 0 0 0;
+      color: $IGTDarkOrange;
+      font-size: 32px;
+    }
+
+    a.link:hover > .fa {
+	    color: $IGTLightGreyMed;
+    }
+
+    .mda_count {
+      position: absolute;
+      top: 2px;
+      left: 9px;
+      width: 18px;
+      height: 18px;
+      background: url("http://media.igt.com/_dev/blue-spruce-all/igt-site/images/game_pages/cart_count.png") no-repeat;
+      color: $white;
+      text-align: center;
+      font-size: 11px;
+      line-height: 18px;
+    }
+
+    .mda_count:before {
+	    margin: 0 0 2px 0;
+    }
+  }
+
+  .facets_viewtoggle {
+    display: inline-block;
+    margin: 0;
+    width: 115px;
+    height: 27px;
+
+    li > a {
+      width: auto;
+      height: auto;
+
+      .fa {
+        font-size: 32px;
+      }
+    }
+
+    .view-toggle {
+      margin: 0;
+      padding: 0;
+      width: 115px;
+      text-align: right;
+
+      li {
+        border-left: none;
+        float: right;
+        margin-left: 10px;
+
+        a {
+          width: auto;
+          height: auto;
+          //color: $IGTBlue;
+
+          .fa {
+            font-size: 29px;
+          }
+
+          &:hover {
+	          color: $IGTBlue;
+          }
+        }
+
+        a.active {
+	        color: $IGTBlue !important;
+        }
+      }
+    }
+  }
+
+  a.cart_btn {
+    width: 65px;
+    outline: 0;
+  }
+
+  .text_link {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  span.cta {
+    position: relative;
+    top: -6px;
+    margin: 0;
+    padding: 0;
+    width: 61px;
+    height: 10px;
+    color: $white;
+  }
+}
+
+
+// --------------------------------------------------------------- Arrow hover whne menu showing
+
+.facet_container {
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  width: auto;
+  height: auto;
+  color: #444;
+}
+
+.column_selection {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 0 20px 0;
+  width: 100%;
+
+  ul.column_wrapper {
+   display: block;
+   float: right;
+   margin: 0;
+   padding: 0;
+   width: 84px;
+
+    li.column_button {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 33.333333%;
+      height: 22px;
+
+      a {
+        display: inline-block;
+        margin-right: 4px;
+        padding: 2px 8px 0 8px;
+        border: solid 1px #c0c0c0;
+        border-radius: 2px;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9));
+        background: -moz-linear-gradient(0% 0% 270deg,#f8f8f8, #e9e9e9);
+        box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+        color: $black;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px rgba(255,255,255, 1);
+        font-weight: bold;
+        font-size: .875em;
+        line-height: 20px;
+
+        &.selected {
+          border: none;
+          border: solid 1px #616161;
+          background: #616161;
+          box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8);
+          color: $white;
+          text-shadow: 0px 0px 3px rgba(0,0,0, .5);
+        }
+      }
+    }
+  }
+}
+
+.available_on {
+  display: inline-block;
+  padding: 0 10px 0 0;
+
+  .fa { font-size: 30px; }
+  .win { color: #41C2F3; }
+  .andr { color: #B1CA39; }
+  .apl { color: #B1B8BC; }
+}
+
+
+

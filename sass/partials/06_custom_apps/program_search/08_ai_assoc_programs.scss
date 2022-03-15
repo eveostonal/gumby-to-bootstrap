@@ -1,0 +1,113 @@
+// --------------------------- ASSOCIATED "INSTALL" PROGRAMS
+
+.associated_container {
+  font-weight: normal
+
+  h3 {
+    //@extend %detials_header_row_default_h3;
+  }
+
+  .associatedInstallProgram {
+    font-weight: normal;
+
+    .table_data_grid {
+      margin: 0 0 10px 0;
+      padding: 0;
+      width: 100%;
+
+      .table_data_grid_header {
+        font-style: normal;
+
+        th {
+          border-bottom: none;
+          text-align: left;
+        }
+      }
+
+      .table_data_row {
+        display: table-row;
+
+        td.program_cell_data {
+         @extend %cell_space_ai_default;
+         border-bottom: none !important;
+         color: $IGTGrey;
+         font-size: 10px;
+
+          .table_data_grid_status_act {
+            @extend %cell_space_ai_default;
+            margin: 0;
+            padding: 10px 0 0 10px;
+            border-bottom: none;
+            color: #78B92E;
+            font-size: 12px
+          }
+
+          .table_data_grid_status_obs {
+            @extend %cell_space_ai_default;
+            margin: 0;
+            padding: 10px 0 0 10px;
+            border-bottom: none;
+            color: red; //was orange
+            font-size: 12px
+          }
+
+          .selected_jurisdiction {
+            color: $IGTLightGreyMedDark;
+            font-size: 10px;
+          }
+        }
+
+
+
+        .table_data_grid_ai {
+          @extend %cell_space_ai_default;
+          margin: 0;
+          padding: 10px 0 0 10px;
+          border-bottom: none;
+        }
+
+        .subPrograms {
+      		@extend %cell_space_ai_default;
+          border-bottom: none !important;
+
+      		span.sub_program_id {
+      			display: block;
+      			padding: 0 0 10px 0;
+      			width: 100%;
+      			//height: 11px;
+      		}
+      	}
+
+      	.table_data_grid_status {
+      		@extend %cell_space_ai_default;
+      	}
+
+      	.table_data_grid_jur {
+      	 padding: 10px;
+      		//@extend %cell_space_ai_default
+      	}
+      }
+
+      .table_sig_row {
+        display: table-row;
+        // font-size: 12px;
+
+        .first_row {
+          display: table-cell;
+          //margin: 0;
+          //padding: 0;
+          //border-bottom: 2px solid #ddd;
+
+          a {
+            display: block;
+            margin-left: 10px;
+            //margin: 0;
+            //padding: 2px 0 2px 20px !important;
+            //height: 8px;
+            //line-height: 2px;
+          }
+        }// ----- first_row end
+      }// ----- table_sig_row end;
+    }
+  }
+}

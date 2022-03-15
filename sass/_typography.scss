@@ -1,0 +1,349 @@
+h1,h2,h3,h4,h5,h6 {
+  font-weight: $header-font-weight;
+  color: $header-font-color;
+  text-rendering: optimizeLegibility;
+
+  @include padding-leader($rhythm-spacing);
+  @include adjust-leading-to($rhythm-height);
+  @include padding-trailer($rhythm-spacing);
+  @extend %verlag_book;
+
+  a {
+    color: $header-link-color;
+  }
+}
+
+@include respond(all-phones) {
+  h1,h2,h3,h4,h5,h6 { word-wrap: break-word;}
+}
+
+h1 {
+  @include font-size($xxxlarge);
+  color: $IGTDarkOrange;
+
+  &.xlarge { @include font-size($reallybig); }
+  &.xxlarge { @include font-size($tremendous); }
+  &.absurd { @include font-size($absurd); }
+
+  a { color: $IGTOrange; }
+}
+
+h2 { @include font-size($xlarge); }
+h3 { @include font-size($larger);}
+h4 { @include font-size($large);}
+h5 { @include font-size($med);}
+h6 { @include font-size($norm);}
+
+@include respond(all-phones) {
+  h1 { @include font-size($xlarge);}
+  h2 { @include font-size($larger + 6);}
+}
+
+.subhead {
+  color: $IGTLightGreyMed;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: $font-family;
+  font-weight: $body-font-weight;
+  @include font-size($base-font-size);
+  //margin-bottom: $base-line-height / 2; (SP) I removed this temporarily until I can come up with a better solution
+  margin-bottom: 30px;
+  @include adjust-leading-to(1);
+  &.lead {
+    @include font-size(ms(0) * 1.25);
+    margin-bottom: ms(1);
+  }
+  @include respond(portrait-tablets) {
+    @include font-size($base-font-size * 1.1);
+    @include adjust-leading-to(1);
+  }
+}
+
+a {
+  color: $body-link-color;
+  text-decoration: none;
+  outline: 0;
+  line-height: inherit;
+  &:hover {
+    color: $body-link-hover-color;
+  }
+}
+
+ul, ol {
+  @include margin-trailer($rhythm-spacing);
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 30px;
+  margin-bottom: 25px;
+}
+
+ul {
+  &.square, &.circle, &.disc, &[type="disc"] {
+    margin-left: 25px;
+    margin-bottom: 25px;
+
+    ul { margin-bottom: 0; }
+  }
+  &.square {
+    list-style: square outside;
+  }
+  &.circle {
+    list-style: circle outside;
+  }
+  &.disc, &[type="disc"] {
+    list-style: disc outside;
+  }
+  ul {
+    margin: 4px 0 5px 25px;
+  }
+}
+
+//Fixes for global UL content (SP)
+[data-target="illustrated-content"] .options ul {
+  margin-left: 25px;
+  margin-bottom: 30px;
+  list-style: disc outside;
+
+  ul { margin: 4px 0 5px 25px; }
+}
+
+ol ol {
+  margin: 4px 0 5px 30px;
+}
+
+li {
+  @include padding-trailer($rhythm-spacing);
+}
+
+ul.large li {
+  line-height: 21px;
+}
+
+dl dt {
+  font-weight: bold;
+  @include font-size($norm);
+}
+
+@include respond(portrait-tablets) {
+
+  ul, ol, dl, p { text-align: left;}
+
+}
+
+em {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 12px;
+  line-height: 17px;
+  display: inline-block;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small {
+  color: $IGTLightGreyMed;
+}
+
+blockquote {
+  position: relative;
+  color: $IGTLightGreyMed;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 40px;
+  background: none;
+  display: block;
+  line-height: 21px;
+  font-size: 16px;
+    
+  &:before {
+    content: "\201C";
+    color: lighten($IGTLightGreyMed, 20);
+    font-size: 5em;
+    position: absolute;
+    left: 0;
+    top: 25px;
+  }
+  
+  .bq_author {
+    color: $body-font-color;  
+  }
+  
+  .bq_title {
+    color: $body-font-color;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  
+  .end_quote:before {
+    content: "\201D";
+    display: inline;
+    color: #cccccc;
+    font-size: 3em;
+    line-height: 0;
+    position: relative;
+    top: 24px;
+    left: 5px;
+  }
+    
+  //a {
+  //  color: $body-font-color;    
+  //  &:visited { color: $body-font-color; }
+  //}
+}
+
+hr {
+  border: solid #e3e3e3;
+  border-width: 1px 0 0 0;
+  font-size: 0;
+  clear: both;
+  margin: 30px 0 60px;
+  height: 0;
+}
+
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222;
+  border-bottom: 1px solid $horizontal-rule-color;
+  cursor: help;
+}
+
+abbr {
+  text-transform: none;
+}
+
+// Print styles.
+// Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+// Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  p a {
+    color: $body-font-color !important;
+    text-decoration: underline;
+    &:visited {
+      color: $body-font-color !important;
+      text-decoration: underline;
+    }
+    &[href]:after {
+      content: " (" attr(href) ")";
+    }
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a {
+    &[href^="javascript:"]:after, &[href^="#"]:after {
+      content: "";
+    }
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+//for Six Pillars of Success
+.orange_header_callout {
+  width: 100%;
+  text-align: center;
+  color: $white;
+  background: $IGTDarkOrange;
+  padding: 20px;
+}
+
+// Interactive Icon Fonts
+// Place in settings maybe? (SP)
+$black_one: #444444;
+
+[data-target="game-accordion-content"] {
+	display: block;
+
+	.game_overview {
+		display: block;
+
+		div:nth-child(2) {
+
+			> div { display: none; }
+		}
+
+		span {
+  		
+			//Testing only
+			//&:before {
+		  //content: "Available Channel";
+			//}
+
+			.available_on {
+				display: inline-block;
+				padding: 0 5px 0 0;
+
+				&.grey_icon {
+					color: $black_one;
+					font-size: 40px;
+				}
+
+				.win {
+					color: #00A2E8;
+					font-size: 22px;
+				}
+
+				.apl {
+					color: #A7A9AB;
+					font-size: 22px;
+				}
+			}
+
+			.available_on_nopadd {
+				display: inline-block;
+				padding: 0 5px 0 0;
+
+				.grey_icon {
+					color: $black_one;
+					font-size: 36px;
+				}
+
+				.andr {
+					color: #A4C639;
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}

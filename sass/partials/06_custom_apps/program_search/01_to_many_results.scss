@@ -1,0 +1,36 @@
+// --------------------------- Too Many Results display
+
+.tooManyResults {
+  display: block;
+
+  h4 {
+    padding: 13px 0 10px 10px;
+    background: $IGTBlue;
+    color: $white;
+  }
+
+  .tooManyResultsList {
+    display: block;
+    padding: 10px 0 10px 0;
+    //border-right: 1px solid #ddd;
+    //border-bottom: 1px solid #ddd;
+    //border-left: 1px solid #ddd;
+
+    ul {
+      display: block;
+      margin: 0 0 30px 0;
+
+      li:nth-child(even) {
+        padding: 3px 0 2px 5px;
+        //background: $white;
+        list-style: none;
+      }
+
+      li:nth-child(odd) {
+        padding: 3px 0 2px 5px;
+        background: #f6f6f6;
+        list-style: none;
+      }
+    }
+  }
+}

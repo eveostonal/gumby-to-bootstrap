@@ -1,0 +1,121 @@
+.panel,
+.panel_b,
+.panel_c,
+.panel_d,
+.panel_e,
+.panel_f,
+.panel_g {
+  display: block;
+  text-align: center;
+  color: $body-font-color;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $body-font-color;
+  }
+}
+
+.panel_a {
+  border-top: none;
+
+  p.homepage_callout {
+    font-size: 26px;
+  }
+
+  .columns {
+    padding-top: 150px;
+  }
+}
+
+.replace-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block; //check to ensure global compabitylity with block addition (SP)
+}
+
+.tablet_only,
+.mobile_only {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@include respond(all-phones) {
+  .mobile_hide {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .mobile_only {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+@include respond(portrait-tablets) {
+  .tablet_hide {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .tablet_only {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.mobile_hide {
+  @include respond(all-phones) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.desktop_only {
+  @include respond(all-phones) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  @include respond(portrait-tablets) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.desktop_tablet_only {
+  @include respond(all-phones) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  @include respond(portrait-tablets) {
+    display: block !important;
+    visibility: visible !important;
+  }
+  @include respond(tablets) {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+%absolute_center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// --------- UL Content Repairs
+
+//.main_wrapper [data-panel="body"]:first-child .columns.no_margin ul {
+//  list-style: disc outside;
+//  margin-left: 25px;
+//  margin-bottom: 25px;
+//}

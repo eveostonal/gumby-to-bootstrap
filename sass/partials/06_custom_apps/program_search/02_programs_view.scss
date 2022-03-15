@@ -1,0 +1,44 @@
+// --------------------------- Program Show
+
+.par_programs {
+  font-style: normal;
+
+  p {
+    padding: 8px 0 4px 0 !important;
+    height: 14px;
+    //border-bottom: 4px solid #126cab !important;
+    // // color: #126cab !important;
+    //text-transform: uppercase;
+    font-size: 1.17em;
+  }
+
+  .par_programs_show {
+    margin: 0 0 30px 0 !important;
+    padding: 0;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+
+  	li:nth-child(even) {
+  		padding: 3px 0 7px 10px;
+  		height: 14px;
+  		//background: $white;
+  		list-style: none;
+
+  		a {
+  			// font-size: 12px;
+  		}
+  	}
+
+  	li:nth-child(odd) {
+			padding: 3px 0 7px 10px;
+			height: 18px;
+			//background: #eaeaea;
+			list-style: none;
+			line-height: 24px;
+
+  		a {
+  			// font-size: 12px;
+  		}
+  	}
+  }
+}

@@ -1,0 +1,186 @@
+%global_box_shadow {
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 10px 10px -10px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.25);
+}
+
+// --------------------------------------------- Extends / Variables for: IGTDS-201 - Mosaic Build
+
+%mosaic-row-default {
+  padding-right: 20px;
+  padding-left: 20px;
+  // Note: might have to remove the padding on go live.  Need to look at this component when it is applied in the html.
+  // padding-right: 0;
+  // padding-left: 0
+}
+
+%mosaic-h2-default {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+%mosaic-btm_margin {
+  margin-bottom: 30px;
+}
+
+$mosaic-element_mobil_btm_margin: 20px;
+
+%mosaic-blockquote {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+  padding: 0 20px 0 19px;
+	width: 40%;
+  text-align: left;
+  line-height: 30px;
+}
+
+%mosaic-summary-default {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+%mosaic-p-default {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+%mosaic-image-default {
+  position: relative;
+  z-index: 0;
+  max-height: 375px;
+}
+
+%mosaic-text_link {
+  margin: 0 0 30px 0;
+  color: $IGTBlue;
+  line-height: 14px;
+}
+
+%text_link_hover { color: $body-link-hover-color; }
+
+%mosaic-default {
+  position: relative;
+  //max-height: 326px
+}
+
+%mosaic-options {
+  z-index: 10;
+  padding: 20px;
+  position: relative;
+  //padding: 20px
+}
+
+// --------------------------------------------- Extends for: Illustrated content
+
+%element_btm_margin {
+  margin-bottom: 80px;
+}
+
+$element_mobil_btm_margin: 50px;
+
+%blockquote {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 0 0 0 19px;
+  color: $white;
+}
+
+%h2-default {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+%row-default {
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+}
+
+%summary-default {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+%p-default {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+%image-default {
+  position: relative;
+  z-index: 0;
+  max-height: 375px;
+}
+
+%text_link {
+  margin: 0 0 30px 0;
+  color: $IGTBlue;
+  line-height: 14px;
+}
+
+// --------------------------------------------- Extends for:  Visual List
+
+%data_source_default {
+  display: table;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+%data_source_li {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+%data_source_img {
+  margin: 0;
+  // margin: 0 0 20px 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+%data_source_title {
+  margin: 15px 0 10px 0;
+  padding: 0;
+  text-align: center;
+  font-size: 28px;
+  line-height: 32px;
+  @extend %verlag_book;
+}
+
+%vl_4col_data_source_title {
+  margin: 15px 0 10px 0;
+  padding: 0;
+  text-align: center;
+  font-size: 18px !important;
+  line-height: 32px;
+  @extend %verlag_book;
+}
+
+%data_source_date {
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
+}
+
+%data_source_p {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+// --------------------------------------------- Extends for: Game Detail Page

@@ -1,0 +1,231 @@
+.prepend.append.field {
+  @include respond(portrait-tablets) {
+    overflow: visible;
+  }
+
+  @include respond(tablets) {
+    overflow: visible;
+  }
+}
+
+// --------------------- Fine Tune Columns and Break Points
+
+.four.columns.adj_width {
+  width: 31.41026% !important;
+  margin-bottom: 20px;
+
+  ::-webkit-input-placeholder {
+   font-size: 14px;
+   text-align: left;
+  }
+
+  :-moz-placeholder {
+     font-size: 14px;
+     text-align: left;
+  }
+
+  ::-moz-placeholder {
+     font-size: 14px;
+     text-align: left;
+  }
+
+  :-ms-input-placeholder {
+     font-size: 14px;
+     text-align: left;
+  }
+
+  @include respond(all-phones) {
+    width: 100% !important;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 559px) {
+
+    .field {
+      position: relative;
+
+      > input {
+        width: 100%;
+      }
+    }
+
+    ::-webkit-input-placeholder {
+     font-size: 14px;
+     text-align: center;
+    }
+
+    :-moz-placeholder {
+       font-size: 14px;
+       text-align: center;
+    }
+
+    ::-moz-placeholder {
+       font-size: 14px;
+       text-align: center;
+    }
+
+    :-ms-input-placeholder {
+       font-size: 14px;
+       text-align: center;
+    }
+  }
+
+
+  @media only screen and (min-width: 560px) and (max-width: 780px) {
+    width: 48.3335%;
+    margin-bottom: 20px;
+
+    ::-webkit-input-placeholder {
+     text-align: center;
+     font-size: 14px;
+    }
+
+    :-moz-placeholder {
+       text-align: center;
+       font-size: 14px;
+    }
+
+    ::-moz-placeholder {
+      font-size: 14px;
+       text-align: center;
+    }
+
+    :-ms-input-placeholder {
+       text-align: center;
+       font-size: 14px;
+    }
+  }
+
+  @include respond(tablets) {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    display: inline-block;
+    width: 125px;
+  }
+}
+
+.prepend, .append {
+  overflow: visible !important;
+}
+
+// ------------------------------ Width Adj
+
+.four.columns.wrapper {
+  //float: right;
+  //width: 165px;
+
+  @include respond(all-phones) {
+    width: auto;
+
+    .btn {
+      width: 47.3555%;
+    }
+
+    .btn.form_reset {
+      float: right;
+    }
+  }
+
+  @media only screen and (min-width: 560px) and (max-width: 780px) {
+    float: left;
+    width: 195px;
+    margin-left: 0;
+  }
+
+  @include respond(tablets) {
+    float: right;
+    width: 195px;
+  }
+}
+
+.double input, .double .input {
+  width: 43% !important;
+}
+
+.adj_width .field > .hasDatepicker {
+  width: 100%;
+}
+
+
+// -------------------------------  Filters mobile toggle
+
+.toggle_menu {
+  display: none;
+
+  @include respond(all-phones) {
+    display: block;
+
+    .toggle_button {
+      margin-bottom: 30px;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+
+        .fa {
+          font-size: 18px;
+          margin: 0 0 0 4px;
+        }
+      }
+    }
+  }
+}
+
+// -------------------------------  Amount Invested / Shares Purchased hack
+#txtAmt, #txtShares {
+
+	@include respond(all-phones) {
+		width: 42.3256% !important;
+	}
+
+	width: 150px !important;
+}
+
+.filters.mobile_hide {
+
+	ul:first-child {
+		width: 200px !important;
+
+		@include respond(all-phones) {
+			width: auto;
+		}
+	}
+
+	ul:first-child + ul {
+		width: 350px !important;
+
+		@include respond(all-phones) {
+			width: auto;
+		}
+	}
+
+	ul:nth-child(2){
+		width: 350px !important;
+
+		@include respond(all-phones) {
+			width: auto;
+		}
+	}
+}
+
+// -------------------------------  Nasdaq Tiker
+
+.dynChart {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .dynChart {
+     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dynChart {
+    width: 100%;
+    margin-top: -38px;
+  }
+}
+

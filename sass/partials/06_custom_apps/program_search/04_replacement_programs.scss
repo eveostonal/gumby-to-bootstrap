@@ -1,0 +1,57 @@
+// --------------------------- REPLACEMENT PROGRAMS
+
+.par_container {
+  display: block;
+
+  h3 {
+    //@extend %detials_header_row_default_h3;
+  }
+
+  .table_data_grid {
+    width: 100%;
+
+    caption {
+      display: none;
+    }
+
+    tr.program_cell_header_row {
+      font-style: normal;
+
+      th.program_cell_header {
+        @extend %detials_header_row_default;
+      }
+    }
+
+    .par_replacement_row {
+      padding: 5px 0 5px 0;
+
+      .par_replacement_sep {
+        margin: 0;
+        padding: 0;
+        height: 2px;
+        //background: #ddd !important;
+      }
+    }
+
+    .replacement_programs_row {
+      font-style: normal;
+
+      td.replacement_programs_cell_data {
+        margin: 0;
+        padding: 10px !important;
+        border-bottom: none;
+        hyphens: auto;
+
+        > a {
+          display: table-row;
+          margin: 0;
+          padding: 0;
+          height: auto;
+          //background: #fff;
+        }
+
+        span.replacement_programs_implementation_advisory {}
+      }
+    }
+  }
+}

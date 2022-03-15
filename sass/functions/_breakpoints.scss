@@ -1,0 +1,38 @@
+@function breakpoint($breakpoint) {
+ 
+ @if $breakpoint == $document-width {
+    @return $document-width - 1;
+  }  
+  
+  // PHONE PORTRAIT
+  @if $breakpoint == $min-device-width {
+  	@return $min-device-width - 1;
+  }
+  // PHONE LANDSCAPE
+  @if $breakpoint == $phone-device-width {
+  	@return $phone-device-width - 1;
+  }
+ 
+  // PHONE LANDSCAPE
+  @if $breakpoint == $phone-all-width {
+  	@return $phone-all-width - 1;
+  }
+   
+  // TABLET PORTRAIT
+  @if $breakpoint == $tablet-device-portrait {
+  	@return $tablet-device-portrait - 1;
+  }
+  // TABLET LANDSCAPE
+  @if $breakpoint == $tablet-device-width {
+  	@return $tablet-device-width - 1;
+  }
+  
+  // DESKTOP
+  @if $breakpoint == $desktop-device-width {
+  	@return $desktop-device-width - 1;
+  }
+  
+  @if $breakpoint == $min-device-width {
+  	@return $min-device-width + 1;
+  }
+}

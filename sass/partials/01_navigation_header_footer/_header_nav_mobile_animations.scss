@@ -1,0 +1,131 @@
+.mobile-menu.mobile-animate-out-2 {
+	-webkit-animation: MenuAnimOut2 0.3s ease-in-out;
+	animation: MenuAnimOut2 0.3s ease-in-out;
+}
+
+@-webkit-keyframes MenuAnimOut2 {
+	0% { }
+	100% {
+		-webkit-transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes MenuAnimOut2 {
+	0% { }
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+.mobile-menu.mobile-animate-in-2 {
+	-webkit-animation: MenuAnimIn2 0.3s ease-in-out;
+	animation: MenuAnimIn2 0.3s ease-in-out;
+}
+
+@-webkit-keyframes MenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes MenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.mobile-menuwrapper > .mobile-submenu.mobile-animate-in-2 {
+	-webkit-animation: SubMenuAnimIn2 0.3s ease-in-out;
+	animation: SubMenuAnimIn2 0.3s ease-in-out;
+}
+
+@-webkit-keyframes SubMenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes SubMenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.mobile-menuwrapper > .mobile-submenu.mobile-animate-out-2 {
+	-webkit-animation: SubMenuAnimOut2 0.3s ease-in-out;
+	animation: SubMenuAnimOut2 0.3s ease-in-out;
+}
+
+@-webkit-keyframes SubMenuAnimOut2 {
+	0% {
+		-webkit-transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(100%);
+		opacity: 0;
+	}
+}
+
+@keyframes SubMenuAnimOut2 {
+	0% {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		opacity: 0;
+	}
+}
+
+.no-js .mobile-menuwrapper .mobile-menu {
+	position: relative;
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+
+.no-js .mobile-menuwrapper li .dl-submenu {
+	display: block;
+}
+
+.no-js .mobile-menuwrapper li.dl-back {
+	display: none;
+}
+
+.no-js .mobile-menuwrapper li > a:not(:only-child) {
+	background: rgba(0,0,0,0.1);
+}
+
+.no-js .mobile-menuwrapper li > a:not(:only-child):after {
+	content: '';
+}

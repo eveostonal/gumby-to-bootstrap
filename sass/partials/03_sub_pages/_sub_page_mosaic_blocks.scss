@@ -1,0 +1,2249 @@
+//----- IGTDS-201 - Mosaic Build
+
+// ---------------------------------- Extends
+
+%options_stock_ver_01 {
+  //padding: 0;
+  height: auto;
+}
+
+%header_stock_ver_01 {
+  margin-bottom: 20px;
+}
+
+%data_name_stock_ver_01 {
+  display: block;
+  font-size: 28px;
+  color: $primary-color;
+  text-align: left;
+  font-family: $font-family;
+}
+
+%data_date_stock_ver_01 {
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+%stock_volume_stock_ver_01 {
+  width: 100%;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+%flt_l_stock_ver_01 {
+  float: left;
+  display: inline-block;
+  text-align: left;
+}
+
+%data_value_stock_ver_01 {
+  font-size: 32px;
+  width: auto;
+  margin: 0 10px 0 0;
+  color: $primary-color;
+}
+
+%data_icon_stock_ver_01 {
+  font-size: 18px;
+  width: auto;
+  margin: 2px 10px 0 0;
+  color: $primary-color;
+}
+
+%data_volume_stock_ver_01 {
+  font-size: 14px;
+  width: auto;
+  color: $IGTLightGreyMedDark;
+  margin: 8px 0 0 0;
+  height: 20px;
+  color: $IGTBlue;
+}
+
+%ticker_background {
+  background: $IGTLighterGrey;
+}
+
+%bottom_margin {
+  margin-bottom: 30px;
+}
+
+%stockticker_default {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+[data-target="mosaic-content"] {
+  margin-left: 0;
+  width: 100%;
+  display: inline-block;
+  // IE Hack
+	*zoom: 1;
+	*display: inline;
+
+  .addthis_igt {
+    margin: 10px 0 20px 0;
+  }
+  
+  .btn {
+    background: $white;
+    
+    &:hover { background: $IGTBackgroundGrey; }
+    
+    a {
+      color: $IGTLightGreyMedDark;
+      
+      &:hover { color: $IGTLightGreyMedDark; }
+    }
+  }
+
+  .non_mobile_img {
+    @extend %ie_8_imageScale;
+    //position: absolute;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    padding-top: 0;
+    //min-width: 100%;
+    height: 100%;
+    // extend has to be on the bottom
+    @extend %ie_8_imageScale_fix;
+
+    img {
+      display: block;
+    }
+
+    @include respond(all-phones) {
+      height: auto;
+    }
+
+    @include respond(portrait-tablets) {
+    }
+
+    @include respond(tablets) {
+    }
+  }
+
+// --------------------------------------------- Option - Light and Dark
+
+	.mosaic_light {
+		color: $white;
+	}
+
+	.mosaic_dark {
+		color: $IGTBlue;
+	}
+
+// --------------------------------------------- Option Master
+
+  .options {
+    @extend %mosaic-options;
+    height: 100%;
+
+    a {
+      //display: block;
+
+      @include respond(all-phones) {
+        img {
+          width: 100%;
+        }
+      }
+
+      img {
+	      margin-bottom: 10px;
+      }
+    }
+
+    .summary {
+      @extend %mosaic-summary-default;
+    }
+
+    .article p {
+      @extend %mosaic-p-default;
+    }
+
+    .text_link {
+      line-height: 16px;
+      @extend %mosaic-text_link;
+      margin: 10px 0 15px 0;
+      display: table;
+      font-size: 14px;
+
+      @include respond(all-phones) {
+        text-align: left;
+      }
+
+      a {
+        color: $white;
+        font-size: 14px;
+
+        @include respond(all-phones) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          color: $IGTLightBlue;
+        }
+      }
+
+      .fa-angle-right {
+        font-size: 14px;
+        margin: 0 4px 0 0;
+        color: $IGTLightBlue;
+
+        @include respond(all-phones) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .media {
+      position: relative;
+      z-index: 10;
+
+      @include respond(all-phones) {
+        margin: 0 0 30px 0;
+      }
+
+      blockquote {
+        @extend %mosaic-blockquote;
+
+        @include respond(all-phones) {
+          width: 100%;
+        }
+      }
+
+      .img {
+        @extend %mosaic-image-default;
+
+        a {
+          display: block;
+          text-decoration: none;
+          border: none;
+          max-height: inherit;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    // ---- Stock Widget
+
+    .header {
+        @extend %header_stock_ver_01;
+
+        [data-symbol="name"] {
+          @extend %data_name_stock_ver_01;
+
+    			span {
+    				font-size: 12px;
+    			}
+    		}
+      }
+
+    .stock_volume {
+      @extend %stock_volume_stock_ver_01;
+
+      .flt_l {
+  			@extend %flt_l_stock_ver_01;
+  		}
+
+  		[data-value="amount"] {
+  			@extend %data_value_stock_ver_01;
+  		}
+
+  		[data-icon="up"] {
+  			@extend %data_icon_stock_ver_01;
+  		}
+
+  		[data-change="volume"] {
+        @extend %data_volume_stock_ver_01;
+  		}
+    }
+
+    [data-title="name"] {
+      @include respond(all-phones) {
+        text-align: center;
+      }
+    }
+
+    [data-symbol="name"] {
+
+    }
+
+    [data-value="amount"] {
+
+    }
+
+    [data-change="volume"],
+    [data-timestamp="date"] {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: $IGTLightGreyMedDark;
+
+      @include respond(all-phones) {
+        text-align: left;
+        margin-bottom: 1px;
+      }
+    }
+
+    [data-update="difference"] {
+      //color: $white;
+      font-size: 16px;
+      color: $IGTLightGreyMedDark;
+      margin-bottom: 0;
+
+      @include respond(all-phones) {
+        text-align: left;
+        margin-bottom: 1px;
+      }
+    }
+
+  } // ----- options
+
+  .stockticker {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+
+    @include respond(all-phones) {
+      position: relative;
+      background: transparent !important;
+    }
+
+    .wrapper {
+      position: relative;
+      display: block;
+      bottom: 0;
+      margin: 0 20px 20px 20px;
+    }
+  }
+
+  .hr {
+    display: none;
+
+    @include respond(all-phones) {
+      //display: none;
+      //border-bottom: 1px solid #cccccc;
+      border-bottom: none;
+      //float: left;
+      height: 1px;
+      display: block;
+      width: 100%;
+      //margin: 30px 0 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .background_chg {
+    background: transparent;
+
+    @include respond(all-phones) {
+      background: $white;
+    }
+  }
+
+// --------------------------------------------- 1. One Column - Used for Carousels...
+
+  [data-target="mosaic-row-1c"] {
+    position: relative;
+    height: auto;
+    margin-bottom: 0;
+    overflow: hidden;
+    display: block;
+		width: 100%;
+
+		@-moz-document url-prefix() {
+			// firefox display fix backuo
+			display: -moz-groupbox;
+		}
+
+    @include respond(all-phones) {
+      margin-bottom: 0;
+      height: auto;
+    }
+
+    @include respond(portrait-tablets) {
+     height: auto;
+    }
+
+    @include respond(tablets) {
+
+    }
+
+    .row {
+      overflow: hidden;
+    }
+
+    .columns {
+      height: 100%;
+      z-index: 10;
+
+      @include respond(portrait-tablets) {
+        height: auto;
+      }
+
+      @include respond(tablets) {
+
+      }
+    }
+
+    .twelve > .row {
+      padding-left: 0;
+      padding-right: 0;
+      height: 100%;
+      //@extend %mosaic-btm_margin;
+
+      .columns {
+        position: relative;
+      }
+
+      .four,
+      .eight {
+        @include respond("max-width: 58.000em") {
+         max-width: intrinsic;
+        }
+
+        @include respond("max-width: 35em") {
+
+        }
+
+        @include respond(all-phones) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+		.twelve > .component > .cycle-slideshow {
+			min-height: 380px !important;
+		}
+
+    .six .options .btn {
+
+      @include respond(all-phones) {
+        width: 100%;
+      }
+
+	    @include respond(portrait-tablets) {
+				margin-bottom: 0;
+			}
+    }
+
+    h2, p, .text_link {
+      text-align: left;
+
+
+      @include respond(all-phones) {
+        text-align: center;
+        //font-size: 28px;
+      }
+    }
+
+    p, .text_link {
+      font-size: 14px;
+
+      @include respond(all-phones) {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+
+    h2, p {
+      @include respond(all-phones) {
+        color: $white;
+      }
+    }
+
+    .summary,
+    .article,
+    .media,
+    .widget {
+      @extend %mosaic-default;
+    }
+
+    .options {
+      @extend %mosaic-options;
+
+      @include respond("max-width: 58.000em") {
+       min-height: intrinsic;
+      }
+
+      @include respond("max-width: 35em") {
+
+      }
+
+      @include respond(all-phones) {
+        position: relative;
+        padding: 20px 20px 0 20px;
+      }
+
+      @include respond(portrait-tablets) {
+        position: relative;
+        padding: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+
+        @include respond(all-phones) {
+          text-align: center;
+        }
+      }
+
+      a {
+        //display: block;
+
+        @include respond(all-phones) {
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .btn {
+        //margin-top: 20px;
+        margin-bottom: 30px;
+
+        @include respond(all-phones) {
+          width: 100%;
+        }
+      }
+    } // ----- options
+
+    .eight {
+	    font: inherit;
+
+	    .options {
+		    @extend %mosaic-options;
+				position: absolute;
+	    }
+    }
+
+    .article {
+      // 576.80 px (Pixels)
+      @include respond("max-width: 35em") {
+        background-color: $white;
+
+        h2, p {
+          text-align: center;
+
+          @include respond(all-phones) {
+            text-align: center;
+          }
+        }
+
+        h2 {
+          color: $IGTBlue;
+
+          @include respond(all-phones) {
+            text-align: center;
+            font-size: 28px;
+          }
+        }
+
+        p {
+          color: $IGTBlue;
+          //margin-bottom: 0;
+
+          @include respond(all-phones) {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+
+        .text_link {
+          display: none;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .img_custom {
+      width: auto;
+      margin: 0 auto;
+      display: block;
+
+      @include respond(all-phones) {
+        width: 100%;
+      }
+    }
+
+    // ------ Slide Show Stuff
+
+    .component {
+			box-sizing: border-box;
+			margin-bottom: 30px;
+
+
+	    [data-source="mosaic-img-lg"] {
+		    padding-top: 0;
+
+		    img {
+			    width: 100%;
+		    }
+	    }
+
+      .row {
+        padding-right: 0;
+        padding-left: 0;
+
+        .options {
+
+          p {
+            font-size: 1rem;
+          }
+
+          @include respond(all-phones) {
+            position: relative;
+          }
+
+          .btn {
+            @include respond(all-phones) {
+              width: 100%;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+
+	    p {
+		    color: $IGTBlue;
+		    margin-bottom: 10px;
+	    }
+
+	    a {
+  	    display: block;
+
+  	    img {
+    	    display: block;
+  	    }
+	    }
+
+	    .text_link {
+	      @extend %mosaic-text_link;
+  	    text-align: center;
+  	    padding-top: 10px;
+  	    font-size: 14px;
+
+  	    a {
+    	    display: inline-block;
+    	    color: $IGTBlue;
+    	    font-size: 14px;
+
+    	    @include respond(all-phones) {
+            font-size: 18px;
+          }
+
+    	    &:hover {
+      	    color: #ffcc00;
+    	    }
+  	    }
+	    }
+
+	    .cycle-slideshow {
+  	    overflow: hidden;
+	    }
+
+	    .slideshow_nav {
+		    max-width: 1080px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 0;
+				display: block;
+				overflow: auto;
+				margin: auto;
+				padding-right: 0;
+				padding-left: 0;
+				overflow: hidden;
+
+				@include respond(all-phones) {
+	        position: relative;
+	        padding: 20px 0 20px 0;
+	      }
+
+	      .slide_pagination_06 {
+		      top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 0;
+					//display: table;
+					overflow: none;
+					margin: auto;
+	      }
+	    }
+
+	    blockquote {
+				@extend %mosaic-blockquote;
+				width: 100%;
+				padding: 0;
+				padding-bottom: 0;
+				padding-top: 0;
+				padding-left: 20px;
+				text-align: left;
+
+				@include respond(all-phones) {
+	        width: 100%;
+	      }
+	    }
+    }
+
+    .component.media {
+      margin-bottom: 0;
+    }
+
+    .align_middle_wrapper {
+      position: relative;
+      width: 100%;
+      height: 36px;
+
+      .btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 200px;
+        margin: 0 auto;
+
+        @include respond(all-phones) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .toggle {
+	    color: $white;
+    }
+
+    .mobile_swap {
+	    //font-size: 16px;
+
+	    @include respond(all-phones) {
+        color: -webkit-text;
+      }
+    }
+
+    // ------ Custom Width
+
+    .four {
+      //min-height: 327px;
+
+      @include respond("max-width: 58.000em") {
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 24.88462%;
+        margin-bottom: 30px;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    .four,
+    .eight {
+      @include respond("max-width: 58.000em") {
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        //width: 100%;
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 0;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+
+      @include respond(portrait-tablets) {
+       height: auto !important;
+      }
+
+      @include respond(tablets) {
+
+      }
+    }
+
+    .eight {
+      @include respond("max-width: 58.000em") {
+        margin-left: 2.88462%;
+
+        img {
+          margin-top: 8%;
+        }
+      }
+
+      @include respond(all-phones) {
+        margin-left: 0%;
+
+        img {
+          margin-top: 0%;
+        }
+      }
+    }
+
+    .flt_l {
+
+    // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 0;
+        float: left;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 30px;
+      }
+    }
+
+    .flt_r {
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 2.88462%;
+        float: right;
+      }
+			// .hr
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100% !important;
+        max-width: none;
+        //margin-bottom: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+// --------------------------------------------- mosaic Row 2 column - Options
+
+  [data-target="mosaic-row-2c"] {
+    position: relative;
+    @extend %mosaic-btm_margin;
+    // this is a temp measure ... will tweak these row swhen we get real conetnt in the columns
+    height: 326.5px;
+    overflow: hidden;
+
+    @include respond(all-phones) {
+      margin-bottom: 0;
+      height: auto;
+    }
+
+    @include respond(portrait-tablets) {
+    	 //height: auto;
+    	 min-height: intrinsic;
+    }
+
+    .row {
+      overflow: hidden;
+    }
+
+    .columns {
+      height: 100%;
+      z-index: 10;
+    }
+
+    .twelve > .row {
+      padding-left: 0;
+      padding-right: 0;
+      height: 100%;
+      //@extend %mosaic-btm_margin;
+
+      .columns {
+        position: relative;
+      }
+
+      .four,
+      .eight {
+        @include respond("max-width: 58.000em") {
+         max-width: intrinsic;
+         margin-left: 2.88462%;
+        }
+
+        @include respond("max-width: 35em") {
+
+        }
+
+        @include respond(all-phones) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .twelve > .row > div:nth-child(1),
+    // ---- IE8 Fall Back
+    .twelve > .row > div:first-child {
+      margin-left: 0;
+    }
+
+    .twelve > .row > div:nth-child(2),
+    // ---- IE8 Fall Back
+    .twelve > .row > div:first-child + div {
+      margin-left: 2.88462%;
+    }
+
+		.twelve > .component > .cycle-slideshow {
+			min-height: 380px !important;
+		}
+
+    .six .options .btn {
+
+      @include respond(all-phones) {
+        width: 100%;
+      }
+
+	    @include respond(portrait-tablets) {
+				margin-bottom: 0;
+			}
+    }
+
+		// Temp changes - should not target the U-Contrl ID
+    #ContentPlaceHolder1_main_0_templateb_1_templateb1b13f8f549c70b042c2aef55e366d7e8af3_0_divImageBlock,
+    #ContentPlaceHolder1_main_0_templateb_2_templateb1b1c8cb861e9f2c41d296416a3c95b846fb_0_divImageBlock {
+	    @include respond(all-phones) {
+        display: none;
+      }
+
+      @include respond(portrait-tablets) {
+        display: none;
+      }
+    }
+
+    .options {
+      @extend %mosaic-options;
+
+      @include respond("max-width: 58.000em") {
+       min-height: intrinsic;
+      }
+
+      @include respond("max-width: 35em") {
+
+      }
+
+      @include respond(all-phones) {
+        position: relative;
+        padding: 20px 20px 0 20px;
+      }
+
+      @include respond(portrait-tablets) {
+        position: relative;
+        padding: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+
+        @include respond(all-phones) {
+          text-align: center;
+        }
+      }
+
+      a {
+	      display: block;
+	      height: 100%;
+
+	      img {
+	        display: block;
+	        height: 100%;
+
+	        @include respond(all-phones) {
+	          display: none;
+	        }
+
+	        @include respond(portrait-tablets) {
+		        display: none;
+		      }
+		    }
+      }
+
+      .btn {
+        //margin-top: 20px;
+        margin-bottom: 30px;
+
+        @include respond(all-phones) {
+          width: 100%;
+        }
+      }
+    } // ----- options
+
+    .article {
+      // 576.80 px (Pixels)
+      @include respond("max-width: 35em") {
+        background-color: $white;
+
+        h2, p {
+          text-align: center;
+
+          @include respond(all-phones) {
+            text-align: center;
+          }
+        }
+
+        h2 {
+          color: $IGTBlue;
+
+          @include respond(all-phones) {
+            text-align: center;
+            font-size: 28px;
+          }
+        }
+
+        p {
+          color: $IGTBlue;
+          //margin-bottom: 0;
+
+          @include respond(all-phones) {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+
+        .text_link {
+          display: none;
+        }
+      }
+    }
+
+    //Global Leader Repair
+    h2 { font-size: 24px; }
+
+    h2, p, .text_link {
+      text-align: left;
+
+
+      @include respond(all-phones) {
+        text-align: center;
+        //font-size: 28px;
+      }
+    }
+
+    p, .text_link {
+      font-size: 14px;
+
+      @include respond(all-phones) {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+
+    h2, p {
+      @include respond(all-phones) {
+        color: $white;
+      }
+    }
+
+    .summary,
+    .article,
+    .media,
+    .widget {
+      @extend %mosaic-default;
+    }
+
+    .media > div:first-child {
+			@extend %ie_8_imageScale;
+			@extend %ie_8_imageScale_fix;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .img_custom {
+      width: auto;
+      margin: 0 auto;
+      display: block;
+
+      @include respond(all-phones) {
+        width: 100%;
+      }
+    }
+
+    // ------ Slide Show Stuff
+
+    .component {
+			box-sizing: border-box;
+			margin-bottom: 60px;
+
+
+	    [data-source="mosaic-img-lg"] {
+		    padding-top: 0;
+
+		    img {
+			    width: 100%;
+		    }
+	    }
+
+      .row {
+        padding-right: 0;
+        padding-left: 0;
+
+        .options {
+
+          p {
+            font-size: 1rem;
+          }
+
+          @include respond(all-phones) {
+            position: relative;
+          }
+
+          .btn {
+            @include respond(all-phones) {
+              width: 100%;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+
+	    p {
+		    color: $IGTBlue;
+		    margin-bottom: 10px;
+	    }
+
+	    a {
+  	    display: block;
+
+  	    img {
+    	    display: block;
+  	    }
+	    }
+
+	    .text_link {
+	      @extend %mosaic-text_link;
+  	    text-align: center;
+  	    padding-top: 10px;
+  	    font-size: 14px;
+
+  	    a {
+    	    display: inline-block;
+    	    color: $IGTBlue;
+    	    font-size: 14px;
+
+    	    @include respond(all-phones) {
+            font-size: 18px;
+          }
+
+    	    &:hover {
+      	    color: #ffcc00;
+    	    }
+  	    }
+	    }
+
+	    .cycle-slideshow {
+  	    overflow: hidden;
+	    }
+
+	    .slideshow_nav {
+		    max-width: 1080px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 0;
+				display: block;
+				overflow: auto;
+				margin: auto;
+				padding-right: 0;
+				padding-left: 0;
+				overflow: hidden;
+
+				@include respond(all-phones) {
+	        position: relative;
+	        padding: 20px 0 20px 0;
+	      }
+
+	      .slide_pagination_06 {
+		      top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 0;
+					//display: table;
+					overflow: none;
+					margin: auto;
+	      }
+	    }
+
+	    blockquote {
+				@extend %mosaic-blockquote;
+
+				@include respond(all-phones) {
+	        width: 100%;
+	      }
+	    }
+    }
+
+    .component.media {
+      margin-bottom: 0;
+    }
+
+    .align_middle_wrapper {
+      position: relative;
+      width: 100%;
+      height: 36px;
+
+      .btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 200px;
+        margin: 0 auto;
+
+        @include respond(all-phones) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .toggle {
+	    color: $white;
+    }
+
+    .mobile_swap {
+	    //font-size: 16px;
+
+	    @include respond(all-phones) {
+        color: -webkit-text;
+      }
+    }
+
+    // ------ Custom Width
+
+    .six.columns {
+	    @include respond(all-phones) {
+        width: 100%;
+      }
+
+      @include respond(portrait-tablets) {
+        //width: 100%;
+      }
+
+      @include respond("max-width: 58.000em") {
+	      width: 100%;
+	    }
+    }
+
+    .four {
+      //min-height: 327px;
+
+      @include respond("max-width: 58.000em") {
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 24.88462%;
+        margin-bottom: 30px;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    .four,
+    .eight {
+      @include respond("max-width: 58.000em") {
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        //width: 100%;
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 0;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+
+    }
+
+    .eight {
+      font: inherit;
+
+      @include respond(all-phones) {
+
+	      margin-left: 0%;
+
+        img {
+          margin-top: 0%;
+        }
+
+				.six.columns:first-child + .six.columns {
+					display: block;
+				}
+
+				.six.columns:nth-child(2){
+					display: block;
+				}
+			}
+
+			@include respond(portrait-tablets) {
+				margin-left: 2.88462%;
+
+        img {
+          margin-top: 8%;
+        }
+
+        .six.columns:first-child + .six.columns {
+					display: block;
+				}
+
+
+				.six.columns:nth-child(2){
+					display: block;
+				}
+			}
+
+      .options {
+		    @extend %mosaic-options;
+				position: relative;
+				width: 100%;
+	    }
+    }
+
+    .flt_l {
+
+    // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 0;
+        float: left;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 30px;
+      }
+    }
+
+    .flt_r {
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 2.88462%;
+        float: right;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100% !important;
+        max-width: none;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+// --------------------------------------------- 4. Three columns - Options
+
+// Custom Breakpoints for the 3 columns so that they break correct
+
+  [data-target="mosaic-row-3c"] {
+    @extend %mosaic-btm_margin;
+    height: 326.5px;
+    // this is a temp measure ... will tweak these row swhen we get real conetnt in the columns
+    overflow: hidden;
+
+    @include respond(all-phones) {
+      margin-bottom: $mosaic-element_mobil_btm_margin;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      @extend %mosaic-h2-default;
+
+      @include respond(all-phones) {
+        text-align: center;
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+
+      @include respond(all-phones) {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      @include respond(tablets) {
+       font-size: .9rem;
+       line-height: 1.325em;
+      }
+
+      a {
+        color: $IGTBlue;
+        //font-size: 14px;
+
+        @include respond(all-phones) {
+          //font-size: 18px;
+        }
+
+        &:hover {
+          color: $body-link-hover-color;
+        }
+      }
+    }
+
+    .btn {
+      //margin-top: 20px;
+      //margin-bottom: 30px;
+      position: absolute;
+      bottom: 20px;
+
+      @include respond(all-phones) {
+        width: 100%;
+        margin-bottom: 30px;
+        position: unset;
+        bottom: unset;
+      }
+    }
+
+    .text_link {
+      font-size: 14px;
+
+      @include respond(all-phones) {
+        text-align: center;
+        display: block;
+        font-size: 18px;
+      }
+    }
+
+    .article,
+    .media,
+    .widget {
+      @extend %mosaic-default;
+      width: 31.3999%;
+      height: 100%;
+      //padding-left: 0%;
+      //padding-right: 0%;
+
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 24.88462%;
+        margin-bottom: 30px;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    [data-target="widget-stock"] {
+      @extend %mosaic-default;
+      width: 31.3999%;
+      height: 100%;
+      padding-left: 0%;
+      padding-right: 0%;
+
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 24.88462%;
+        margin-bottom: 30px;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    .img_custom_placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      img {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    [data-target="video"] {
+      margin-bottom: 20px;
+      height: auto;
+      //max-height: 125px;
+    }
+
+    // ------ Custom WIdth
+
+    .four {
+
+	    div:first-child {
+		    @extend %ie_8_imageScale;
+		    @extend %ie_8_imageScale_fix;
+	    }
+
+      @include respond("max-width: 58.000em") {
+       // 37.28571%
+       //was -> width: percentage(1.9 / 4); // ='s 47.5%
+        width: 31.115%;
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 24.88462%;
+        margin-bottom: 30px;
+        float: left !important;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    .eight {
+      @include respond("max-width: 58.000em") {
+       // 37.28571%
+        width: percentage(1.9 / 4); // ='s 47.5%
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 0;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    .flt_l {
+    // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 0;
+        float: left;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 30px;
+      }
+    }
+
+    .flt_r {
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 2.88462%;
+        float: right;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100% !important;
+        max-width: none;
+        margin-bottom: 30px; // -> was 0
+
+        .hr {
+			    //display: none;
+		      //border-bottom: 1px solid #cccccc;
+		      border-bottom: none;
+		      //float: left;
+		      height: 1px;
+		      display: block;
+		      width: 100%;
+		      //margin: 30px 0 30px;
+		      margin-bottom: 0;
+			  }
+      }
+    }
+  } // end data-target="mosaic-row-3c"
+
+  [data-target="mosaic-row-3c"] > div.four:first-child {
+	  margin-left: 0 !important;
+  }
+
+
+// --------------------------------------------- 2. Two Columns with Medium on left - 3. Two Columns with Medium on right
+
+// Custom Breakpoints for the 3 columns so that they break correct
+
+  [data-target="mosaic-row-med-sm"] {
+    @extend %mosaic-btm_margin;
+    height: 326.5px;
+    // this is a temp measure ... will tweak these row swhen we get real conetnt in the columns
+    overflow: hidden;
+
+    @include respond(all-phones) {
+      margin-bottom: $mosaic-element_mobil_btm_margin;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      @extend %mosaic-h2-default;
+
+      @include respond(all-phones) {
+        text-align: center;
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+
+      @include respond(all-phones) {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      @include respond(tablets) {
+       font-size: .9rem;
+       line-height: 1.325em;
+      }
+
+      a {
+        color: $IGTBlue;
+        //font-size: 14px;
+
+        @include respond(all-phones) {
+          //font-size: 18px;
+        }
+
+        &:hover {
+          color: $body-link-hover-color;
+        }
+      }
+    }
+
+    .btn {
+      //margin-top: 20px;
+      //margin-bottom: 30px;
+
+      @include respond(all-phones) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .text_link {
+      font-size: 14px;
+
+      @include respond(all-phones) {
+        text-align: center;
+        display: block;
+        font-size: 18px;
+      }
+    }
+
+    .article,
+    .media,
+    .widget {
+      @extend %mosaic-default;
+      //width: 31.3999%;
+      height: 100%;
+      //padding-left: 0%;
+      //padding-right: 0%;
+
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+
+       // 37.28571%
+        //width: percentage(1.9 / 4);
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        //margin-left: 24.88462%;
+        //margin-bottom: 30px;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    [data-target="widget-stock"] {
+      @extend %mosaic-default;
+      width: 31.3999%;
+      height: 100%;
+      padding-left: 0%;
+      padding-right: 0%;
+
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+
+       // 37.28571%
+        width: percentage(1.9 / 4);
+        height: 100%;
+        max-height: 327px;
+        max-width: 327px;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-left: 24.88462%;
+        margin-bottom: 30px;
+      }
+
+      @include respond("max-width: 35em") {
+        max-height: none;
+      }
+    }
+
+    .img_custom_placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      img {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    [data-target="video"] {
+      margin-bottom: 20px;
+      height: auto;
+      //max-height: 125px;
+    }
+
+    // ------ Custom WIdth
+
+    .twelve {
+    	height: 100%;
+
+	    > .row {
+		    padding-left: 0;
+		    padding-right: 0;
+		    height: 100%;
+
+		    .four {
+					@include respond("max-width: 58.000em") {
+		       // 37.28571%
+		        //width: percentage(1.9 / 4); // ='s 47.5%
+		        height: 100%;
+		        max-height: 327px;
+		        max-width: 327px;
+		        //padding-left: 0%;
+		        margin-left: 2.88462%;
+		        padding-right: 0%;
+						//margin-left: 24.88462%;
+		        //margin-bottom: 30px;
+		      }
+
+		      @include respond("max-width: 35em") {
+		        max-height: none;
+		        max-width: intrinsic;
+		        margin-left: 0;
+		      }
+
+		      h2 {
+			      color: $white;
+		      }
+
+		      p {
+			      color: $white;
+		      }
+		    }
+
+		    .eight {
+					@include respond("max-width: 58.000em") {
+		       // 37.28571%
+
+		       // width: percentage(1.9 / 4); // ='s 47.5%
+		        height: 100%;
+		        max-height: 327px;
+		        max-width: 650px;
+		        padding-left: 0%;
+		        padding-right: 0%;
+		        margin-left: 0;
+		        //margin-bottom: 30px;
+		        overflow: hidden;
+
+		      }
+
+		      @include respond("max-width: 35em") {
+		        max-height: none;
+		      }
+
+		      > .row {
+				    padding-left: 0;
+				    padding-right: 0;
+				    height: 100%;
+
+				    .six {
+					    height: 100%;
+					    width: 47.98333%;
+					    //margin-left: 0;
+
+					    &.non_mobile_img {
+						    @include respond("max-width: 35em") {
+					      	min-height: 200px;
+					      	display: none;
+					      }
+					    }
+
+					    .options {
+						    margin: 0;
+
+						    @include respond("max-width: 35em") {
+					      	//padding: 20px 0 20px 0;
+					      }
+
+						    h2 {
+							    color: $white;
+						    }
+
+						    p {
+							    color: $white;
+						    }
+					    }
+				    }
+
+				    [class~='six']:last-of-type  {
+							margin-left: 3.911111%;
+
+							@include respond("max-width: 35em") {
+				      	margin-left: 0;
+				      }
+						}
+			    }
+		    }
+	    }
+    }
+
+    .flt_l {
+    // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 0;
+        float: left;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 30px;
+      }
+    }
+
+    .flt_r {
+      // ---- 768 bp - Tablet Portrait ...
+      @include respond("max-width: 58.000em") {
+        margin-left: 2.88462%;
+        float: right;
+      }
+
+      @include respond("max-width: 35em") {
+        height: auto;
+        margin-left: 0;
+        float: none;
+        width: 100% !important;
+        max-width: none;
+        margin-bottom: 30px;
+      }
+    }
+  } // end data-target="mosaic-row-med-sm"
+
+
+  .row {
+    @extend %mosaic-row-default;
+    overflow: hidden;
+  }
+
+  [data-target="mosaic-row-2c"],
+  [data-target="mosaic-row-3c"] {
+
+    // --------------------------------------------- Stock Ticker -- Option Master
+    min-height: 230px;
+
+
+    .stock_ticker_container {
+      @extend %options_stock_ver_01;
+      // below is custom only to mosaic
+      position: relative;
+      margin-bottom: 0;
+      overflow: hidden;
+      width: 100%;
+      // below is custom only to mosaic -> for Merger
+      background: #eaeaea;
+
+      @include respond(all-phones) {
+				height: 100%;
+			}
+
+      .header {
+        @extend %header_stock_ver_01;
+
+        [data-symbol="name"] {
+          @extend %data_name_stock_ver_01;
+
+    			span {
+    				font-size: 12px;
+    			}
+    		}
+      }
+
+      .stock_volume {
+      	@extend %stock_volume_stock_ver_01;
+
+	      .flt_l {
+	  			@extend %flt_l_stock_ver_01;
+	  		}
+
+	  		[data-value="amount"] {
+	  			@extend %data_value_stock_ver_01;
+	  		}
+
+	  		[data-icon="up"] {
+	  			@extend %data_icon_stock_ver_01;
+	  		}
+
+	  		[data-change="volume"] {
+	        @extend %data_volume_stock_ver_01;
+	  		}
+	    }
+
+      [data-title="name"] {
+      @include respond(all-phones) {
+        text-align: center;
+      }
+    }
+
+	    [data-symbol="name"] {}
+	    [data-value="amount"] {}
+
+      [data-change="volume"],
+      [data-timestamp="date"] {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: $IGTLightGreyMedDark;
+        @extend %data_date_stock_ver_01;
+
+        @include respond(all-phones) {
+          text-align: left;
+          margin-bottom: 1px;
+        }
+      }
+
+      [data-update="difference"] {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: $IGTLightGrey;
+
+        @include respond(all-phones) {
+          text-align: left;
+          margin-bottom: 1px;
+        }
+      }
+
+      .text_link {
+        line-height: 14px;
+        @extend %mosaic-text_link;
+        margin: 20px 0 10px 0;
+        display: table;
+        font-size: 14px;
+
+      @include respond(all-phones) {
+        text-align: left;
+      }
+
+      a {
+        color: $IGTBlue;
+        font-size: 14px;
+
+        @include respond(all-phones) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          color: $body-link-hover-color;
+        }
+      }
+
+      .fa-angle-right {
+        font-size: 14px;
+        margin: 0 4px 0 0;
+
+        @include respond(all-phones) {
+          font-size: 18px;
+        }
+      }
+    }
+
+      .stockticker {
+      font-variant: normal;
+      position: relative;
+    }
+
+    } // end options
+
+
+    // Small
+
+    .four > .stock_ticker_container {
+      min-height: 326px;
+      padding: 20px;
+
+      @include respond(all-phones) {
+        min-height: intrinsic;
+      }
+
+      .ticker_widget {
+        width: 100%;
+        min-height: 315px;
+        margin-left: 0;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @include respond("max-width: 58.000em") {
+          width: 100%;
+          min-height: intrinsic;
+        }
+
+        @include respond(all-phones) {
+          width: 100%;
+          height: auto;
+          min-height: intrinsic;
+          float: none;
+        }
+      }
+
+      .stockticker {
+        display: none;
+      }
+    }
+
+    .four > .stock_ticker_container > .stockticker {
+      display: none;
+    }
+
+
+    // Medium
+
+    .eight > .stock_ticker_container {
+      min-height: 326px;
+      padding: 20px;
+      display: table;
+      width: 100%;
+
+      @include respond(all-phones) {
+        min-height: intrinsic;
+      }
+
+      .ticker_widget {
+        width: 38.55769%;
+        min-height: 315px;
+        margin-left: 0;
+        float: left;
+        //min-height: 1px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @include respond("max-width: 58.000em") {
+          width: 100%;
+          min-height: intrinsic;
+        }
+
+        @include respond(all-phones) {
+          width: 100%;
+          height: auto;
+          min-height: intrinsic;
+          float: none;
+        }
+      }
+
+      .stockticker {
+        width: 58.55769%;
+        height: 287px;
+        margin-left: 2.88462%;
+        float: left;
+        min-height: 1px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @include respond("max-width: 58.000em") {
+          display: none;
+        }
+
+        @include respond("max-width: 35em") {
+          display: none;
+        }
+      }
+
+      .ticker_medium {
+      height: 287px;
+
+      @include respond("max-width: 58.000em") {
+        display: none;
+      }
+
+      @include respond("max-width: 35em") {
+        display: none;
+      }
+    }
+    }
+
+
+    // Large
+
+    .twelve > .stock_ticker_container {
+      padding: 20px;
+      min-height: 326px;
+
+      @include respond(all-phones) {
+        min-height: intrinsic;
+      }
+
+      .ticker_widget {
+        width: 31.41026%;
+        margin-left: 0;
+        float: left;
+        min-height: 315px;
+        //min-height: 1px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @include respond(all-phones) {
+          width: 100%;
+          min-height: intrinsic;
+          float: none;
+        }
+      }
+
+      .stockticker {
+        width: 65.70513%;
+        height: 287px;
+        margin-left: 2.88462%;
+        float: left;
+        min-height: 1px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @include respond(all-phones) {
+          display: none;
+        }
+      }
+
+      .ticker_medium {
+        height: 287px;
+      }
+
+      .ticker_large {
+        // bw
+        height: 345px;
+        width: 100%;
+      }
+    }
+
+    .four, .eight, .twelve {
+      overflow: hidden;
+    }
+  }
+  
+  [data-target="mosaic-row-2c"],
+  [data-target="mosaic-row-3c"] {
+    p, .text_link {
+      font-size: 14px !important;
+      line-height: 1.625em !important;
+      margin-bottom: 20px !important;   
+    }   
+  }
+}
+
+// --------------------------------------------- Header Icon Layout
+
+// see --->  _sub_page_illustrated_content.scss

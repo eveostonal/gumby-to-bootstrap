@@ -1,0 +1,17 @@
+// --------------------------- RELATED GAME THEMES
+
+.related_game_themes {
+	display: block;
+
+	ul.par_theme_show {
+    margin: 0;
+    padding: 0;
+    border: 1px #ddd solid;
+
+		li {
+			padding: 10px 0 5px 10px;
+			list-style: none;
+			//@extend %cell_space_ai_default
+		}
+	}
+}

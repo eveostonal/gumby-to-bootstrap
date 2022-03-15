@@ -1,0 +1,405 @@
+// ----------------------------------------------------- PANEL 5 - Product & Services
+
+[data-panel="product"] {
+  background: $IGTMediumBlue;
+  
+  .cycle-slideshow-wrapper { background: $white; }
+}
+
+[data-target="no_background_slideshow"] {
+  @extend %panel_container_defaults;
+  height: auto;
+  width: auto;
+  top: 10%;
+
+  @include respond(all-phones) {
+    position: relative;
+    padding: 0 20px 40px 20px;
+    width: 100%;
+  }
+  
+  @include respond(portrait-tablets) {
+    top: 0;
+  }
+
+  .header_title {
+    margin: 0 0 60px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 34px;
+    color: $white;
+
+    @include respond(all-phones) {
+      margin: 0 0 30px 0;
+      font-size: 22px;
+      //font-weight: 700;
+    }
+
+    @include respond(portrait-tablets) {
+      margin: 0 0 30px 0;
+    }
+
+    @include respond(tablets) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .cycle-slideshow-wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 40px;
+    background-repeat: repeat;
+    display: block;
+    width: 920px;
+    height: 590px; //was 540px
+    z-index: 25;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+
+    @include respond(portrait-tablets) {
+      width: 580px;
+      height: 780px;
+    }
+
+    @include respond(tablets) {
+      width: 830px;
+      height: 515px;
+    }
+  } // ----- cycle-slideshow-wrapper end
+
+  .cycle-slideshow-header {
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    margin: auto;
+    width: 100%;
+    left: 0;
+
+    a {
+      float: right;
+      margin: 0 10px 0 0;
+
+      i.fa {
+        font-size: 24px;
+        color: $body-link-color;
+        text-decoration: none;
+      }
+    }
+
+    a:hover {
+      float: right;
+
+      i.fa {
+        font-size: 24px;
+        color: $body-link-hover-color;
+        text-decoration: none;
+      }
+    }
+  } // panel content
+
+  .cycle-slideshow,
+  .cycle-slide {
+    height: 100%;
+    width: 100%;
+  }
+
+  .title {
+    width: 100%;
+    margin: auto;
+
+    h1 {
+      display: block;
+      margin: 0 0 50px 0;
+
+      @include respond(portrait-tablets) {
+        margin: 0 0 20px 0;
+      }
+
+      @include respond(tablets) {
+        margin: 0 0 20px 0;
+      }
+
+      @include respond(desktop) {
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+
+  .slide {
+    display: block;
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    ul {
+      padding: inherit;
+
+      li {
+        padding: inherit;
+
+        a {
+          color: $body-link-color;
+          text-decoration: none;
+          @extend %panel_font_weight_default;
+        }
+
+        a:hover {
+          color: $body-link-hover-color;
+          text-decoration: none;
+        }
+      }
+
+			@include respond(tablets) {
+	      li:nth-child(odd) {
+				    float: left;
+				    width: 50%;
+				    display: block;
+				}
+
+				li:nth-child(even) {
+				    float: left;
+				}
+			}
+    }
+
+    .widget {
+      float: left;
+      display: block;
+      position: relative;
+
+      h3 {
+        margin: 0 0 40px 0;
+        padding: 0;
+
+        @include respond(portrait-tablets) {
+					margin: 0 0 20px 0;
+				}
+
+				@include respond(tablets) {
+					margin: 0 0 20px 0;
+				}
+      }
+
+      p {
+        display: inherit;
+        color: $body-font-color;
+        margin-bottom: $p_tag_bottom;
+        @extend %panel_font_weight_default;
+        float: left;
+        width: 100%;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        float: left;
+        width: 100%;
+        
+        li {
+          display: block;
+          clear: both;
+        }
+      }
+    } // ----- widget end
+
+    .one {
+      display: block;
+      width: 45%;
+      height: 100%;
+      margin: 0 5% 0 0;
+      z-index: auto;
+      @extend %ie_8_imageScale;
+      // extend has to be on the bottom
+      @extend %ie_8_imageScale_fix;
+
+      @include respond(portrait-tablets) {
+        width: 40%;
+        height: 500px;
+        margin: 0 30px 30px 0;
+        background-size: contain !important;
+      }
+
+      @include respond(tablets) {
+        width: 50%;
+        height: 100%;
+        margin: 0 30px 30px 0;
+        
+      }
+    } // ----- one end
+
+    .two {
+      margin: 0;
+      text-align: left;
+      width: 49%;
+
+      @include respond(portrait-tablets) {
+        text-align: left;
+        width: 46%;
+      }
+
+      @include respond(tablets) {
+        text-align: left;
+        width: 46%;
+      }
+    } // ----- two end
+
+  } // ----- slide end
+
+  ul.list {
+  	@extend %cell_ul;
+  	display: block;
+    width: 920px;
+    height: 540px;
+
+    @include respond(portrait-phones) {
+      display: none;
+    }
+
+    @include respond(landscape-phones) {
+      display: none;
+    }
+
+    @include respond(all-phones) {
+      display: none;
+    }
+
+    @include respond(portrait-tablets) {
+      width: 510px;
+      height: auto;
+    }
+
+    @include respond(tablets) {
+      width: 830px;
+      height: 515px;
+    }
+
+  li.widget {
+    @extend %cell_li;
+    width: 280px;
+    height: 280px;
+    //-webkit-border-radius: 50%;
+    //-moz-border-radius: 50%;
+    //border-radius: 50%;
+    
+    &:hover {
+      background: $IGTDarkOrange;
+      //border: 5px solid $IGTYellow;
+      //box-shadow: 0px 0px 0px 5px $IGTYellow;
+      cursor: pointer;
+      
+      a div { background: none !important; }
+    }
+
+    @include respond(portrait-tablets) {
+      width: 240px;
+      height: 240px;
+    }
+
+    @include respond(tablets) {
+      width: 240px;
+      height: 240px;
+    }
+
+    a {
+      @extend %cell_a_tag;
+      height: inherit;
+
+      [data-background="0"],
+      [data-background="1"],
+      [data-background="2"],
+      [data-background="3"],
+      [data-background="4"],
+      [data-background="5"] {
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-behavior: url(http://media.igt.com/pollyfills/backgroundsize.htc);
+        //-webkit-border-radius: 50%;
+        //-moz-border-radius: 50%;
+        //border-radius: 50%;      
+
+        .wrapper {
+          @extend %cell_wrapper;
+          
+
+          span.title {
+            @extend %cell_title;
+          }
+
+          span.sub_title {
+            @extend %cell_sub_title;
+          }
+        }
+      } // ----- data-background="" end
+    } // a end
+
+    a:hover div div.wrapper {
+      margin: auto;
+      //color: $IGTYellow;
+
+      span.title {
+        display: block;
+        //color: $IGTYellow;
+      }
+
+      span.sub_title {
+        display: block;
+      }
+    } // a:hover end
+  } // --- li .widget End
+
+    li.one {
+      z-index: auto;
+      margin: 0 30px 30px 0;
+
+      @include respond(portrait-tablets) {
+        margin: 0 30px 30px 0;
+      }
+    }
+
+    li.two,
+    li.four {
+      margin: 0 30px 30px 0;
+
+      @include respond(portrait-tablets) {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    li.three {
+      margin: 0 0 30px 0;
+
+      @include respond(portrait-tablets) {
+        margin: 0 30px 30px 0;
+      }
+    }
+
+    li.five {
+      margin: 0 30px 30px 0;
+
+      @include respond(portrait-tablets) {
+        margin: 0 30px 0 0;
+      }
+    }
+
+    li.six {
+      margin: 0 0 30px 0;
+
+      @include respond(portrait-tablets) {
+        margin: 0 0 0 0;
+      }
+    }
+  } // ----- Ul End
+} // ----- .component.full_panel_grid_slideshow end

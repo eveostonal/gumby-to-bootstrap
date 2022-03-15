@@ -1,0 +1,169 @@
+// --------------------------- SIGNATURE CODES
+
+.signature_container {
+  font-weight: normal
+
+  h3 {
+    //@extend %detials_header_row_default_h3;
+  }
+
+  .signature_row_width {
+  	border-left: 1px solid $IGTGrey;
+  }
+
+  .program_group {
+    display: none;
+    padding: 0 0 10px 0;
+    //border-right: 1px solid $IGTGrey;
+    //border-left: 1px solid $IGTGrey;
+
+    .program {
+      display: block;
+      padding: 0 0 0 10px;
+    }
+  }
+
+  .signature_row_header {
+    display: block;
+    border-left: 1px solid $IGTGrey;
+    // font-size: 12px;
+
+    th {
+      border-bottom: none;
+      //background: $IGTGrey;
+      text-align: center;
+      line-height: 16px;
+    }
+
+    .signature_row {
+      display: table-row;
+      // font-size: 12px;
+
+      .signature_cell {
+        padding: 0;
+
+        .cellValue {
+          padding: 2px 0 2px 5px;
+          border-top: 0 !important;
+          //@extend %cell_space_default
+        }
+      }
+    } // -----
+
+    .par_replacement_row {
+      padding: 5px 0 5px 0;
+
+      .par_replacement_sep {
+        height: 1px;
+        //background: $IGTGrey !important;
+      }
+    }
+  }
+}
+
+
+// -----
+
+.par_replacement_row {
+  padding: 5px 0 5px 0;
+
+	.par_replacement_sep {
+    height: 2px;
+    //background: $IGTGrey !important;
+	}
+}
+
+// ----- Signature Codes expand text link
+
+.table_sig_row > td > a {
+	display: block;
+	//padding: 2px 0 2px 20px !important;
+	//height: 11px;
+	//background: $white;
+}
+
+.table_sig_row {
+	display: table-row;
+	// font-size: 12px;
+
+	.first_row {
+		display: table-cell;
+
+		// -------
+
+		a {
+			//height: 8px;
+      //line-height: 2px;
+		}
+
+		.table_width_1 {
+		 float: right;
+			width: 593px !important;
+			border-left: 1px solid $IGTGrey;
+		}
+
+		.program_show_width {
+			float: right;
+			width: 650px !important;
+			border-left: 1px solid $IGTGrey;
+		}
+
+		.signature_row_width {
+			margin: 20px 0 40px 0;
+			border-right: 1px solid $IGTGrey;
+			border-bottom: 1px solid $IGTGrey;
+			border-left: 1px solid $IGTGrey;
+			//background: $white;
+
+			tr > th {
+  			//padding: 5px 0 5px 10px !important;
+  			border-bottom: none;
+			}
+
+			.signature_row {
+        display: table-row;
+        // font-size: 12px;
+
+        .signature_cell,
+        .signature_cell_a,
+        .signature_cell_b,
+        .signature_cell_c,
+        .signature_cell_d,
+        .signature_cell_e,
+        .signature_cell_f {
+          padding: 2px !important;
+          //background: green
+        }
+
+        .cellValue { padding: 0 0 0 5px; }
+
+      } // ----- signature_row
+
+		} // ----- signature_row_width;
+	}
+}
+
+// -----
+
+.signature_cell {
+  padding: 2px;
+  text-align: left;
+
+  .cellValue {
+	  padding: 2px 0 2px 5px;
+  }
+}
+
+.signature_cell_a,
+.signature_cell_b,
+.signature_cell_c,
+.signature_cell_d,
+.signature_cell_e {
+  padding: 2px;
+  text-align: center;
+}
+
+.signature_cell_f {
+  padding: 2px 0 2px 5px;
+  text-align: left;
+}

@@ -1,0 +1,299 @@
+// ---------------------------------------------------  Variables
+
+//@import "../../../var/_settings";
+@import "../../var/_settings";
+@import "program_search/extends";
+
+// ---------------------------------------------------  Details Search Results output
+
+// ----- TOO MANY RESULTS DISPLAY
+@import "program_search/01_to_many_results";
+
+// ----- Programs View
+@import "program_search/02_programs_view";
+
+// ----- PROGRAM STATUS
+@import "program_search/03_program_status";
+
+// ----- REPLACEMENT PROGRAMS
+@import "program_search/04_replacement_programs";
+
+// ----- DOWNLOADS
+@import "program_search/05_downloads";
+
+// ----- PAYTABLES
+@import "program_search/06_paytables";
+
+// ----- SIGNATURE CODES
+@import "program_search/07_signature_code";
+
+// ----- ASSOCIATED "INSTALL" PROGRAMS
+@import "program_search/08_ai_assoc_programs";
+
+// ----- RELATED GAME THEMES
+@import "program_search/09_related_game_themes";
+
+// ---- FIX A
+@import "program_search/10_fix";
+
+// --------- Jurisdiction Picker
+
+.leftside_wrapper {
+  .field { padding: 0; }
+  .search_text_box { width: 70%; }
+  
+  .btn {
+    width: 30%;
+    
+    input { font-weight: normal; }
+  }
+}
+
+.jur_dropdown_wrapper {
+  width: 100%;
+  display: block;
+  position: relative;
+  
+  .btn {
+    float: left;
+    width: 30%;
+    
+    a {
+      padding: 0;
+    }
+  }
+  
+  .selected_list {
+    display: block;
+    float: right;
+    width: 70%;
+    border: solid lighten($IGTLightGreyMedDark, 40%);
+    border-width: 1px 1px 1px 0;
+    height: 35.84375px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 12px !important;
+    padding: 1px 3px;
+    line-height: 15px;
+    color: $IGTLightGrey;
+    
+    span {
+      background-color: $IGTLightGrey;
+      height: 13px;
+      display: inline-block;
+      line-height: 13px;
+      font-size: 10px;
+      padding: 0 4px;
+      //margin-right: 3px;
+      color: $white;
+    }
+  }
+  
+  .drop_menu {
+    width: 100%;
+    border: 1px solid lighten($IGTLightGreyMedDark, 40%);
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: $white;
+    z-index: 1000;
+    
+    .drop_menu_header {
+      text-align: center;
+      border-bottom: 1px solid lighten($IGTLightGreyMedDark, 40%);
+      height: 35.84375px;
+      line-height: 35.84375px;
+      background: $IGTLighterGrey;
+    }
+  }
+
+  ul.choices li {
+    display: inline-block;
+   
+    span {
+      background-color: $IGTLightGrey;
+      height: 13px;
+      display: inline-block;
+      line-height: 13px;
+      font-size: 10px;
+      padding: 0 4px;
+      margin-right: 3px;
+      color: $white;
+      
+      a {
+        font-size: 10px;
+        padding-left: 3px;
+        color: $white;
+      }
+    }
+  }
+
+  .choices {
+    height: 35.84375px;
+    border-bottom: 1px solid lighten($IGTLightGreyMedDark, 40%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 12px !important;
+    padding: 1px 3px;
+    line-height: 15px;
+    padding: 1px 3px;
+  }
+
+  .selection_list {
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: small;
+    margin: 0px;
+    padding: 10px 12px;
+    
+    li {
+      display: block;
+      padding: 0.273em 0;
+      
+      &.group-title {
+        font-weight: bold;
+        padding-bottom: 0 !important;
+      }
+      
+      &.jd_item {
+        cursor: pointer;
+        
+        &.fa:before { padding-right: 5px !important; }
+      }
+      
+      &.jd_item.selected { color: $IGTMediumBlue; }
+    }
+  }
+
+  .select_all_button_wrapper {
+    position: absolute;
+    width: 70px;
+    height: 35.84375px;
+    line-height: 35.84375px;
+    
+    .select_all_button { width: 100%; }
+  }
+
+  .x_cancel_button {
+    position: absolute;
+    right: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 35.84375px;
+    height: 35.84375px;
+    line-height: 35.84375px;
+  }
+
+  .jurButtons {
+    text-align: center;
+    padding: 0;
+    
+    .btn {
+      width: 25%;
+      border-left: 1px solid lighten($IGTLightGreyMedDark, 40%);
+      
+      &:first-child { border: none; }
+      
+      &.disabled {
+        cursor: not-allowed !important;
+        background: $IGTLightestGrey !important;
+        color: $IGTGrey !important;
+      }
+    }
+  }
+}
+
+// --------- Expansion
+
+.expansion_header {
+  padding: 0 0 10px 0;
+  
+  .four {
+    .btn { float: right; margin-bottom: 10px; }
+    .btn:first-child { margin: 0 0 0 10px; }
+  }
+}
+
+.expansion_wrapper { padding-bottom: 35px; }
+
+a.expansion_panel_link {
+  display: block;
+  margin: 0 0 4px 0;
+  padding: 0 20px;
+  background: $IGTMediumBlue;
+  
+  h3 {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0 40px 0 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: $white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    &:first-child {
+      margin: 0;
+      display: block;
+    }
+    
+    .fa {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      font-size: 40px;
+    }
+  }
+}
+
+.expansion_panel {
+  td, th { font-size: 14px !important; }
+}
+
+// --------- Modal Window
+
+#psInstallProgramSignatureCodeDialog {
+  td, th { font-size: 12px !important; }
+}
+
+// --------- Testing Area
+
+.ps-testing {
+  background: lighten($danger-color, 40%);
+  border: 1px solid $danger-color;
+  padding: 20px;
+  margin: 0 0 30px 0;
+}
+
+.results_wrapper,
+.par_replacement_program {
+  width: 100%;
+}
+
+.program_group {
+	margin-bottom: 10px;
+
+	.program {
+		font-style: normal;
+	}
+}
+
+// -------------- Back Button
+
+.programsearch {
+  a.ps_back_button.disabled {
+    background: #eee !important;
+    color: #ddd !important;
+    cursor: not-allowed !important;
+    
+    &:hover {
+      background: #eee !important;
+      color: #ddd !important;
+      cursor: not-allowed !important;      
+    }
+  }
+}

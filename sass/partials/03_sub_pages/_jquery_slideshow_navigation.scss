@@ -1,0 +1,187 @@
+// -------------------- Slide Show Navigation - Core Pages
+  
+.slideshow_nav {
+  @extend %slideshow_nav;
+  
+  @include respond(all-phones) {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 20px 0;
+    width: 100%;
+    height: 65px;
+  }
+  
+  .nav_left {
+    left: $left_right_arrow_space;
+    float: left;
+  }
+  
+  .nav_right {
+    right: $left_right_arrow_space;
+    float: right;
+  }
+  
+	.nav_left {
+    @extend %nav_defaults;     
+    
+    @include respond(all-phones) {
+      margin: 0 0 0 10px;
+      width: 17px;
+      height: 48px;
+    }
+    
+    @include respond(portrait-tablets) {
+      bottom: $tablet_port;
+    }
+    
+    @include respond(tablets) {
+      bottom: $tablet;
+    }
+    
+    @include respond(desktop) {
+      bottom: $desktop;
+    }
+    
+    a#prev_01, 
+    a#prev_02,
+    a#prev_03,
+    a#prev_04,
+    a#prev_05,
+    a#prev_06,
+    a#prev_07,
+    .cycle-prev,
+    a#fact-img-icon_prev,
+    a#fact-img-background-prev {
+      float: left;
+      @extend %nav_a_defaults;
+      
+      @include respond(all-phones) {
+        color: $IGTLightGrey;
+        font-size: 48px;
+      }     
+      
+      &:hover {
+        color: $body-link-hover-color;
+      }
+    }
+    
+    a#prev_03 {
+      //display: none;
+    }
+  } // --- nav_left end
+	
+	.slide_pagination_01, 
+	.slide_pagination_02,
+	.slide_pagination_03,
+	.slide_pagination_04,
+	.slide_pagination_05,
+	.slide_pagination_06,
+	.slide_pagination_07,
+	.game_detail_pagination,
+	.fact-img-icon-pagination,
+	.fact-img-background-pagination,
+	.video_pagination {
+    display: none;
+    
+    @include respond(all-phones) {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      left: 0;
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      height: 25px;
+      text-align: center;
+      //background: aqua
+    }
+        
+    li {
+      display: inline-block;
+      padding: 0 5px 0 5px;
+      
+      a {
+        color: $IGTLightBlue;
+        font-size: 20px;
+      }
+      
+      a:hover {
+        color: $IGTLightBlue;
+      } 
+    }
+    
+    li.cycle-pager-active a {            
+        color: $IGTLightGrey;
+        content: "\f111";
+    }
+    
+    li.cycle-pager-active a > i.fa:before {
+      color: $IGTLightGrey;
+      content: "\f111";
+    }
+    
+    li.cycle-pager-active a:hover > i.fa:before {
+      color: $IGTYellow;
+      content: "\f111";
+    }
+  }
+	
+	.nav_right {
+    @extend %nav_defaults;
+    
+    @include respond(all-phones) {
+      float: right;
+      margin: 0 10px 0 0;
+      width: 17px;
+      height: 48px; 
+    }
+    
+    @include respond(portrait-tablets) {
+      bottom: $tablet_port; 
+    }
+    
+    @include respond(tablets) {
+      bottom: $tablet;
+    }
+    
+    @include respond(desktop) {
+      bottom: $desktop;
+    }
+    
+    a#next_01, 
+    a#next_02,
+    a#next_03,
+    a#next_04,
+    a#next_05,
+    a#next_06,
+    a#next_07,
+    .cycle-next,
+    a#fact-img-icon_next,
+    a#fact-img-background-next {
+      float: right;
+      @extend %nav_a_defaults;      
+      
+      @include respond(all-phones) {
+        font-size: 48px;
+      }     
+      
+      &:hover {
+        color: $body-link-hover-color;
+      }
+    }
+    
+    a#next_03 {
+      //display: none;      
+    }    
+  } // --- nav_right end
+	
+	// might want to remove this later?
+	.slide_pagination_03 {
+    display: none;  
+    
+    @include respond(all-phones) {
+      display: block;
+    }
+  }
+} // END slideshow_nav
+

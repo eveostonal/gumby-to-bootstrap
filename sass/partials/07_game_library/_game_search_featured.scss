@@ -1,0 +1,208 @@
+.catalog_view > .games_list_container > li.hover_area {
+  padding: 0 !important;
+  position: relative; 
+  
+  a {
+    z-index: 50;
+    
+    .game-title {
+      color: $IGTMediumBlue;
+     
+      &:hover { color: $IGTBlue; }
+    }
+  }
+
+  .icon_set {
+    margin: 0 0 10px 0;
+    font-size: 0;
+    padding: 0 10px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    line-height: 1em;
+          
+    li {	    
+      border: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+
+      width: 40%;
+      line-height: 1em;
+      font-size: 0;
+      
+      img {
+        padding: 0;
+        margin: 0;
+        max-height: none;
+        width: 100%;
+      }
+    }
+  }
+  
+  &:hover {
+    .hover_wrapper {
+      height: 100%;
+      transform: scaleY(1);
+      -webkit-transition: all 150ms ease-in;
+      -moz-transition: all 150ms ease-in;
+      -ms-transition: all 150ms ease-in;
+      -o-transition: all 150ms ease-in;
+      transition: all 150ms ease-in;
+    }
+  }
+  
+  .game_segment {
+    padding: 0;
+    display: inline-block;
+    
+    img {
+      max-width: 23px;
+      width: auto;
+    }
+  }
+}
+
+.flag-wrapper.game_hover {
+  margin: 7px 0;
+  padding: 0;
+
+  .flag-container {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+
+    div { margin-left: 0; }
+
+    .flag-new {
+      height: 25px;
+      line-height: 25px;
+      background: $IGTBlue;
+      color: $white;
+      font-size: 12px;
+      width: auto;
+    }
+
+    .flag-featured {
+      height: 25px;
+      line-height: 25px;
+      padding: 0 10px;
+      min-width: 35px;
+      width: auto;
+      background: $IGTYellow;
+      color: $white;
+      font-size: 12px;
+
+      .fa { color: $IGTBlue; }
+    }
+  }
+}
+
+.hover_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transform: scaleY(0);
+  transform-origin: top left;
+  -webkit-transition: all 150ms ease-out;
+  -moz-transition: all 150ms ease-out;
+  -ms-transition: all 150ms ease-out;
+  -o-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  overflow: hidden;
+  
+  .hover_container {
+    background: $IGTBlue;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+        
+    .content_wrapper {
+      display: table;
+      width: 100.5%; //fixes subpixel issue
+
+      //&:nth-child(1) { height: 40%; }
+      //&:nth-child(2) { height: 30%; }
+      //&:nth-child(3) { height: 30%; }
+      &:nth-child(1) { height: 50.5%; }
+      &:nth-child(2) { height: 50.5%; }
+    }
+    
+    .type_icon {
+      display: table-cell;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      font-size: 40px;
+      text-align: center;
+      vertical-align: middle;
+      
+      img { max-width: 70px !important; }
+      
+      span {
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        display: block;
+        clear: both;  
+      }
+    }
+    
+    .link_1 {
+      display: table;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      
+      a {
+        cursor: pointer;
+        vertical-align: middle;
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        border-top: 1px solid rgba($white, 0.1);
+        border-bottom: 1px solid rgba($white, 0.1);
+        
+        &:hover {
+          background: $IGTMediumBlue;
+          color: $white;
+          border-color: transparent;
+        }
+      }
+    }
+
+    .link_2 {
+      display: table;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      
+      a {
+        cursor: pointer;
+        vertical-align: middle;
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        font-size: 14px;
+        background: rgba($IGTMediumBlue, 0.1);
+
+        &:hover {
+          background: $IGTMediumBlue;
+          color: $white;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

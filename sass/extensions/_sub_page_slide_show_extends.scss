@@ -1,0 +1,115 @@
+// --------------------------------------------- Extends / Variables for: Slide Show - Core pages only
+
+%static_header_default {
+	position: relative;
+  display: block; //Agreed upon change by SP & BW
+	width: 100%;
+	height: 300px;
+}
+
+%static_header_text {
+  width: 100%;
+  height: 300px;
+}
+
+%static_header_h2 {
+  padding-top: 0;
+  color: $white;
+  text-align: center;
+  //font-weight: 700;
+}
+
+%static_header_p {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+%static_header_btn {
+  display: block;
+  margin: 0 auto;
+  width: 302px;
+}
+
+%p_tag_item_defaults {
+  //font-weight: 700;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: $IGTLightGreyMed;
+  white-space: normal;
+  font-size: 16px;
+}
+
+%image_bottom_margin {
+  margin-bottom: 10px;
+}
+
+%text_link {
+  //color: $IGTBlue;
+  color: $IGTLightGreyMed;
+  line-height: 14px;
+  margin-top: 5px;
+}
+
+%text_link_a {
+  color: $IGTBlue;
+  font-size: 14px;
+}
+
+%text_link_hover {
+  color: $body-link-hover-color;
+}
+
+%wrap_text {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+
+// ----- Variables
+
+$related-img-background-defaults: 130px;
+
+$height-500: 490px;
+
+%three_up_carousel {
+  margin: 0 5% 0 5%;
+}
+
+%five_up_carousel {
+  margin: 0 10px 0 10px;
+}
+
+
+// -------------------- Slider Arrow Navigation // 01, 02, 03
+
+
+%slideshow_nav {
+  position: relative;
+  bottom: 20%;
+  margin: 0 auto;
+  height: 48px;
+  text-align: center;
+}
+
+%nav_defaults {
+  position: relative;
+  bottom: 30%;
+  display: block;
+}
+
+%nav_a_defaults {
+  display: block;
+  margin: 0;
+  color: $IGTLightGrey;
+  font-size: 72px;
+}
+
+$tablet_port: 20%;
+$tablet: 20%;
+$desktop: 25%;
+
+$left_right_arrow_space: 0;

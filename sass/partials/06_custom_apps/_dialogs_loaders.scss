@@ -1,0 +1,280 @@
+// Game Search and dialogs
+
+
+body.modal_open {
+  overflow: hidden;
+  position: fixed;
+}
+
+.game_search_progress,
+.progress_dialog {
+  width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 190;
+  background: rgba(255, 255, 255, 1.0);
+  display: table;
+  overflow: hidden;
+  
+  .progress_wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+
+    .primary.label {
+      padding: 0;
+      margin: 0 auto 15px auto;
+      width: 120px;
+      height: 120px;
+      line-height: 120px;
+      border-radius: 60px;
+      background: $IGTOrange; //Old browsers
+      background: -moz-linear-gradient(top,  $IGTOrange 0%, $IGTDarkOrange 100%);
+      background: -webkit-linear-gradient(top,  $IGTOrange 0%,$IGTDarkOrange 100%);
+      background: linear-gradient(to bottom,  $IGTOrange 0%,$IGTDarkOrange 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$IGTOrange', endColorstr='$IGTDarkOrange',GradientType=0 );
+      border: 5px solid $IGTDarkYellow;
+      position: relative;
+      
+      span {
+        @extend %verlag_book;  
+        text-align: center;
+        font-size: 20px;
+        line-height: 1em;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 38px;
+        
+      }
+      
+      .fa {
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        margin: 0 0 0 -12px;
+        font-size: 24px;
+      }
+    }
+    
+    .progress_message {
+      width: 230px;
+      text-align: center;
+      font-size: 14px;
+      padding: 0;
+      margin: 0 auto;
+    }
+    
+    p.btn {
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.preloader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 190;
+  
+  .loader {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    
+    .inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transition: all 640ms cubic-bezier(0.1, 1.0, 1.0, 0.1);
+      
+      &.one {
+        left: 0;
+        top: 0;  
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(90deg);
+        transition-delay: 160ms;
+      }
+      
+      &.two {
+        left: 0;
+        top: 0;    
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+        transition-delay: 320ms;
+      }
+      
+      .ring {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2.5px solid;
+        border-bottom-width: 5px;
+        animation: rotate-ring 2s linear infinite;
+        z-index: 200;
+        
+        &.orange { border-color: $IGTDarkOrange; }
+        &.blue { border-color: $IGTMediumBlue; }
+      }
+    }
+  }
+  
+  .text {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    top: calc(50% + 95px);
+    font-weight: 400;
+    color: grey;
+    
+    .dot {
+      opacity: 0;
+      -webkit-animation: dot 1.3s infinite;
+      -webkit-animation-delay: 0.0s;
+      animation: dot 1s infinite;
+      
+      &.one { animation-delay: 0.1s; }
+      &.two { animation-delay: 0.2s; }
+      &.three { animation-delay: 0.3s; }
+    }
+  }
+  
+  .preload_back {
+    width: 100%;
+    height: 100%;
+    background: $white;
+  }
+}
+
+@keyframes rotate-ring {
+  0% { transform: rotateY(0) scaleX(0.9) scaleY(1);  }
+  50% { transform: rotateY(180deg) scaleX(0.8) scaleY(1.1); }
+  100% { transform: rotateY(0) scaleX(0.9) scaleY(1); }
+}
+
+@keyframes rotate {
+  0% { transform:  rotateZ(0) rotateY(0); }
+  50% { transform: rotateZ(180deg) rotateY(45deg); }
+  100% { transform: rotateZ(360deg) rotateY(0); }
+}
+
+@keyframes dot {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.eula_container {
+  width: 100%;
+  height: 35px;
+  min-height: 35px;
+  z-index: 200;
+  
+  @media all and (min-width: 320px) and (max-width: 650px) {
+    height: 70px;
+    min-height: 70px;
+  }
+  
+  .eula_notice {
+    width: 100%;
+    height: 35px;
+    min-height: 35px;
+    line-height: 35px;
+    background: $danger-color;
+    text-align: center;
+    display: block;
+    position: fixed;
+    z-index: 200;
+    color: $white;
+    font-size: 14px;
+    
+    @media all and (min-width: 320px) and (max-width: 650px) {
+      height: 70px;
+      min-height: 70px;
+      line-height: 1.5em;
+      padding: 15px 20px 0 20px;
+    }
+    
+    a {
+      color: $white;
+      border: dotted $white;
+      border-width: 0 0 1px 0;
+      
+      &:hover {
+        color: $white;
+        border-style: solid;
+      }
+    }
+  }
+}
+
+[data-chapter="mobile_alert"] {
+  display: none !important;
+  visibility: hidden !important;
+
+  @media all and (min-width: 320px) and (max-width: 560px) {
+    display: none !important;
+    visibility: hidden !important;
+	}
+
+	//@media all and (min-width: 561px) and (max-width: 3000px) {
+ 	@media all and (min-width: 320px) and (max-width: 1000px) and (orientation:landscape) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999999;
+		display: block !important;
+		visibility: visible !important;
+		width: 100%;
+		height: 100%;
+		background: none;
+		background-color: $IGTDarkGrey;
+		background-position: center 35%;
+
+		.center_all {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: auto;
+			overflow: hidden;
+			margin: auto !important;
+			width: auto;
+			height: 320px;
+			background: url(../images/rotate_mobile.png) no-repeat;
+			background-position: center 35%;
+
+			p {
+				width: 100%;
+				color: #fff;
+				text-align: center;
+				font-size: 1.125em !important;
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+}
+
+//Used for Testing Mobile on Desktop (SP) 
+//[data-chapter="desk_alert"] {
+//  display: none !important;
+//  visibility: hidden !important;
+//}
