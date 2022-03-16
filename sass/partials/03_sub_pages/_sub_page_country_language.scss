@@ -27,7 +27,7 @@
       text-decoration: none;    
       line-height: 14px; 
          
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin: 10px 0 10px 0;
         background: #F8F8F8;
         text-align: left;
@@ -47,7 +47,7 @@
         width: 59.33355%;
         font-size: 14px;
         
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding: 10px 0 0 0;
           text-align: left;
         }         
@@ -83,7 +83,7 @@
       color: $white;
       text-shadow: none;
       
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         padding-top: 10px;
         padding-bottom: 10px;
         line-height: 24px !important;

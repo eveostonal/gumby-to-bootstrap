@@ -4,7 +4,7 @@
   background: $IGTOrange;
   padding: 30px 20px 40px 20px;
   
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     padding: 30px 10px 40px 10px;
   }
   
@@ -41,7 +41,7 @@
     }
     
       
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100% !important;
     }
   }
@@ -50,7 +50,7 @@
     margin: 0 !important;
     width: 30% !important;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100% !important;
     }
     
@@ -97,7 +97,7 @@
     margin: 0 !important;
     width: 25% !important;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100% !important;
     }
     

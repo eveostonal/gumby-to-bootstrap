@@ -44,7 +44,7 @@
   visibility: hidden !important;
 }
 
-@include respond(all-phones) {
+@include media-breakpoint-down(sm){
   .mobile_hide {
     display: none !important;
     visibility: hidden !important;
@@ -56,7 +56,7 @@
   }
 }
 
-@include respond(portrait-tablets) {
+@include media-breakpoint-down(lg){
   .tablet_hide {
     display: none !important;
     visibility: hidden !important;
@@ -69,35 +69,35 @@
 }
 
 .mobile_hide {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: none !important;
     visibility: hidden !important;
   }
 }
 
 .desktop_only {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: none !important;
     visibility: hidden !important;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     display: none !important;
     visibility: hidden !important;
   }
 }
 
 .desktop_tablet_only {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: none !important;
     visibility: hidden !important;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     display: block !important;
     visibility: visible !important;
   }
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     display: block !important;
     visibility: visible !important;
   }

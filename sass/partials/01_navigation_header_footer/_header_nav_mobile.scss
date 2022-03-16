@@ -1,6 +1,6 @@
 // ----- Mobile Nav
 
-@include respond(all-phones) {
+@include media-breakpoint-down(sm){
   .mobile-menu {
   	.user_header_controls {
   	  position: static;
@@ -11,7 +11,7 @@
 
 .mobile_nav_wrapper {
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
   	//position: inherent;
   	position: fixed;
   	z-index: 6000;
@@ -32,7 +32,7 @@
 	#ir_mobile_header {
 		display: none;
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			display: block;
 		}
 	}
@@ -90,7 +90,7 @@
 
   	.mobile_search { display: none; }
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			height: 59px;
 
 			a {
@@ -133,7 +133,7 @@
 			top: 12px;
 			left: 14px;
 
-			@include respond(all-phones) {
+			@include media-breakpoint-down(sm){
   			top: 0;
   			left: 0;
   		}
@@ -274,7 +274,7 @@
 		-moz-backface-visibility: hidden;
 		backface-visibility: hidden;
 
-		@include respond(all-phones) { top: 59px; }
+		@include media-breakpoint-down(sm){ top: 59px; }
 	}
 
 	i.fa.fa-mobile {
@@ -299,7 +299,7 @@
 		pointer-events: auto;
 
     //when styling tablet, found this problematic. Commented out (SP).
-		//@include respond(all-phones) {
+		//@include media-breakpoint-down(sm){
 		//	display: block;
 		//}
 
@@ -334,7 +334,7 @@
 		margin: 0;
 		width: 100%;
 
-		@include respond(all-phones) { top: 59px; }
+		@include media-breakpoint-down(sm){ top: 59px; }
 	}
 }
 
@@ -348,5 +348,5 @@
 	top: 82px; //was 60px
 	padding: 15px 20px;
 
-	@include respond(all-phones) { top: 59px; }
+	@include media-breakpoint-down(sm){ top: 59px; }
 }

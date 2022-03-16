@@ -120,19 +120,19 @@
 .accordian { 
   display: block;
   
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     display: block;
   }
   
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     display: block;
   }
   
-  @include respond(desktop) {
+  @include media-breakpoint-down(xl){
     display: none;
   }
   
-  @include respond(large-screens) {
+  @include media-breakpoint-down(xxl){
     display: none;
   }
     
@@ -262,7 +262,7 @@
 // ----------------------------------------------------- PANEL 4 - Information
 
 .cycle-slideshow-wrapper {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
 	  width: 100%;
 		height: auto;
 	}
@@ -273,21 +273,21 @@
 }
 
 .cycle-slide {
- @include respond(all-phones) {
+ @include media-breakpoint-down(sm){
     width: 100%;
   	height: auto;	
 	}
 }
   
 .component {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: 100%;
   	height: auto;
   }
 }
 
 .widget {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: block;
     width: 100%;
     //height: auto;
@@ -328,19 +328,19 @@
 }
 
 .proceed_arrow {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     left: -99999px;
   }
 }
 
 [data-target="static_panel_slideshow"] .cycle-slideshow .push_top {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     padding-top: 0 !important;
   }
 }
 
 [data-target="half_height"] .center {		
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		position: relative !important;
 	}
 }

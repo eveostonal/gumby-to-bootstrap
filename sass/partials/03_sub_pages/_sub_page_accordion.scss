@@ -4,7 +4,7 @@
 .accordian  {
   display: none;
 
-  @include respond(all-phones) { display: block; }
+  @include media-breakpoint-down(sm){ display: block; }
   
   //updated 2019 accordion style (SP)
   dd.row.active { padding: 26px 30px 0 30px; }
@@ -41,7 +41,7 @@
         white-space: nowrap;
         overflow: hidden;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding: 0 9.88854px;
           font-size: 18px;
           //text-align: center;
@@ -183,7 +183,7 @@
 	}
 }
 
-@include respond(all-phones) {
+@include media-breakpoint-down(sm){
   dd > .row > [data-target="programsTabAccordion"]:first-child {
 		margin: 20px 0 20px 0;
 	}

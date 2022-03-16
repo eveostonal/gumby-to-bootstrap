@@ -7,7 +7,7 @@ header {
   background: $white;
   border-bottom: 1px solid $IGTLightestGrey;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     background: $white !important;
     height: 60px !important;
   }
@@ -26,7 +26,7 @@ header {
       background-size: 145px 55px;
     }
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       top: 10px;
       left: 10px;
       width: 105px;
@@ -78,8 +78,8 @@ header {
     top: 33px;
     right: 20px;
 
-    @include respond(portrait-tablets) { width: 100%; }
-    @include respond(tablets) { width: 100%; }
+    @include media-breakpoint-down(lg){ width: 100%; }
+    @include media-breakpoint-down(lg){ width: 100%; }
 
     ul.main_navigation_items {
       font-size: 0;
@@ -119,8 +119,8 @@ header {
           cursor: pointer;
           @extend %verlag_book;
 
-          @include respond(portrait-tablets) { padding: 0 10px; }
-          @include respond(tablets) { padding: 0 15px; }
+          @include media-breakpoint-down(lg){ padding: 0 10px; }
+          @include media-breakpoint-down(lg){ padding: 0 15px; }
 
           &.dropdown_active {
             text-decoration: none;
@@ -159,8 +159,8 @@ header {
         }
 
         &.search a {
-          @include respond(portrait-tablets) { padding: 0 0 0 10px; }
-          @include respond(tablets) { padding: 0 10px 0 15px; }
+          @include media-breakpoint-down(lg){ padding: 0 0 0 10px; }
+          @include media-breakpoint-down(lg){ padding: 0 10px 0 15px; }
         }
 
         &.separator {
@@ -171,8 +171,8 @@ header {
           position: relative;
           float: left;
 
-          @include respond(portrait-tablets) { width: 21px; }
-          @include respond(tablets) { width: 31px; }
+          @include media-breakpoint-down(lg){ width: 21px; }
+          @include media-breakpoint-down(lg){ width: 31px; }
 
           span {
             display: block;
@@ -184,14 +184,14 @@ header {
             top: 10px;
             left: 20px;
 
-            @include respond(portrait-tablets) { left: 10px; }
-            @include respond(tablets) { left: 15px; }
+            @include media-breakpoint-down(lg){ left: 10px; }
+            @include media-breakpoint-down(lg){ left: 15px; }
           }
         }
       }
       
       //Added for new global search component
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         display: none;
         visibility: hidden;
       }
@@ -208,12 +208,12 @@ header {
       height: auto;
       @extend %global_box_shadow;
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         width: 100%;
         right: -20px;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         width: 100%;
         right: -20px;
       }
@@ -243,8 +243,8 @@ header {
           float: left;
           width: 321px;
 
-          @include respond(portrait-tablets) { width: 40%; }
-          @include respond(tablets) { width: 40%; }
+          @include media-breakpoint-down(lg){ width: 40%; }
+          @include media-breakpoint-down(lg){ width: 40%; }
         }
 
         .navigation_columns {
@@ -257,7 +257,7 @@ header {
             padding-left: 20px;
           }
 
-          @include respond(tablets) {
+          @include media-breakpoint-down(lg){
             width: 60%;
             padding-left: 20px ;
           }
@@ -307,8 +307,8 @@ header {
         width: 880px;
         height: auto;
 
-        @include respond(portrait-tablets) { width: 100%; }
-        @include respond(tablets) { width: 100%; }
+        @include media-breakpoint-down(lg){ width: 100%; }
+        @include media-breakpoint-down(lg){ width: 100%; }
 
         .navigation_content {
           height: 100%;
@@ -347,7 +347,7 @@ header {
                   padding-right: 2%;
                 }
 
-                @include respond(tablets) {
+                @include media-breakpoint-down(lg){
                   font-size: 10px;
                   padding-left: 2%;
                   padding-right: 2%;
@@ -394,7 +394,7 @@ header {
 
 
     //Removed due to new global search component. Moved hide to .main_navigation_items
-    //@include respond(all-phones) {
+    //@include media-breakpoint-down(sm){
     //  display: none;
     //  visibility: hidden;
     //}
@@ -413,9 +413,9 @@ header {
   width: 700px;
   z-index: 50;
 
-  //@include respond(tablets) { width: 445px; } NOT NEEDED W/ NEW SEARCH
+  //@include media-breakpoint-down(lg){ width: 445px; } NOT NEEDED W/ NEW SEARCH
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     right: -20px;
   }
   
@@ -453,7 +453,7 @@ header {
       border-bottom: 9px solid $IGTLightestGrey;
       border-right: 9px solid transparent;
 
-      @include respond(tablets) { right: 10px; }
+      @include media-breakpoint-down(lg){ right: 10px; }
       
       @media only screen and (min-width: 320px) and (max-width: 560px) {
         right: 136px;
@@ -470,8 +470,8 @@ header {
       height: 36px;
       line-height: 36px;
 
-      //@include respond(portrait-tablets) { width: 200px;}
-      //@include respond(tablets) { width: 300px; }
+      //@include media-breakpoint-down(lg){ width: 200px;}
+      //@include media-breakpoint-down(lg){ width: 300px; }
       
       @media only screen and (min-width: 561px) and (max-width: 720px) {
         width: 37%;
@@ -579,8 +579,8 @@ header {
   //  @include border-bottom-left-radius($button-radius);
   //  @include border-bottom-right-radius($button-radius);
   //
-  //  @include respond(portrait-tablets) { width: 180px; }
-  //  @include respond(tablets) { width: 280px; }
+  //  @include media-breakpoint-down(lg){ width: 180px; }
+  //  @include media-breakpoint-down(lg){ width: 280px; }
   //
   //  li {
   //    margin: 0 0 5px 0;
@@ -635,8 +635,8 @@ header {
     }
   }
 
-  @include respond(all-phones) { display: none; }
-  @include respond(portrait-tablets) { display: none; }
+  @include media-breakpoint-down(sm){ display: none; }
+  @include media-breakpoint-down(lg){ display: none; }
 }
 
 .user_header_controls {
@@ -647,7 +647,7 @@ header {
   color: #5d5d5d;
   z-index: 999;
   
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     //position: static;
     display: none;
   }

@@ -18,7 +18,7 @@ $breakpoints: (
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // @include respond-above(sm) {}
-@mixin respond-above($breakpoint) {
+@mixin respond-above($breakpoint) { 
 
   // If the breakpoint exists in the map.
   @if map-has-key($breakpoints, $breakpoint) {
@@ -113,10 +113,40 @@ $breakpoints: (
   }
 
 
-// Responsive image
-  // Keep images from scaling beyond the width of their parents.
-  @mixin responsive-image($display: block) {
-    display: $display;
-    max-width: 100%; // Part 1: Set a maximum relative to the parent
-    height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+@mixin responsive-image($filename, $extension, $width, $height) {
+  background: url('#{$get-path-to-images}#{$filename}.#{$extension}') no-repeat 0 0;
+  width: $width;
+  height: $height;
+  background-size: $width $height;
+  
+  @media (-webkit-min-device-pixel-ratio: 1.25) {
+    background: url('#{$get-path-to-images}#{$filename}@2x.#{$extension}') no-repeat 0 0;
+    background-size: $width $height;
+  }
+}
+
+@mixin responsive-image-2015($filename, $extension, $width, $height) {
+  background: url('#{$get-path-to-images}2015/#{$filename}.#{$extension}') no-repeat 0 0;
+  width: $width;
+  height: $height;
+  background-size: $width $height;
+  
+  @media (-webkit-min-device-pixel-ratio: 1.25) {
+    background: url('#{$get-path-to-images}2015/#{$filename}@2x.#{$extension}') no-repeat 0 0;
+    background-size: $width $height;
+  }
+}
+
+  // Make line-height equal to an element's height
+
+  //Form Fields (SP)
+  @mixin line-and-height($height) {
+    height: $height;
+    line-height: $height - 2;
+  }
+  
+  // Buttons and Tabs (SP)
+  @mixin line-and-height-alt($height) {
+    height: $height;
+    line-height: $height;
   }

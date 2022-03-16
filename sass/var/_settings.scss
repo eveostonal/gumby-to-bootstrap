@@ -2,7 +2,7 @@
 $get-path-to-images: "../images/";
 
 // Grid Settings
-$gutter-in-px: 30px !default;
+$gutter-in-px: 30px !default; 
 $cols: 12 !default;
 $hybrid: 16 !default;
 $row-max-width: 1040px !default; //1680
@@ -58,7 +58,7 @@ $ms-ratio: $golden;	// Ratio for Modular Scale
 $base-font-size: 16px !default;
 $importantNum: 78px !default;
 $ms-base: $base-font-size $importantNum;
-// Gumby Default Scale Values: 16, 18, 26, 30, 42, 48, 68, 78, 110, 126; */
+// Gumby Default Scale Values: 16, 18, 26, 30, 42, 48, 68, 78, 110, 126; */ 
 
 // Sizing
 $xsmall: ms(-2);
@@ -198,4 +198,4 @@ $tt-pretty: no;
 
 // Floats
 $default-float: left;
-$switch-float: right;
+$switch-float: right; 

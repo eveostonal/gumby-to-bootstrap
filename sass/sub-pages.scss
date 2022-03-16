@@ -41,39 +41,32 @@
 // Bootstrap Framework
 @import "core-framework";
 
-// Header/Footer
-@import "partials/01_navigation_header_footer/_header",
-				"partials/01_navigation_header_footer/_header_nav_mobile",
-				"partials/01_navigation_header_footer/_header_nav_mobile_animations",
-				"partials/01_navigation_header_footer/_footer",
-				"partials/01_navigation_header_footer/_sub_nav";
-
 @import 'overrides/_g2b_mixins';
 @import 'overrides/_g2b_grid';
+
+// Header/Footer
+@import "partials/01_navigation_header_footer/_header_new",
+				"partials/01_navigation_header_footer/_footer_new",
+				"partials/01_navigation_header_footer/_sub_nav";
+
+// Extensions (all) - Sub-Pages				
+@import "extensions/_sub_page_extends";
 
 // Partials - Sub-Pages
 @import "partials/03_sub_pages/_sub_page_global";
 
 // Vendors (might need to place this someplace lower)
-@import "partials/08_vendors/_chosen";
+@import "partials/08_vendors/_chosen"; 
 
 // Partials/Extensions - Game Search
 @import "partials/07_game_library/_game_search", // Version 4 Game Search
 		  "partials/07_game_library/_game_search_featured"; // Featured Games Catalog Enhancements
-		  
-// Partials/Extensions - Tables
-@import "extensions/footable/_footable_core";
 
 // CUSTOM DESKTOP/MOBILE APPS
 @import "partials/06_custom_apps/_dialogs_loaders",
 		"partials/06_custom_apps/_marketing_kits_downloads_app",
 		"partials/06_custom_apps/_forgot_password",
 		"partials/06_custom_apps/_search_results";
-
-// Widgets
-@import "partials/03_sub_pages/_sub_page_widgets",
-		"partials/03_sub_pages/_sub_page_accordion",
-		"partials/03_sub_pages/_sub_page_country_language";
 
 // Partials/Extensions - Game Detail
 @import "partials/07_game_library/_game_detail";

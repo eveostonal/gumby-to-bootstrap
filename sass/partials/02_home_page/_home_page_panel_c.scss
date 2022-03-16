@@ -8,16 +8,16 @@
     overflow: hidden; // fixes About IGT iPad overflow issue
   }
   
-  @include respond(all-phones) { padding: 30px 10px 10px 10px; }
+  @include media-breakpoint-down(sm){ padding: 30px 10px 10px 10px; }
   
   h2 {
     margin: 0 0 30px 0;
     padding: 0;
     font-size: 82px;
     
-    @include respond(all-phones) { font-size: 42px; }
-    @include respond(tablets) { font-size: 62px; }
-    @include respond(portrait-tablets) { font-size: 52px; }
+    @include media-breakpoint-down(sm){ font-size: 42px; }
+    @include media-breakpoint-down(lg){ font-size: 62px; }
+    @include media-breakpoint-down(lg){ font-size: 52px; }
   }
   
   h3 { 
@@ -137,7 +137,7 @@
       }
     }
     
-    //@include respond(all-phones) { margin-bottom: 0; }
+    //@include media-breakpoint-down(sm){ margin-bottom: 0; }
     
     .hp_featured_article_item {
       .five {
@@ -291,7 +291,7 @@
     overflow: hidden;
     overflow-y: scroll;
     
-    @include respond(all-phones) { height: 300px !important; }
+    @include media-breakpoint-down(sm){ height: 300px !important; }
     
     &::-webkit-scrollbar-track {
 	    background-color: #efefef;

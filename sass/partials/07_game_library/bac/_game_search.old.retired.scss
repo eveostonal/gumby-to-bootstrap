@@ -187,7 +187,7 @@
     float: left;
     margin-right: 2%;
 
-    //@include respond(all-phones) {
+    //@include media-breakpoint-down(sm){
     //  width: 100%;
     //  clear: both;
     //  margin: 0;
@@ -272,7 +272,7 @@
     float: left;
     width: 50%;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       float: none;
       width: 100%;
       clear: both;
@@ -282,7 +282,7 @@
       margin: 0;
       overflow: visible;
       height: 35px;
-      @include respond(all-phones) { margin: 0 0 17px 0; }
+      @include media-breakpoint-down(sm){ margin: 0 0 17px 0; }
 
       .input {
         width: 80%;
@@ -300,9 +300,9 @@
         top: 35px;
         z-index: 100;
 
-        @include respond(tablets) { width: 260px; }
-        @include respond(portrait-tablets) { width: 135px; }
-        @include respond(all-phones) {
+        @include media-breakpoint-down(lg){ width: 260px; }
+        @include media-breakpoint-down(lg){ width: 135px; }
+        @include media-breakpoint-down(sm){
           width: 60%;
           left: 0;
           margin: 0 2%;
@@ -310,7 +310,7 @@
       }
     }
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       .btn {
         width: 29%;
         float: right;
@@ -336,7 +336,7 @@
       }
     }
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100%;
       float: none;
     }
@@ -363,7 +363,7 @@
         line-height: 35.85532px !important;
       }
 
-      //@include respond(all-phones) {
+      //@include media-breakpoint-down(sm){
       @media only screen and (max-width: 600px) {
         width: 100% !important;
         margin-left: 0 !important;

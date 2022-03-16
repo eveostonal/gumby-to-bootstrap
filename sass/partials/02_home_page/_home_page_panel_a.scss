@@ -9,7 +9,7 @@
   line-height: 1em;
   overflow: hidden;
   
-  @include respond(all-phones) { min-height: 110px; }
+  @include media-breakpoint-down(sm){ min-height: 110px; }
   
   a {
     display: block;
@@ -25,7 +25,7 @@
     padding: 0;
     margin: 0;
     
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       height: 110px;
       width: auto;
       margin: 0 auto;
@@ -55,21 +55,21 @@
       margin-bottom: 0;
       text-align: center !important;
       
-      @include respond(portrait-tablets) { display: none; }
-      @include respond(all-phones) { display: none; }
+      @include media-breakpoint-down(lg){ display: none; }
+      @include media-breakpoint-down(sm){ display: none; }
             
       &.btn {
         margin-top: 15px;
         height: 35.85532px;
         line-height: 35.85532px;
         
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
           height: 26px;
           line-height: 26px 2;
           display: inline-block;
         }
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           height: 26px;
           line-height: 26px;
           display: inline-block;
@@ -83,13 +83,13 @@
           line-height: 35.85532px;
           padding: 0 20px;
 
-          @include respond(portrait-tablets) {
+          @include media-breakpoint-down(lg){
             height: 26px;
             line-height: 26px;
             padding: 0 10px;
           }
           
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             height: 26px;
             line-height: 26px;
             padding: 0 10px;

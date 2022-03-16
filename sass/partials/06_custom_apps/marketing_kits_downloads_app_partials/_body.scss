@@ -39,7 +39,7 @@ $alert_breakpoint_width: 820px;
 .signature_container > table, // This is for Program Search
 .associated_container > div > .associatedInstallProgram, // This is for Program Search
 .marketing_downloads_wrapper > .facets_viewtoggle {
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: none !important;
   }
 
@@ -70,7 +70,7 @@ $alert_breakpoint_width: 820px;
   //--background-color: #000;
   background: rgba(255, 255, 255, 0.8);
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: block;
   }
 
@@ -92,7 +92,7 @@ $alert_breakpoint_width: 820px;
     background: $IGTLightGrey;
     border-radius: 7px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       position: relative;
       top: 30px;
       width: 90%;
@@ -100,7 +100,7 @@ $alert_breakpoint_width: 820px;
       height: auto;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       position: relative;
       top: 30px;
       width: 90%;
@@ -118,11 +118,11 @@ $alert_breakpoint_width: 820px;
     color: $black;
     display: none;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       display: block;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       display: block;
     }
   }

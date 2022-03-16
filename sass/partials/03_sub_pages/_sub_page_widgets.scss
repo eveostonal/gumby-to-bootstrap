@@ -119,7 +119,7 @@
   }
 
   [data-title="name"] {
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       text-align: center;
     }
   }
@@ -139,7 +139,7 @@
       color: $IGTLightGreyMedDark;
       @extend %data_date_stock_ver_01;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: center;
         margin-bottom: 1px;
       }
@@ -150,7 +150,7 @@
       margin-bottom: 0;
       color: $IGTLightGrey;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: left;
         margin-bottom: 1px;
       }
@@ -158,12 +158,12 @@
 
   .text_link {
     line-height: 14px;
-    @extend %mosaic-text_link;
+    @extend %mosaic-text_link !optional;
     margin: 20px 0 10px 0;
     display: table;
     font-size: 14px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       text-align: left;
     }
 
@@ -171,7 +171,7 @@
       color: $IGTBlue;
       font-size: 14px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         font-size: 18px;
       }
 
@@ -184,7 +184,7 @@
       font-size: 14px;
       margin: 0 4px 0 0;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         font-size: 18px;
       }
     }
@@ -235,7 +235,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100%;
       float: none;
     }
@@ -269,7 +269,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100%;
       float: none;
     }
@@ -284,7 +284,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       display: none;
     }
   }
@@ -307,7 +307,7 @@
     padding: 0;
     min-height: 326px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       min-height: intrinsic;
     }
 
@@ -324,7 +324,7 @@
     }
 
     [data-title="name"] {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: center;
       }
     }
@@ -339,7 +339,7 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         display: block;
         height: auto !important;
         /// was none
@@ -363,12 +363,12 @@
 
     .text_link {
       line-height: 14px;
-      @extend %mosaic-text_link;
+      @extend %mosaic-text_link !optional;
       margin: 20px 0 10px 0;
       display: table;
       font-size: 14px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: left;
       }
 
@@ -376,7 +376,7 @@
         color: $IGTBlue;
         font-size: 14px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           font-size: 18px;
         }
 
@@ -389,7 +389,7 @@
         font-size: 14px;
         margin: 0 4px 0 0;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           font-size: 18px;
         }
       }

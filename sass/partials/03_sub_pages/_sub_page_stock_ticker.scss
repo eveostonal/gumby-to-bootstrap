@@ -1,9 +1,9 @@
 .prepend.append.field {
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     overflow: visible;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     overflow: visible;
   }
 }
@@ -34,7 +34,7 @@
      text-align: left;
   }
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: 100% !important;
   }
 
@@ -95,7 +95,7 @@
     }
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     margin-bottom: 20px;
   }
 
@@ -115,7 +115,7 @@
   //float: right;
   //width: 165px;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: auto;
 
     .btn {
@@ -133,7 +133,7 @@
     margin-left: 0;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     float: right;
     width: 195px;
   }
@@ -153,7 +153,7 @@
 .toggle_menu {
   display: none;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: block;
 
     .toggle_button {
@@ -175,7 +175,7 @@
 // -------------------------------  Amount Invested / Shares Purchased hack
 #txtAmt, #txtShares {
 
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		width: 42.3256% !important;
 	}
 
@@ -187,7 +187,7 @@
 	ul:first-child {
 		width: 200px !important;
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			width: auto;
 		}
 	}
@@ -195,7 +195,7 @@
 	ul:first-child + ul {
 		width: 350px !important;
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			width: auto;
 		}
 	}
@@ -203,7 +203,7 @@
 	ul:nth-child(2){
 		width: 350px !important;
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			width: auto;
 		}
 	}

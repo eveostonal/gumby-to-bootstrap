@@ -16,7 +16,7 @@
       width: 42%;
       text-align: left;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
 		    float: none;
 		    width: auto;
 		  }
@@ -50,7 +50,7 @@
       height: auto;
       text-align: left;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
 		    float: none;
 		    width: auto;
 		  }

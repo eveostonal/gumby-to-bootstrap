@@ -26,7 +26,7 @@
   [data-target="stagger-row"] {
     @extend %element_btm_margin;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-bottom: $element_mobil_btm_margin;
     }
 
@@ -55,7 +55,7 @@
         margin: 10px 0 10px 0;
         display: table;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           text-align: left;
         }
 
@@ -79,7 +79,7 @@
         z-index: 10;
         margin-top: 16.9865%; // there might be a better solution for this
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           margin: 0 0 30px 0;
         }
 
@@ -116,7 +116,7 @@
         width: 100%;
         overflow: hidden;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           min-height: intrinsic;
         }
 
@@ -154,7 +154,7 @@
           }
 
         [data-title="name"] {
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             text-align: center;
           }
         }
@@ -174,7 +174,7 @@
           color: $IGTLightGreyMedDark;
           @extend %data_date_stock_ver_01;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             text-align: center;
             margin-bottom: 1px;
           }
@@ -185,7 +185,7 @@
           margin-bottom: 0;
           color: $IGTLightGrey;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             text-align: left;
             margin-bottom: 1px;
           }
@@ -193,12 +193,12 @@
 
         .text_link {
           line-height: 14px;
-          @extend %mosaic-text_link;
+          @extend %mosaic-text_link !optional;
           margin: 20px 0 10px 0;
           display: table;
           font-size: 14px;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             text-align: left;
           }
 
@@ -206,7 +206,7 @@
             color: $IGTBlue;
             font-size: 14px;
 
-            @include respond(all-phones) {
+            @include media-breakpoint-down(sm){
               font-size: 18px;
             }
 
@@ -219,7 +219,7 @@
             font-size: 14px;
             margin: 0 4px 0 0;
 
-            @include respond(all-phones) {
+            @include media-breakpoint-down(sm){
               font-size: 18px;
             }
           }
@@ -249,7 +249,7 @@
           -moz-box-sizing: border-box;
           box-sizing: border-box;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             width: 100%;
             height: auto;
             min-height: intrinsic;
@@ -257,11 +257,11 @@
             margin-bottom: 20px;
           }
 
-          @include respond(portrait-tablets) {
+          @include media-breakpoint-down(lg){
             width: 100%;
           }
 
-          @include respond(tablets) {
+          @include media-breakpoint-down(lg){
             width: 28.55769%;
           }
         }
@@ -277,11 +277,11 @@
           -moz-box-sizing: border-box;
           box-sizing: border-box;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
 
-          @include respond(portrait-tablets) {
+          @include media-breakpoint-down(lg){
             display: none;
           }
         }
@@ -304,16 +304,16 @@
     width: 100%;
     margin-bottom: 3px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       min-height: 360px;
       margin-bottom: $element_mobil_btm_margin;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       min-height: 400px;
     }
 
-    @include respond(tablets) {
+    @include media-breakpoint-down(lg){
       min-height: 410px;
     }
 
@@ -331,7 +331,7 @@
         max-height: 390px;
         overflow: hidden;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           margin: 0 0 30px 0;
         }
 
@@ -344,7 +344,7 @@
           @extend %h2-default;
           color: $IGTBlue;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             margin: 30px 0 30px 0;
           }
         }
@@ -364,7 +364,7 @@
         iframe {
           display: inherit;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             margin: 30px 0 30px 0;
           }
         }
@@ -377,7 +377,7 @@
           line-height: 14px;
           @extend %text_link;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             text-align: left;
           }
 
@@ -406,12 +406,12 @@
   @extend %row-default;
   @extend %element_btm_margin;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     margin-bottom: $element_mobil_btm_margin;
   }
 
   .columns {
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-bottom: 30px;
     }
   }
@@ -469,7 +469,7 @@
       }
 		}
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       font-size: 16px;
     }
   }
@@ -478,7 +478,7 @@
     line-height: 14px;
     @extend %text_link;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       text-align: left;
     }
 

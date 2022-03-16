@@ -32,12 +32,12 @@
   		&.page_login {
     	  padding: 0 195px 0 185px;
     	  
-    	  @include respond(all-phones) {
+    	  @include media-breakpoint-down(sm){
       	  padding: 0 195px 0 135px;  
         }  	
   		}
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         height: 60px;
         line-height: 60px;
         padding: 0 285px 0 135px;
@@ -58,7 +58,7 @@
     		width: 195px;
   		}
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         top: 14px;
         
         .btn {
@@ -351,7 +351,7 @@
       margin-bottom: 15px !important;
     }
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-bottom: 30px;
     }
   }

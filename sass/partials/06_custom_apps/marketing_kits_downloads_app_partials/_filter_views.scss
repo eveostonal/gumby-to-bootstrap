@@ -318,11 +318,11 @@
     color: $IGTLightGreyMed;
     text-align: left;
 
-    @include respond(tablets) {
+    @include media-breakpoint-down(lg){
       width: auto;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       width: auto;
     }
 

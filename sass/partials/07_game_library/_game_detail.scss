@@ -55,7 +55,7 @@ $color_3: $IGTLighterGrey;
   [data-target="game-accordion-content"] {
     margin-bottom: 40px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-bottom: 30px;
     }
 
@@ -79,7 +79,7 @@ $color_3: $IGTLighterGrey;
       margin-top: 10px;
       font-size: 14px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin-top: 0;
       }
     }
@@ -89,7 +89,7 @@ $color_3: $IGTLighterGrey;
     .three.columns {
       width: 16.83654%;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin-bottom: 20px;
       }
 
@@ -128,7 +128,7 @@ $color_3: $IGTLighterGrey;
       width: 100%;
       display: block;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: left;
         margin-top: 10px;
       }
@@ -152,7 +152,7 @@ $color_3: $IGTLighterGrey;
     }
 
     .btn {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
 	      margin-bottom: 20px;
 	      width: 100%;
 	    }
@@ -160,7 +160,7 @@ $color_3: $IGTLighterGrey;
 	    &.medium.default {
   	    margin-right: 10px;
 
-  	    @include respond(all-phones) {
+  	    @include media-breakpoint-down(sm){
   	      margin-right: 0;
   	    }
 	    }
@@ -185,7 +185,7 @@ $color_3: $IGTLighterGrey;
   		.cycle-slideshow {
     		max-height: 500px;
 
-    		@include respond(all-phones) {
+    		@include media-breakpoint-down(sm){
 
 // -------------------------------------------------------------- hack for cycle2 -- set height on slideshow when its within a Accordion
 
@@ -199,7 +199,7 @@ $color_3: $IGTLighterGrey;
 // -------------------------------- hack for cycle2 -- set height on slideshow when its within a Accordion
   	    min-height: 325px;
 
-  	    @include respond(all-phones) {
+  	    @include media-breakpoint-down(sm){
 // -------------------------------- hack for cycle2 -- set height on slideshow when its within a Accordion
   	      min-height: 272px;
   	    }
@@ -209,7 +209,7 @@ $color_3: $IGTLighterGrey;
   		    width: auto !important;
   		    height: auto !important;
 
-  		    @include respond(all-phones) {
+  		    @include media-breakpoint-down(sm){
   		      width: 100%;
   		    }
   	    }
@@ -224,7 +224,7 @@ $color_3: $IGTLighterGrey;
     	    width: 65%;
     	    margin: 0 auto;
 
-    	    @include respond(all-phones) {
+    	    @include media-breakpoint-down(sm){
     	      width: 100%;
     	    }
         }
@@ -277,7 +277,7 @@ $color_3: $IGTLighterGrey;
 
         .options {
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             position: relative;
           }
 
@@ -286,7 +286,7 @@ $color_3: $IGTLighterGrey;
           }
 
           .btn {
-            @include respond(all-phones) {
+            @include media-breakpoint-down(sm){
               margin-bottom: 30px;
               width: 100%;
             }
@@ -305,7 +305,7 @@ $color_3: $IGTLighterGrey;
       }
 
       .text_link {
-        @extend %mosaic-text_link;
+        @extend %mosaic-text_link !optional;
   	    text-align: center;
   	    padding-top: 10px;
   	    font-size: 14px;
@@ -315,7 +315,7 @@ $color_3: $IGTLighterGrey;
     	    color: $IGTBlue;
     	    font-size: 14px;
 
-    	    @include respond(all-phones) {
+    	    @include media-breakpoint-down(sm){
             font-size: 18px;
           }
 
@@ -345,7 +345,7 @@ $color_3: $IGTLighterGrey;
   			padding-left: 0;
   	    max-width: 1080px;
 
-  			@include respond(all-phones) {
+  			@include media-breakpoint-down(sm){
           position: relative;
           padding: 20px 0 20px 0;
         }
@@ -376,7 +376,7 @@ $color_3: $IGTLighterGrey;
     .game_overview {
       width: 100%;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         width: auto;
       }
 
@@ -394,13 +394,13 @@ $color_3: $IGTLighterGrey;
       float: right;
       padding: 0 0 2.335% 2.335%;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         width: auto;
         float: none;
         padding: 0 0 30px 0;
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         //display: block;
         //margin: 0 auto;
         //float: none;
@@ -409,7 +409,7 @@ $color_3: $IGTLighterGrey;
       img {
         max-width: 495px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           max-width: 300px;
           display: block;
           margin: 0 auto;
@@ -432,7 +432,7 @@ $color_3: $IGTLighterGrey;
     margin-bottom: 30px;
     padding: 0;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       padding: 0;
     }
 
@@ -440,7 +440,7 @@ $color_3: $IGTLighterGrey;
   		box-sizing: border-box;
   		//margin-bottom: 60px;
 
-  		@include respond(all-phones) {
+  		@include media-breakpoint-down(sm){
         margin-bottom: 0;
       }
 
@@ -453,7 +453,7 @@ $color_3: $IGTLighterGrey;
           margin: 0 0 20px 0;
           cursor: pointer;
 
-  		    @include respond(all-phones) {
+  		    @include media-breakpoint-down(sm){
   		      width: 100%
   		    }
   	    }
@@ -520,12 +520,12 @@ $color_3: $IGTLighterGrey;
             font-size: 1rem;
           }
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             position: relative;
           }
 
           .btn {
-            @include respond(all-phones) {
+            @include media-breakpoint-down(sm){
               width: 100%;
               margin-bottom: 30px;
             }
@@ -546,7 +546,7 @@ $color_3: $IGTLighterGrey;
       }
 
       .text_link {
-        @extend %mosaic-text_link;
+        @extend %mosaic-text_link !optional;
   	    text-align: center;
   	    padding-top: 10px;
   	    font-size: 14px;
@@ -556,7 +556,7 @@ $color_3: $IGTLighterGrey;
     	    color: $IGTBlue;
     	    font-size: 14px;
 
-    	    @include respond(all-phones) {
+    	    @include media-breakpoint-down(sm){
             font-size: 18px;
           }
 
@@ -581,7 +581,7 @@ $color_3: $IGTLighterGrey;
   			padding-left: 0;
   			overflow: hidden;
 
-  			@include respond(all-phones) {
+  			@include media-breakpoint-down(sm){
           position: relative;
           //padding: 20px 0 20px 0;
         }

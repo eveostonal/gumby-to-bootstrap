@@ -44,11 +44,11 @@
 
 .gm_navigation {
 
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		margin-left: 0 !important;
 	}
 
-	@include respond(portrait-tablets) {
+	@include media-breakpoint-down(lg){
 		margin-left: 0;
 		width: 100% !important;
 	}
@@ -68,7 +68,7 @@
 	}
 // --------------- Mobile Select Menu
 	[data-igt-id="Categories_Mobile"] {
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			display: block;
 			width: 100%;
 			height: 40px;
@@ -81,7 +81,7 @@
 			margin: 0 0 20px 0;
 		}
 
-		@include respond(portrait-tablets) {
+		@include media-breakpoint-down(lg){
 			display: block;
 			width: 50%;
 			height: 40px;
@@ -94,15 +94,15 @@
 			margin: 0 0 20px 0;
 		}
 
-		@include respond(tablets) {
+		@include media-breakpoint-down(lg){
 			display: none;
 		}
 
-		@include respond(desktop) {
+		@include media-breakpoint-down(xl){
 			display: none;
 		}
 
-		@include respond(large-screens) {
+		@include media-breakpoint-down(xxl){
 			display: none;
 		}
 	}
@@ -113,23 +113,23 @@
 		margin-bottom: 40px;
 		min-width: 205px;
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			display: none;
 		}
 
-		@include respond(portrait-tablets) {
+		@include media-breakpoint-down(lg){
 			display: none;
 		}
 
-		@include respond(tablets) {
+		@include media-breakpoint-down(lg){
 			display: block;
 		}
 
-		@include respond(desktop) {
+		@include media-breakpoint-down(xl){
 			display: block;
 		}
 
-		@include respond(large-screens) {
+		@include media-breakpoint-down(xxl){
 			display: block;
 		}
 
@@ -237,11 +237,11 @@
 	// ------------- Show Hide items
 	.three.columns {
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			width: 100% !important;
 		}
 
-		@include respond(portrait-tablets) {
+		@include media-breakpoint-down(lg){
 			width: 100% !important;
 		}
 	}
@@ -252,11 +252,11 @@
 
 .gm_results {
 
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		margin-left: 0 !important;
 	}
 
-	@include respond(portrait-tablets) {
+	@include media-breakpoint-down(lg){
 		margin-left: 0;
 		width: 100% !important;
 	}
@@ -296,7 +296,7 @@
 		margin: 0;
 		width: 91.122%;
 
-		@include respond(all-phones) {
+		@include media-breakpoint-down(sm){
 			width: 80%;
 		}
 	}
@@ -377,7 +377,7 @@
 				overflow: hidden;
 			}
 
-			@include respond(all-phones) {
+			@include media-breakpoint-down(sm){
 				width: 100%;
 			}
 
@@ -454,7 +454,7 @@
 				top: 2px;
 				margin-right: 0;
 				
-				@include respond(all-phones) {
+				@include media-breakpoint-down(sm){
 					width: 70%; 
 				}
 				
@@ -982,23 +982,23 @@ $ui_pad: 2px 0 0 4px;
 .chosen-container {
 	width: 193px !important;
 	
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		width: 100% !important; 
 	}
 	
-	@include respond(portrait-tablets) {
+	@include media-breakpoint-down(lg){
 		width: 175px !important;
 	}
 	
-	@include respond(tablets) {
+	@include media-breakpoint-down(lg){
 		width: 175px !important;
 	}
 	
-	@include respond(desktop) {
+	@include media-breakpoint-down(xl){
 		
 	}
 	
-	@include respond(large-screens) {
+	@include media-breakpoint-down(xxl){
 		
 	}
 }
@@ -1501,7 +1501,7 @@ $ui_pad: 2px 0 0 4px;
 
 .ttip:after,
 .ttip:before {
-	@include respond(portrait-tablets) {
+	@include media-breakpoint-down(lg){
 		display: none;
 	}
 }

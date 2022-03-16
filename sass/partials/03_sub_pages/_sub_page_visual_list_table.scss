@@ -118,7 +118,7 @@
     padding: 10px 0  0 0;
   }
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     .title,
     .game-data,
     .game-link,
@@ -129,7 +129,7 @@
 }
 
 .two > .game-info-set {
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     .flag-h5g {
       float: none !important;
       display: block !important;
@@ -166,7 +166,7 @@
   .hr {
     display: none;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       border-bottom: 1px solid $IGTLightGrey;
       height: 1px;
       display: block;
@@ -185,7 +185,7 @@
     height: inherit;
     margin-bottom: 0;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-bottom: 40px;
     }
 
@@ -204,7 +204,7 @@
         width: 100%;
         display: table;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           margin-bottom: 0;
         }
 
@@ -229,7 +229,7 @@
           color: $white;
           //color: $header-font-color;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             width: 100%;
           }
 
@@ -238,7 +238,7 @@
             width: 100%;
             height: auto;
 
-            @include respond(all-phones) {
+            @include media-breakpoint-down(sm){
               max-height: 140px;
               width: 148px;
               margin: 0 auto;
@@ -288,7 +288,7 @@
           text-align: left;
           color: $IGTLightGreyMed;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
 
@@ -326,7 +326,7 @@
           color: $IGTBlue;
           display: inline-block;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
         }
@@ -364,7 +364,7 @@
 		      margin-top: 0;
 	      }
 
-	      @include respond(all-phones) {
+	      @include media-breakpoint-down(sm){
 		    	margin-top: 20px;
 				}
 	    }
@@ -422,12 +422,12 @@
 					  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/IGTLogo_grey_280x140.jpg', sizingMethod='scale');
 					  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/IGTLogo_grey_280x140.jpg', sizingMethod='scale')";
 
-					  @include respond(portrait-tablets) {
+					  @include media-breakpoint-down(lg){
 							//width: 12%;
 							//height: 100%;
 						}
 
-						@include respond(tablets) {
+						@include media-breakpoint-down(lg){
 							//width: 12%;
 							//height: 100%;
 						}
@@ -455,7 +455,7 @@
         text-align: center;
         position: relative;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           width: 100% !important;
           margin-bottom: 20px;
         }
@@ -489,7 +489,7 @@
           @extend %data_source_date;
           color: $IGTLightGreyMed;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
 
@@ -527,7 +527,7 @@
           text-align: center;
           font-size: 1rem;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
         }
@@ -555,7 +555,7 @@
         display: table;
         height: inherit !important;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           width: 100% !important;
           margin-bottom: 20px;
         }
@@ -566,11 +566,11 @@
           padding-left: 20px;
           padding-right: 20px;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             padding: 0 10px 0 10px;
           }
 
-          @include respond(portrait-tablets) {
+          @include media-breakpoint-down(lg){
             padding: 0 10px 0 10px;
           }
         }
@@ -598,7 +598,7 @@
           @extend %data_source_date;
           color: $white;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
 
@@ -623,7 +623,7 @@
           font-size: 1rem;
           text-align: center;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
         }
@@ -653,7 +653,7 @@
           padding: 0;
           margin: 0;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none !important;
           }
         }
@@ -666,7 +666,7 @@
           line-height: 24px;
           text-align: left;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             margin: 0 0 20px 0;
           }
         }
@@ -676,7 +676,7 @@
           color: $white;
           text-align: left;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
 
@@ -722,7 +722,7 @@
         .text_link a {
           color: $IGTBlue;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             display: none;
           }
         }
@@ -766,7 +766,7 @@
         .columns {
           padding: 0 20px 0 0;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             padding: 20px;
           }
         }
@@ -800,7 +800,7 @@
     .expansion_link {
       margin-top: 0;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin-top: 30px !important;
         margin-bottom: 0;
       }
@@ -824,7 +824,7 @@
       cursor: auto !important;
       display: inline-block;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin-bottom: 40px !important;
         margin-top: 0 !important;
       }
@@ -851,7 +851,7 @@
         //padding: 0 0 20px 20px;
         padding: 0;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           //padding: 30px 20px 20px 20px;
           display: none;
           padding: 0 !important;
@@ -862,7 +862,7 @@
         img {
           display: block;
 
-           @include respond(all-phones) {
+           @include media-breakpoint-down(sm){
             display: none;
           }
         }
@@ -900,7 +900,7 @@
       .five.columns {
         margin-left: 0;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           margin-top: 20px;
         }
       }
@@ -911,7 +911,7 @@
         border: none;
         min-height: intrinsic;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding: 30px 20px 20px 20px;
           margin-top: 30px !important;
           padding: 0;
@@ -963,7 +963,7 @@
 	        margin-bottom: 0;
         }
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           // was -> padding: 30px 0 0 0;
           padding: 10px 0 0 0;
         }
@@ -1048,7 +1048,7 @@
       width: 100%;
       height: auto;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         max-width: none;
         width: 100% !important;
       }
@@ -1069,7 +1069,7 @@
         height: 48px;
         overflow: hidden;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           margin: 0;
         }
       }
@@ -1088,7 +1088,7 @@
         height: 25px;
         text-align: center;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           top: 10px;
         }
 
@@ -1097,7 +1097,7 @@
           padding: 0 5px 0 5px;
           width: auto;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             width: auto !important;
           }
 
@@ -1146,7 +1146,7 @@
         }
 
         img {
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             width: 230px;
           }
         }
@@ -1156,14 +1156,14 @@
         }
 
         &:hover img {
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             opacity: 100;
           }
         }
       }
 
       img {
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           width: 220px;
           height: 130px;
           margin: 0 auto !important;
@@ -1176,7 +1176,7 @@
       position: relative;
 
       .close_window {
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           width: auto !important;
           right: 5px;
         }
@@ -1222,11 +1222,11 @@
     [data-cycle-fx="carousel"] {
       min-height: 300px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         min-height: 165px;
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         min-height: 240px;
       }
     }
@@ -1279,7 +1279,7 @@
   transition: all 0.5s;
   z-index: 1;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     //height: 280px;
     display: none;
   }
@@ -1294,12 +1294,12 @@
   content:'\A';
   cursor: pointer;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     //height: 280px;
     display: none;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     height: 157px;
   }
 }
@@ -1325,12 +1325,12 @@
   cursor: pointer;
   //content:attr(data-content);
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: none;
     //height: top: 26%;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     top: 18%;
   }
 }

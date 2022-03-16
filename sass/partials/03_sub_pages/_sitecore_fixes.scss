@@ -85,7 +85,7 @@
 	top: 15%;
 	min-height: 600px !important;
 
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		min-height: 50% !important;
 	}
 }
@@ -163,7 +163,7 @@
 }
 
 [data-target="mosaic-content"] > [data-target="mosaic-row-2c"]{
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     margin-bottom: 0;
     height: auto;
   }
@@ -177,20 +177,20 @@
 
 	// this was removing the cell btm margin -> &:first-child { margin: 0 !important; }
 
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     margin-left: 0 !important;
   }
 }
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .eight .options {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     position: relative !important;
   }
 }
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .six.columns,
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve >.row > div:first-child {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 
     .hr {
 	    display: none !important;
@@ -205,20 +205,20 @@
 // Hide all HRs
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve > .row > .hr {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		display: none !important;
   }
 }
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve>.row .four > .hr {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		display: none !important;
 	}
 }
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .options > p,
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .options > .text_link {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     p {
 	    text-align: left;
     }
@@ -226,27 +226,27 @@
 }
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve >.row > div:nth-child(1) {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		height: 260px;
 		margin-bottom: 30px;
 	}
 }
 // all this css needs to be migrated into the partials....
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .twelve >.row > div:first-child {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		height: auto;
 		margin-bottom: 30px;
 	}
 }
 
 #ContentPlaceHolder1_main_0_templateb_0_blbRow > .eight.columns {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     height: initial;
   }
 }
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     margin-bottom: 10px;
   }
 }
@@ -259,7 +259,7 @@
 // ---- Stock Ticker Fixs
 
 [data-target="mosaic-content"] [data-target="mosaic-row-2c"] .eight > .stock_ticker_container {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
 		height: 100%;
 	}
 }
@@ -284,7 +284,7 @@
 // --- related footer
 
 div.widget.row.slideshow_nav {
-	@include respond(all-phones) {
+	@include media-breakpoint-down(sm){
     display: block !important;
   }
 }

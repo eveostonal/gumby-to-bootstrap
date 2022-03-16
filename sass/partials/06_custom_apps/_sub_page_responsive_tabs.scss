@@ -248,7 +248,7 @@ $color_3: $IGTLighterGrey;
     				color: $white;
     				font-size: 18px;
 
-            @include respond(all-phones) {
+            @include media-breakpoint-down(sm){
               padding: 5px 10px 0 10px;
               text-align: center;
               font-size: 15px;

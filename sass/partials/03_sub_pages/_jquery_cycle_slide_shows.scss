@@ -9,7 +9,7 @@ $header_btn_width: 50%; // was 302px
   height: $height-500;
   overflow: hidden;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     height: 285px;
     margin-bottom: 30px;
   }
@@ -38,7 +38,7 @@ $header_btn_width: 50%; // was 302px
     .center {
       padding: 0;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         position: absolute;
         top: 0;
         right: 0;
@@ -56,19 +56,19 @@ $header_btn_width: 50%; // was 302px
       min-height: 17px;
       line-height: 14px;
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         margin: 0;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         margin: 0;
       }
 
-      @include respond(desktop) {
+      @include media-breakpoint-down(xl){
         margin: 0;
       }
 
-      @include respond(large-screens) {
+      @include media-breakpoint-down(xxl){
         margin: 0;
       }
     }
@@ -78,7 +78,7 @@ $header_btn_width: 50%; // was 302px
      display: block;
      //padding-top: 100px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         padding: 0 20px;
         padding-top: 0;
       }
@@ -87,16 +87,16 @@ $header_btn_width: 50%; // was 302px
         width: 31.41026%;
         padding-top: 100px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding-top: 80px;
         }
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 8.57372%;
           width: 41.41026%;
         }
 
-        @include respond(tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 8.57372%;
           width: 31.41026%;
         }
@@ -107,17 +107,17 @@ $header_btn_width: 50%; // was 302px
         width: 48.55769%;
         padding-top: 100px;
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 2.88462%;
           width: 38.55769%;
         }
 
-        @include respond(tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 2.88462%;
           width: 48.55769%;
         }
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           display: none;
           visibility: hidden;
         }
@@ -130,7 +130,7 @@ $header_btn_width: 50%; // was 302px
         font-size: 30px;
         line-height: 36px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           position: relative;
           display: block;
           padding: 0 0 20px 0;
@@ -145,13 +145,13 @@ $header_btn_width: 50%; // was 302px
         font-size: 16px;
         line-height: 22px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           display: none;
         }
       }
 
       .fluid-width-video-wrapper {
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
          display: block;
          // was display -> none
         }
@@ -162,28 +162,28 @@ $header_btn_width: 50%; // was 302px
     [data-source="text"] {
       padding-top: 155px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         //padding-top: 100px;
         padding-top: 40px;
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         padding-top: 115px;
       }
 
       .widget {
         text-align: center;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding: 0 30px;
         }
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 4.28686%;
           width: 91.42628%;
         }
 
-        @include respond(tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 4.28686%;
           width: 91.42628%;
         }
@@ -197,7 +197,7 @@ $header_btn_width: 50%; // was 302px
         line-height: 56px;
         padding-bottom: 30px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding: 0 0 20px 0;
           width: auto;
           font-size: 30px;
@@ -211,7 +211,7 @@ $header_btn_width: 50%; // was 302px
       	color: $white;
       	text-align: center;
 
-        //@include respond(all-phones) {
+        //@include media-breakpoint-down(sm){
         //  display: none;
         //}
       }
@@ -226,15 +226,15 @@ $header_btn_width: 50%; // was 302px
         padding: 0 30px;
         margin: 0 auto;
 
-        //@include respond(all-phones) {
+        //@include media-breakpoint-down(sm){
         //  display: none;
         //}
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
 	        //width: 50%;
 	      }
 
-	      @include respond(tablets) {
+	      @include media-breakpoint-down(lg){
 	        //width: 40%;
 	      }
       }
@@ -245,7 +245,7 @@ $header_btn_width: 50%; // was 302px
       //padding-top: 100px;
       display: block;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         padding: 0 20px;
         padding-top: 0;
       }
@@ -255,17 +255,17 @@ $header_btn_width: 50%; // was 302px
         padding-top: 100px;
         z-index: 50;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           padding-top: 5px; //was 20px (SP)
           text-align: center;
         }
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 8.57372%;
           width: 41.41026%;
         }
 
-        @include respond(tablets) {
+        @include media-breakpoint-down(lg){
           margin-left: 8.57372%;
           width: 31.41026%;
         }
@@ -283,12 +283,12 @@ $header_btn_width: 50%; // was 302px
         margin: 0;
         z-index: 25;
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
           //margin-left: 2.88462%;
           //width: 38.55769%;
         }
 
-        @include respond(tablets) {
+        @include media-breakpoint-down(lg){
           //margin-left: 2.88462%;
           //width: 48.55769%;
         }
@@ -301,7 +301,7 @@ $header_btn_width: 50%; // was 302px
         font-size: 30px;
         line-height: 36px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           position: relative;
           display: block;
           //padding: 40px 0 15px 0;
@@ -321,7 +321,7 @@ $header_btn_width: 50%; // was 302px
         font-size: 16px;
         line-height: 22px;
 
-        //@include respond(all-phones) {
+        //@include media-breakpoint-down(sm){
         //  display: none;
         //}
       }
@@ -332,7 +332,7 @@ $header_btn_width: 50%; // was 302px
         //padding-top: 20px;
         //max-height: 260px;
 
-        //@include respond(all-phones) {
+        //@include media-breakpoint-down(sm){
         //margin: 0 0 0 5%;
         //width: 90%;
         //display: none;
@@ -346,16 +346,16 @@ $header_btn_width: 50%; // was 302px
         //max-width: inherit !important;
         max-width: 450px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           display: none;
         }
 
-        @include respond(portrait-tablets) {
+        @include media-breakpoint-down(lg){
 	        //right: -120px;
 	        right: 15px; //see all w/ padding
 	      }
 
-	      @include respond(tablets) {
+	      @include media-breakpoint-down(lg){
 	        right: 100px;
 	      }
 	      
@@ -373,7 +373,7 @@ $header_btn_width: 50%; // was 302px
         padding: 0 30px;
         margin: 0;
 
-        //@include respond(all-phones) {
+        //@include media-breakpoint-down(sm){
         //  display: none;
         //}
       }
@@ -398,7 +398,7 @@ $header_btn_width: 50%; // was 302px
     }
 
     .btn {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         display: block;
         margin: 0 auto;
         width: 265px;
@@ -423,7 +423,7 @@ $header_btn_width: 50%; // was 302px
     padding: 0;
     bottom: 55%;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       display: block !important;
       visibility: visible !important;
     }
@@ -442,7 +442,7 @@ $header_btn_width: 50%; // was 302px
       width: 100%;
       z-index: 140;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         bottom: -82px;
         top: auto;
       }
@@ -476,11 +476,11 @@ $header_btn_width: 50%; // was 302px
         &:hover { color: rgba(255, 255, 255, 0.65) !important; }
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         left: 20px;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         left: 20px;
       }
     }
@@ -495,11 +495,11 @@ $header_btn_width: 50%; // was 302px
         &:hover { color: rgba(255, 255, 255, 0.65) !important; }
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         right: 20px;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         right: 20px;
       }
     }
@@ -511,7 +511,7 @@ $header_btn_width: 50%; // was 302px
 [data-target="static-header"] {
   @extend %static_header_default;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     height: 200px;
   }
 
@@ -524,16 +524,16 @@ $header_btn_width: 50%; // was 302px
       text-align: left;
       padding-top: 50px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         padding: 30px 30px 0;
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 4.28686%;
         width: 91.42628%;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 4.28686%;
         width: 91.42628%;
       }
@@ -546,7 +546,7 @@ $header_btn_width: 50%; // was 302px
       z-index: 10;
       padding-top: 30px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin-left: 0;
         padding-top: 30px;
       }
@@ -572,17 +572,17 @@ $header_btn_width: 50%; // was 302px
       @extend %static_header_h2;
       font-size: 52px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         padding: 5px 0 20px 0;
         width: auto;
         font-size: 32px;
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         font-size: 48px;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         font-size: 48px;
       }
     }
@@ -594,7 +594,7 @@ $header_btn_width: 50%; // was 302px
       padding: 0;
       margin: 0 0 20px 0;
 
-      //@include respond(all-phones) {
+      //@include media-breakpoint-down(sm){
       //  display: none;
       //}
     }
@@ -602,7 +602,7 @@ $header_btn_width: 50%; // was 302px
     .btn {
       @extend %static_header_btn;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         width: 265px;
       }
     }
@@ -627,7 +627,7 @@ $header_btn_width: 50%; // was 302px
     height: inherit;
     width: inherit;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       padding: 0 20px;
       padding-top: 0;
     }
@@ -636,12 +636,12 @@ $header_btn_width: 50%; // was 302px
       width: 31.41026%;
       padding-top: 100px;
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 8.57372%;
         width: 41.41026%;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 8.57372%;
         width: 31.41026%;
       }
@@ -652,12 +652,12 @@ $header_btn_width: 50%; // was 302px
       width: 48.55769%;
       //padding-top: 100px;
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 2.88462%;
         width: 38.55769%;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 2.88462%;
         width: 48.55769%;
       }
@@ -670,7 +670,7 @@ $header_btn_width: 50%; // was 302px
       font-size: 32px;
       //font-weight: 700;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         position: relative;
         display: block;
         padding: 40px 0 10px 0;
@@ -681,7 +681,7 @@ $header_btn_width: 50%; // was 302px
     }
 
     p {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         display: none;
       }
     }
@@ -690,7 +690,7 @@ $header_btn_width: 50%; // was 302px
       width: 100%;
       padding-top: 20px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         //margin: 0 0 0 5%;
         //width: 90%;
         display: none;
@@ -702,7 +702,7 @@ $header_btn_width: 50%; // was 302px
       margin: 0 auto;
       width: 302px;
 
-     @include respond(all-phones) {
+     @include media-breakpoint-down(sm){
         width: 265px;
         display: none;
       }
@@ -744,11 +744,11 @@ $header_btn_width: 50%; // was 302px
     margin: 0;
     width: 91.42628% !important;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100% !important;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       width: 87.23568% !important;
       margin-left: 6.28686% !important;
     }
@@ -790,7 +790,7 @@ $header_btn_width: 50%; // was 302px
     padding: 0;
     max-width: 1040px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       position: relative;
       margin: 20px 0 0 0;
       height: 48px;
@@ -799,7 +799,7 @@ $header_btn_width: 50%; // was 302px
 
     .nav_left,
     .nav_right {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin: 14px 0 0;
       }
     }
@@ -820,7 +820,7 @@ $header_btn_width: 50%; // was 302px
   visibility: hidden;
 
   h4 {
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       display: none;
     }
   }
@@ -834,7 +834,7 @@ $header_btn_width: 50%; // was 302px
     padding: 10px 0 20px 0;
     height: 65px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       height: 125px;
     }
 
@@ -842,7 +842,7 @@ $header_btn_width: 50%; // was 302px
       float: left;
       margin-left: 10px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
        margin-left: 0;
 
       h4 {
@@ -852,11 +852,11 @@ $header_btn_width: 50%; // was 302px
        }
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 23px;
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         margin-left: 10px;
       }
     }
@@ -866,7 +866,7 @@ $header_btn_width: 50%; // was 302px
       margin-right: 10px;
       width: 218px;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
        float: left;
        margin-right: 0;
        width: 218px;
@@ -876,7 +876,7 @@ $header_btn_width: 50%; // was 302px
         }
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         margin-right: 15px;
         width: 218px;
 
@@ -885,7 +885,7 @@ $header_btn_width: 50%; // was 302px
         }
       }
 
-      @include respond(tablets) {
+      @include media-breakpoint-down(lg){
         margin-right: 0;
         width: 218px;
       }
@@ -921,7 +921,7 @@ $header_btn_width: 50%; // was 302px
     margin: auto;
     //max-width: 1040px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       position: relative;
       top: 0;
       margin: 0;
@@ -929,7 +929,7 @@ $header_btn_width: 50%; // was 302px
 
     .nav_left,
     .nav_right {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin: 0;
       }
     }
@@ -947,13 +947,13 @@ $header_btn_width: 50%; // was 302px
     height: 197px !important;
     width: 91.42628% !important;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       height: 128px !important;
       width: 100% !important;
       margin: 0 0 10px 0;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       width: 87.23568% !important;
       margin-left: 6.28686%;
     }
@@ -964,7 +964,7 @@ $header_btn_width: 50%; // was 302px
       height: auto;
 
       .cycle-slide {
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           overflow: visible;
           height: auto;
         }
@@ -992,7 +992,7 @@ $header_btn_width: 50%; // was 302px
   #cycle-1 {
     width: 100% !important;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       max-height: 203px !important;
     }
 
@@ -1008,11 +1008,11 @@ $header_btn_width: 50%; // was 302px
         }
       }
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         min-width: 100%;
       }
 
-      @include respond(portrait-tablets) {
+      @include media-breakpoint-down(lg){
         min-width: 100%;
       }
 
@@ -1027,7 +1027,7 @@ $header_btn_width: 50%; // was 302px
         width: 100%;
         height: 60px;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           height: 60px;
         }
 
@@ -1038,7 +1038,7 @@ $header_btn_width: 50%; // was 302px
           height: auto;
           display: block;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             font-size: 12px;
           }
         }
@@ -1051,7 +1051,7 @@ $header_btn_width: 50%; // was 302px
           padding-bottom: 0;
           font-size: 18px;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             font-size: 16px;
           }
         }
@@ -1062,7 +1062,7 @@ $header_btn_width: 50%; // was 302px
           height: auto;
           display: block;
 
-          @include respond(all-phones) {
+          @include media-breakpoint-down(sm){
             float: right;
             width: 114px;
 
@@ -1071,11 +1071,11 @@ $header_btn_width: 50%; // was 302px
             }
           }
 
-          @include respond(portrait-tablets) {
+          @include media-breakpoint-down(lg){
             float: right;
           }
 
-          @include respond(tablets) {
+          @include media-breakpoint-down(lg){
             float: right;
           }
         }
@@ -1101,12 +1101,12 @@ $header_btn_width: 50%; // was 302px
   vertical-align: top;
   //margin: 0 20px 0 0;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: 100% !important;
     margin: 0 20px 0 0;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     //margin: 0 40px 0 40px;
     margin: 0 5% 0 5%;
   }
@@ -1118,7 +1118,7 @@ $header_btn_width: 50%; // was 302px
     //cursor: pointer;
     @extend %image_bottom_margin;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 220px;
       height: 130px;
       margin: 0 auto;
@@ -1129,7 +1129,7 @@ $header_btn_width: 50%; // was 302px
   p {
   	@extend %p_tag_item_defaults;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-right: 0;
       font-size: 14px;
       padding: 10px 20px 0 20px;
@@ -1148,7 +1148,7 @@ $header_btn_width: 50%; // was 302px
       //merger only Kill this class
       //display: none;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: center;
       }
 
@@ -1167,7 +1167,7 @@ $header_btn_width: 50%; // was 302px
 		  	font-family: $font-family !important;
 		  	font-size: 14px !important;
 
-		    @include respond(all-phones) {
+		    @include media-breakpoint-down(sm){
 		      text-align: center;
 		    }
 		  }
@@ -1179,7 +1179,7 @@ $header_btn_width: 50%; // was 302px
       .text_link {
         @extend %text_link_hover;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           text-align: center;
         }
 
@@ -1197,7 +1197,7 @@ $header_btn_width: 50%; // was 302px
 			  	font-family: $font-family !important;
 			  	font-size: 14px !important;
 
-			    @include respond(all-phones) {
+			    @include media-breakpoint-down(sm){
 			      text-align: center;
 			    }
 			  }
@@ -1210,7 +1210,7 @@ $header_btn_width: 50%; // was 302px
     margin: 0 auto;
     width: 302px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       //width: 265px;
       display: none;
     }
@@ -1223,15 +1223,15 @@ $header_btn_width: 50%; // was 302px
   margin: 0 10px 0 10px;
   vertical-align: top;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: 100% !important;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     width: 195px !important;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     margin: 0 40px 0 40px;
   }
 
@@ -1244,7 +1244,7 @@ $header_btn_width: 50%; // was 302px
       @extend %wrap_text;
       color: $IGTMediumBlue;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: center;
       }
 
@@ -1263,7 +1263,7 @@ $header_btn_width: 50%; // was 302px
 		  	font-family: $font-family !important;
 		  	font-size: 14px !important;
 
-		    @include respond(all-phones) {
+		    @include media-breakpoint-down(sm){
 		      text-align: center;
 		    }
 		  }
@@ -1275,7 +1275,7 @@ $header_btn_width: 50%; // was 302px
       .text_link {
         @extend %text_link_hover;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           text-align: center;
         }
 
@@ -1293,7 +1293,7 @@ $header_btn_width: 50%; // was 302px
 			  	font-family: $font-family !important;
 			  	font-size: 14px !important;
 
-			    @include respond(all-phones) {
+			    @include media-breakpoint-down(sm){
 			      text-align: center;
 			    }
 			  }
@@ -1315,7 +1315,7 @@ $header_btn_width: 50%; // was 302px
     @extend %p_tag_item_defaults;
     text-align: center;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-right: 0;
       font-size: 14px;
       padding: 0;
@@ -1344,17 +1344,17 @@ $header_btn_width: 50%; // was 302px
   @extend %three_up_carousel;
   height: $related-img-background-defaults;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     // width: 220px !important;
     width: 100% !important;
     margin: 0 20px 0 0;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
 
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     //margin: 0 50px 0 50px;
     margin: 0 5% 0 5%;
   }
@@ -1369,7 +1369,7 @@ $header_btn_width: 50%; // was 302px
       @extend %wrap_text;
       color: $IGTMediumBlue;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: center;
       }
 
@@ -1388,7 +1388,7 @@ $header_btn_width: 50%; // was 302px
 		  	font-family: $font-family !important;
 		  	font-size: 14px !important;
 
-		    @include respond(all-phones) {
+		    @include media-breakpoint-down(sm){
 		      text-align: center;
 		    }
 		  }
@@ -1400,7 +1400,7 @@ $header_btn_width: 50%; // was 302px
       .text_link {
         @extend %text_link_hover;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           text-align: center;
         }
 
@@ -1418,7 +1418,7 @@ $header_btn_width: 50%; // was 302px
 			  	font-family: $font-family !important;
 			  	font-size: 14px !important;
 
-			    @include respond(all-phones) {
+			    @include media-breakpoint-down(sm){
 			      text-align: center;
 			    }
 			  }
@@ -1433,7 +1433,7 @@ $header_btn_width: 50%; // was 302px
     display: block;
     top: 0;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       height: $related-img-background-defaults;
       margin: 0 auto;
     }
@@ -1465,7 +1465,7 @@ $header_btn_width: 50%; // was 302px
     // background: rgb(18, 108, 171);
     // background: rgba(18, 108, 171, 0.3);
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       font-size: 14px;
     }
   }
@@ -1511,20 +1511,20 @@ $related-video-tablet-landscape-h: 99px;
   @extend %five_up_carousel;
   vertical-align: top;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     position: relative;
     width: 48% !important;
     height: auto !important;
     margin: 0 14.25px 0 0;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     width: $related-video-tablet-portrait;
     //height: $related-video-tablet-portrait-h;
     height: auto;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     width: $related-video-tablet-landscape;
     height: auto;
   }
@@ -1536,19 +1536,19 @@ $related-video-tablet-landscape-h: 99px;
     display: block;
     cursor: pointer;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: $related-video-phone;
       height: $related-video-phone-h;
       margin: 0 auto;
       padding: 0 0 10px 0;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       width: $related-video-tablet-portrait;
       height: $related-video-tablet-portrait-h;
     }
 
-    @include respond(tablets) {
+    @include media-breakpoint-down(lg){
       width: $related-video-tablet-landscape;
       height: $related-video-tablet-landscape-h;
       margin: 0 auto;
@@ -1559,7 +1559,7 @@ $related-video-tablet-landscape-h: 99px;
   p, .text_link {
     text-align: left;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       text-align: center;
     }
   }
@@ -1569,7 +1569,7 @@ $related-video-tablet-landscape-h: 99px;
     line-height: 18px;
     margin-right: 20px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-right: 0;
       font-size: 14px;
       padding: 0;
@@ -1581,7 +1581,7 @@ $related-video-tablet-landscape-h: 99px;
     //line-height: 24px;
     //margin-right: 20px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
      //margin-right: 0;
     }
   }
@@ -1608,7 +1608,7 @@ $related-video-tablet-landscape-h: 99px;
       }
     }
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin-right: 0;
     }
   }
@@ -1634,7 +1634,7 @@ $fact-box-margin-phone: 77px;
     margin: 0 0 20px 0;
     padding: 0;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       display: none;
     }
   }
@@ -1645,11 +1645,11 @@ $fact-box-margin-phone: 77px;
     width: 91.42628% !important;
 
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       width: 100% !important;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       //width: 87.23568% !important;
       width: 100% !important;
       margin-left: 0 !important;
@@ -1692,7 +1692,7 @@ $fact-box-margin-phone: 77px;
     padding: 0;
     max-width: 1040px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       position: relative;
       margin: 20px 0 0 0;
       height: 48px;
@@ -1701,7 +1701,7 @@ $fact-box-margin-phone: 77px;
 
     .nav_left,
     .nav_right {
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         margin: 14px 0 0;
       }
     }
@@ -1714,12 +1714,12 @@ $fact-box-margin-phone: 77px;
   vertical-align: top;
   height: auto;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: 100%;
     margin: auto;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     width: 31.99987%;
     //height: 130px;
     height: auto;
@@ -1728,7 +1728,7 @@ $fact-box-margin-phone: 77px;
     //margin: $fact-box-margin-tablet-portrait;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     margin: $fact-box-margin-tablet-landscape;
   }
 
@@ -1740,7 +1740,7 @@ $fact-box-margin-phone: 77px;
     .text_link {
       @extend %text_link;
 
-      @include respond(all-phones) {
+      @include media-breakpoint-down(sm){
         text-align: center;
       }
     }
@@ -1751,7 +1751,7 @@ $fact-box-margin-phone: 77px;
       .text_link {
         @extend %text_link_hover;
 
-        @include respond(all-phones) {
+        @include media-breakpoint-down(sm){
           text-align: center;
         }
       }
@@ -1779,7 +1779,7 @@ $fact-box-margin-phone: 77px;
     position: static;
     line-height: normal;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       font-size: 20px;
     }
   }
@@ -1793,11 +1793,11 @@ $fact-box-margin-phone: 77px;
     line-height: normal;
     //font-weight: 700;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       font-size: 14px;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       font-size: 13px;
     }
   }
@@ -1809,18 +1809,18 @@ $fact-box-margin-phone: 77px;
   width: 220px;
   height: 130px;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     width: 100% !important;
     margin: auto;
   }
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     width: 31.99987%;
     height: 130px;
     margin: 0 10px 0 0;
   }
 
-  @include respond(tablets) {
+  @include media-breakpoint-down(lg){
     margin: $fact-box-margin-tablet-landscape;
   }
 
@@ -1829,11 +1829,11 @@ $fact-box-margin-phone: 77px;
     width: 220px;
     height: 130px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin: auto;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       width: 100%;
       height: 130px;
       margin: 0 auto;
@@ -1849,18 +1849,18 @@ $fact-box-margin-phone: 77px;
     width: 220px;
     height: 130px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       //margin: auto;
       width: 220px;
       height: 130px;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       width: 100%;
       height: 130px;
     }
 
-    @include respond(tablets) {
+    @include media-breakpoint-down(lg){
       //margin: $fact-box-margin-tablet-landscape;
     }
   }
@@ -1876,7 +1876,7 @@ $fact-box-margin-phone: 77px;
     // extend has to be on the bottom
     @extend %ie_8_imageScale_fix;
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       //width: 195px;
       height: 130px;
     }
@@ -1895,7 +1895,7 @@ $fact-box-margin-phone: 77px;
     font-size: 20px;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       font-size: 20px;
     }
   }
@@ -1910,11 +1910,11 @@ $fact-box-margin-phone: 77px;
     text-align: center;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       font-size: 14px;
     }
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       font-size: 13px;
     }
   }
@@ -1930,7 +1930,7 @@ $fact-box-margin-phone: 77px;
 [data-source="text"] {
   padding-top: 155px;
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     padding-top: 90px;
   }
 
@@ -1941,7 +1941,7 @@ $fact-box-margin-phone: 77px;
     font-size: 60px;
     //font-weight: 700;
 
-    @include respond(portrait-tablets) {
+    @include media-breakpoint-down(lg){
       padding-bottom: 10px;
     }
   }
@@ -1950,7 +1950,7 @@ $fact-box-margin-phone: 77px;
   	font-size: 24px;
   	line-height: 28px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin: 0;
       padding: 10px 20px 20px 20px;
       color: $IGTBlue;
@@ -1964,7 +1964,7 @@ $fact-box-margin-phone: 77px;
     margin: 0 auto;
     width: 302px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       display: none;
     }
   }
@@ -1974,7 +1974,7 @@ $fact-box-margin-phone: 77px;
 [data-source="image"] {
   padding-top: 90px;
 
-  @include respond(portrait-tablets) {
+  @include media-breakpoint-down(lg){
     padding-top: 110px;
   }
 
@@ -1984,7 +1984,7 @@ $fact-box-margin-phone: 77px;
     font-size: 30px;
     line-height: 36px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       position: absolute;
       padding: 50px 20px 0 30px;
       width: 310px;
@@ -1997,7 +1997,7 @@ $fact-box-margin-phone: 77px;
   	font-size: 16px;
   	line-height: 22px;
 
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       margin: 0;
       padding: 10px 20px 20px 20px;
       color: $IGTBlue;
@@ -2028,7 +2028,7 @@ $fact-box-margin-phone: 77px;
   // this class will have to toggle dynamically from the CMS
   height: $height-500;
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     height: 285px !important;
     // was height: 356px !important;
   }
@@ -2043,7 +2043,7 @@ $fact-box-margin-phone: 77px;
 		padding-top: 50px !important;
 	}
 
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     height: 250px !important;
   }
 }
@@ -2078,12 +2078,12 @@ $fact-box-margin-phone: 77px;
 }
 //
 // Apply a background overlay in mobile view to any banner (SP)
-//@include respond(all-phones) {
+//@include media-breakpoint-down(sm){
   //#HeaderCarousel1_lvHeaderCarousel_divSetDataSource_2 { background: rgba(0, 0, 0, .5); }
 //}
 //
 // Apply a background overlay in tablet view to any banner (SP)
-//@include respond(portrait-tablets) {
+//@include media-breakpoint-down(lg){
   //#HeaderCarousel1_lvHeaderCarousel_divSetDataSource_2,
   //#HeaderCarousel1_lvHeaderCarousel_divSetDataSource_1 { background: rgba(0, 0, 0, .5); }
 //}

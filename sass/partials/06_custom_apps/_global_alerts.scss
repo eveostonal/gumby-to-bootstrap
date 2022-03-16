@@ -188,14 +188,14 @@
                   	animation: scale-v 1.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both infinite;
                   	//@media all and (orientation:portrait) {}
                   	//@media all and (orientation:landscape) {}
-                  	@include respond(all-phones) { display: none; }
+                  	@include media-breakpoint-down(sm){ display: none; }
                   }
                 	
                 	&.fa-arrows-h {
                   	animation: scale-h 1.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both infinite;
                   	//@media all and (orientation:portrait) {}
                   	//@media all and (orientation:landscape) {}
-                  	@include respond(all-phones) { display: none; }
+                  	@include media-breakpoint-down(sm){ display: none; }
                   }
               	}
             	}

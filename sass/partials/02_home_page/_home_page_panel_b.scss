@@ -15,7 +15,7 @@
     margin: -30px 0 0 0;
     padding: 0;
     
-    @include respond(all-phones) { 
+    @include media-breakpoint-down(sm){ 
       display: none;
       visibility: hidden;
     }
@@ -94,7 +94,7 @@
           display: block;
           font-size: 0;
           
-          @include respond(all-phones) { z-index: 9998; }
+          @include media-breakpoint-down(sm){ z-index: 9998; }
         }
 
         .wrapper {
@@ -106,7 +106,7 @@
           bottom: 0;
           left: 0;
           
-          @include respond(all-phones) { z-index: 9999; }
+          @include media-breakpoint-down(sm){ z-index: 9999; }
 
           .wrapper_inner {
             display: table;
@@ -135,12 +135,12 @@
                   color: $white;
                 }
 
-                @include respond(portrait-tablets) {
+                @include media-breakpoint-down(lg){
                   height: 26px;
                   line-height: 26px;
                 }
                 
-                @include respond(all-phones) {
+                @include media-breakpoint-down(sm){
                   display: none;
                   visibility: hidden;
                 }
@@ -150,13 +150,13 @@
                   line-height: 35.85532px;
                   padding: 0 20px;
 
-                  @include respond(portrait-tablets) {
+                  @include media-breakpoint-down(lg){
                     height: 26px;
                     line-height: 26px;
                     padding: 0 10px;
                   }
 
-                  @include respond(all-phones) {
+                  @include media-breakpoint-down(sm){
                     height: 26px;
                     line-height: 26px;
                     padding: 0 10px;
@@ -164,7 +164,7 @@
                 }
               }
 
-              @include respond(all-phones) { padding: 0 10% 0 35%; }
+              @include media-breakpoint-down(sm){ padding: 0 10% 0 35%; }
             }            
           }
         }
@@ -177,7 +177,7 @@
               .container {
                 padding: 0 60% 0 10%;
                 
-                @include respond(all-phones) { padding: 0 35% 0 10%; }
+                @include media-breakpoint-down(sm){ padding: 0 35% 0 10%; }
               }
             }
           }
@@ -195,12 +195,12 @@
                 p, h2, h3 {
                   text-align: center !important;
   
-                  @include respond(portrait-tablets) {
+                  @include media-breakpoint-down(lg){
                     max-width: 500px;
                     margin: 0 auto;
                   }
   
-                  @include respond(all-phones) {
+                  @include media-breakpoint-down(sm){
                     max-width: 300px;
                     margin: 0 auto;
                   }
@@ -223,7 +223,7 @@
   }
   
   .owl-item {
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       max-height: 250px;
       height: 250px;
       position: relative;
@@ -232,11 +232,11 @@
       
       .item {
         &.wrapper_left {
-          img { @include respond(all-phones) { transform: translate(-55%, -50%) !important;; } }
+          img { @include media-breakpoint-down(sm){ transform: translate(-55%, -50%) !important;; } }
         }
         
         &.wrapper_center {
-          img { @include respond(all-phones) { transform: translate(-50%, -50%) !important;; } }          
+          img { @include media-breakpoint-down(sm){ transform: translate(-50%, -50%) !important;; } }          
         }
         
         
@@ -291,12 +291,12 @@
               h3 { color: $IGTDarkBlue; }
               p {
                 color: $body-font-color;
-                @include respond(portrait-tablets) { display: none; }
-                @include respond(all-phones) { display: none; }
+                @include media-breakpoint-down(lg){ display: none; }
+                @include media-breakpoint-down(sm){ display: none; }
               }
               
               p.btn { display: none !important; }
-              @include respond(all-phones) { padding: 0 7% 0 50% !important; }
+              @include media-breakpoint-down(sm){ padding: 0 7% 0 50% !important; }
             }
           }
         }
@@ -308,17 +308,17 @@
             .wrapper_inner {
               .container {
                 padding: 0 45% 0 10% !important;
-                @include respond(all-phones) { padding: 0 50% 0 7% !important; }
+                @include media-breakpoint-down(sm){ padding: 0 50% 0 7% !important; }
               }
             }
           }
           
-          img { @include respond(all-phones) { transform: translate(-60%, -50%); } }
+          img { @include media-breakpoint-down(sm){ transform: translate(-60%, -50%); } }
         } 
       }
     }
     
-    @include respond(all-phones) {
+    @include media-breakpoint-down(sm){
       max-height: 150px;
       height: 150px;
       position: relative;
@@ -357,7 +357,7 @@ hero-progress-ring {
   top: 10px;
   right: 10px;
   
-  @include respond(all-phones) {
+  @include media-breakpoint-down(sm){
     display: none;
     visibility: hidden;
   }
