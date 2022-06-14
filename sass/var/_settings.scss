@@ -39,7 +39,7 @@ $font-weight-medium: 400;
 $font-weight-regular: 400;
 $font-weight-light: 300;
 $font-weight-thin: 300;
-$header-font-weight: Normal;
+$header-font-weight: 400;
 $body-font-weight: $font-weight-regular;
 $type-font-weight: $font-weight-regular;
 $link-font-weight: $font-weight-regular;
@@ -74,19 +74,26 @@ $reallybig: ms(8);
 $tremendous: ms(9);
 $absurd: ms(10);
 
-// IGT Colors
-$IGTBlue:             #0c51a1;
-$IGTMediumBlue:       #1b9ddb;
-$IGTDarkBlue:         #003865;
-$IGTLightBlue:        #8dc8e8;
-$IGTOrange:           #ffa300;
-$IGTDarkOrange:       #ff671f;
+// IGT Colors from https://brandcentral.igt.com/brand-identity-system
+$IGTLightBlue:        #8DC8E8;
+$IGTMediumBlue:       #1B9DDB;
+$IGTBlue:             #0C51A1;
+$IGTDarkBlue:         #003966;
+$IGTYellow:           #FEDD00;
+$IGTDarkYellow:       #FFC629;
+$IGTOrange:           #FFA300;
+$IGTDarkOrange:       #FF671F;
+
+$IGTDarkGrey:         #323F48;
+$IGTMediumGrey:       #5B6770;
+$IGTLightGrey:        #B3B3B3;
+
+
+
 $IGTDarkestOrange:    #d4451d; // Only to be used for the PURE CORE game segmentation
-$IGTDarkYellow:       #ffc72C;
-$IGTYellow:           #fedd00;
-$IGTDarkGrey:         #2b2b2b;
+$IGTLighterBlue:      #e8f4fa; // For homepage Products and Services (EO)
+
 $IGTLightGreyMedDark: #666666;
-$IGTLightGrey:        #b3b3b3;
 $IGTLightGreyDrk:     #333333;
 $IGTLightGreyMed:     #999999;
 $IGTGrey:             #dddddd;
@@ -97,8 +104,8 @@ $IGTBackgroundGrey:   #f3f5f6;
 $IGTTransparent:      transparent;
 $black:               #000000;
 $white:               #ffffff;
-$IGTBrownAlt:    			#d77804; // Only to be used for the FRUIT GAMES game segmentation
-$IGTDarkGreyAlt:	    #5a6770; // Only to be used for the LINKED CORE game segmentation
+$IGTBrownAlt:    	  #d77804; // Only to be used for the FRUIT GAMES game segmentation
+$IGTDarkGreyAlt:	  #5a6770; // Only to be used for the LINKED CORE game segmentation
 
 // Typography Colors
 $header-font-color:        $IGTBlue !default; //NEW IGT BLUE
@@ -199,3 +206,4 @@ $tt-pretty: no;
 // Floats
 $default-float: left;
 $switch-float: right; 
+

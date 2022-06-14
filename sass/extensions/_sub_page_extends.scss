@@ -6,7 +6,7 @@
 
 // --------------------------------------------- Extends / Variables for: IGTDS-201 - Mosaic Build
 
-%mosaic-row-default {
+/* %mosaic-row-default {
   padding-right: 20px;
   padding-left: 20px;
   // Note: might have to remove the padding on go live.  Need to look at this component when it is applied in the html.
@@ -73,11 +73,11 @@ $mosaic-element_mobil_btm_margin: 20px;
   padding: 20px;
   position: relative;
   //padding: 20px
-}
+} */
 
 // --------------------------------------------- Extends for: Illustrated content
 
-%element_btm_margin {
+/* %element_btm_margin {
   margin-bottom: 80px;
 }
 
@@ -126,11 +126,11 @@ $element_mobil_btm_margin: 50px;
   margin: 0 0 30px 0;
   color: $IGTBlue;
   line-height: 14px;
-}
+} */
 
 // --------------------------------------------- Extends for:  Visual List
 
-%data_source_default {
+/* %data_source_default {
   display: table;
   margin-bottom: 0;
   width: 100%;
@@ -181,6 +181,6 @@ $element_mobil_btm_margin: 50px;
   text-align: center;
   font-size: 1rem;
   line-height: 20px;
-}
+} */
 
 // --------------------------------------------- Extends for: Game Detail Page

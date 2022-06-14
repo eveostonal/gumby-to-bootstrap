@@ -1,12 +1,13 @@
 h1,h2,h3,h4,h5,h6 {
   font-weight: $header-font-weight;
-  color: $header-font-color;
   text-rendering: optimizeLegibility;
 
   @extend %verlag_book;
 
+  font-family: "Verlag A", "Verlag B", "Verlag", sans-serif;
+
   a {
-    color: $header-link-color;
+    /* color: $header-link-color; */
   }
 }
 
@@ -16,13 +17,13 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   @include font-size($xxxlarge);
-  color: $IGTDarkOrange; 
+  /* color: $IGTDarkOrange;  */
 
   &.xlarge { @include font-size($reallybig); }
   &.xxlarge { @include font-size($tremendous); }
   &.absurd { @include font-size($absurd); }
 
-  a { color: $IGTOrange; }
+  /* a { color: $IGTOrange; } */
 }
 
 h2 { @include font-size($xlarge); }
@@ -31,13 +32,22 @@ h4 { @include font-size($large);}
 h5 { @include font-size($med);}
 h6 { @include font-size($norm);}
 
+.content{
+    /* h1{color: $IGTDarkOrange}
+    h2{color: $IGTBlue}
+    h3{color: $IGTBlue}
+    h4{color: $IGTMediumBlue}
+    h5{color: $IGTDarkBlue}
+    h6{color: $black} */
+}
+
 @include media-breakpoint-up(sm){
   h1 { @include font-size($xlarge);}
   h2 { @include font-size($larger + 6);}
 }
 
 .subhead {
-  color: $IGTLightGreyMed;
+  /* color: $IGTLightGreyMed; */
   font-weight: normal;
   margin-bottom: 20px;
 }

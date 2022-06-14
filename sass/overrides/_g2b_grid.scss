@@ -11,16 +11,32 @@
 .eleven{@extend .col-md-11;}
 .twelve{@extend .col-md-12;}
 
+.embed-container{
+    @extend .ratio;
+    @extend .ratio-16x9;
+}
+
 span.btn.medium.default,
-p.btn.medium.default{
+p.btn.medium.default,
+span.btn.medium.defualt{
     @extend .btn;
     @extend .btn-primary;
     background-color: $IGTDarkOrange;
     border-color: $IGTDarkOrange; 
 }
 
+span.btn.medium.default:hover,
+p.btn.medium.default:hover,
+span.btn.medium.defualt:hover{
+    @extend .btn;
+    @extend .btn-primary;
+    background-color: $IGTDarkBlue;
+    border-color: $IGTDarkBlue; 
+}
+
 span.btn.medium.default>a,
-p.btn.medium.default>a{
+p.btn.medium.default>a,
+span.btn.medium.defualt>a{
     color: white;
 } 
 
