@@ -2,5 +2,5 @@
 
 
 // --------------------------- MAGIC ZOOM FILES
-// @codekit-prepend "js/magic360.js", 
-										"js/magicscroll.js";
+// @codekit-prepend "js/vendors/magic360.js", 
+										"js/vendors/magicscroll.js";
