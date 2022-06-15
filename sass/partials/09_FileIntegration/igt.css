@@ -1,0 +1,150 @@
+.list-to-column h5 {
+  color: #2c2c2c;
+  font-weight: bold;
+  padding-bottom: 0 !important;
+}
+
+.list-to-column p {
+  font-size: 14px;
+  margin-bottom: 10px !important;
+}
+
+.list-to-column p:last-child {
+  margin-bottom: 30px !important;
+}
+
+h4 + ul.disc {
+  margin-top: 5px;
+}
+
+p.missing {
+  color: red;
+}
+
+p.subheader {
+  color: #199edb;
+  font-size: 16px;
+  margin-top: -15px;
+}
+
+ul.disc > li {
+  line-height: 1.6;
+}
+
+ul.disc.large-list > li {
+  font-size: 18px;
+  font-family: "Verlag", sans-serif;
+}
+
+span.btn > a > i {
+  margin-left: 10px;
+}
+
+.section-header {
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.section-header:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background: #8DC8E8;
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+  top: 14px;
+}
+
+.section-header.terminals {
+  margin-top: 0 !important;
+}
+
+.section-header h3 {
+  margin-top: 0 !important;
+  background: #ffffff;
+  color: #8DC8E8;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid #8DC8E8;
+}
+
+@media only screen and (min-width: 768px) {
+  .row.TemplateCLayout > .twelve > .row:nth-child(odd) {
+    display: flex;
+  }
+
+  .row.TemplateCLayout > .twelve > .row + .row {
+    margin-top: 90px;
+  }
+
+  .row.TemplateCLayout > .twelve > .row:nth-child(odd) > div:first-child {
+    order: 2;
+  }
+
+  .row.TemplateCLayout > .twelve > .row:nth-child(odd) > div:last-child {
+    order: 1;
+    margin-left: 0;
+    margin-right: 2.88462%;
+  }
+}
+.rgsTable {
+  margin-top: 15px;
+}
+
+.rgsTable h6 + a {
+  display: block;
+  line-height: 1;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+span.btn.block.playsportsbutton {
+  text-align: left;
+  margin-top: 30px;
+}
+
+span.btn.block {
+  display: block;
+}
+
+span.btn.block i {
+  float: right;
+  line-height: 37px;
+}
+
+div#networkmanagement {
+  padding-top: 90px !important;
+  margin-top: 0px !important;
+}
+
+[data-target=slideshow-related] {
+  margin-top: 30px;
+}
+
+.container-body .container-templates .row.TemplateCLayout .row {
+  margin-top: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-body .container-templates .row.TemplateCLayout .row:nth-child(odd) > div:first-child {
+    order: 1;
+  }
+
+  .container-body .container-templates .row.TemplateCLayout .row:nth-child(odd) > div:last-child {
+    order: 0;
+    margin-right: unset;
+  }
+}
+.container-body .container-templates .row.TemplateCLayout .row > div > img {
+  display: block;
+  width: 100%;
+}

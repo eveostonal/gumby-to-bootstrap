@@ -9,7 +9,11 @@ h4 + ul.disc{
 p.missing{ color: red }
 p.subheader{ color: #199edb; font-size: 16px; margin-top: -15px; }
 
-ul.disc>li { font-size: 14px; line-height: 1.6; }
+ul.disc > li { 
+// 	font-size: 14px; 
+	line-height: 1.6; 
+}
+
 ul.disc.large-list>li{
     font-size: 18px;
     font-family: "Verlag", sans-serif;
