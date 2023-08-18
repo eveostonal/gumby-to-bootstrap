@@ -1,0 +1,115 @@
+.template-b-block .card.bg-lightblue:hover,
+.btn.bg-lightblue:hover {
+    background-color: #6fb5d3 !important;
+    border-color: #6fb5d3 !important;
+    color: #ffffff !important;
+}
+
+.btn.btn-secondary:hover,
+.template-b-block .card.bg-mediumblue:hover,
+.btn.bg-mediumblue:hover {
+    background-color: #008fca !important;
+    border-color: #008fca !important;
+    color: #ffffff !important;
+}
+
+.template-b-block .card.bg-blue:hover,
+.btn.bg-blue:hover {
+    background-color: #004896 !important;
+    border-color: #004896 !important;
+    color: #ffffff !important;
+}
+
+.template-b-block .card.bg-darkblue:hover,
+.btn.bg-darkblue:hover {
+    background-color: #00335f !important;
+    border-color: #00335f !important;
+    color: #ffffff !important;
+}
+
+.template-b-block .card.bg-yellow:hover,
+.btn.bg-yellow:hover {
+    background-color: #e5c600 !important;
+    border-color: #e5c600 !important;
+    color: #000000 !important
+}
+
+.template-b-block .card.bg-darkyellow:hover,
+.btn.bg-darkyellow:hover {
+    background-color: #e5b100 !important;
+    border-color: #e5b100 !important;
+    color: #000000 !important;
+}
+
+.template-b-block .card.bg-orange:hover,
+.btn.bg-orange:hover {
+    background-color: #e58f00 !important;
+    border-color: #e58f00 !important;
+    color: #ffffff !important;
+}
+
+.btn.btn-primary:hover,
+.template-b-block .card.bg-darkorange:hover,
+.btn.bg-darkorange:hover {
+    background-color: #e55100 !important;
+    border-color: #e55100 !important;
+    color: #ffffff !important;
+}
+
+/* HOVER */
+.template-b-block .card:hover,
+.template-g-cols .card:hover,
+.container-related-link a:hover img,
+.news-list .card:hover,
+.cabinet-card:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+.btn.bg-white:hover {
+    opacity: .9;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 2px !important;
+}
+
+
+/* Button block with icons */
+.btn.w-100 {
+    text-align: left;
+    padding-right: 1.75rem;
+    position: relative;
+}
+
+.btn.w-100 i,
+.btn.w-100 em {
+    position: absolute;
+    top: .35rem;
+    right: .5rem;
+    line-height: 1.5rem;
+}
+
+
+/* Active Buttons */
+.btn.lang-active {
+    opacity: .5
+}
+
+
+a.btn.cursor-default {
+    cursor: default !important;
+}
+
+.content.scroll_area p>a:hover,
+.content.scroll_area a.btn.bg-transparent:hover {
+    text-decoration: underline !important;
+}
+
+.content.scroll_area a.btn:hover,
+.content.scroll_area .card>a:hover {
+    text-decoration: none !important;
+}

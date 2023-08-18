@@ -1,0 +1,55 @@
+/* CUSTOM for MLP */
+span.shape-star {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+span.shape-star::before {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    /* Rotate */
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+    z-index: -1;
+}
+
+span.shape-star:after {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    /* Rotate */
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    z-index: -1;
+}
+
+span.shape-star.red,
+span.shape-star.red::before,
+span.shape-star.red::after {
+    background-color: #dc3545;
+}
+
+span.shape-star.yellow,
+span.shape-star.yellow::before,
+span.shape-star.yellow::after {
+    background-color: $IGTYellow;
+}

@@ -1,0 +1,26 @@
+/*
+.MagicScroll[data-mode="scroll"] .mcs-item .mcs-caption, 
+.MagicScroll[data-mode="animation"] .mcs-item .mcs-caption {
+    left: 0;
+    width: 100%;
+    bottom: 0!important;
+    -webkit-transition: unset!important;
+    transition: unset!important;
+    -webkit-transform:  unset!important;
+    -ms-transform:  unset!important;
+    transform:  unset!important;
+    overflow: unset!important;
+    white-space: initial!important;
+    display: block!important;
+    padding: 8px;
+}
+*/
+
+.MagicScroll[data-mode="scroll"] .mcs-item .mcs-caption,
+.MagicScroll[data-mode="animation"] .mcs-item .mcs-caption {
+    display: block !important;
+    overflow: visible;
+    white-space: normal !important;
+    padding: 8px !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}

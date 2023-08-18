@@ -1,0 +1,297 @@
+/* Story Cards */
+#storycards {
+    .story-carousel-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5em;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .wrapped-container {
+        display: flex;
+        overflow: hidden;
+        width: 95%;
+        justify-content: center;
+    }
+
+    .story-carousel {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-y: hidden;
+        display: flex;
+        gap: 1em;
+        scrollbar-width: none;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+
+        &::-webkit-scrollbar-track {
+            background-color: $IGTBackgroundGrey;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: $IGTBackgroundGrey;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $IGTBlack;
+            border-radius: 4px;
+
+            &:hover {
+                background: #FF671F;
+            }
+        }
+    }
+
+    .arrows {
+        width: 40px;
+        height: 40px;
+        outline: none;
+        border: none;
+        background-color: $white;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        opacity: 1;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        padding: 0;
+        pointer-events: all;
+        position: absolute;
+        z-index: 300;
+
+        &:hover {
+            background-color: $white;
+            transform: scale(1.1);
+        }
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            fill: black;
+        }
+    }
+
+    .arrow-inactive {
+        opacity: 0.2;
+        cursor: auto;
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    .story-carousel-item {
+        width: 260px;
+        height: auto;
+
+        img {
+            /* border-radius: 10pt; */
+            max-width: unset !important;
+        }
+
+        >a.card {
+            overflow: hidden;
+            perspective: 1000px;
+            padding: 0 !important;
+
+            >.card-img-overlay {
+                background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 100%);
+                background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 100%);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+                /* border-radius: 10pt; */
+                font-family: $font-verlag;
+                color: $white !important;
+                line-height: 1;
+                /* top: 48%; */
+                padding-top: 45%;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                -webkit-transition: all 0.3s ease;
+
+                >.story-copy-wrapper {
+                    width: 100%;
+                    align-items: bottom;
+                    filter: drop-shadow(0 1px 2px black);
+
+                    /* background: rgba(0, 0, 0, 0.8);
+                    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 100%);
+                    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 100%);
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1); */
+                    >.story-overline {
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 700;
+                        margin-bottom: .5rem;
+                    }
+
+                    >.story-title {
+                        font-size: 28px !important;
+                        font-weight: 800;
+                        color: $white;
+                    }
+
+                    >.story-lead {
+                        display: none;
+                    }
+
+                    >.story-cta {
+                        padding: 0 !important;
+                        background-color: $IGTTransparent !important;
+                        border-color: $IGTTransparent !important;
+                        color: $white !important;
+                    }
+                }
+            }
+
+            &:hover {
+                >.card-img-overlay {
+                    /* top: 0%; */
+                    /* bottom: 0%; */
+                    padding-top: 5%;
+                    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, .5) 100%);
+                    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, .5) 100%);
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, .5) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+                    -moz-transition: all 0.5s ease;
+                    -o-transition: all 0.5s ease;
+                    -webkit-transition: all 0.5s ease;
+
+                    >.story-copy-wrapper {
+                        /* overflow: auto; */
+                        height: 100%;
+
+                        /* background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.5) 100%);
+                        background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.5) 100%);
+                        background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.5) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1); */
+                        &::-webkit-scrollbar-track {
+                            background-color: $IGTTransparent;
+                        }
+
+                        &::-webkit-scrollbar {
+                            width: 3px;
+                            background-color: $IGTTransparent;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background-color: rgba(255, 255, 255, 0.3);
+                        }
+
+                        >.story-lead {
+                            display: block;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+
+            &:not(:hover) {
+                >.card-img-overlay {
+                    >.story-copy-wrapper {
+                        >.story-lead {
+                            height: 0px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .left-arrow {
+        left: 1rem;
+    }
+
+    .right-arrow {
+        right: 1rem;
+    }
+
+    .story-carousel-wrapper.scrollbar-overflow {
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+    }
+
+    .story-carousel-item[sc-part-of="placeholder rendering"] {
+        >a.card {
+            >.card-img-overlay {
+                background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.25) 100%);
+                background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.25) 100%);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.25) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+                top: 0%;
+                bottom: 0%;
+
+                >.story-copy-wrapper {
+                    >.story-lead {
+                        height: unset !important;
+                        overflow: unset !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #storycards {
+        .story-carousel-item {
+            width: 310px;
+            height: auto;
+            >a.card {
+                >.card-img-overlay {
+                    padding-top: 68%;
+                    >.story-copy-wrapper {
+                        >.story-overline {
+                            font-size: 12px;
+                            margin-bottom: .5rem;
+                        }
+                        >.story-title {
+                            font-size: 28px !important;
+                        }
+                    }
+                }
+                &:hover {
+                    >.card-img-overlay {
+                        padding-top: 5%;
+                        >.story-copy-wrapper {
+                            >.story-lead{
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-arrow {
+            right: 2rem;
+        }
+    }
+}
+
+@media (pointer: coarse) {
+	#storycards {
+		.story-carousel {
+			overflow-x: auto;
+			scrollbar-width: thin;
+		}
+		.story-carousel-wrapper {
+			&::-webkit-scrollbar {
+                height: 6px;
+                border-radius: 4px;
+			}
+		}
+	}
+}

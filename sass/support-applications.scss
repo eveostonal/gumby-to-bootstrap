@@ -1,0 +1,345 @@
+//-------------------------------------------------------------------------//
+//-------------------------------------------------------------------------//
+//                                                                         //
+//    _____                              _____                             //
+//   |  _  |                            |_   _|                            //
+//   | | | |_ __ __ _ _ __   __ _  ___    | | ___                          //
+//   | | | | '__/ _` | '_ \ / _` |/ _ \   | |/ __|                         //
+//   \ \_/ / | | (_| | | | | (_| |  __/  _| |\__ \                         //
+//    \___/|_|  \__,_|_| |_|\__, |\___|  \___/___/                         //
+//                           __/ |                                         //
+//                          |___/                                          //
+//    _____ _            _   _                                             //
+//   |_   _| |          | \ | |                                            //
+//     | | | |__   ___  |  \| | _____      __                              //
+//     | | | '_ \ / _ \ | . ` |/ _ \ \ /\ / /                              //
+//     | | | | | |  __/ | |\  |  __/\ V  V /                               //
+//     \_/ |_| |_|\___| \_| \_/\___| \_/\_/                                //
+//                                                                         //
+//                                                                         //
+//   ______ _                                                              //
+//   | ___ \ |                                                             //
+//   | |_/ / |_   _  ___                                                   //
+//   | ___ \ | | | |/ _ \                                                  //
+//   | |_/ / | |_| |  __/                                                  //
+//   \____/|_|\__,_|\___|                                                  //
+//                                                                         //
+//                                                                         //
+//-------------------------------------------------------------------------//
+//-------------------------------------------------------------------------//
+//                                                                         //
+// File: support-applicaitons.scss                                         //
+// Version: 2.0 (Post Merger)                                              //
+// Project: IGT.com - Orange is the New Blue -- Support Applications       //
+// Project Authors: Scott Patterson (SP) and Brent Wuest (BW)              //
+//                                                                         //
+//-------------------------------------------------------------------------//
+//-------------------------------------------------------------------------//
+
+@charset "UTF-8";
+
+// Import Core Framework
+@import "core-framework-external";
+
+// Overrides
+@import 'overrides/_g2b_mixins';
+@import 'overrides/_g2b_grid';
+
+// Header/Footer
+@import "partials/03_sub_pages/_sub_page_masthead";
+@import "partials/03_sub_pages/_sub_page_footer";
+@import "partials/01_navigation_header_footer/_sub_nav";
+
+// Extensions (all) - Sub-Pages
+@import "extensions/_sub_page_extends";
+
+// Partials - Sub-Pages
+@import "partials/04_support_applications/_support_applications_global",
+        "partials/04_support_applications/_service_tickets",
+        "partials/03_sub_pages/_sub_page_global";
+
+// Partials - Sub-Pages
+@import "partials/03_sub_pages/_03_sub_page_global_background_color";
+@import "partials/03_sub_pages/_05_sub_page_global_text_size";
+@import "partials/03_sub_pages/_06_sub_page_global_text_color";
+@import "partials/03_sub_pages/_15_sub_page_global_breadcrumbs";
+@import "partials/03_sub_pages/_18_sub_page_global_bs_margin";
+@import "partials/03_sub_pages/_21_sub_page_global_footer";
+@import "partials/03_sub_pages/_28_sub_page_global_fixes";
+
+// Partials/Extensions - Tables
+@import "extensions/footable/_footable_core";
+
+// Widgets
+@import "partials/03_sub_pages/_sub_page_accordion";
+
+// Program Search
+@import "partials/06_custom_apps/_program_search",
+        "partials/06_custom_apps/_global_alerts";
+//        "partials/06_custom_apps/_dialogs_loaders";
+
+// Browser Hacks -- This is only for go live - will want to move these fixes into the other partials...
+@import "partials/03_sub_pages/_sitecore_fixes";
+
+
+.persistant_controls {
+	header {
+		.logo { z-index: 675; } //650 when search field (mobile) is included.
+	}
+}
+
+.content {
+  .subpage_subhead {
+    /* padding: 75px 125px 25px 0; */
+    padding-top: 3rem;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      /* padding: 10px 125px 10px 0; */
+    }
+
+    /* .medium.btn {
+      position: absolute;
+      top: 83px;
+      right: 0;
+
+      @include media-breakpoint-down(sm) {
+        top: 10px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+      }
+    } */
+  }
+}
+
+//--- Paging
+
+.pagination_1,
+.pagination_2 {
+  li {
+    border: 0;
+    margin: 0 0 0 3px;
+    padding: 0;
+    list-style: none;
+    float: left;
+    font-weight: bold;
+  }
+
+  .pagi_previous,
+  .pagi_previous_off {
+    margin: 0 10px 0 0;
+  }
+
+  .pagi_next,
+  .pagi_next_off {
+    margin: 0 0 0 10px;
+  }
+
+  .pagi_previous_off a,
+  .pagi_previous_off a:hover {
+    color: $IGTLightGrey;
+    text-decoration: none;
+    cursor: default;
+  }
+
+  .pagi_next_off a,
+  .pagi_next_off a:hover {
+    color: $IGTLightGrey;
+    text-decoration: none;
+    cursor: default;
+  }
+
+  .pagi_active a,
+  .pagi_active a:hover {
+    color: $IGTBlue;
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
+//-- Parts
+
+#rbFulfillmentoption1,
+#rbFulfillmentoption2 {
+  input {
+    -webkit-appearance: radio;
+    width: auto;
+    margin: 0 5px 0 0;
+    max-width: none;
+    display: inline-block;
+  }
+
+  label { display: inline-block; }
+}
+
+.ul_results {
+  margin: 20px 0 80px 0;
+
+  li {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 16px;
+
+    .search_title {
+      display: block;
+    }
+
+    .search_link {
+      display: block;
+      color: $IGTBlue;
+      font-size: 10px;
+    }
+  }
+}
+
+/* -----> Modal Window <---------------------------------------------------------- */
+/*----- JQuery Window (AJAX (GAMES) MODAL USES SAME CLASSES FOR CONSISTANCY) -----*/
+
+#main_content > .modal_preview { height: 340px; }
+
+.ui-widget-overlay,
+.modal_popup {
+  background: $black;
+  opacity: .90;
+  filter:Alpha(Opacity=80);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_content .defaultForm { background: $white; }
+
+.ui-widget-content,
+.modal_content {
+  border: none;
+  background: none;
+  color: #444;
+  overflow-x: none;
+  overflow-y: auto;
+  padding: 10px 10px 0 10px;
+}
+
+.ui-widget-header,
+.modal_header {
+  //background: #1a4fb5;
+  color: $white;
+  font-family: Frank-Medium, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  clear: both;
+  padding: 10px;
+}
+
+.ui-widget-header a { color: $white; }
+.ui-widget-content a { color: #126cab; }
+
+.ui-widget-content a.button { color: $white !important; }
+
+.ui-dialog {
+  position: absolute;
+  padding: 0px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.ui-state-default .ui-icon,
+.ui-dialog a.ui-dialog-titlebar-close,
+.ui-dialog input.ui-dialog-titlebar-close,
+.ui-dialog-titlebar_yt .ui-dialog-titlebar-close {
+  background: url(../images/background_modal_close.png) 0 0 !important;
+  outline-color: transparent;
+  outline-style: none;
+  width: 13px !important;
+  height: 13px !important;
+  float: right;
+  text-indent: -999999px;
+  -webkit-appearance: none;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0 !important;
+  position: relative;
+  background: none !important;
+  font-size: 16px !important;
+  height: 30px !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover,
+.ui-dialog .ui-dialog-titlebar-close:focus
+.ui-dialog input.ui-dialog-titlebar-close:hover,
+.ui-dialog input.ui-dialog-titlebar-close:focus {
+  padding: 0;
+}
+
+.ui-dialog-pretext { padding: 20px 20px 5px 20px !important; }
+
+.ui-dialog-terms {
+  margin: 0 20px;
+  padding: 10px 0;
+  background: #f9f9f9;
+  border: solid #e9e9e9;
+  border-width: 1px 0;
+  overflow-y: scroll !important;
+}
+
+.ui-dialog-acceptance { padding: 20px; }
+
+.ui-widget-content {
+  background: none !important;
+  overflow: hidden;
+}
+
+.ui-dialog-content { background: $white !important; }
+
+.ui-dialog-titlebar_yt .ui-dialog-titlebar,
+.ui-widget-content.ui-dialog-titlebar_yt,
+.ui-dialog-titlebar_yt .ui-dialog-content { background: none !important; }
+
+.ui-dialog-container { background: $white; }
+
+/* -----> Autocomplete <---------------------------------------------------------- */
+
+.ui-widget-content.ui-autocomplete {
+  overflow-y: scroll;
+  background: $white !important;
+  height: 300px;
+  padding: 0;
+  border: 1px solid lighten($IGTLightGreyMedDark, 40%);
+  
+  .ui-menu-item {
+    padding: 0;
+    line-height: 18px;
+    background: $white;
+    
+    div,
+    a {
+      padding: 5px;
+      line-height: 18px;
+      
+      &.ui-state-active,
+      &.ui-state-focus {
+      	border: none;
+        background: $IGTMediumBlue;
+        font-weight: normal;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// --- support form adjustments
+
+#recaptcha {
+	margin-bottom: 10px;	
+}
+
+.gdpr {
+	margin-bottom: 30px;
+}
+
+/* Aug 17 2023 */

@@ -10,10 +10,17 @@
 }
 
 .main_wrapper {
-	// [position:absolute;] needs to be removed from .main_wrapper
-  // position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+body:not([data-index="home"]){
+  .container-main-footer{
+    padding-top: 3rem !important;
+    >div{
+      margin-top: 1.5rem !important;
+    }
+  }
 }

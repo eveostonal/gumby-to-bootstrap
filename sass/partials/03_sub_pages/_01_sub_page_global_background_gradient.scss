@@ -1,0 +1,131 @@
+/* GRADIENT START */ 
+
+.gradient-lightblue,
+.bg-gradient-lightblue {
+    background: $IGTLightBlue;
+    background: -moz-linear-gradient(45deg, $IGTLightBlue 0%, $IGTMediumBlue 100%);
+    background: -webkit-linear-gradient(45deg, $IGTLightBlue 0%, $IGTMediumBlue 100%);
+    background: linear-gradient(45deg, $IGTLightBlue 0%, $IGTMediumBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTLightBlue", endColorstr="$IGTMediumBlue", GradientType=1);
+    color: $IGTDarkBlue;
+}
+
+.bg-gradient-lightblue-to-blue {
+    background: $IGTLightBlue;
+    background: -moz-linear-gradient(45deg, $IGTLightBlue 0%, $IGTBlue 100%);
+    background: -webkit-linear-gradient(45deg, $IGTLightBlue 0%, $IGTBlue 100%);
+    background: linear-gradient(45deg, $IGTLightBlue 0%, $IGTBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTLightBlue", endColorstr="$IGTBlue", GradientType=1);
+    color: $white;
+}
+
+.bg-gradient-mediumblue {
+    background: $IGTMediumBlue;
+    background: -moz-linear-gradient(45deg, $IGTMediumBlue 0%, $IGTBlue 100%);
+    background: -webkit-linear-gradient(45deg, $IGTMediumBlue 0%, $IGTBlue 100%);
+    background: linear-gradient(45deg, $IGTMediumBlue 0%, $IGTBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTMediumBlue", endColorstr="$IGTBlue", GradientType=1);
+    color: $white;
+}
+
+.bg-gradient-mediumblue-to-darkblue {
+    background: $IGTMediumBlue;
+    background: -moz-linear-gradient(45deg, $IGTMediumBlue 0%, $IGTDarkBlue 100%);
+    background: -webkit-linear-gradient(45deg, $IGTMediumBlue 0%, $IGTDarkBlue 100%);
+    background: linear-gradient(45deg, $IGTMediumBlue 0%, $IGTDarkBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTMediumBlue", endColorstr="$IGTDarkBlue", GradientType=1);
+    color: $white;
+}
+
+.gradient-blue,
+.bg-gradient-blue {
+    background: $IGTBlue;
+    background: -moz-linear-gradient(45deg, $IGTBlue 0%, $IGTDarkBlue 100%);
+    background: -webkit-linear-gradient(45deg, $IGTBlue 0%, $IGTDarkBlue 100%);
+    background: linear-gradient(45deg, $IGTBlue 0%, $IGTDarkBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTBlue", endColorstr="$IGTDarkBlue", GradientType=1);
+    color: $white;
+}
+
+.gradient-yellow,
+.bg-gradient-yellow {
+    background: $IGTYellow;
+    background: -moz-linear-gradient(45deg, $IGTYellow 0%, $IGTDarkYellow 100%);
+    background: -webkit-linear-gradient(45deg, $IGTYellow 0%, $IGTDarkYellow 100%);
+    background: linear-gradient(45deg, $IGTYellow 0%, $IGTDarkYellow 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTYellow", endColorstr="$IGTDarkYellow", GradientType=1);
+    color: $black;
+}
+
+.bg-gradient-yellow-to-orange {
+    background: $IGTYellow;
+    background: -moz-linear-gradient(45deg, $IGTYellow 0%, $IGTOrange 100%);
+    background: -webkit-linear-gradient(45deg, $IGTYellow 0%, $IGTOrange 100%);
+    background: linear-gradient(45deg, $IGTYellow 0%, $IGTOrange 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTYellow", endColorstr="$IGTOrange", GradientType=1);
+    color: $black;
+}
+
+.bg-gradient-darkyellow {
+    background: $IGTDarkYellow;
+    background: -moz-linear-gradient(45deg, $IGTDarkYellow 0%, $IGTOrange 100%);
+    background: -webkit-linear-gradient(45deg, $IGTDarkYellow 0%, $IGTOrange 100%);
+    background: linear-gradient(45deg, $IGTDarkYellow 0%, $IGTOrange 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTDarkYellow", endColorstr="$IGTOrange", GradientType=1);
+    color: $black;
+}
+
+.bg-gradient-darkyellow-to-darkorange {
+    background: $IGTDarkYellow;
+    background: -moz-linear-gradient(45deg, $IGTDarkYellow 0%, $IGTDarkOrange 100%);
+    background: -webkit-linear-gradient(45deg, $IGTDarkYellow 0%, $IGTDarkOrange 100%);
+    background: linear-gradient(45deg, $IGTDarkYellow 0%, $IGTDarkOrange 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTDarkYellow", endColorstr="$IGTDarkOrange", GradientType=1);
+    color: $white;
+}
+
+.gradient-orange,
+.bg-gradient-orange {
+    background: $IGTOrange;
+    background: -moz-linear-gradient(45deg, $IGTOrange 0%, $IGTDarkOrange 100%);
+    background: -webkit-linear-gradient(45deg, $IGTOrange 0%, $IGTDarkOrange 100%);
+    background: linear-gradient(45deg, $IGTOrange 0%, $IGTDarkOrange 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffa300", endColorstr="#ff671f", GradientType=1);
+    color: $white;
+}
+
+.gradient-blue-hover:hover {
+    background: rgb(0, 87, 184);
+    background: -moz-linear-gradient(135deg, rgba(0, 87, 184, 1) 0%, rgba(2, 61, 115, 1) 75%);
+    background: -webkit-linear-gradient(135deg, rgba(0, 87, 184, 1) 0%, rgba(2, 61, 115, 1) 75%);
+    background: linear-gradient(135deg, rgba(0, 87, 184, 1) 0%, rgba(2, 61, 115, 1) 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0057b8", endColorstr="#023d73", GradientType=1);
+}
+
+.gradient-igt-blue,
+.bg-gradient-igt-blue {
+    background: $IGTBlue;
+    background: radial-gradient(circle, $IGTMediumBlue 0%, $IGTBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$IGTMediumBlue", endColorstr="$IGTBlue", GradientType=1);
+    color: $white;
+}
+
+.gradient-playdigital-mediumblue,
+.bg-gradient-playdigital-mediumblue {
+    background: $PlayDigitalMediumBlue;
+    background: -moz-linear-gradient(45deg, $PlayDigitalMediumBlue 0%, $PlayDigitalBlue 100%);
+    background: -webkit-linear-gradient(45deg, $PlayDigitalMediumBlue 0%, $PlayDigitalBlue 100%);
+    background: linear-gradient(45deg, $PlayDigitalMediumBlue 0%, $PlayDigitalMediumBlue 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$PlayDigitalMediumBlue", endColorstr="$PlayDigitalBlue", GradientType=1);
+    color: $white;
+}
+
+.gradient-playdigital-orange,
+.bg-gradient-playdigital-orange {
+    background: $PlayDigitalOrange;
+    background: -moz-linear-gradient(45deg, $PlayDigitalOrange 0%, $PlayDigitalDarkOrange 100%);
+    background: -webkit-linear-gradient(45deg, $PlayDigitalOrange 0%, $PlayDigitalDarkOrange 100%);
+    background: linear-gradient(45deg, $PlayDigitalOrange 0%, $PlayDigitalDarkOrange 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$PlayDigitalOrange", endColorstr="$PlayDigitalDarkOrange", GradientType=1);
+    color: $white;
+}

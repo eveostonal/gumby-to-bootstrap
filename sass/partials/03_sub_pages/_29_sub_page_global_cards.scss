@@ -1,0 +1,21 @@
+/* Overlay Styles on Hover */
+.card[data-card-structured-onhover="Slide Up on Hover"] {
+	position: relative;
+	overflow: hidden;
+	background: transparent;
+	.card-img-overlay {
+		background: rgba(0,0,0,0);
+		position: absolute;
+		width: 100%;
+		top: 200%;
+		-moz-transition: all 0.8s ease;
+		-o-transition: all 0.8s ease;
+		-webkit-transition: all 0.8s ease;
+	}
+	&:hover {
+		.card-img-overlay {
+			background: rgba(0,0,0,.85);
+			top: 0;
+		}
+	}
+}

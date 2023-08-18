@@ -14,7 +14,7 @@ footer .row,
 	}
 }
 footer {
-	background: #0c51a1;
+	background: #0252b2;
 	
 	.row {
 		.footer_top {
@@ -36,7 +36,7 @@ footer {
 						color: #fff;
 						text-decoration: none;
 						&:hover {
-							color: #8dc8e8;
+							color: $IGTLightBlue;
 						}
 					}
 				}
@@ -126,7 +126,7 @@ footer {
 	}
 }
 #ir_footer {
-	background: #0c51a1;
+	background: $IGTBlue;
 	padding: 70px 0;
 	.row {
 		.footer_top {
@@ -238,7 +238,7 @@ footer {
 	}
 }
 [data-target="footer"] {
-	background: #0c51a1;
+	background: $IGTBlue;
 	padding: 70px 0;
 	.row {
 		.footer_top {

@@ -23,6 +23,7 @@ span.btn.medium.defualt{
     @extend .btn-primary;
     background-color: $IGTDarkOrange;
     border-color: $IGTDarkOrange; 
+    border-radius: 4px!important;
 }
 
 span.btn.medium.default:hover,
@@ -32,6 +33,7 @@ span.btn.medium.defualt:hover{
     @extend .btn-primary;
     background-color: $IGTDarkBlue;
     border-color: $IGTDarkBlue; 
+    color: $white;
 }
 
 span.btn.medium.default>a,
@@ -40,20 +42,24 @@ span.btn.medium.defualt>a{
     color: white;
 } 
 
-span.btn.medium.secondary{
+span.btn.medium.secondary,
+p.medium.secondary.btn{
     @extend .btn;
     @extend .btn-secondary;
     background-color: $IGTMediumBlue;
     border-color: $IGTMediumBlue;
+    color: white!important;
+    border-radius: 4px!important;
 }
 
+p.medium.secondary.btn>a,
 span.btn.medium.secondary>a{
-    color: white;
+    color: white!important;
 }
 
 a.btn.btn-light.btn-sm{
     @extend .btn;
-    @extend .btn-light;
+    @extend .btn-outline-light;
 }
 
 img{
@@ -62,4 +68,62 @@ img{
 
 .row_full{
     @extend .row;
+}
+
+/* .example-content-main {
+    @include make-col-ready();
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+  }
+  
+  .example-content-secondary {
+    @include make-col-ready();
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+}
+
+.col-md-8half {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+        @include make-col(8.5);
+    }
+}
+
+.col-md-3half {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+        @include make-col(3.5);
+    }
+} */
+
+.sub_nav_container.clearfix.full_header_content>.sub_nav>ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.sub_nav_container.clearfix.full_header_content>.sub_nav>ul>li>ul{
+    @extend .breadcrumb;
+}
+
+.sub_nav_container.clearfix.full_header_content>.sub_nav>ul>li>ul>li{
+    @extend .breadcrumb-item;
+    font-family: $font-verlag;
+    font-size: 14px;
+}
+
+.sub_nav_container.clearfix.full_header_content .sub_nav ul li ul li:after{
+    content: "";
 }

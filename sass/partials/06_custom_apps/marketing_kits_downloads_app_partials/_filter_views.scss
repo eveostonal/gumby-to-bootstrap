@@ -22,7 +22,7 @@
   margin-bottom: 60px;
 
   @media only screen and (max-width: 1100px) {
-    width: 785px !important;
+    /* width: 785px !important; */
   }
 
   .catalog_item {
@@ -46,16 +46,23 @@
   margin: 0;
 
   .element:hover {
-    background: url('../images/in_cart_background_235px.png') repeat-y;
+    //background: url('../images/in_cart_background_235px.png') repeat-y;
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .09) !important;
+    background: #f9f9f9;
+    border: 1px solid #eaeaea;
   }
 
   // grid
   .element.in_cart:hover {
-    background: url('../images/in_cart_background_235px.png') repeat-y;
+    //background: url('../images/in_cart_background_235px.png') repeat-y;
+    background: #ececec;
   }
 
   .element.in_cart {
-    background: url('../images/in_cart_background_235px.png') repeat-y;
+    //background: url('../images/in_cart_background_235px.png') repeat-y;
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .09) !important;
+    background: #f9f9f9;
+    border: 1px solid #eaeaea;
   }
 
   // rows
@@ -65,6 +72,20 @@
 
   .element.in_cart.large {
     background: #f4f4f4;
+  }
+}
+
+.isotope_container.cart{
+  a.remove.in_cart{
+    background: #b3b3b3!important;
+    color: #333f48;
+    display: inline-block!important;
+    width: unset!important;
+    padding: .35rem .75rem;
+    border-radius: 2px;
+  }
+  a.remove.in_cart:hover{
+    opacity: .85;
   }
 }
 
@@ -83,92 +104,38 @@
   @extend %animate_1;
   position: relative;
   //width: 235px;
-  width: 260px;
-  height: 205px;
+  width: 18.5%;
+  height: 350px;
   border: none;
-  border-top: 2px solid $white;
+  //border-top: 2px solid $white;
   color: $IGTLightGreyMed;
   text-align: center;
   cursor: pointer;
+  margin: .75%;
+  border-radius: 2px;
+//  border: 1px solid red;
 
-  .element_button {
-    position: relative;
-    top: 160px;
-    display: block;
+  // UNDO UPTO HERE 
 
-    a.btn {
-      margin: 0;
-      width: auto;
-      height: auto;
-      font-size: 12px;
-      line-height: 28px;
-
-      i.fa {
-        margin: 6px;
-        font-size: 14px;
-        color: $white;
-      }
-
-      span {
-        color: $white;
-        margin: 6px 6px 6px 0;
-      }
-
-      span:after {
-        content: "Add to Cart";
-      }
-    }
-
-    a.in_cart {
-      background-color: $IGTLightGreyMed;
-
-      span:after {
-        content: "Go to Cart";
-      }
-    }
-
-// --------------------------------------------------------------- Cart Button states
-
-    a.remove {
-      @extend %animate_1;
-      display: none;
-      margin: 0 0 0 10px;
-      width: auto;
-      font-size: 11px;
-      color: #126cab;
-      background-color: transparent;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    a.remove.in_cart {
-      @extend %animate_1;
-      display: inline-block;
-      margin: 0 0 0 10px;
-      width: auto;
-      font-size: 11px;
-      color: #126cab;
-      background-color: transparent;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  @media only screen and (max-width: 1199px) {
+    /* width: 785px !important; */
+    width: 23.5%;
+    margin: .75%;
+    height: 350px;
   }
+
 
   .element_image {
     position: relative;
-    top: -4px;
+    //top: -4px;
     margin: auto;
-    width: 100px;
-    height: 100px;
+    //width: 200px;
+    //height: 200px;
     text-align: center;
 
     img {
-      width: 100px;
-      height: 100px;
+      //width: 200px;
+      //height: 200px;
     }
   }
 
@@ -212,203 +179,60 @@
 
     }
   }
+
+  a.remove{
+    display: none!important;
+  }
+
+  a.remove.in_cart{
+    display: block!important;
+  }
+
+} 
+
+/* .element.large{
+  width: 100%!important;
+  display: flex!important;
+  flex: column!important;
+  margin: 0 0 0 0!important;
+  height: unset!important;
+  align-items: center;
+
+    .element_image{
+      width: 12%!important;
+      border-right: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .element_description{
+      width: 80%!important;
+      text-align: left!important;
+      text-align: start!important;
+
+        .description_file_name{
+          font-size: 18px;
+          text-overflow: unset!important;
+          with: unset!important;
+          overflow: unset!important;
+          margin: unset!important;
+          padding: 1rem; 
+        }
+    }
+    
+    .element_button{
+      width: 18%;
+    }
+} */
+
+.isotope-item.shadow-sm.element.large:not(.in_cart){
+  display: none!important;
 }
 
 // --------------------------------------------------------------- ROW VIEW -- Large
 
-.element.large {
-  width: 100%;
-  height: 160px;
-  border-bottom: 1px solid #ddd;
-  background: none;
-  text-align: left;
-  cursor: pointer;
 
-  .element_button {
-    position: relative;
-    top: 52px;
-    display: block;
-    float: left;
-    margin: 0 40px 0 40px;
-    width: 120px;
-    height: 37px;
-    text-align: center;
 
-    a.btn {
-      position: relative;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      width: 100%;
-      height: 40px;
-      font-size: inherit;
-      line-height: 40px;
 
-      i.fa {
-        display: inline-block;
-        margin: 7px 0 0 5px;
-        width: 28px;
-        text-align: left;
-        font-size: 24px;
-        color: $white;
-      }
 
-      span {
-        position: relative;
-        top: -2px;
-        color: $white;
-      }
-
-      span:after {
-        content: "Add to Cart";
-      }
-
-      &.in_cart span:after {
-        content: "Go to Cart";
-      }
-
-      &.remove {
-        display: none;
-      }
-    }
-
-    a.btn.in_cart {
-      //display: none;
-
-      span:after {
-        content: "Go to Cart";
-      }
-    }
-
-    a.in_cart.remove {
-      display: block;
-      margin: 10px 0 0 0;
-      width: auto;
-      height: 15px;
-      font-size: 11px;
-
-      i.fa {
-        font-size: 12px;
-      }
-    }
-  }
-
-  .element_image {
-    top: auto;
-    float: left;
-    margin: 20px 40px 0 0;
-    width: 120px;
-    height: 120px;
-    text-align: center;
-
-    img {
-      width: 120px;
-      height: 120px;
-    }
-  }
-
-  .element_description {
-    top: auto;
-    float: left;
-    margin-top: 20px;
-    width: 540px;
-    height: 130px;
-    color: $IGTLightGreyMed;
-    text-align: left;
-
-    @include media-breakpoint-down(lg){
-      width: auto;
-    }
-
-    @include media-breakpoint-down(lg){
-      width: auto;
-    }
-
-    .description_title {
-      display: block;
-      color: $IGTLightGreyMed;
-      font-family: $font-family;
-    }
-
-    .description_screen_name {
-      display: block;
-      color: $IGTLightGreyMed;
-    }
-
-    .description_lang {
-      display: block;
-      color: $IGTLightGreyMed;
-      font-size: 12px;
-    }
-
-    .description_file_name {
-      display: block;
-      width: auto;
-      color: $IGTLightGreyMed;
-      text-align: left;
-      text-overflow: inherit;
-      font-size: 11px;
-      font-family: $font-family;
-    }
-
-    .description_file_dimensions,
-    .description_file_size {
-      display: block;
-      float: left;
-      color: $IGTBackgroundGrey;
-      font-size: 10px;
-    }
-
-    .description_file_size {
-      padding: 0 10px 0 0;
-      //display: none;
-    }
-  }
-}
-
-// --------------------------------------------------------------- Add Hover while in Media Downloads - 4th Column only
-
-.in_cart:nth-child(4n+4) {
-  background: #f4f4f4;
-}
-
-.in_cart:nth-child(4n+4) {
-  background: #f4f4f4;
-}
-
-// --------------------------------------------------------------- Kill Hover while in Cart
-
-.cart {
-  margin: 0;
-
-  .in_cart.large:hover {
-    background: none !important;
-  }
-
-  .in_cart.large {
-    background: none !important;
-  }
-
-// ----- Over-ride height while in the cart
-
-  .in_cart {
-    //height: 140px;
-
-    .element_button {
-      //top: 50px
-    }
-
-    .element_image {
-     //margin: 10px 40px 0 0
-    }
-
-    .element_description {
-      //margin-top: 10px
-    }
-  }
-}
 
 // --------------------------------------------------------------- might need to place elsewhere ....?
 
@@ -481,7 +305,7 @@
     float: right;
 
     a {
-      padding: 0 8px 0 8px;
+      /* padding: 0 8px 0 8px; */
       color: $white;
 
       .cta {
@@ -676,3 +500,7 @@
 	behavior: url(http://media.igt.com/pollyfills/PIE.htc);
 }
 
+a.selected.items_as_grid_button.active,
+a.items_as_list_button.active{
+    color: #ccc;
+}

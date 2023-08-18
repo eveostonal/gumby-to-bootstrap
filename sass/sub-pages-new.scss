@@ -48,8 +48,8 @@
 
 
 // Header/Footer
-@import "partials/01_navigation_header_footer/_header_new",
-		"partials/01_navigation_header_footer/_footer_new";
+@import "partials/03_sub_pages/_sub_page_masthead";
+@import "partials/03_sub_pages/_sub_page_footer";
 
 
 // Extensions (all) - Sub-Pages -- Not loaded in compiled CSS	
@@ -58,9 +58,11 @@
 
 // Partials - Sub-Pages
 @import "partials/03_sub_pages/_sub_page_global";
-@import "partials/03_sub_pages/_sub_page_global_convert"; 
+// @import "partials/03_sub_pages/_sub_page_global_convert"; 
 
-/* @import "partials/03_sub_pages/_01_sub_page_global_background_gradient";
+@import "partials/03_sub_pages/_05_sub_page_global_text_size";
+@import "partials/03_sub_pages/_06_sub_page_global_text_color";
+@import "partials/03_sub_pages/_01_sub_page_global_background_gradient";
 @import "partials/03_sub_pages/_02_sub_page_global_legacy_gumbytobs";
 @import "partials/03_sub_pages/_03_sub_page_global_background_color";
 @import "partials/03_sub_pages/_04_sub_page_global_buttons_cards";
@@ -87,7 +89,8 @@
 @import "partials/03_sub_pages/_25_sub_page_global_banner";
 @import "partials/03_sub_pages/_26_sub_page_global_magicscroll";
 @import "partials/03_sub_pages/_27_sub_page_global_story_cards";
-@import "partials/03_sub_pages/_28_sub_page_global_fixes"; */
+@import "partials/03_sub_pages/_28_sub_page_global_fixes";
+@import "partials/03_sub_pages/_29_sub_page_global_cards.scss";
 
 @import "fonts";
 
@@ -100,12 +103,8 @@
 // CHOSEN
 @import "partials/08_vendors/_chosen";
 
+/* Exp Ed Fix */
+#scPageExtendersForm{height: 0!important; overflow: hidden!important}
 
-/* Remove after new meganav pushed live */
-/* nav.igt-breadcrumb{
-	position: unset!important; 
-}
 
-.persistant_controls + .position-absolute {
-    position: static!important;
-} */
+/* Aug 9 11:50pm */
