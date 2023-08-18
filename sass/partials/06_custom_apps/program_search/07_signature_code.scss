@@ -160,10 +160,19 @@
 .signature_cell_d,
 .signature_cell_e {
   padding: 2px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .signature_cell_f {
   padding: 2px 0 2px 5px;
   text-align: left;
+}
+
+
+/* 2023 */
+[aria-describedby="psInstallProgramSignatureCodeDialog"]{
+  min-width: 75%!important;
+  left: 0!important;
+  right: 0!important;
+  margin: 0 auto!important;
 }

@@ -1,0 +1,38 @@
+blockquote p:first-child {
+    position: relative;
+}
+
+blockquote p:first-child:before {
+    content: "\f10d";
+    font-family: "FontAwesome", serif;
+    font-size: 40px;
+    color: $black;
+    text-align: center;
+    line-height: 48px;
+    padding-right: .5rem;
+    float: left;
+}
+
+blockquote.quote-blue p:first-child:before {
+    color: $IGTBlue;
+}
+
+blockquote.quote-mediumblue p:first-child:before {
+    color: $IGTMediumBlue;
+}
+
+blockquote.quote-lightblue p:first-child:before {
+    color: $IGTLightBlue;
+}
+
+blockquote.quote-yellow p:first-child:before {
+    color: $IGTYellow;
+}
+
+blockquote.quote-darkyellow p:first-child:before {
+    color: $IGTDarkYellow;
+}
+
+blockquote.quote-darkorange p:first-child:before {
+    color: $IGTDarkOrange;
+}

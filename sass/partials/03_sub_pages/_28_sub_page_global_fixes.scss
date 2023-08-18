@@ -1,0 +1,15 @@
+*:focus-visible {
+    outline: none;
+}
+
+/* AFFIX */
+.affix {
+    position: -webkit-sticky !important;
+    position: sticky;
+    top: 140px;
+    right: 0;
+    z-index: 2;
+    height: calc(100vh - 7rem);
+    overflow-y: unset;
+    margin-bottom: 100px;
+}

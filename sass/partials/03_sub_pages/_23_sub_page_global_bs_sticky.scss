@@ -1,0 +1,23 @@
+@media only screen and (max-width: 767px) {
+    .sticky-top {
+        position: unset !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sticky-top {
+        z-index: 399 !important;
+        top: 122px !important;
+    }
+
+    .sticky-top.sticky-below-meganav {
+        top: 104px !important;
+        z-index: 399 !important;
+    }
+}
+
+
+.sticky-top.sticky-over-meganav {
+    z-index: 1025 !important;
+    top: 0 !important;
+}

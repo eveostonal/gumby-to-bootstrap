@@ -1,0 +1,7 @@
+.accordion-button.bg-darkblue::after,
+.accordion-button.bg-blue::after,
+.accordion-button.bg-mediumblue::after,
+.accordion-button.bg-darkorange::after,
+.accordion-button.bg-orange::after {
+    filter: brightness(1000%);
+}

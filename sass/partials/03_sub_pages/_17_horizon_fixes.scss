@@ -1,0 +1,266 @@
+/* Horizon component border */
+.sc-frame--2M1LL {
+    border: 1px dashed #199edb !important;
+}
+
+[class^="sc-page-element-outline--"] [class^="spd--"] {
+    font-size: 20px;
+}
+
+[class^="sc-page-element-outline--"] [class^="text--"] {
+    font-size: 16px;
+}
+
+[class^="empty-placeholder--"] {
+    background: white !important;
+    border: 1px dashed rgba(0, 0, 0, .5);
+}
+
+span[scwatermark="true"] {
+    opacity: .5;
+    color: #5B6770;
+}
+
+
+/* HORIZON TEST */
+#bannerplaceholder [class^=empty-placeholder--],
+#mainplaceholder [class^=empty-placeholder--],
+#relatedlinksplaceholder [class^=empty-placeholder--] {
+    background: #f5f5f5 !important;
+    padding: 10px;
+}
+
+[class^=empty-placeholder--]::before,
+[class^=empty-placeholder--]::after {
+    display: block;
+    font-size: 11.5px;
+    letter-spacing: 1px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+[class^=empty-placeholder--]::before {
+    letter-spacing: .5px;
+}
+
+[class^=empty-placeholder--]::after {
+    display: block;
+    font-weight: bold;
+    color: #666;
+}
+
+[hintname="Container"]+div>div[class^="container"],
+[hintname="Full Width Container"]+div>div[class^="container-fluid"] {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+[hintname="Container"]+div>div[class^="container"]:before,
+[hintname="Container"]+div>div[class^="container"]:after,
+[hintname^="Row with"]+.row.igt-horizon-edit:before,
+[hintname^="Row with"]+.row.igt-horizon-edit:after,
+[hintname="Full Width Container"]+div>div.container-fluid:hover:before,
+[hintname="Full Width Container"]+div>div.container-fluid.igt-horizon-edit.active-edit:before,
+[hintname="Full Width Container"]+div>div.container-fluid:hover:after,
+[hintname="Full Width Container"]+div>div.container-fluid.igt-horizon-edit.active-edit:after,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit:hover:before,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit:hover:after,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit.active:before,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit.active:after,
+#bannerplaceholder .carousel:hover .carousel-item:before,
+#bannerplaceholder .carousel:hover .carousel-item:after,
+#bannerplaceholder .carousel-item.active-edit:before,
+#bannerplaceholder .carousel-item.active-edit:after {
+    display: block;
+    padding: 6px;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #eaeaea;
+    text-align: center;
+    color: #999;
+    display: block !important;
+    width: 100%;
+}
+
+
+
+#bannerplaceholder [hintname="Banner Carousel"]+.carousel:hover .carousel-item:before,
+#bannerplaceholder [hintname="Banner Carousel"] .carousel:hover .carousel-item:after,
+#bannerplaceholder [hintname="Banner Carousel"] .carousel-item.active-edit:before,
+#bannerplaceholder [hintname="Banner Carousel"] .carousel-item.active-edit:after {
+    content: "Add new content slide here";
+}
+
+#bannerplaceholder>[class^=empty-placeholder--]::after {
+    content: "Drop banner carousel here";
+}
+
+#bannerplaceholder .igt-horizon-edit.carousel>.carousel-inner>[class^=empty-placeholder--]::before {
+    content: "Banner Carousel";
+}
+
+#bannerplaceholder .igt-horizon-edit.carousel>.carousel-inner>[class^=empty-placeholder--]::after {
+    content: "Drop secondary banner slide here";
+}
+
+#mainplaceholder>[class^=empty-placeholder--]::after {
+    content: "Drop container here";
+}
+
+#relatedlinksplaceholder>[class^=empty-placeholder--]::after {
+    content: "Drop related links here";
+}
+
+/*[hintname="Container"] + div>div.container:hover:before,*/
+[hintname="Container"]+div>div.container.igt-horizon-edit.active-edit:before,
+/*hintname="Container"] + div>div.container:hover:after,*/
+[hintname="Container"]+div>div.container.igt-horizon-edit.active-edit:after,
+/*[hintname="Full Width Container"] + div>div.container-fluid:hover:before,*/
+[hintname="Full Width Container"]+div>div.container-fluid.igt-horizon-edit.active-edit:before,
+/*[hintname="Full Width Container"] + div>div.container-fluid:hover:after,*/
+[hintname="Full Width Container"]+div>div.container-fluid.igt-horizon-edit.active-edit:after {
+    content: "Add container here";
+}
+
+/*[hintname^="Row with"] + .row.igt-horizon-edit:hover:before,*/
+[hintname^="Row with"]+.row.igt-horizon-edit.active-edit:before,
+/*[hintname^="Row with"] + .row.igt-horizon-edit:hover:after,*/
+[hintname^="Row with"]+.row.igt-horizon-edit.active-edit:after {
+    content: "Add column template here";
+}
+
+
+[class^="container"]>[class^=empty-placeholder--]::after {
+    content: "Drop column here";
+}
+
+[hintname="Multi Row"]+div.row>[class^=empty-placeholder--]::after {
+    content: "Drop column here";
+}
+
+[class^="col"]>[class^=empty-placeholder--]::after {
+    content: "Drop component here";
+}
+
+
+
+#mainplaceholder .card.igt-horizon-edit>.card-body>[class^=empty-placeholder--]::after {
+    content: "Drop component here";
+}
+
+#mainplaceholder .carousel>.carousel-inner>[class^=empty-placeholder--]::after {
+    content: "Drop content slide here";
+}
+
+#mainplaceholder .carousel>.carousel-inner>.carousel-item>[class^=empty-placeholder--]::after {
+    content: "Drop component on content slide here";
+}
+
+[class="tab-content"]>[class^=empty-placeholder--] {
+    min-width: unset !important;
+}
+
+[class="tab-content"]>[class^=empty-placeholder--]::after {
+    content: "Drop Content Tab/Rich Text Tab here";
+}
+
+.accordion>[class^=empty-placeholder--]::after {
+    content: "Drop accordion item here";
+}
+
+.accordion-body>[class^=empty-placeholder--]::after {
+    content: "Drop column/component here";
+}
+
+.tab-pane.igt-horizon-edit>[class^=empty-placeholder--]::after {
+    content: "Drop component on content tab here";
+}
+
+[hintname="Image"]+.alert.alert-danger,
+[hintname="Video"]+.alert.alert-danger,
+[hintname="Rich Text"]+.alert.alert-danger,
+[hintname="Button"]+.alert.alert-danger,
+[hintname="Heading"]+.alert.alert-danger,
+[hintname="Tab Container"]+.alert.alert-danger,
+[hintname="Standard Card"]+.alert.alert-danger,
+[hintname="Rich Text Accordion Item"]+.alert.alert-danger,
+[hintname="Content Accordion Item"]+.alert.alert-danger,
+[hintname="Content Tab"]+.alert.alert-danger,
+[hintname="Rich Text Tab"]+.alert.alert-danger,
+[hintname="Secondary Banner Slide"]+.carousel-item>.alert.alert-danger {
+    font-size: 14px;
+    background: white;
+    color: #666;
+    border: 1px dashed #999;
+    margin-bottom: 5px !important;
+}
+
+code[hintname="Button"]+a.btn {
+    background: #e1e1e1;
+    min-height: 40px;
+    min-width: 100px;
+}
+
+.carousel.igt-horizon-edit {
+    background: #f9f9f9;
+}
+
+#bannerplaceholder [hintname="Banner Carousel"] .carousel-item.igt-horizon-edit {
+    text-align: center !important;
+}
+
+#bannerplaceholder [hintname="Banner Carousel"] .carousel-item.igt-horizon-edit>img.scEmptyImage {
+    max-width: 200px !important;
+    margin: 5rem !important;
+}
+
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit:hover:before,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit:hover:after,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit.active:before,
+[hintname="Content Slide"]+.carousel-item.igt-horizon-edit.active:after {
+    content: "Add content slide here";
+}
+
+span>div.ql-blank {
+    font-size: 14px;
+    mix-blend-mode: difference;
+}
+
+[hintname="Video"] div.ratio.igt-horizon-edit {
+    background-color: red !important;
+    display: block !important;
+    border: 1px solid red !important;
+}
+
+[hintname="Image"]~img.igt-horizon-edit.scEmptyImage {
+    max-width: unset !important;
+    max-height: unset !important;
+    min-width: unset !important;
+    min-height: unset !important;
+    width: 160px !important;
+    border: 1px solid #e1e1e1 !important;
+    margin-top: 1rem;
+}
+
+[hintname="Tab Container"]+div.d-flex.igt-horizon-edit>div.tab-content {
+    width: 100%;
+}
+
+
+
+/* MODAL Horizon */
+.has-background .modal-content {
+    background: transparent;
+}
+
+.has-background .modal-header {
+    border-color: transparent;
+}
+
+
+/* Remove or Hide Unlinked data sources block */
+.alert.alert-danger.igt-horizon-edit {
+    /* display: none !important;  TEST */ 
+}

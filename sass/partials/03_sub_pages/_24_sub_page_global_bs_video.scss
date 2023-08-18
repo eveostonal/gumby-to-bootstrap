@@ -1,0 +1,24 @@
+/* CUSTOM: Video Banner Ratio */
+.ratio.ratio-banner {
+    padding-bottom: 28.5714286%;
+    margin-bottom: 0 !important;
+}
+
+
+/* Video Ratio */
+.ratio-10x3,
+.ratio-9x16 {
+    --bs-aspect-ratio: 56.25%;
+}
+
+@media only screen and (min-width: 1200px) {
+    .ratio-10x3 {
+        --bs-aspect-ratio: 28.5373134%;
+    }
+
+    .ratio-9x16 {
+        --bs-aspect-ratio: 177.77%;
+    }
+}
+
+.content.scroll_area video{display: block}

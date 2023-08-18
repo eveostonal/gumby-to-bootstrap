@@ -1,0 +1,24 @@
+/* Modal for all YT Embed */
+.embed-container:hover+button.playfs span,
+button.playfs:hover span {
+    display: inline-block !important;
+}
+
+.homepage-footer-banner .video-wrapper button {
+    display: none !important;
+}
+
+.modal.bg-gradient-igt-blue .btn-close,
+.modal.bg-darkorange .btn-close,
+.modal.bg-darkblue .btn-close,
+.modal.bg-blue .btn-close,
+.modal.bg-mediumblue .btn-close,
+.modal.bg-mediumgray .btn-close,
+.modal.bg-darkgray .btn-close,
+.modal.bg-gradient-blue .btn-close,
+.modal.bg-gradient-playdigital-mediumblue .btn-close,
+.modal.bg-gradient-playdigital-orange .btn-close{
+    color: #ffffff!important;
+    opacity: 1!important;
+    filter: invert(1)!important;
+}

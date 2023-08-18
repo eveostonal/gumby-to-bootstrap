@@ -263,10 +263,22 @@ a.expansion_panel_link {
 // --------- Testing Area
 
 .ps-testing {
-  background: lighten($danger-color, 40%);
-  border: 1px solid $danger-color;
-  padding: 20px;
+  /* background: lighten($danger-color, 40%); */
+  border: 1px solid $IGTLightestGrey;
+  /* padding: 2rem; */
   margin: 0 0 30px 0;
+  table{
+    font-size: 16px;
+    border-color: $IGTLightBlue;
+    margin-bottom: 0!important;
+    tbody{
+      tr:first-child{
+        background: $IGTLightBlue;
+        color: $white;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .results_wrapper,
@@ -281,6 +293,8 @@ a.expansion_panel_link {
 		font-style: normal;
 	}
 }
+
+
 
 // -------------- Back Button
 

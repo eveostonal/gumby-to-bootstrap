@@ -43,69 +43,17 @@
 
 
 // Overrides
+/* OVERRIDES */
 @import 'overrides/_g2b_mixins';
 @import 'overrides/_g2b_grid';
 
-
-// Header/Footer
-@import "partials/01_navigation_header_footer/_header_new",
-		"partials/01_navigation_header_footer/_footer_new";
-
-
-// Extensions (all) - Sub-Pages -- Not loaded in compiled CSS	
-@import "extensions/_sub_page_extends";
-
-
-// Partials - Sub-Pages
-@import "partials/03_sub_pages/_sub_page_global";
-@import "partials/03_sub_pages/_sub_page_global_convert"; 
-
-/* @import "partials/03_sub_pages/_01_sub_page_global_background_gradient";
-@import "partials/03_sub_pages/_02_sub_page_global_legacy_gumbytobs";
-@import "partials/03_sub_pages/_03_sub_page_global_background_color";
-@import "partials/03_sub_pages/_04_sub_page_global_buttons_cards";
-@import "partials/03_sub_pages/_05_sub_page_global_text_size";
-@import "partials/03_sub_pages/_06_sub_page_global_text_color";
-@import "partials/03_sub_pages/_07_sub_page_global_heading_style";
-@import "partials/03_sub_pages/_08_sub_page_global_border";
-@import "partials/03_sub_pages/_09_sub_page_global_legacybs_gamesearch";
-@import "partials/03_sub_pages/_10_sub_page_global_forms";
-@import "partials/03_sub_pages/_11_sub_page_global_bs_accordion";
-@import "partials/03_sub_pages/_12_sub_page_global_pagination";
-@import "partials/03_sub_pages/_13_sub_page_global_modal";
-@import "partials/03_sub_pages/_14_sub_page_lottery_blog";
-@import "partials/03_sub_pages/_15_sub_page_global_breadcrumbs";
-@import "partials/03_sub_pages/_16_sub_page_global_image";
-@import "partials/03_sub_pages/_17_horizon_fixes";
-@import "partials/03_sub_pages/_18_sub_page_global_bs_margin";
-@import "partials/03_sub_pages/_19_sub_page_mlp_custom";
-@import "partials/03_sub_pages/_20_sub_page_global_blockquote";
-@import "partials/03_sub_pages/_21_sub_page_global_footer";
-@import "partials/03_sub_pages/_22_sub_page_global_bs_carousel";
-@import "partials/03_sub_pages/_23_sub_page_global_bs_sticky";
-@import "partials/03_sub_pages/_24_sub_page_global_bs_video";
-@import "partials/03_sub_pages/_25_sub_page_global_banner";
-@import "partials/03_sub_pages/_26_sub_page_global_magicscroll";
-@import "partials/03_sub_pages/_27_sub_page_global_story_cards";
-@import "partials/03_sub_pages/_28_sub_page_global_fixes"; */
-
 @import "fonts";
 
-// CUSTOM DESKTOP/MOBILE APPS
-@import "partials/06_custom_apps/_dialogs_loaders",
-		"partials/06_custom_apps/_marketing_kits_downloads_app",
-		"partials/06_custom_apps/_forgot_password",
-		"partials/06_custom_apps/_search_results";
+@import "partials/03_sub_pages/_sub_page_masthead";
+@import "partials/03_sub_pages/_sub_page_footer";
 
-// CHOSEN
-@import "partials/08_vendors/_chosen";
-
-
-/* Remove after new meganav pushed live */
-/* nav.igt-breadcrumb{
-	position: unset!important; 
-}
-
-.persistant_controls + .position-absolute {
-    position: static!important;
+/* .container-xxl>.row,
+.container>.row{
+    max-width: 1320px;
+    margin: 0 auto!important;
 } */

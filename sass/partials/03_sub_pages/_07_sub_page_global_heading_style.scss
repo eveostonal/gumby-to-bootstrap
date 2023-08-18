@@ -1,0 +1,116 @@
+.section-header h2,
+.section-header h3,
+.section-header h4,
+.section-header h5,
+.section-header h6 {
+    display: inline-block;
+    position: relative;
+    font-size: 14px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: white;
+    color: $IGTLightBlue;
+    border: 1px solid $IGTLightBlue;
+    margin: 0;
+    padding: .5rem .5rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    z-index: 2;
+}
+
+.section-header::before {
+    display: block;
+    content: "";
+    height: 1px;
+    background: $IGTLightBlue;
+    position: relative;
+    top: 17px;
+    z-index: 1;
+
+}
+
+
+.section-header.section-darkorange::before {
+    background: $IGTDarkOrange
+}
+
+.section-header.section-orange::before {
+    background: $IGTOrange
+}
+
+.section-header.section-darkyellow::before {
+    background: $IGTDarkYellow
+}
+
+.section-header.section-yellow::before {
+    background: $IGTYellow
+}
+
+.section-header.section-darkblue::before {
+    background: $IGTDarkBlue
+}
+
+.section-header.section-blue::before {
+    background: $IGTBlue
+}
+
+.section-header.section-mediumblue::before {
+    background: $IGTMediumBlue
+}
+
+.section-header.section-lightblue::before {
+    background: $IGTLightBlue
+}
+
+
+.bg-lightblue .section-header-title {
+    background-color: $IGTLightBlue !important;
+}
+
+.bg-mediumblue .section-header-title {
+    background-color: $IGTMediumBlue !important;
+}
+
+.bg-blue .section-header-title {
+    background-color: $IGTBlue !important;
+}
+
+.bg-darkblue .section-header-title {
+    background-color: $IGTDarkBlue !important;
+}
+
+.bg-yellow .section-header-title {
+    background-color: $IGTYellow;
+}
+
+.bg-darkyellow .section-header-title {
+    background-color: $IGTDarkYellow !important;
+}
+
+.bg-orange .section-header-title {
+    background-color: $IGTOrange !important;
+}
+
+.bg-darkorange .section-header-title {
+    background-color: $IGTDarkOrange !important;
+}
+
+.bg-darkgrey .section-header-title {
+    background-color: #323F48 !important;
+}
+
+.bg-mediumgrey .section-header-title {
+    background-color: #5B6770 !important;
+}
+
+.bg-lightgrey .section-header-title {
+    background-color: #B3B3B3 !important;
+}
+
+.bg-lightergrey .section-header-title {
+    background-color: #eaeaea !important;
+}
+
+.bg-lighterblue .section-header-title {
+    background-color: #e8f4fa !important;
+}

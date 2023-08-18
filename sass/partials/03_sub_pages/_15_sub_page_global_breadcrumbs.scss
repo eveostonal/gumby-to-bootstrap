@@ -1,0 +1,39 @@
+/* breadcrumbs */
+.breadcrumb-dropdown>li>a {
+    padding-left: .35rem;
+    padding-right: .35rem;
+}
+
+.breadcrumb-dropdown>li+li a {
+    border-top: 1px solid #dee2e5;
+}
+
+/* hide cabinet long list of dropdown 
+
+.breadcrumb-has-child[data-category-name="Promotions"] .breadcrumb-dropdown
+
+*/
+.breadcrumb-has-child[data-category-name="Cabinets"] .breadcrumb-dropdown {
+    display: none !important;
+}
+
+/* .igt-breadcrumb{
+    color: white;
+}
+.breadcrumb-light,
+.breadcrumb-light li:first-child a>span,
+.breadcrumb-light a,
+.breadcrumb-light a>span.d-none.d-lg-inline,
+.breadcrumb-item + .breadcrumb-item::before{
+    color: white!important;
+}
+
+.breadcrumb-light span {
+    color: white!important;
+} */
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}

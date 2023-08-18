@@ -1,0 +1,98 @@
+/* Lottery Blog Blocks */
+.card.blog-card {
+    border-left: 16px solid transparent !important;
+    border-right: 4px solid transparent !important;
+}
+
+.card.blog-card img {
+    border-radius: 0;
+}
+
+.card.Customer.Success,
+.card.Customer.Success .btn {
+    border-color: #FFC629 !important;
+}
+
+.card.Customer.Success .btn-secondary {
+    background-color: #FFC629 !important;
+}
+
+.card.Customer.Success a h2 {
+    color: #FFC629 !important;
+}
+
+.card.Innovation,
+.card.Innovation .btn {
+    border-color: #FF671F !important;
+}
+
+.card.Innovation .btn-secondary {
+    background-color: #FF671F !important;
+}
+
+.card.Innovation a h2 {
+    color: #FF671F !important;
+}
+
+.card.Consumer.Trends,
+.card.Consumer.Trends .btn {
+    border-color: #1B9DDB !important;
+}
+
+.card.Consumer.Trends .btn-secondary {
+    background-color: #1B9DDB !important;
+}
+
+.card.Consumer.Trends a h2 {
+    color: #1B9DDB !important;
+}
+
+.card.Corporate.Leadership {
+    border-color: #0C51A1 !important;
+}
+
+.card.Corporate.Leadership a h2 {
+    color: #0C51A1 !important;
+}
+
+.card.Corporate.Leadership .btn-secondary {
+    background-color: #0C51A1 !important;
+}
+
+
+
+
+/* Lottery Vertical Colored Tab */
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+
+    #v-pills-tabContent.tab-content>.tab-pane,
+    #v-pills-tabContent.tab-content>.active {
+        display: block !important;
+        opacity: 1 !important;
+        height: unset !important;
+    }
+
+
+
+    #v-pills-tabContent.tab-content #acc1 {
+        border: 0;
+        display: block !important;
+    }
+
+    #v-pills-tabContent.tab-content h2.accordion-header,
+    #v-pills-tabContent.tab-content h2.accordion-header>button {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #v-pills-tabContent.tab-content .card.collapse {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #v-pills-tabContent.tab-content>.tab-pane .card h2 {
+        font-size: 34px !important;
+    }
+}

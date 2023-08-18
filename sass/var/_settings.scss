@@ -28,6 +28,8 @@ $date: 5px;
 
 // Typography
 $font-family: "Lato", Arial, Helvetica, sans-serif;
+$font-lato: "Lato", Arial, Helvetica, sans-serif;
+$font-verlag: "Verlag A", "Verlag B", "Verlag", sans-serif !important;
 $font-style-italic: italic;
 $icons: "FontAwesome";
 $font-smoothing: antialiased;
@@ -75,23 +77,31 @@ $tremendous: ms(9);
 $absurd: ms(10);
 
 // IGT Colors from https://brandcentral.igt.com/brand-identity-system
-$IGTLightBlue:        #8DC8E8;
-$IGTMediumBlue:       #1B9DDB;
-$IGTBlue:             #0C51A1;
-$IGTDarkBlue:         #003966;
-$IGTYellow:           #FEDD00;
-$IGTDarkYellow:       #FFC629;
-$IGTOrange:           #FFA300;
-$IGTDarkOrange:       #FF671F;
+$IGTLightBlue:        #8DC7E8;
+$IGTMediumBlue:       #019BE0;
+$IGTBlue:             #0055B9;
+$IGTDarkBlue:         #013965;
+$IGTYellow:           #FEDD01;
+$IGTDarkYellow:       #FEC629;
+$IGTOrange:           #FF9D1A;
+$IGTDarkOrange:       #FF671D;
 
-$IGTDarkGrey:         #323F48;
-$IGTMediumGrey:       #5B6770;
-$IGTLightGrey:        #B3B3B3;
+$IGTDarkGrey:         #334149;
+$IGTMediumGrey:       #5E6770;
+$IGTLightGrey:        #C5C6C8;
 
-
+$PlayDigitalMediumBlue: #019be0;
+$PlayDigitalBlue: #0055b9;
+$PlayDigitalDarkOrange: #ff9d1a;
+$PlayDigitalOrange: #ff671d;
 
 $IGTDarkestOrange:    #d4451d; // Only to be used for the PURE CORE game segmentation
 $IGTLighterBlue:      #e8f4fa; // For homepage Products and Services (EO)
+
+$IGTBlack:            #212121;
+$black:               #000000;
+$white:               #ffffff;
+$IGTTransparent:      transparent;
 
 $IGTLightGreyMedDark: #666666;
 $IGTLightGreyDrk:     #333333;
@@ -100,12 +110,55 @@ $IGTGrey:             #dddddd;
 $IGTLighterGreyAlt:   #e1e1e1;
 $IGTLighterGrey:      #e0e0e0;
 $IGTLightestGrey:     #eaeaea;
-$IGTBackgroundGrey:   #f3f5f6;
-$IGTTransparent:      transparent;
-$black:               #000000;
-$white:               #ffffff;
+$IGTBackgroundGrey:   #f5f5f5;
+
+$IGTRed:              #e74c3c;
+$IGTGreen:            #2ecc71;
 $IGTBrownAlt:    	  #d77804; // Only to be used for the FRUIT GAMES game segmentation
 $IGTDarkGreyAlt:	  #5a6770; // Only to be used for the LINKED CORE game segmentation
+
+// IGT Colors Less
+$IGTLightBlueLess:    #97d4ef;
+$IGTMediumBlueLess:   #33b2e7;
+$IGTBlueLess:         #3374b9;
+$IGTDarkBlueLess:     #336187;
+$IGTYellowLess:       #ffe433;
+$IGTDarkYellowLess:   #ffd133;
+$IGTOrangeLess:       #ffb233;
+$IGTDarkOrangeLess:   #ff7b33;
+
+// IGT Hover Colors
+$IGTLightBlueHover:   #6fb5d3;
+$IGTMediumBlueHover:  #008fca;
+$IGTBlueHover:        #004896;
+$IGTDarkBlueHover:    #00335f;
+$IGTYellowHover:      #e5c600;
+$IGTDarkYellowHover:  #e5b100;
+$IGTOrangeHover:      #e58f00;
+$IGTDarkOrangeHover:  #e55100;
+
+// Transparent Background
+$black-opacity-95: rgba(0, 0, 0, .95);
+$black-opacity-90: rgba(0, 0, 0, .9);
+$black-opacity-85: rgba(0, 0, 0, .85);
+$black-opacity-80: rgba(0, 0, 0, .8);
+$black-opacity-75: rgba(0, 0, 0, .75);
+$black-opacity-70: rgba(0, 0, 0, .7);
+$black-opacity-65: rgba(0, 0, 0, .65);
+$black-opacity-60: rgba(0, 0, 0, .60);
+$black-opacity-55: rgba(0, 0, 0, .55);
+$black-opacity-50: rgba(0, 0, 0, .5);
+$black-opacity-45: rgba(0, 0, 0, .45);
+$black-opacity-40: rgba(0, 0, 0, .4);
+$black-opacity-35: rgba(0, 0, 0, .35);
+$black-opacity-30: rgba(0, 0, 0, .3);
+$black-opacity-25: rgba(0, 0, 0, .25);
+$black-opacity-20: rgba(0, 0, 0, .2);
+$black-opacity-15: rgba(0, 0, 0, .15);
+$black-opacity-10: rgba(0, 0, 0, .1);
+$black-opacity-5: rgba(0, 0, 0, .05);
+
+$white-opacity-30: rgba(255, 255, 255, .3);
 
 // Typography Colors
 $header-font-color:        $IGTBlue !default; //NEW IGT BLUE

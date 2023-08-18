@@ -1,0 +1,266 @@
+/* TEST */
+h1 {
+    color: $IGTDarkOrange
+}
+
+/* darkOrange */
+h2 {
+    color: $IGTBlue
+}
+
+/* blue */
+h3 {
+    color: $IGTBlue
+}
+
+/* mdBlue */
+h4 {
+    color: $IGTBlue
+}
+
+/* darkOrange */
+h5 {
+    color: $IGTMediumBlue
+}
+
+/* orange */
+h6 {
+    color: $IGTDarkBlue
+}
+
+/* orange */
+a {
+    color: $IGTMediumBlue
+}
+
+a:hover {
+    color: $IGTBlue
+}
+
+
+
+
+.bg-lightblue,
+.bg-lightblue2,
+.bg-gradient-lightblue{
+	color: $white;
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+		color: $white;
+	}
+	a {
+		color: $white;
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+			color: $white;
+		}
+		&:hover {
+			color: $white;
+		}
+	}
+}
+a.bg-lightblue,
+a.bg-lightblue2,
+a.bg-gradient-lightblue{
+	color: $IGTBlue!important;}
+
+.bg-mediumblue,
+.bg-blue,
+.bg-darkblue,
+.bg-orange,
+.bg-darkorange,
+.bg-gradient-blue,
+.bg-gradient-orange,
+.bg-gradient-igt-blue,
+.bg-gradient-playdigital-mediumblue,
+.bg-gradient-playdigital-mediumblue,
+.bg-black,
+.bg-darkgray,
+.bg-mediumgray,
+.bg-lightgray{
+	color: $white;
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+		color: $white;
+	}
+	a{
+		color: $white;
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+			color: $white;
+		}
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+a.bg-mediumblue,
+a.bg-blue,
+a.bg-darkblue,
+a.bg-darkorange,
+a.bg-orange,
+a.bg-gradient-blue,
+a.bg-gradient-orange,
+a.bg-gradient-igt-blue,
+a.bg-gradient-playdigital-mediumblue,
+a.bg-gradient-playdigital-mediumblue,
+a.bg-black,
+a.bg-darkgray,
+a.bg-mediumgray,
+a.bg-lightgray{
+	color: $white!important;}
+
+
+.bg-darkyellow,
+.bg-yellow,
+.bg-gradient-yellow, 
+.bg-lightergray,
+.bg-lightestgray,
+.bg-backgroundgray{
+	color: $black;
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+		color: $black;
+	}
+	a {
+		color: $black;
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+			color: $black;
+		}
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+a.bg-darkyellow,
+a.bg-yellow,
+a.bg-gradient-yellow, 
+a.bg-lightergray,
+a.bg-lightestgray,
+a.bg-backgroundgray{
+	color: $black!important;}
+
+.card-img-overlay{	
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+		color: $white;
+	}
+}
+
+
+a {
+    color: $IGTMediumBlue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $IGTBlue
+} 
+
+
+.text-lightblue {
+    color: $IGTLightBlue!important;
+}
+
+.text-mediumblue {
+    color: $IGTMediumBlue!important;
+}
+
+.text-blue {
+    color: $IGTBlue!important;
+}
+
+.text-darkblue {
+    color: $IGTDarkBlue!important;
+}
+
+.text-yellow {
+    color: $IGTYellow!important;
+}
+
+.text-darkyellow {
+    color: $IGTDarkYellow!important;
+}
+
+.text-orange {
+    color: $IGTOrange!important;
+}
+
+.text-darkorange {
+    color: $IGTDarkOrange!important;
+}
+
+.text-darkgrey {
+    color: $IGTDarkGrey!important;
+}
+
+.text-mediumgrey {
+    color: $IGTMediumGrey!important;
+}
+
+.text-lightgrey {
+    color: $IGTLightGrey!important;
+}
+
+.text-lightergrey {
+    color: $IGTLighterGrey!important;
+}
+
+.text-lighterblue {
+    color: $IGTLighterBlue!important;
+}
+
+.text-white {
+    color: $white !important;
+}
+
+.text-lightblue2, 
+.text-lighterblue {
+    color: $IGTLighterBlue !important;
+}
+
+.text-lightergray {
+    color: $IGTLighterGrey !important;
+
+}
+
+.text-lightergray-alt {
+    color: $IGTLighterGreyAlt !important;
+
+}
+
+.text-lightestgray {
+    color: $IGTLightestGrey !important;
+
+}
+
+.text-backgroundgray {
+    color: $IGTBackgroundGrey !important;
+
+}
+
+.text-lightgray-mediumdark{
+    color: $IGTLightGreyMedDark;
+
+}
+
+.text-lightgray-dark{
+    color: $IGTLightGreyDrk;
+
+}
+
+.text-lightgray-medium{
+    color: $IGTLightGreyMed;
+
+}
+
+.text-gray{
+    color: $IGTGrey;
+
+}
+
+.text-red{
+    color: $IGTRed;
+
+}
+
+.text-green{
+    color: $IGTGreen;
+
+}

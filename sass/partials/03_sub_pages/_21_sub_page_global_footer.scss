@@ -1,0 +1,37 @@
+/* FOOTER */
+@media only screen and (max-width: 560px) and (min-width: 319px) {
+    .malta_img {
+        /* max-width: 70px !important; */
+        margin: 0 !important;
+    }
+
+    .malta_small {
+        margin: 10px 0 40px 0 !important;
+    }
+}
+
+#footer_legal_link {
+    cursor: pointer;
+}
+
+#footer_legal_link>i {
+    color: #ff671f;
+}
+
+#footer_legal_link:hover>i {
+    color: #8dc8e8;
+}
+
+#footer_legal_link>i {
+    color: #ff671f;
+}
+
+#footer_legal_link.showLegal>i.fa-angle-down:before {
+    content: "";
+}
+
+.malta_small>a,
+.malta_small>a:hover {
+    color: white;
+    text-decoration: underline;
+}
