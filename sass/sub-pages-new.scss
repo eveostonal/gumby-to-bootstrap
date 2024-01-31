@@ -1,37 +1,15 @@
 //-------------------------------------------------------------------------//
 //-------------------------------------------------------------------------//
 //                                                                         //
-//    _____                              _____                             //
-//   |  _  |                            |_   _|                            //
-//   | | | |_ __ __ _ _ __   __ _  ___    | | ___                          //
-//   | | | | '__/ _` | '_ \ / _` |/ _ \   | |/ __|                         //
-//   \ \_/ / | | (_| | | | | (_| |  __/  _| |\__ \                         //
-//    \___/|_|  \__,_|_| |_|\__, |\___|  \___/___/                         //
-//                           __/ |                                         //
-//                          |___/                                          //
-//    _____ _            _   _                                             //
-//   |_   _| |          | \ | |                                            //
-//     | | | |__   ___  |  \| | _____      __                              //
-//     | | | '_ \ / _ \ | . ` |/ _ \ \ /\ / /                              //
-//     | | | | | |  __/ | |\  |  __/\ V  V /                               //
-//     \_/ |_| |_|\___| \_| \_/\___| \_/\_/                                //
-//                                                                         //
-//                                                                         //
-//   ______ _                                                              //
-//   | ___ \ |                                                             //
-//   | |_/ / |_   _  ___                                                   //
-//   | ___ \ | | | |/ _ \                                                  //
-//   | |_/ / | |_| |  __/                                                  //
-//   \____/|_|\__,_|\___|                                                  //
-//                                                                         //
+//        2024                                                             //
 //                                                                         //
 //-------------------------------------------------------------------------//
 //-------------------------------------------------------------------------//
 //                                                                         //
-// File: sub-pages.scss                                                    //
-// Version: 2.0 (Post Merger)                                              //
-// Project: IGT.com - Orange is the New Blue -- Sub Pages                  //
-// Project Authors: Scott Patterson (SP) and Brent Wuest (BW)              //
+// File: sub-pages-new.scss                                                //
+// Version: 1.0.                                                           //
+// Project: IGT.com -- Global                                              //
+// Project Authors:                                                        //
 //                                                                         //
 //-------------------------------------------------------------------------//
 //-------------------------------------------------------------------------//
@@ -100,8 +78,19 @@
 		"partials/06_custom_apps/_forgot_password",
 		"partials/06_custom_apps/_search_results";
 
+// ---------- Vendors
+
 // CHOSEN
 @import "partials/08_vendors/_chosen";
+
+// Horizon
+@import "partials/10_Horizon/horizon_inspect.scss";
+
+// Magic Zoom
+@import "partials/08_vendors/magiczoom/magic360.scss";
+@import "partials/08_vendors/magiczoom/magicscroll.scss";
+@import "partials/08_vendors/magiczoom/magiczoomplus.scss";
+
 
 /* Exp Ed Fix */
 #scPageExtendersForm{height: 0!important; overflow: hidden!important}
